@@ -1,0 +1,7 @@
+Find InternalElement ie1 : InternalElement{
+	    baseSystemUnit n : suc OR ie2; 
+}, SystemUnitClass suc :InternalElement{
+	name sucName;
+}, InternalElement ie2 : InternalElement{
+	name ie2Name;
+}  

@@ -1,0 +1,8 @@
+Find SystemUnitClass{
+	attribute a:Attribute{
+		name n:self.startsWith("R1_");
+	}
+	attribute b:Attribute{
+		name m:self.contains("Power");
+	}
+}

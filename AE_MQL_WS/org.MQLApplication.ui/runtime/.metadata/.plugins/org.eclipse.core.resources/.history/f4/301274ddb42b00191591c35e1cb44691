@@ -1,0 +1,8 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s){
+	Professor.name(p, "Peter Parker");
+	Professor.lectures(p,c);
+	Student.attends(s,c);
+} 

@@ -1,0 +1,12 @@
+
+Find 
+
+InternalElement ie : InternalElement{
+	additionalInformation aiRef : addInfo; 
+}; 
+
+AdditionalInformation addInfo : AdditionalInformation{
+	name n : self.equals("AutomationMLVersion A");
+};
+
+Select ie, n;  

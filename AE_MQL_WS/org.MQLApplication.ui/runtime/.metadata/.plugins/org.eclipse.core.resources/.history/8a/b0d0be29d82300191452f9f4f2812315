@@ -1,0 +1,38 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a){
+	find s_OrGroup(s, a,n);
+}
+
+pattern a_OrGroup(a){
+	Course(a);
+}
+
+pattern s_OrGroup(s,a,n){
+    find Strudent732386333(s,a,n);
+}
+
+pattern Strudent732386333(s:Strudent,a:Course,n){
+    Course(a);
+    Strudent(s);
+    find n_Person_name_AttrEClass(s,n);
+    find a_OrGroup_ref(s,a);
+    a != n;
+}
+
+pattern n_Person_name_AttrEClass(s:Strudent, n){
+    Strudent.name(s, n);
+    check(((n).startsWith("Larry Lazy")));
+}
+
+pattern Strudent_attends14523447(from:Strudent, to:Course){
+    Strudent.attends(from, to);
+}
+
+pattern a_OrGroup_ref(s,a){
+    find a_OrGroup(a);
+    find Strudent_attends14523447(s,a);
+}
+
+

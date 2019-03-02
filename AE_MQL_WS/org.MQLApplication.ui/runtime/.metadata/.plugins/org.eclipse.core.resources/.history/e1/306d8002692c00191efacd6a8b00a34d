@@ -1,0 +1,10 @@
+Find
+Course c;
+Professor p : Professor{
+	name n: self.equals("Peter Parker");
+	lectures l: c; 
+};
+Student s : Student{
+	attends a: c;
+};
+Select s; 

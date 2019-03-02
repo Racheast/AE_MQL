@@ -1,0 +1,56 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(c){
+	find c_OrGroup(c, e,ei1,ei2);
+}
+
+pattern c_OrGroup(c,e,ei1,ei2){
+    find Course1341543871(c,e,ei1,ei2);
+}
+
+pattern e_OrGroup(e,ei1,ei2){
+    e == ei2;
+    find Exam825458697(e,ei1);
+}
+or{
+    e == ei1;
+    find Exam1353376424(e,ei2);
+}
+
+pattern Exam1353376424(e:Exam,ei2){
+    Exam(e);
+    find ei2_Exam_examID_AttrEClass(e,ei2);
+}
+
+pattern Course1341543871(c:Course,e:Exam,ei1,ei2){
+    Course(c);
+    Exam(e);
+    find e_OrGroup_ref(c,e,ei1,ei2);
+}
+
+pattern Exam825458697(e:Exam,ei1){
+    Exam(e);
+    find ei1_Exam_examID_AttrEClass(e,ei1);
+}
+
+pattern ei1_Exam_examID_AttrEClass(e:Exam, ei1){
+    Exam.examID(e, ei1);
+    check(((ei1).startsWith("analysis")));
+}
+
+pattern ei2_Exam_examID_AttrEClass(e:Exam, ei2){
+    Exam.examID(e, ei2);
+    check(((ei2).startsWith("innovation")));
+}
+
+pattern Course_exam209393411(from:Course, to:Exam){
+    Course.exam(from, to);
+}
+
+pattern e_OrGroup_ref(c,e,ei1,ei2){
+    find e_OrGroup(e,ei1,ei2);
+    find Course_exam209393411(c,e);
+}
+
+

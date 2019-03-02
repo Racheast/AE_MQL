@@ -1,0 +1,16 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement1162184273(result);
+}
+
+pattern InternalElement1162184273(elem:InternalElement){
+    InternalElement(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	InternalElement.name(elem,n1);
+}
+

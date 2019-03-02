@@ -1,0 +1,10 @@
+Find
+
+File f1;
+
+File f2;
+
+Folder folder1: Folder{
+	name nfolder1 ;
+	contains c : f1;
+};

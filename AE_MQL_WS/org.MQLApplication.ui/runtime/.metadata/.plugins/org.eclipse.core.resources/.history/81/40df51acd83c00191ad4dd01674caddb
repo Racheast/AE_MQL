@@ -1,0 +1,11 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(p){
+	find p_Person(p);
+}
+
+pattern p_Person(p:Person){
+    Person(p);
+}
+

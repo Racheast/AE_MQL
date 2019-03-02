@@ -1,0 +1,14 @@
+Find
+Course c1{
+	courseType ct :PR;
+	eval: count(ct).greaterEquals(1);
+	name n1;
+	name* n2;
+	exam e : Exam e1{
+		
+	}OR Exam e2{
+		
+	}
+};
+
+Select c1;

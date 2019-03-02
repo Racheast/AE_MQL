@@ -1,0 +1,49 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_i(i){
+    find InternalElement1470517637(i);
+}
+
+pattern a_OrGroup(elem:Attribute){
+	Attribute(elem);
+}
+
+pattern InternalElement1470517637(elem:InternalElement){
+    InternalElement(elem);
+    find a_OrGroup_ref(elem,a);
+}
+
+pattern InternalElement_attribute944259555(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a_OrGroup(member);
+    find InternalElement_attribute944259555(container,member);
+}
+
+
+pattern query_h(n){
+    find InstanceHierarchy80712979(h, n);
+}
+
+pattern InstanceHierarchy80712979(elem:InstanceHierarchy, n){
+    InstanceHierarchy(elem);
+    find n_CAEXObject_name_AttrEClass(elem,n);
+}
+
+pattern n_CAEXObject_name_AttrEClass(elem:InstanceHierarchy,n){
+	InstanceHierarchy.name(elem,n);
+}
+
+
+pattern query_f(f){
+    find CAEXFile1278247254(f);
+}
+
+pattern CAEXFile1278247254(elem:CAEXFile){
+    CAEXFile(elem);
+}
+
+

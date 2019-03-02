@@ -1,0 +1,33 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_i1(a1){
+    find InternalElement1617351358(i1, a1);
+}
+
+pattern a1_OrGroup(elem:Attribute){
+	Attribute(elem);
+}
+
+pattern InternalElement1617351358(elem:InternalElement, a1){
+    InternalElement(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+    find a1_OrGroup_ref(elem,a1);
+    a1 != n1;
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	InternalElement.name(elem,n1);
+	check(((n1).equals("R4_Stack_Connection")));
+}
+
+pattern InternalElement_attribute803870250(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a1_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a1_OrGroup(member);
+    find InternalElement_attribute803870250(container,member);
+}
+
+

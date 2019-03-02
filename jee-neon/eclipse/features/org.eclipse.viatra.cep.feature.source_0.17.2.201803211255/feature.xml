@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.eclipse.viatra.cep.feature.source" version="0.17.2.201803211255" label="VIATRA-CEP framework (Incubation) Developer Resources" provider-name="Eclipse VIATRA Project">
+  <includes id="org.eclipse.viatra.cep.feature" version="0.17.2.201803211255"/>
+  <description url="http://www.example.com/description">
+      VIATRA CEP framework
+   </description>
+  <license url="%licenseURL">
+      %license
+   </license>
+  <plugin id="org.eclipse.viatra.cep.core.source" version="0.17.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.cep.core.metamodels.source" version="0.17.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.cep.emf.notification.source" version="0.17.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.cep.tooling.ui.source" version="0.17.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.cep.vepl.source" version="0.17.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.cep.vepl.ui.source" version="0.17.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.cep.tooling.core.source" version="0.17.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+</feature>

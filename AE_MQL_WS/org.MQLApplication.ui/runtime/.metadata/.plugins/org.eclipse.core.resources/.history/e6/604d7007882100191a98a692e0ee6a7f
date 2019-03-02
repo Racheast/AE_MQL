@@ -1,0 +1,47 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie){
+	find ai_OrGroup(ai,n);
+	find ie_OrGroup(ie, ai);
+}
+
+pattern ie_OrGroup(ie,ai){
+    find InternalElement103837487(ie,ai);
+}
+
+pattern ai_OrGroup(ai,n){
+    find AdditionalInformation1901229002(ai,n);
+}
+
+pattern aiRef_OrGroup(aiRef,ai){
+    AdditionalInformation(ai);
+    aiRef == ai;
+}
+
+pattern AdditionalInformation1901229002(ai:AdditionalInformation,n){
+    AdditionalInformation(ai);
+    find n_Element_name_AttrEClass(ai,n);
+}
+
+pattern InternalElement103837487(ie:InternalElement,ai:AdditionalInformation){
+    InternalElement(ie);
+    AdditionalInformation(ai);
+    neg find aiRef_OrGroup_ref(ie,aiRef,ai);
+}
+
+pattern n_Element_name_AttrEClass(ai:AdditionalInformation, n){
+    AdditionalInformation.name(ai, n);
+    check(((n).equals("AutomationMLVersion A")));
+}
+
+pattern InternalElement_additionalInformation1543431069(from:InternalElement, to:AdditionalInformation){
+    InternalElement.additionalInformation(from, to);
+}
+
+pattern aiRef_OrGroup_ref(ie,aiRef,ai){
+    find aiRef_OrGroup(aiRef,ai);
+    find InternalElement_additionalInformation1543431069(ie,aiRef);
+}
+
+

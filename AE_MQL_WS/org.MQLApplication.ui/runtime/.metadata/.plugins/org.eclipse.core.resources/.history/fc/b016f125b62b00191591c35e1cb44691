@@ -1,0 +1,15 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+
+pattern query_0(c){
+	Course(c);
+	Course.name(mastersDefense,"Masters Defense Exam");
+	neg find transitive(c,mastersDefense);
+}
+pattern transitive(c,m){
+	find mandatoryFor+(c,m);
+}
+pattern mandatoryFor(c,m){
+	Course.mandatoryFor(c,m);
+}

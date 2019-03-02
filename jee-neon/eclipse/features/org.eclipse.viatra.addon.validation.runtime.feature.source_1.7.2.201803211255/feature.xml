@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.eclipse.viatra.addon.validation.runtime.feature.source" version="1.7.2.201803211255" label="VIATRA Validation Framework Runtime Developer Resources" provider-name="Eclipse VIATRA Project">
+  <includes id="org.eclipse.viatra.addon.validation.runtime.feature" version="1.7.2.201803211255"/>
+  <description url="http://www.example.com/description">
+      VIATRA Validation framework runtime
+   </description>
+  <license url="%licenseURL">
+      %license
+   </license>
+  <plugin id="org.eclipse.viatra.addon.validation.core.source" version="1.7.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.addon.validation.runtime.source" version="1.7.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.addon.validation.runtime.ui.source" version="1.7.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+</feature>

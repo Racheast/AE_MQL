@@ -1,0 +1,18 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(p){
+	find p_Person(p,n);
+}
+
+pattern p_Person(p:Person,n){
+    Person(p);
+    find n_Person_name_AttrEClass(p,n);
+}
+
+
+pattern n_Person_name_AttrEClass(p:Person, n){
+    Person.name(p, n);
+    check(((n).contains("Lazy")));
+}
+

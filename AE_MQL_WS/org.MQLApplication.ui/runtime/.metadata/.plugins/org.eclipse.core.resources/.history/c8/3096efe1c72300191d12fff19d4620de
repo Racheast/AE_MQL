@@ -1,0 +1,13 @@
+Find
+
+Course c1 : Course{
+	name n : self.startsWith("Mathe");
+	mandatoryFor m;
+};
+
+Strudent s : Strudent{
+	attends a : c1;
+	eval: count(a).greaterEquals(2);
+};
+
+Select c1;

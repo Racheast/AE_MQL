@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.viatra.transformation.runtime.emf.feature"
+      label="VIATRA Transformation Engine"
+      version="1.7.2.201803211255"
+      provider-name="Eclipse VIATRA Project">
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <description url="http://www.example.com/description">
+      VIATRA Transformation Engine - EVM and Xtend based DSL
+   </description>
+
+   <requires>
+      <import feature="org.eclipse.viatra.query.runtime.feature" version="1.7.0" match="equivalent"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.viatra.transformation.runtime.emf"
+         download-size="141"
+         install-size="408"
+         version="1.7.2.201803211255"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.viatra.transformation.evm"
+         download-size="163"
+         install-size="381"
+         version="1.7.2.201803211255"
+         unpack="false"/>
+
+</feature>

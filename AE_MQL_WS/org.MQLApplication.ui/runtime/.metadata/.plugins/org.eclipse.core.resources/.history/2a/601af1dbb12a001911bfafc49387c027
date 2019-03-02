@@ -1,0 +1,16 @@
+Find
+ 
+Course c1 : Course{
+	name nc1 : self.equals("Masters Defense");
+};
+
+Course c2 : Course{
+	name nc2 : self.equals("Seminar for Masters");
+	exam e;
+	mandatoryFor+ m;
+}; 
+  
+Professor p1 : Professor{
+	name n1 : self.equals("Peter Parker"); 
+	lectures l1 : c1 OR c2;  
+};

@@ -1,0 +1,18 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+
+pattern query_ie( n){
+    find InternalElement1336032246(ie, n);
+}
+
+pattern InternalElement1336032246(elem:InternalElement, n){
+    InternalElement(elem);
+    find n_CAEXObject_name_AttrEClass(elem,n);
+}
+
+pattern n_CAEXObject_name_AttrEClass(elem:InternalElement,n){
+	InternalElement.name(elem,n);
+	check(((n).startsWith("R1")));
+}
+
+

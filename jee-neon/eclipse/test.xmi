@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<operator:Attrubite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:operator="/OperatorEcore/model/Operator.ecore">
+  <operator xsi:type="operator:OrOperator">
+    <connects xsi:type="operator:EqualsOperator">
+      <argument xsi:type="operator:StringArgument" value="Abc"/>
+    </connects>
+    <connects xsi:type="operator:EqualsOperator">
+      <argument xsi:type="operator:StringArgument" value="Def"/>
+    </connects>
+  </operator>
+</operator:Attrubite>

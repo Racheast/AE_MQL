@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.eclipse.viatra.addon.querybasedfeatures.runtime.feature.source" version="1.7.2.201803211255" label="VIATRA Query Based Feature Runtime Developer Resources" provider-name="Eclipse VIATRA Project">
+  <includes id="org.eclipse.viatra.addon.querybasedfeatures.runtime.feature" version="1.7.2.201803211255"/>
+  <description>
+      VIATRA query based derived feature handling feature.
+   </description>
+  <license url="%licenseURL">
+      %license
+   </license>
+  <plugin id="org.eclipse.viatra.addon.querybasedfeatures.runtime.source" version="1.7.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+</feature>

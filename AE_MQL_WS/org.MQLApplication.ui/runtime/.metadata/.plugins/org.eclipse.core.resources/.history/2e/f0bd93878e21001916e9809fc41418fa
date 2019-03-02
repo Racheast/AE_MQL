@@ -1,0 +1,116 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_OrGroup(i, ie, a, ie2, bsu,n);
+}
+
+pattern i_OrGroup(i,ie,a,ie2,bsu,n){
+    find InternalElement652902710(i,ie,a,ie2,bsu,n);
+}
+
+pattern a_OrGroup(a){
+	Attribute(a);
+}
+
+pattern ie2_OrGroup(ie2,bsu,i,ie){
+    find InternalElement1358991424(ie2,bsu,i,ie);
+}
+
+pattern ie_OrGroup(ie,a,ie2,bsu,i,n){
+    find InternalElement1645056325(ie,a,ie2,bsu,i,n);
+}
+
+pattern bsu_OrGroup(bsu,i,ie,ie2){
+    InternalElement(i);
+    InternalElement(ie2);
+    InternalElement(ie);
+    bsu == i;
+}
+or{
+    InternalElement(i);
+    InternalElement(ie2);
+    InternalElement(ie);
+    bsu == ie;
+}
+or{
+    InternalElement(i);
+    InternalElement(ie2);
+    InternalElement(ie);
+    bsu == ie2;
+}
+
+pattern InternalElement1358991424(ie2:InternalElement,bsu:SystemUnitClass,i:InternalElement,ie:InternalElement){
+    InternalElement(i);
+    InternalElement(ie2);
+    InternalElement(ie);
+    SystemUnitClass(bsu);
+    find bsu_OrGroup_ref(ie2,bsu,i,ie);
+}
+
+pattern InternalElement1645056325(ie:InternalElement,a:Attribute,ie2:InternalElement,bsu:SystemUnitClass,i:InternalElement,n){
+    InternalElement(i);
+    Attribute(a);
+    InternalElement(ie2);
+    InternalElement(ie);
+    SystemUnitClass(bsu);
+    find n_CAEXObject_name_AttrEClass(ie,n);
+    find a_OrGroup_ref(ie,a);
+    find ie2_OrGroup_ref(ie,ie2,bsu,i);
+    ie2 != n;
+    a != n;
+    a != ie2;
+}
+
+pattern InternalElement652902710(i:InternalElement,ie:InternalElement,a:Attribute,ie2:InternalElement,bsu:SystemUnitClass,n){
+    InternalElement(i);
+    Attribute(a);
+    InternalElement(ie2);
+    InternalElement(ie);
+    SystemUnitClass(bsu);
+    find ie_OrGroup_ref(i,ie,a,ie2,bsu,n);
+    find count1063182322(i, ref1063182322);
+    check(((ref1063182322)>=(0)));
+}
+
+pattern n_CAEXObject_name_AttrEClass(ie:InternalElement, n){
+    InternalElement.name(ie, n);
+}
+
+pattern count1063182322(i:InternalElement, result : java Integer){
+    result == count find ie_OrGroup_ref(i,ie,a,ie2,bsu,n);
+}
+
+pattern InternalElement_baseSystemUnit179506262(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern InternalElement_internalElement1248357187(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern InternalElement_attribute116706504(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(ie,a){
+    find a_OrGroup(a);
+    find InternalElement_attribute116706504(ie,a);
+}
+
+pattern ie2_OrGroup_ref(ie,ie2,bsu,i){
+    find ie2_OrGroup(ie2,bsu,i,ie);
+    find InternalElement_internalElement1248357187+(ie,ie2);
+}
+
+pattern ie_OrGroup_ref(i,ie,a,ie2,bsu,n){
+    find ie_OrGroup(ie,a,ie2,bsu,i,n);
+    find InternalElement_internalElement1248357187+(i,ie);
+}
+
+pattern bsu_OrGroup_ref(ie2,bsu,i,ie){
+    find bsu_OrGroup(bsu,i,ie,ie2);
+    find InternalElement_baseSystemUnit179506262(ie2,bsu);
+}
+
+

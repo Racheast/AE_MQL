@@ -1,0 +1,41 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s){
+	find c_OrGroup(c);
+	find s_OrGroup(s, c);
+}
+
+pattern s_OrGroup(s,c){
+    find Strudent1828075502(s,c);
+}
+
+pattern a_OrGroup(a,c){
+    Course(c);
+    a == c;
+}
+
+pattern c_OrGroup(c){
+    find Course749674463(c);
+}
+
+pattern Course749674463(c:Course){
+    Course(c);
+}
+
+pattern Strudent1828075502(s:Strudent,c:Course){
+    Strudent(s);
+    Course(c);
+    neg find a_OrGroup_ref(s,a,c);
+}
+
+pattern Strudent_attends14523447(from:Strudent, to:Course){
+    Strudent.attends(from, to);
+}
+
+pattern a_OrGroup_ref(s,a,c){
+    find a_OrGroup(a,c);
+    find Strudent_attends14523447(s,a);
+}
+
+

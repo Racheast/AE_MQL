@@ -1,0 +1,7 @@
+Find SystemUnitClass s:SystemUnitClass{
+	attribute a:Attribute{
+		name n:self.equals("color");
+		unit u:self.equals("hex");
+		value v:self.equals("#40f2dc");
+	};
+}; 

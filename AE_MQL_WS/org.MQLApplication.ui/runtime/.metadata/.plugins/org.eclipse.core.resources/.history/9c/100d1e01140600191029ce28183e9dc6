@@ -1,0 +1,11 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find Compound537478559(result);
+}
+
+pattern Compound537478559(elem:Compound){
+    Compound(elem);
+}
+

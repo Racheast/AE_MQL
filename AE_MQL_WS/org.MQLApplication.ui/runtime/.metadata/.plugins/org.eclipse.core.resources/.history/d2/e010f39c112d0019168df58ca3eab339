@@ -1,0 +1,12 @@
+Find
+Course c {
+	courseType ct:VO;
+	exam e : Exam ex;
+};
+
+Student s {
+	attends a:c; 
+	//eval: count(a).greaterEquals(3); 
+};
+
+Select s;  

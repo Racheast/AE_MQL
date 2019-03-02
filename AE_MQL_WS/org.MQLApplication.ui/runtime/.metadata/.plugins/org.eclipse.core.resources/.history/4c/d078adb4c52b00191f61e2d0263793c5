@@ -1,0 +1,70 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(c1, c2, p){
+	find c1_OrGroup(c1,nc1);
+	find c2_OrGroup(c2,nc2);
+	find p_OrGroup(p, l1, c1, c2);
+}
+
+pattern c1_OrGroup(c1,nc1){
+    find Course2131591898(c1,nc1);
+}
+
+pattern p_OrGroup(p,l1,c1,c2){
+    find Professor379205033(p,l1,c1,c2);
+}
+
+pattern l1_OrGroup(l1,c1,c2){
+    Course(c1);
+    Course(c2);
+    l1 == c1;
+}
+or{
+    Course(c1);
+    Course(c2);
+    l1 == c2;
+}
+
+pattern c2_OrGroup(c2,nc2){
+    find Course1574329895(c2,nc2);
+}
+
+pattern Course1574329895(c2:Course,nc2){
+    Course(c2);
+    find nc2_Course_name_AttrEClass(c2,nc2);
+}
+
+pattern Professor379205033(p:Professor,l1:Course,c1:Course,c2:Course){
+    Course(c1);
+    Professor(p);
+    Course(l1);
+    Course(c2);
+    find l1_OrGroup_ref(p,l1,c1,c2);
+}
+
+pattern Course2131591898(c1:Course,nc1){
+    Course(c1);
+    find nc1_Course_name_AttrEClass(c1,nc1);
+}
+
+pattern nc1_Course_name_AttrEClass(c1:Course, nc1){
+    Course.name(c1, nc1);
+    check(((nc1).contains("Masters Defense")));
+}
+
+pattern nc2_Course_name_AttrEClass(c2:Course, nc2){
+    Course.name(c2, nc2);
+    check(((nc2).contains("Seminar for Masters")));
+}
+
+pattern Professor_lectures495164706(from:Professor, to:Course){
+    Professor.lectures(from, to);
+}
+
+pattern l1_OrGroup_ref(p,l1,c1,c2){
+    find l1_OrGroup(l1,c1,c2);
+    find Professor_lectures495164706(p,l1);
+}
+
+

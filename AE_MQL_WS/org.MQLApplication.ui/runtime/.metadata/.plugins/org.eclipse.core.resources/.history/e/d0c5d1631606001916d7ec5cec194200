@@ -1,0 +1,4 @@
+Find Element{
+	code c1 : self.length().greaterThan(2);
+	code c2 : self.length().greaterThan(3);
+}

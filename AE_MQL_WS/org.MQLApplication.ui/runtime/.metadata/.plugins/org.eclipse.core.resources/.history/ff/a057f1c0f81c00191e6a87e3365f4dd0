@@ -1,0 +1,38 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(j){
+	find i_OrGroup(i, j,n);
+}
+
+pattern i_OrGroup(i,j,n){
+    find InternalElement269550638(i,j,n);
+}
+
+pattern j_OrGroup(j){
+	InternalElement(j);
+}
+
+pattern InternalElement269550638(i:InternalElement,j:InternalElement,n){
+    InternalElement(i);
+    InternalElement(j);
+    find n_CAEXObject_name_AttrEClass(i,n);
+    find j_OrGroup_ref(i,j);
+    n != j;
+}
+
+pattern n_CAEXObject_name_AttrEClass(i:InternalElement, n){
+    InternalElement.name(i, n);
+    check(((n).equals("R1_Stack")));
+}
+
+pattern InternalElement_internalElement1965302813(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern j_OrGroup_ref(i,j){
+    find j_OrGroup(j);
+    find InternalElement_internalElement1965302813+(i,j);
+}
+
+

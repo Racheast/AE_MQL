@@ -1,0 +1,22 @@
+Find 
+
+InternalElement i1 : InternalElement{
+	internalElement! ie2 : InternalElement{
+		internalElement!+ ie3 : InternalElement{
+			internalElement iexx;
+			baseSystemUnit bsu_ie3 : ie2 OR ie3 ;
+		} OR InternalElement{
+			baseClass bc_ie3 : i1;
+			changeMode cm : change; 
+			internalElement iex : InternalElement{
+				internalElement+ iex_ie: InternalElement{
+					internalElement iex_ie2:InternalElement{
+							
+					};
+				};
+				baseSystemUnit bsu_ie3_2 : ie3 OR ie2 OR iex_ie;
+			};
+		};
+	};
+};
+

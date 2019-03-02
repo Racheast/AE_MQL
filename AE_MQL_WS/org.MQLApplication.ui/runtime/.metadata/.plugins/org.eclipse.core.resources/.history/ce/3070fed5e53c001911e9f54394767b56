@@ -1,0 +1,18 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie){
+	find ie_InternalElement(ie,n);
+}
+
+pattern ie_InternalElement(ie:InternalElement,n){
+    InternalElement(ie);
+    find n_CAEXObject_name_AttrEClass(ie,n);
+}
+
+
+pattern n_CAEXObject_name_AttrEClass(ie:InternalElement, n){
+    InternalElement.name(ie, n);
+    check(((n).contains("R1")));
+}
+

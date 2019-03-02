@@ -1,0 +1,296 @@
+!SESSION 2019-01-19 00:23:24.667 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -product MQLSetup.product
+Command-line arguments:  -product MQLSetup.product -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.product/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+This is a continuation of log file C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup\.metadata\.bak_0.log
+Created Time: 2019-01-19 00:23:30.844
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.844
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/UIElement/widget/SET] {ChangedElement=org.eclipse.e4.ui.model.application.ui.basic.impl.TrimmedWindowImpl@743cb8e0 (elementId: IDEWindow, tags: [topLevel], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer@45e22def, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, context: TrimmedWindowImpl (IDEWindow) Context, variables: [], x: 669, y: 255, width: 543, height: 490), Widget=null, org.eclipse.e4.data={ChangedElement=org.eclipse.e4.ui.model.application.ui.basic.impl.TrimmedWindowImpl@743cb8e0 (elementId: IDEWindow, tags: [topLevel], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer@45e22def, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, context: TrimmedWindowImpl (IDEWindow) Context, variables: [], x: 669, y: 255, width: 543, height: 490), AttName=widget, EventType=SET, OldValue=Shell {MQL Setup}, Widget=null}, AttName=widget, EventType=SET, OldValue=Shell {MQL Setup}}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.844
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/UIElement/renderer/SET] {ChangedElement=org.eclipse.e4.ui.model.application.ui.basic.impl.TrimmedWindowImpl@743cb8e0 (elementId: IDEWindow, tags: [topLevel], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, context: TrimmedWindowImpl (IDEWindow) Context, variables: [], x: 669, y: 255, width: 543, height: 490), Widget=null, org.eclipse.e4.data={ChangedElement=org.eclipse.e4.ui.model.application.ui.basic.impl.TrimmedWindowImpl@743cb8e0 (elementId: IDEWindow, tags: [topLevel], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, context: TrimmedWindowImpl (IDEWindow) Context, variables: [], x: 669, y: 255, width: 543, height: 490), AttName=renderer, EventType=SET, OldValue=org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer@45e22def, Widget=null}, AttName=renderer, EventType=SET, OldValue=org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer@45e22def}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.844
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/UIElement/parent/SET] {ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.HandledMenuItemImpl@7718a40f (elementId: org.eclipse.ui.file.exit, tags: null, contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: Exit, iconURI: null, tooltip: null, enabled: true, selected: false, type: Push) (mnemonics: null) (wbCommand: ParameterizedCommand(Command(org.eclipse.ui.file.exit,Exit,
+		Exit the application,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ba359bd,
+		[Parameter(mayPrompt,may prompt,null,true)],,true),null)), Widget=null, org.eclipse.e4.data={ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.HandledMenuItemImpl@7718a40f (elementId: org.eclipse.ui.file.exit, tags: null, contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: Exit, iconURI: null, tooltip: null, enabled: true, selected: false, type: Push) (mnemonics: null) (wbCommand: ParameterizedCommand(Command(org.eclipse.ui.file.exit,Exit,
+		Exit the application,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ba359bd,
+		[Parameter(mayPrompt,may prompt,null,true)],,true),null)), AttName=parent, EventType=SET, OldValue=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@711d1a52 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a, tags: [menuContribution:menu], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: File, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), Widget=null}, AttName=parent, EventType=SET, OldValue=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@711d1a52 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a, tags: [menuContribution:menu], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: File, iconURI: null, tooltip: null, mnemonics: null) (enabled: true)}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.844
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/ElementContainer/children/REMOVE] {ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@711d1a52 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a, tags: [menuContribution:menu], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: File, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), org.eclipse.e4.data={ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@711d1a52 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a, tags: [menuContribution:menu], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: File, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), AttName=children, EventType=REMOVE, Position=0, OldValue=org.eclipse.e4.ui.model.application.ui.menu.impl.HandledMenuItemImpl@7718a40f (elementId: org.eclipse.ui.file.exit, tags: null, contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: Exit, iconURI: null, tooltip: null, enabled: true, selected: false, type: Push) (mnemonics: null) (wbCommand: ParameterizedCommand(Command(org.eclipse.ui.file.exit,Exit,
+		Exit the application,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ba359bd,
+		[Parameter(mayPrompt,may prompt,null,true)],,true),null)), Widget=null}, AttName=children, EventType=REMOVE, Position=0, OldValue=org.eclipse.e4.ui.model.application.ui.menu.impl.HandledMenuItemImpl@7718a40f (elementId: org.eclipse.ui.file.exit, tags: null, contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: Exit, iconURI: null, tooltip: null, enabled: true, selected: false, type: Push) (mnemonics: null) (wbCommand: ParameterizedCommand(Command(org.eclipse.ui.file.exit,Exit,
+		Exit the application,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ba359bd,
+		[Parameter(mayPrompt,may prompt,null,true)],,true),null)), Widget=null}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.844
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/UIElement/parent/SET] {ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@711d1a52 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a, tags: [menuContribution:menu], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: File, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), Widget=null, org.eclipse.e4.data={ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@711d1a52 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a, tags: [menuContribution:menu], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: File, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), AttName=parent, EventType=SET, OldValue=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@75483843 (elementId: org.eclipse.ui.main.menu, tags: [], contributorURI: null) (widget: Menu {File}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), Widget=null}, AttName=parent, EventType=SET, OldValue=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@75483843 (elementId: org.eclipse.ui.main.menu, tags: [], contributorURI: null) (widget: Menu {File}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, mnemonics: null) (enabled: true)}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.844
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/ElementContainer/children/REMOVE] {ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@75483843 (elementId: org.eclipse.ui.main.menu, tags: [], contributorURI: null) (widget: Menu {File}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), org.eclipse.e4.data={ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@75483843 (elementId: org.eclipse.ui.main.menu, tags: [], contributorURI: null) (widget: Menu {File}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), AttName=children, EventType=REMOVE, Position=0, OldValue=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@711d1a52 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a, tags: [menuContribution:menu], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: File, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), Widget=Menu {File}}, AttName=children, EventType=REMOVE, Position=0, OldValue=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@711d1a52 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a, tags: [menuContribution:menu], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: File, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), Widget=Menu {File}}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.854
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/UIElement/widget/SET] {ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@75483843 (elementId: org.eclipse.ui.main.menu, tags: [], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), Widget=null, org.eclipse.e4.data={ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@75483843 (elementId: org.eclipse.ui.main.menu, tags: [], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), AttName=widget, EventType=SET, OldValue=Menu {}, Widget=null}, AttName=widget, EventType=SET, OldValue=Menu {}}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.854
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/UIElement/renderer/SET] {ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@75483843 (elementId: org.eclipse.ui.main.menu, tags: [], contributorURI: null) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), Widget=null, org.eclipse.e4.data={ChangedElement=org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl@75483843 (elementId: org.eclipse.ui.main.menu, tags: [], contributorURI: null) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, mnemonics: null) (enabled: true), AttName=renderer, EventType=SET, OldValue=org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101, Widget=null}, AttName=renderer, EventType=SET, OldValue=org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer@47a7a101}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.854
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.854
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/Context/context/SET] {ChangedElement=org.eclipse.e4.ui.model.application.ui.basic.impl.TrimmedWindowImpl@743cb8e0 (elementId: IDEWindow, tags: [topLevel], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, context: null, variables: [], x: 669, y: 255, width: 543, height: 490), Widget=null, org.eclipse.e4.data={ChangedElement=org.eclipse.e4.ui.model.application.ui.basic.impl.TrimmedWindowImpl@743cb8e0 (elementId: IDEWindow, tags: [topLevel], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: null, iconURI: null, tooltip: null, context: null, variables: [], x: 669, y: 255, width: 543, height: 490), AttName=context, EventType=SET, OldValue=TrimmedWindowImpl (IDEWindow) Context, Widget=null}, AttName=context, EventType=SET, OldValue=TrimmedWindowImpl (IDEWindow) Context}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.864
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.864
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.874
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.884
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.884
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.884
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.884
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.884
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.888
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.888
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.888
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.888
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.888
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.894
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.894
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.894
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.894
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.894
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.894
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.894
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.894
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/renderer/requestEnablementUpdate] {org.eclipse.e4.data=ALL}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.894
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/menu/MenuContributions/menuContributions/REMOVE_MANY] {ChangedElement=org.eclipse.e4.ui.model.application.impl.ApplicationImpl@410ae9a3 (elementId: org.eclipse.e4.legacy.ide.application, tags: [activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration, ModelMigrationProcessor.001], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (context: WorkbenchContext, variables: null), org.eclipse.e4.data={ChangedElement=org.eclipse.e4.ui.model.application.impl.ApplicationImpl@410ae9a3 (elementId: org.eclipse.e4.legacy.ide.application, tags: [activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration, ModelMigrationProcessor.001], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (context: WorkbenchContext, variables: null), AttName=menuContributions, EventType=REMOVE_MANY, Position=[I@4da6d664, OldValue=[org.eclipse.e4.ui.model.application.ui.menu.impl.MenuContributionImpl@27fde870 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@779, tags: [scheme:menu, menuContribution:menu], contributorURI: null) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (positionInParent: after=additions, parentId: org.eclipse.ui.main.menu), org.eclipse.e4.ui.model.application.ui.menu.impl.MenuContributionImpl@4abf3f0 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a, tags: [scheme:menu, menuContribution:menu], contributorURI: null) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (positionInParent: after=additions, parentId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a)], Widget=null}, AttName=menuContributions, EventType=REMOVE_MANY, Position=[I@4da6d664, OldValue=[org.eclipse.e4.ui.model.application.ui.menu.impl.MenuContributionImpl@27fde870 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@779, tags: [scheme:menu, menuContribution:menu], contributorURI: null) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (positionInParent: after=additions, parentId: org.eclipse.ui.main.menu), org.eclipse.e4.ui.model.application.ui.menu.impl.MenuContributionImpl@4abf3f0 (elementId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a, tags: [scheme:menu, menuContribution:menu], contributorURI: null) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (positionInParent: after=additions, parentId: org.eclipse.core.internal.registry.ConfigurationElementHandle@77a)], Widget=null}.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-01-19 00:23:30.957
+!MESSAGE Event Admin service is not available, unable to publish event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/LifeCycle/appShutdownStarted] {ChangedElement=org.eclipse.e4.ui.model.application.impl.ApplicationImpl@410ae9a3 (elementId: org.eclipse.e4.legacy.ide.application, tags: [activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration, ModelMigrationProcessor.001], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (context: WorkbenchContext, variables: null), org.eclipse.e4.data={ChangedElement=org.eclipse.e4.ui.model.application.impl.ApplicationImpl@410ae9a3 (elementId: org.eclipse.e4.legacy.ide.application, tags: [activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration, ModelMigrationProcessor.001], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (context: WorkbenchContext, variables: null)}}.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-01-19 00:23:31.024
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2019-01-19 00:23:34.864 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.application/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-01-19 00:23:36.059
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-01-19 00:23:36.344
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2019-01-19 00:25:24.074 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.application/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-01-19 00:25:25.223
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-01-19 00:25:25.493
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-01-19 00:25:32.604
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2019-01-19 00:42:22.968 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.application/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-01-19 00:42:24.109
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-01-19 00:42:24.384
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-01-19 00:42:31.935
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2019-02-10 10:23:12.606 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.application/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-02-10 10:23:13.876
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-10 10:23:14.210
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-10 10:23:21.981
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2019-02-10 10:41:19.431 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.application/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-02-10 10:41:20.748
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-10 10:41:21.063
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-10 10:41:28.522
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2019-02-10 20:43:46.877 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.application/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-02-10 20:43:48.125
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-10 20:43:48.457
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2019-03-02 11:52:32.120 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.application/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-03-02 11:52:34.194
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-02 11:52:35.540
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-02 11:52:50.923
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2019-03-02 11:56:18.266 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.application/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-03-02 11:56:19.447
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-02 11:56:19.713
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2019-03-02 12:00:21.263 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.application/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-03-02 12:00:22.447
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-02 12:00:22.715
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-02 12:00:36.353
+!MESSAGE The workspace will exit with unsaved changes in this session.

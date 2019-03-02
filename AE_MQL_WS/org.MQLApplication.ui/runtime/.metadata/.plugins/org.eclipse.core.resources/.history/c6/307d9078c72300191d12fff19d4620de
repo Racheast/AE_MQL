@@ -1,0 +1,17 @@
+Find InternalElement ie : InternalElement{
+	systemUnitClass suc : InternalElement{
+		name n1 : self.startsWith("R1");
+	}OR SystemUnitClass{
+		name n2; 
+		internalElement ie2 : InternalElement{
+			name n3!;
+		} OR InternalElement{ 
+			name n4;
+			internalElement ie3 : InternalElement{
+				name n5 : self.equals("n5");
+			}OR InternalElement{
+				name n6 : self.equals("n6");
+			}; 
+		};
+	};
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.viatra.transformation.runtime.debug.feature"
+      label="VIATRA Transformation Debugger Runtime (Incubation)"
+      version="0.17.2.201803211255"
+      provider-name="Eclipse VIATRA Project">
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <description url="http://www.example.com/description">
+      VIATRA Transformation Debugger Runtime
+   </description>
+
+   <requires>
+      <import feature="org.eclipse.viatra.transformation.runtime.emf.feature" version="1.7.0" match="equivalent"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.viatra.transformation.runtime.debug"
+         download-size="90"
+         install-size="209"
+         version="0.17.2.201803211255"/>
+
+   <plugin
+         id="org.eclipse.viatra.transformation.runtime.tracer"
+         download-size="21"
+         install-size="45"
+         version="0.17.2.201803211255"/>
+
+   <plugin
+         id="org.eclipse.viatra.transformation.runtime.transformationtrace"
+         download-size="25"
+         install-size="38"
+         version="0.17.2.201803211255"/>
+
+</feature>

@@ -1,0 +1,98 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a1, addInfo, ie1){
+	find a1_OrGroup(a1, addInfo);
+	find addInfo_OrGroup(addInfo);
+	find ie1_OrGroup(ie1, suc, bsu, ie1, suc);
+}
+
+pattern addInfo_OrGroup(addInfo:AdditionalInformation){
+    find AdditionalInformation522986653(addInfo);
+}
+
+pattern suc_OrGroup(suc:SystemUnitClass){
+    find SystemUnitClass44095055(suc);
+}
+
+pattern a1_OrGroup(a1:Attribute, addInfo){
+    find Attribute1022200926(a1, addInfo);
+}
+
+pattern aiRef_OrGroup(aiRef:AdditionalInformation, addInfo){
+    AdditionalInformation(addInfo);
+    aiRef == addInfo;
+}
+
+pattern bsu_OrGroup(bsu:SystemUnitClass, ie1, suc){
+    InternalElement(ie1);
+    SystemUnitClass(suc);
+    bsu == ie1;
+}
+or{
+    InternalElement(ie1);
+    SystemUnitClass(suc);
+    bsu == suc;
+}
+
+pattern ie1_OrGroup(ie1:InternalElement, suc, bsu, ie1, suc){
+    find InternalElement289592846(ie1, suc, bsu, ie1, suc);
+}
+
+pattern AdditionalInformation522986653(addInfo:AdditionalInformation){
+    AdditionalInformation(addInfo);
+    find n_Element_name_AttrEClass(addInfo,n);
+}
+
+pattern Attribute1022200926(a1:Attribute, addInfo){
+    Attribute(a1);
+    AdditionalInformation(addInfo);
+    neg find aiRef_OrGroup_ref(a1, addInfo);
+}
+
+pattern InternalElement289592846(ie1:InternalElement, suc, bsu, ie1, suc){
+    InternalElement(ie1);
+    InternalElement(ie1);
+    SystemUnitClass(suc);
+    find suc_OrGroup_ref(ie1, suc);
+    find bsu_OrGroup_ref(ie1, bsu, ie1, suc);
+    suc != bsu;
+}
+
+pattern SystemUnitClass44095055(suc:SystemUnitClass){
+    SystemUnitClass(suc);
+}
+
+pattern n_Element_name_AttrEClass(addInfo:AdditionalInformation, n){
+    AdditionalInformation.name(addInfo, n);
+    check(((n).endsWith("B")));
+}
+
+pattern Attribute_additionalInformation1510280185(from:Attribute, to:AdditionalInformation){
+    Attribute.additionalInformation(from, to);
+}
+
+pattern InternalElement_baseSystemUnit1901768975(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern InternalElement_systemUnitClass773245323(from:InternalElement, to:SystemUnitClass){
+    InternalElement.systemUnitClass(from, to);
+}
+
+pattern suc_OrGroup_ref(ie1, suc){
+    find suc_OrGroup(suc);
+    find InternalElement_systemUnitClass773245323(ie1,suc);
+}
+
+pattern aiRef_OrGroup_ref(a1, addInfo){
+    find aiRef_OrGroup(aiRef, addInfo);
+    find Attribute_additionalInformation1510280185(a1,aiRef);
+}
+
+pattern bsu_OrGroup_ref(ie1, bsu, ie1, suc){
+    find bsu_OrGroup(bsu, ie1, suc);
+    find InternalElement_baseSystemUnit1901768975(ie1,bsu);
+}
+
+

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<caex:CAEXFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:caex="/MQLSetup/model/DMM.ecore" changeMode="state" fileName="PPU AML" schemaVersion="3.0">
+  <superiorStandardVersion>AutomationML 2.0</superiorStandardVersion>
+  <sourceDocumentInformation originID="TODO" originName="TODO" originProjectID="TODO" originProjectTitle="TODO" originRelease="TODO" originVendor="TODO" originVendorURL="TODO" originVersion="3.0"/>
+</caex:CAEXFile>

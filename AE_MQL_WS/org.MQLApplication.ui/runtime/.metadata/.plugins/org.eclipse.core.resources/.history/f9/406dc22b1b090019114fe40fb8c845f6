@@ -1,0 +1,5 @@
+Find CAEXBasicObject{
+	changeMode c=create;
+}OR CAEXBasicObject{
+	changeMode d!;
+}

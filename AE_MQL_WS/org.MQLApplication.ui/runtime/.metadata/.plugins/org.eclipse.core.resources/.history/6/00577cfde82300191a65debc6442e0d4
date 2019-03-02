@@ -1,0 +1,54 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie){
+	find ai_OrGroup(ai,n);
+	find ie_OrGroup(ie, aiRef, ai);
+}
+
+pattern ie_OrGroup(ie,aiRef,ai){
+    find InternalElement1178281841(ie,aiRef,ai);
+}
+
+pattern ai_OrGroup(ai,n){
+    find AdditionalInformation116587249(ai,n);
+}
+
+pattern aiRef_OrGroup(aiRef,ai){
+    AdditionalInformation(ai);
+    aiRef == ai;
+}
+
+pattern AdditionalInformation116587249(ai:AdditionalInformation,n){
+    AdditionalInformation(ai);
+    find n_Element_name_AttrEClass(ai,n);
+}
+
+pattern InternalElement1178281841(ie:InternalElement,aiRef:AdditionalInformation,ai:AdditionalInformation){
+    InternalElement(ie);
+    AdditionalInformation(ai);
+    AdditionalInformation(aiRef);
+    find aiRef_OrGroup_ref(ie,aiRef,ai);
+    find count1001769814(ie, ref1001769814);
+    check(((ref1001769814)>=(1)));
+}
+
+pattern n_Element_name_AttrEClass(ai:AdditionalInformation, n){
+    AdditionalInformation.name(ai, n);
+    check(((n).equals("AutomationMLVersion B")));
+}
+
+pattern count1001769814(ie:InternalElement, result : java Integer){
+    result == count find aiRef_OrGroup_ref(ie,aiRef,ai);
+}
+
+pattern InternalElement_additionalInformation2058348472(from:InternalElement, to:AdditionalInformation){
+    InternalElement.additionalInformation(from, to);
+}
+
+pattern aiRef_OrGroup_ref(ie,aiRef,ai){
+    find aiRef_OrGroup(aiRef,ai);
+    find InternalElement_additionalInformation2058348472(ie,aiRef);
+}
+
+

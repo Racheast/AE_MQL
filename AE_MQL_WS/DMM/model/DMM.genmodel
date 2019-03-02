@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/DMM/src" modelPluginID="DMM" modelName="DMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>../../MQLSetup/model/DMM.ecore</foreignModel>
+  <genPackages prefix="Dmm" resource="XML" disposableProviderFactory="true" ecorePackage="DMM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DMM.ecore#//ChangeMode">
+      <genEnumLiterals ecoreEnumLiteral="DMM.ecore#//ChangeMode/state"/>
+      <genEnumLiterals ecoreEnumLiteral="DMM.ecore#//ChangeMode/create"/>
+      <genEnumLiterals ecoreEnumLiteral="DMM.ecore#//ChangeMode/delete"/>
+      <genEnumLiterals ecoreEnumLiteral="DMM.ecore#//ChangeMode/change"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="DMM.ecore#//AttributeDataType"/>
+    <genDataTypes ecoreDataType="DMM.ecore#//ChangeModeObject"/>
+    <genClasses ecoreClass="DMM.ecore#//AttributeFamily"/>
+    <genClasses ecoreClass="DMM.ecore#//AttributeNameMapping">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//AttributeNameMapping/roleAttributeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//AttributeNameMapping/systemUnitAttributeName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//AttributeNameMapping/roleAttribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//AttributeNameMapping/systemUnitAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Attribute/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Attribute/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//Attribute/refSemantic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//Attribute/constraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//Attribute/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Attribute/attributeDataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Attribute/refAttributeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Attribute/unit"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//AttributeLib">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//AttributeLib/attributeType"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//AttributeValueRequirement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//AttributeValueRequirement/ordinalScaledType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//AttributeValueRequirement/nominalScaledType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//AttributeValueRequirement/unknownType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//AttributeValueRequirement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//CAEXBasicObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//CAEXBasicObject/changeMode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXBasicObject/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXBasicObject/version"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXBasicObject/revision"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXBasicObject/copyright"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXBasicObject/additionalInformation"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//CAEXFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//CAEXFile/superiorStandardVersion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXFile/sourceDocumentInformation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXFile/externalReference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXFile/instanceHierarchy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXFile/interfaceClassLib"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXFile/roleClassLib"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXFile/systemUnitClassLib"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//CAEXFile/attributeTypeLib"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//CAEXFile/fileName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//CAEXFile/schemaVersion"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//CAEXObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//CAEXObject/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//CAEXObject/name"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//DocumentRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute DMM.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//DocumentRoot/cAEXFile"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//ExternalInterface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//ExternalInterface/externalInterface"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//ExternalReferenceType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//ExternalReferenceType/alias"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//ExternalReferenceType/path"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//InstanceHierarchy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//InstanceHierarchy/internalElement"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//InterfaceClassLib">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//InterfaceClassLib/interfaceClass"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//InterfaceClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//InterfaceClass/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//InterfaceClass/refBaseClassPath"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//InterfaceClass/baseClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//InterfaceClass/interfaceClass"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//InterfaceFamily"/>
+    <genClasses ecoreClass="DMM.ecore#//InterfaceIDMapping">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//InterfaceIDMapping/roleInterfaceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//InterfaceIDMapping/systemUnitInterfaceID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//InterfaceIDMapping/roleInterface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//InterfaceIDMapping/systemUnitInterface"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//InternalElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//InternalElement/roleRequirements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//InternalElement/refBaseSystemUnitPath"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//InternalElement/baseSystemUnit"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//InternalLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//InternalLink/refPartnerSideA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//InternalLink/refPartnerSideB"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//InternalLink/partnerSideA"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//InternalLink/partnerSideB"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//Mapping">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//Mapping/attributeNameMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//Mapping/interfaceIDMapping"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//NominalScaledType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//NominalScaledType/requiredValue"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//OrdinalScaledType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//OrdinalScaledType/requiredMaxValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//OrdinalScaledType/requiredValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//OrdinalScaledType/requiredMinValue"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//RefSemantic">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//RefSemantic/correspondingAttributePath"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//RoleClassLib">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//RoleClassLib/roleClass"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//RoleClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//RoleClass/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//RoleClass/externalInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//RoleClass/refBaseClassPath"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//RoleClass/baseClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//RoleClass/roleClass"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//RoleFamily"/>
+    <genClasses ecoreClass="DMM.ecore#//RoleRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//RoleRequirements/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//RoleRequirements/externalInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//RoleRequirements/mappingObject"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//RoleRequirements/roleClass"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//SourceDocumentInformation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//SourceDocumentInformation/lastWritingDateTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//SourceDocumentInformation/originID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//SourceDocumentInformation/originName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//SourceDocumentInformation/originProjectID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//SourceDocumentInformation/originProjectTitle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//SourceDocumentInformation/originRelease"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//SourceDocumentInformation/originVendor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//SourceDocumentInformation/originVendorURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//SourceDocumentInformation/originVersion"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//SupportedRoleClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//SupportedRoleClass/mappingObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//SupportedRoleClass/refRoleClassPath"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//SupportedRoleClass/roleClass"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//SystemUnitClassLib">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//SystemUnitClassLib/systemUnitClass"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//SystemUnitClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//SystemUnitClass/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//SystemUnitClass/externalInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//SystemUnitClass/internalElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//SystemUnitClass/supportedRoleClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//SystemUnitClass/internalLink"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DMM.ecore#//SystemUnitClass/baseClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//SystemUnitClass/systemUnitClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//SystemUnitClass/refBaseClassPath"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//SystemUnitFamily"/>
+    <genClasses ecoreClass="DMM.ecore#//UnknownType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//UnknownType/requirements"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//Copyright">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Copyright/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Copyright/changeMode"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//Description">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Description/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Description/changeMode"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//Revision">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Revision/revisionDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Revision/oldVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Revision/newVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Revision/authorName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Revision/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//Version">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Version/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Version/changeMode"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//AdditionalInformation"/>
+    <genClasses image="false" ecoreClass="DMM.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Element/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DMM.ecore#//Element/value"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//GenericElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//GenericElement/nestedElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DMM.ecore#//GenericElement/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute DMM.ecore#//GenericElement/elementFeatureMap"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute DMM.ecore#//GenericElement/attributeFeatureMap"/>
+    </genClasses>
+    <genClasses ecoreClass="DMM.ecore#//GenericAttribute"/>
+  </genPackages>
+</genmodel:GenModel>

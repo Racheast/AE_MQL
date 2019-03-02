@@ -1,0 +1,7 @@
+Find 
+
+LinkFile lf : LinkFile{
+	opens o;
+};
+
+File f;

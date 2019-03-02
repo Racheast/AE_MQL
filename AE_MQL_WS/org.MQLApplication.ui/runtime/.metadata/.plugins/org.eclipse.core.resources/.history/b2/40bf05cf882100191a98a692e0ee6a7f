@@ -1,0 +1,176 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a1, addInfo){
+	find a1_OrGroup(a1, a2, a4, addInfRef, addInfo, a8,n1);
+	find addInfo_OrGroup(addInfo,n);
+}
+
+pattern a8_OrGroup(a8){
+	Attribute(a8);
+}
+
+pattern addInfRef_OrGroup(addInfRef,addInfo){
+    AdditionalInformation(addInfo);
+    addInfRef == addInfo;
+}
+
+pattern a2_OrGroup(a2,a4,addInfRef,addInfo,a8){
+    find Attribute2059786940(a2,a4,addInfRef,addInfo,a8);
+}
+
+pattern a6_OrGroup(a6,addInfRef,addInfo,a8){
+    find Attribute1896533147(a6,addInfRef,addInfo,a8);
+}
+
+pattern a3_OrGroup(a3,a4,addInfRef,addInfo,a8){
+    find Attribute1987456012(a3,a4,addInfRef,addInfo,a8);
+}
+
+pattern a7_OrGroup(a7,addInfRef,addInfo,a8){
+    find Attribute1490242309(a7,addInfRef,addInfo,a8);
+}
+
+pattern addInfo_OrGroup(addInfo,n){
+    find AdditionalInformation72499110(addInfo,n);
+}
+
+pattern a4_OrGroup(a4,addInfRef,addInfo,a8){
+    find Attribute568791832(a4,addInfRef,addInfo,a8);
+}
+
+pattern a5_OrGroup(a5,addInfRef,addInfo,a8){
+    find Attribute1286541434(a5,addInfRef,addInfo,a8);
+}
+
+pattern a1_OrGroup(a1,a2,a4,addInfRef,addInfo,a8,n1){
+    find Attribute1323650672(a1,a2,a4,addInfRef,addInfo,a8,n1);
+}
+
+pattern Attribute1896533147(a6:Attribute,addInfRef:AdditionalInformation,addInfo:AdditionalInformation,a8:Attribute){
+    Attribute(a8);
+    AdditionalInformation(addInfRef);
+    Attribute(a6);
+    AdditionalInformation(addInfo);
+    neg find a7_OrGroup_ref(a6,a7,addInfRef,addInfo,a8);
+}
+
+pattern AdditionalInformation72499110(addInfo:AdditionalInformation,n){
+    AdditionalInformation(addInfo);
+    find n_Element_name_AttrEClass(addInfo,n);
+}
+
+pattern Attribute1323650672(a1:Attribute,a2:Attribute,a4:Attribute,addInfRef:AdditionalInformation,addInfo:AdditionalInformation,a8:Attribute,n1){
+    Attribute(a8);
+    AdditionalInformation(addInfRef);
+    Attribute(a2);
+    AdditionalInformation(addInfo);
+    Attribute(a4);
+    Attribute(a1);
+    find n1_CAEXObject_name_AttrEClass(a1,n1);
+    find a2_OrGroup_ref(a1,a2,a4,addInfRef,addInfo,a8);
+    a2 != n1;
+}
+
+pattern Attribute1286541434(a5:Attribute,addInfRef:AdditionalInformation,addInfo:AdditionalInformation,a8:Attribute){
+    Attribute(a8);
+    AdditionalInformation(addInfRef);
+    AdditionalInformation(addInfo);
+    Attribute(a5);
+    neg find a6_OrGroup_ref(a5,a6,addInfRef,addInfo,a8);
+}
+
+pattern Attribute1490242309(a7:Attribute,addInfRef:AdditionalInformation,addInfo:AdditionalInformation,a8:Attribute){
+    Attribute(a8);
+    AdditionalInformation(addInfRef);
+    AdditionalInformation(addInfo);
+    Attribute(a7);
+    find addInfRef_OrGroup_ref(a7,addInfRef,addInfo);
+    find a8_OrGroup_ref(a7,a8);
+    a8 != addInfRef;
+}
+
+pattern Attribute2059786940(a2:Attribute,a4:Attribute,addInfRef:AdditionalInformation,addInfo:AdditionalInformation,a8:Attribute){
+    Attribute(a8);
+    AdditionalInformation(addInfRef);
+    Attribute(a2);
+    AdditionalInformation(addInfo);
+    Attribute(a4);
+    neg find a3_OrGroup_ref(a2,a3,a4,addInfRef,addInfo,a8);
+}
+
+pattern Attribute1987456012(a3:Attribute,a4:Attribute,addInfRef:AdditionalInformation,addInfo:AdditionalInformation,a8:Attribute){
+    Attribute(a8);
+    AdditionalInformation(addInfRef);
+    AdditionalInformation(addInfo);
+    Attribute(a3);
+    Attribute(a4);
+    find a4_OrGroup_ref(a3,a4,addInfRef,addInfo,a8);
+}
+
+pattern Attribute568791832(a4:Attribute,addInfRef:AdditionalInformation,addInfo:AdditionalInformation,a8:Attribute){
+    Attribute(a8);
+    AdditionalInformation(addInfRef);
+    AdditionalInformation(addInfo);
+    Attribute(a4);
+    neg find a5_OrGroup_ref(a4,a5,addInfRef,addInfo,a8);
+}
+
+pattern n1_CAEXObject_name_AttrEClass(a1:Attribute, n1){
+    Attribute.name(a1, n1);
+}
+
+pattern n_Element_name_AttrEClass(addInfo:AdditionalInformation, n){
+    AdditionalInformation.name(addInfo, n);
+    check(((n).endsWith("B")));
+}
+
+pattern Attribute_additionalInformation1543431069(from:Attribute, to:AdditionalInformation){
+    Attribute.additionalInformation(from, to);
+}
+
+pattern Attribute_attribute536886007(from:Attribute, to:Attribute){
+    Attribute.attribute(from, to);
+}
+
+pattern a8_OrGroup_ref(a7,a8){
+    find a8_OrGroup(a8);
+    find Attribute_attribute536886007(a7,a8);
+}
+
+pattern addInfRef_OrGroup_ref(a7,addInfRef,addInfo){
+    find addInfRef_OrGroup(addInfRef,addInfo);
+    find Attribute_additionalInformation1543431069(a7,addInfRef);
+}
+
+pattern a2_OrGroup_ref(a1,a2,a4,addInfRef,addInfo,a8){
+    find a2_OrGroup(a2,a4,addInfRef,addInfo,a8);
+    find Attribute_attribute536886007(a1,a2);
+}
+
+pattern a6_OrGroup_ref(a5,a6,addInfRef,addInfo,a8){
+    find a6_OrGroup(a6,addInfRef,addInfo,a8);
+    find Attribute_attribute536886007(a5,a6);
+}
+
+pattern a3_OrGroup_ref(a2,a3,a4,addInfRef,addInfo,a8){
+    find a3_OrGroup(a3,a4,addInfRef,addInfo,a8);
+    find Attribute_attribute536886007(a2,a3);
+}
+
+pattern a7_OrGroup_ref(a6,a7,addInfRef,addInfo,a8){
+    find a7_OrGroup(a7,addInfRef,addInfo,a8);
+    find Attribute_attribute536886007(a6,a7);
+}
+
+pattern a4_OrGroup_ref(a3,a4,addInfRef,addInfo,a8){
+    find a4_OrGroup(a4,addInfRef,addInfo,a8);
+    find Attribute_attribute536886007(a3,a4);
+}
+
+pattern a5_OrGroup_ref(a4,a5,addInfRef,addInfo,a8){
+    find a5_OrGroup(a5,addInfRef,addInfo,a8);
+    find Attribute_attribute536886007+(a4,a5);
+}
+
+

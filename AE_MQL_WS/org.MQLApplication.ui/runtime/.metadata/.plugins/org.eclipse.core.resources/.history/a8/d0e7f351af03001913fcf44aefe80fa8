@@ -1,0 +1,33 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find CAEXBasicObject970651662(result);
+}
+
+pattern v_OrGroup(elem:Version){
+	Version(elem);
+}
+
+pattern CAEXBasicObject970651662(elem:CAEXBasicObject){
+    CAEXBasicObject(elem);
+    find v_OrGroup_ref(elem,v);
+}
+
+pattern InternalElement_internalElement239096855(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern Attribute_attribute730226452(from:Attribute, to:Attribute){
+    Attribute.attribute(from, to);
+}
+
+pattern CAEXBasicObject_version1211911658(from:CAEXBasicObject, to:Version){
+    CAEXBasicObject.version(from, to);
+}
+
+pattern v_OrGroup_ref(container:CAEXBasicObject, member:Version){
+    find v_OrGroup(member);
+    find CAEXBasicObject_version1211911658(container,member);
+}
+

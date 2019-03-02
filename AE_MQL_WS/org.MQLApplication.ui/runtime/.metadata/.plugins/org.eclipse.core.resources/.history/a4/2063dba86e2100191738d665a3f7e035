@@ -1,0 +1,582 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(addInfo1, i, ieTwo, sutwo, n1, ie, ieTr){
+	find i_OrGroup(i, ieTr, ieTwo, sutwo, bsu, bc2, ie, attr2, ax, addInfo1, addInfoAXX, bc,n1,nfamfam2);
+	find addInfo1_OrGroup(addInfo1,naddInfo);
+	find ie_OrGroup(ie, iet, ies, bsu_iea);
+}
+
+pattern bsu_OrGroup(bsu,ieTr,i,ieTwo,sutwo){
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bsu == ieTr;
+}
+or{
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bsu == i;
+}
+or{
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bsu == ieTwo;
+}
+or{
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bsu == sutwo;
+}
+
+pattern ieTwo_OrGroup(ieTwo,sutwo,bsu,ieTr,i,bc2,ie,nfamfam2){
+    find InternalElement1619460007(ieTwo,sutwo,bsu,ieTr,i,bc2,ie,nfamfam2);
+}
+
+pattern suc_OrGroup(suc,attr2,ax,addInfo1,addInfoAXX,bc,i,ie,ieTr,ieTwo,sutwo){
+    find SystemUnitFamily614660453(suc,attr2,ax,addInfo1,addInfoAXX,bc,i,ie,ieTr,ieTwo,sutwo);
+}
+
+pattern attr2_OrGroup(attr2,ax,addInfo1,addInfoAXX){
+    find Attribute2117725222(attr2,ax,addInfo1,addInfoAXX);
+}
+
+pattern i_OrGroup(i,ieTr,ieTwo,sutwo,bsu,bc2,ie,attr2,ax,addInfo1,addInfoAXX,bc,n1,nfamfam2){
+    find InternalElement954021977(i,ieTr,ieTwo,sutwo,bsu,bc2,ie,attr2,ax,addInfo1,addInfoAXX,bc,n1,nfamfam2);
+}
+
+pattern bc2_OrGroup(bc2,ieTr,sutwo,ie,i){
+    InternalElement(ie);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc2 == ieTr;
+}
+or{
+    InternalElement(ie);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc2 == sutwo;
+}
+or{
+    InternalElement(ie);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc2 == ie;
+}
+or{
+    InternalElement(ie);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc2 == i;
+}
+
+pattern ies_OrGroup(ies,bsu_iea,ie){
+    find InternalElement491417854(ies,bsu_iea,ie);
+}
+
+pattern ieTr_OrGroup(ieTr,ieTwo,sutwo,bsu,i,bc2,ie,nfamfam2){
+    find InternalElement1233560878(ieTr,ieTwo,sutwo,bsu,i,bc2,ie,nfamfam2);
+}
+
+pattern attrneg_OrGroup(attrneg,ax,addInfo1,addInfoAXX){
+    find Attribute484367551(attrneg,ax,addInfo1,addInfoAXX);
+}
+
+pattern bc_OrGroup(bc,i,ie,ieTr,ieTwo,sutwo){
+    InternalElement(ie);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc == i;
+}
+or{
+    InternalElement(ie);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc == i;
+}
+or{
+    InternalElement(ie);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc == i;
+}
+or{
+    InternalElement(ie);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc == ie;
+}
+or{
+    InternalElement(ie);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc == ie;
+}
+or{
+    InternalElement(ie);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc == ieTr;
+}
+or{
+    InternalElement(ie);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc == ieTwo;
+}
+or{
+    InternalElement(ie);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    bc == sutwo;
+}
+
+pattern iea_OrGroup(iea,bsu_iea,ie){
+    find InternalElement1464431286(iea,bsu_iea,ie);
+}
+
+pattern addInfo1_OrGroup(addInfo1,naddInfo){
+    find AdditionalInformation1805038203(addInfo1,naddInfo);
+}
+
+pattern ax_OrGroup(ax,addInfo1,addInfoAXX){
+    find AttributeFamily249242497(ax,addInfo1,addInfoAXX);
+}
+or{
+    ax == addInfo1;
+    ax == addInfoAXX;
+    find AttributeFamily2110477354(ax);
+}
+
+pattern ie_OrGroup(ie,iet,ies,bsu_iea){
+    find InternalElement1226051003(ie,iet,ies,bsu_iea);
+}
+
+pattern sutwo_OrGroup(sutwo,bsu,ieTr,i,ieTwo,bc2,ie,nfamfam2){
+    sutwo == bc2;
+    sutwo == ie;
+    sutwo == nfamfam2;
+    find InternalElement644434218(sutwo,bsu,ieTr,i,ieTwo);
+}
+or{
+    sutwo == bsu;
+    sutwo == ieTwo;
+    find SystemUnitFamily103265978(sutwo,bc2,ieTr,ie,i,nfamfam2);
+}
+
+pattern addInfoAXX_OrGroup(addInfoAXX){
+	AdditionalInformation(addInfoAXX);
+}
+
+pattern ien_OrGroup(ien,iet,ies,bsu_iea,ie){
+    find InternalElement360603518(ien,iet,ies,bsu_iea,ie);
+}
+
+pattern bsu_iea_OrGroup(bsu_iea,ie){
+    InternalElement(ie);
+    bsu_iea == ie;
+}
+
+pattern attr_OrGroup(attr,attr2,ax,addInfo1,addInfoAXX){
+    find AttributeFamily489893407(attr,attr2,ax,addInfo1,addInfoAXX);
+}
+
+pattern addInfoAX_OrGroup(addInfoAX,addInfo1){
+    AdditionalInformation(addInfo1);
+    addInfoAX == addInfo1;
+}
+
+pattern iet_OrGroup(iet,ies,bsu_iea,ie){
+    find InternalElement257686296(iet,ies,bsu_iea,ie);
+}
+
+pattern InternalElement360603518(ien:InternalElement,iet:InternalElement,ies:InternalElement,bsu_iea:SystemUnitClass,ie:InternalElement){
+    InternalElement(ie);
+    InternalElement(ies);
+    InternalElement(ien);
+    SystemUnitClass(bsu_iea);
+    InternalElement(iet);
+    find iet_OrGroup_ref(ien,iet,ies,bsu_iea,ie);
+}
+
+pattern InternalElement1619460007(ieTwo:InternalElement,sutwo:SystemUnitClass,bsu:SystemUnitClass,ieTr:InternalElement,i:InternalElement,bc2:SystemUnitClass,ie:InternalElement,nfamfam2){
+    SystemUnitClass(bsu);
+    InternalElement(ie);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    SystemUnitClass(bc2);
+    InternalElement(ieTr);
+    find sutwo_OrGroup_ref(ieTwo,sutwo,bsu,ieTr,i,bc2,ie,nfamfam2);
+}
+
+pattern Attribute484367551(attrneg:Attribute,ax:Attribute,addInfo1:AdditionalInformation,addInfoAXX:AdditionalInformation){
+    AdditionalInformation(addInfo1);
+    Attribute(ax);
+    AdditionalInformation(addInfoAXX);
+    Attribute(attrneg);
+    find ax_OrGroup_ref(attrneg,ax,addInfo1,addInfoAXX);
+    find count758602718(attrneg, ref758602718);
+    find count788812324(attrneg, ref788812324);
+    check(((ref758602718)>(ref788812324)));
+}
+
+pattern AttributeFamily2110477354(ax:AttributeFamily){
+    Attribute(ax);
+    find nfam_CAEXObject_name_AttrEClass(ax,nfam);
+    find count1843523282(ax, ref1843523282);
+    check(((((((ref1843523282).toString())).length()))>=(3)));
+}
+
+pattern InternalElement644434218(sutwo:InternalElement,bsu:SystemUnitClass,ieTr:InternalElement,i:InternalElement,ieTwo:InternalElement){
+    SystemUnitClass(bsu);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    InternalElement(ieTr);
+    find bsu_OrGroup_ref(sutwo,bsu,ieTr,i,ieTwo);
+}
+
+pattern InternalElement257686296(iet:InternalElement,ies:InternalElement,bsu_iea:SystemUnitClass,ie:InternalElement){
+    InternalElement(ie);
+    InternalElement(ies);
+    SystemUnitClass(bsu_iea);
+    InternalElement(iet);
+    find ies_OrGroup_ref(iet,ies,bsu_iea,ie);
+    find count1748619298(iet, ref1748619298);
+    check(((ref1748619298)>=(1)));
+}
+
+pattern InternalElement954021977(i:InternalElement,ieTr:InternalElement,ieTwo:InternalElement,sutwo:SystemUnitClass,bsu:SystemUnitClass,bc2:SystemUnitClass,ie:InternalElement,attr2:Attribute,ax:Attribute,addInfo1:AdditionalInformation,addInfoAXX:AdditionalInformation,bc:SystemUnitClass,n1,nfamfam2){
+    SystemUnitClass(bsu);
+    InternalElement(ieTwo);
+    Attribute(attr2);
+    InternalElement(i);
+    SystemUnitClass(bc2);
+    InternalElement(ieTr);
+    SystemUnitClass(bc);
+    AdditionalInformation(addInfo1);
+    InternalElement(ie);
+    Attribute(ax);
+    SystemUnitClass(sutwo);
+    AdditionalInformation(addInfoAXX);
+    find n1_CAEXObject_name_AttrEClass(i,n1);
+    find ieTr_OrGroup_ref(i,ieTr,ieTwo,sutwo,bsu,bc2,ie,nfamfam2);
+    neg find suc_OrGroup_ref(i,suc,attr2,ax,addInfo1,addInfoAXX,bc,ie,ieTr,ieTwo,sutwo);
+    ieTr != n1;
+}
+
+pattern SystemUnitFamily614660453(suc:SystemUnitFamily,attr2:Attribute,ax:Attribute,addInfo1:AdditionalInformation,addInfoAXX:AdditionalInformation,bc:SystemUnitClass,i:InternalElement,ie:InternalElement,ieTr:InternalElement,ieTwo:InternalElement,sutwo:SystemUnitClass){
+    AdditionalInformation(addInfo1);
+    InternalElement(ie);
+    Attribute(ax);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    SystemUnitClass(suc);
+    Attribute(attr2);
+    InternalElement(i);
+    InternalElement(ieTr);
+    AdditionalInformation(addInfoAXX);
+    SystemUnitClass(bc);
+    find n2_CAEXObject_name_AttrEClass(suc,n2);
+    neg find attr_OrGroup_ref(suc,attr,attr2,ax,addInfo1,addInfoAXX);
+    find bc_OrGroup_ref(suc,bc,i,ie,ieTr,ieTwo,sutwo);
+    n2 != bc;
+}
+
+pattern InternalElement1233560878(ieTr:InternalElement,ieTwo:InternalElement,sutwo:SystemUnitClass,bsu:SystemUnitClass,i:InternalElement,bc2:SystemUnitClass,ie:InternalElement,nfamfam2){
+    SystemUnitClass(bsu);
+    InternalElement(ie);
+    InternalElement(ieTwo);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    SystemUnitClass(bc2);
+    InternalElement(ieTr);
+    find ieTwo_OrGroup_ref(ieTr,ieTwo,sutwo,bsu,i,bc2,ie,nfamfam2);
+}
+
+pattern AttributeFamily489893407(attr:AttributeFamily,attr2:Attribute,ax:Attribute,addInfo1:AdditionalInformation,addInfoAXX:AdditionalInformation){
+    AdditionalInformation(addInfo1);
+    Attribute(ax);
+    Attribute(attr2);
+    AdditionalInformation(addInfoAXX);
+    Attribute(attr);
+    neg find attrDatType_Attribute_attributeDataType_AttrEClass(attr,attrDatType);
+    find attr2_OrGroup_ref(attr,attr2,ax,addInfo1,addInfoAXX);
+}
+
+pattern AdditionalInformation1805038203(addInfo1:AdditionalInformation,naddInfo){
+    AdditionalInformation(addInfo1);
+    find naddInfo_Element_name_AttrEClass(addInfo1,naddInfo);
+}
+
+pattern InternalElement1226051003(ie:InternalElement,iet:InternalElement,ies:InternalElement,bsu_iea:SystemUnitClass){
+    InternalElement(ie);
+    InternalElement(ies);
+    SystemUnitClass(bsu_iea);
+    InternalElement(iet);
+    neg find ien_OrGroup_ref(ie,ien,iet,ies,bsu_iea);
+}
+
+pattern InternalElement491417854(ies:InternalElement,bsu_iea:SystemUnitClass,ie:InternalElement){
+    InternalElement(ie);
+    InternalElement(ies);
+    SystemUnitClass(bsu_iea);
+    neg find iea_OrGroup_ref(ies,iea,bsu_iea,ie);
+}
+
+pattern AttributeFamily249242497(ax:AttributeFamily,addInfo1:AdditionalInformation,addInfoAXX:AdditionalInformation){
+    AdditionalInformation(addInfo1);
+    Attribute(ax);
+    AdditionalInformation(addInfoAXX);
+    neg find addInfoAX_OrGroup_ref(ax,addInfoAX,addInfo1);
+    find addInfoAXX_OrGroup_ref(ax,addInfoAXX);
+    find count1738344098(ax, ref1738344098);
+    check(((ref1738344098)>(0)));
+}
+
+pattern SystemUnitFamily103265978(sutwo:SystemUnitFamily,bc2:SystemUnitClass,ieTr:InternalElement,ie:InternalElement,i:InternalElement,nfamfam2){
+    InternalElement(ie);
+    SystemUnitClass(sutwo);
+    InternalElement(i);
+    SystemUnitClass(bc2);
+    InternalElement(ieTr);
+    neg find nfamfam_CAEXObject_name_AttrEClass(sutwo,nfamfam);
+    find nfamfam2_CAEXObject_name_AttrEClass(sutwo,nfamfam2);
+    find bc2_OrGroup_ref(sutwo,bc2,ieTr,ie,i);
+    bc2 != nfamfam2;
+    find count1793826637(sutwo, ref1793826637);
+    find count2096886709(sutwo, ref2096886709);
+    check(((ref1793826637)>=(ref2096886709)));
+}
+
+pattern Attribute2117725222(attr2:Attribute,ax:Attribute,addInfo1:AdditionalInformation,addInfoAXX:AdditionalInformation){
+    AdditionalInformation(addInfo1);
+    Attribute(ax);
+    Attribute(attr2);
+    AdditionalInformation(addInfoAXX);
+    neg find attrneg_OrGroup_ref(attr2,attrneg,ax,addInfo1,addInfoAXX);
+}
+
+pattern InternalElement1464431286(iea:InternalElement,bsu_iea:SystemUnitClass,ie:InternalElement){
+    InternalElement(ie);
+    SystemUnitClass(bsu_iea);
+    InternalElement(iea);
+    find bsu_iea_OrGroup_ref(iea,bsu_iea,ie);
+    find count432678177(iea, ref432678177);
+    check(((ref432678177)>(29)));
+}
+
+pattern n1_CAEXObject_name_AttrEClass(i:InternalElement, n1){
+    InternalElement.name(i, n1);
+}
+
+pattern nfamfam_CAEXObject_name_AttrEClass(sutwo:SystemUnitFamily, nfamfam){
+    SystemUnitFamily.name(sutwo, nfamfam);
+}
+
+pattern nfamfam2_CAEXObject_name_AttrEClass(sutwo:SystemUnitFamily, nfamfam2){
+    SystemUnitFamily.name(sutwo, nfamfam2);
+}
+
+pattern n2_CAEXObject_name_AttrEClass(suc:SystemUnitFamily, n2){
+    SystemUnitFamily.name(suc, n2);
+    check(!((n2).contains((((((("BA").toString())).length())).toString()))));
+}
+
+pattern nfam_CAEXObject_name_AttrEClass(ax:AttributeFamily, nfam){
+    AttributeFamily.name(ax, nfam);
+    check(((nfam).equals("Lalala")));
+}
+
+pattern attrDatType_Attribute_attributeDataType_AttrEClass(attr:AttributeFamily, attrDatType){
+    AttributeFamily.attributeDataType(attr, attrDatType);
+}
+
+pattern naddInfo_Element_name_AttrEClass(addInfo1:AdditionalInformation, naddInfo){
+    AdditionalInformation.name(addInfo1, naddInfo);
+    check(((((naddInfo).length()))>(2)));
+}
+
+pattern count788812324(attrneg:Attribute, result : java Integer){
+    result == count find ax_OrGroup_ref(attrneg,ax,addInfo1,addInfoAXX);
+}
+
+pattern count1843523282(ax:AttributeFamily, result : java Integer){
+    result == count find nfam_CAEXObject_name_AttrEClass(ax, nfam);
+}
+
+pattern count1793826637(sutwo:SystemUnitFamily, result : java Integer){
+    result == count find bc2_OrGroup_ref(sutwo,bc2,ieTr,ie,i);
+}
+
+pattern count758602718(attrneg:Attribute, result : java Integer){
+    result == count find ax_OrGroup_ref(attrneg,ax,addInfo1,addInfoAXX);
+}
+
+pattern count1748619298(iet:InternalElement, result : java Integer){
+    result == count find ies_OrGroup_ref(iet,ies,bsu_iea,ie);
+}
+
+pattern count432678177(iea:InternalElement, result : java Integer){
+    result == count find bsu_iea_OrGroup_ref(iea,bsu_iea,ie);
+}
+
+pattern count2096886709(sutwo:SystemUnitFamily, result : java Integer){
+    result == count find nfamfam2_CAEXObject_name_AttrEClass(sutwo, nfamfam2);
+}
+
+pattern count1738344098(ax:AttributeFamily, result : java Integer){
+    result == count find addInfoAXX_OrGroup_ref(ax,addInfoAXX);
+}
+
+pattern InternalElement_baseSystemUnit1852521919(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern InternalElement_systemUnitClass1372465609(from:InternalElement, to:SystemUnitClass){
+    InternalElement.systemUnitClass(from, to);
+}
+
+pattern InternalElement_internalElement1009850015(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern SystemUnitFamily_baseClass1711234567(from:SystemUnitFamily, to:SystemUnitClass){
+    SystemUnitFamily.baseClass(from, to);
+}
+
+pattern SystemUnitFamily_attribute1511554260(from:SystemUnitFamily, to:Attribute){
+    SystemUnitFamily.attribute(from, to);
+}
+
+pattern AttributeFamily_attribute626955849(from:AttributeFamily, to:Attribute){
+    AttributeFamily.attribute(from, to);
+}
+
+pattern AttributeFamily_additionalInformation967740021(from:AttributeFamily, to:AdditionalInformation){
+    AttributeFamily.additionalInformation(from, to);
+}
+
+pattern Attribute_attribute626955849(from:Attribute, to:Attribute){
+    Attribute.attribute(from, to);
+}
+
+pattern bsu_OrGroup_ref(sutwo,bsu,ieTr,i,ieTwo){
+    find bsu_OrGroup(bsu,ieTr,i,ieTwo,sutwo);
+    find InternalElement_baseSystemUnit1852521919(sutwo,bsu);
+}
+
+pattern ieTwo_OrGroup_ref(ieTr,ieTwo,sutwo,bsu,i,bc2,ie,nfamfam2){
+    find ieTwo_OrGroup(ieTwo,sutwo,bsu,ieTr,i,bc2,ie,nfamfam2);
+    find InternalElement_internalElement1009850015(ieTr,ieTwo);
+}
+
+pattern suc_OrGroup_ref(i,suc,attr2,ax,addInfo1,addInfoAXX,bc,ie,ieTr,ieTwo,sutwo){
+    find suc_OrGroup(suc,attr2,ax,addInfo1,addInfoAXX,bc,i,ie,ieTr,ieTwo,sutwo);
+    find InternalElement_systemUnitClass1372465609(i,suc);
+}
+
+pattern attr2_OrGroup_ref(attr,attr2,ax,addInfo1,addInfoAXX){
+    find attr2_OrGroup(attr2,ax,addInfo1,addInfoAXX);
+    find AttributeFamily_attribute626955849(attr,attr2);
+}
+
+pattern bc2_OrGroup_ref(sutwo,bc2,ieTr,ie,i){
+    find bc2_OrGroup(bc2,ieTr,sutwo,ie,i);
+    find SystemUnitFamily_baseClass1711234567(sutwo,bc2);
+}
+
+pattern ies_OrGroup_ref(iet,ies,bsu_iea,ie){
+    find ies_OrGroup(ies,bsu_iea,ie);
+    find InternalElement_internalElement1009850015(iet,ies);
+}
+
+pattern ieTr_OrGroup_ref(i,ieTr,ieTwo,sutwo,bsu,bc2,ie,nfamfam2){
+    find ieTr_OrGroup(ieTr,ieTwo,sutwo,bsu,i,bc2,ie,nfamfam2);
+    find InternalElement_internalElement1009850015+(i,ieTr);
+}
+
+pattern attrneg_OrGroup_ref(attr2,attrneg,ax,addInfo1,addInfoAXX){
+    find attrneg_OrGroup(attrneg,ax,addInfo1,addInfoAXX);
+    find Attribute_attribute626955849+(attr2,attrneg);
+}
+
+pattern bc_OrGroup_ref(suc,bc,i,ie,ieTr,ieTwo,sutwo){
+    find bc_OrGroup(bc,i,ie,ieTr,ieTwo,sutwo);
+    find SystemUnitFamily_baseClass1711234567(suc,bc);
+}
+
+pattern iea_OrGroup_ref(ies,iea,bsu_iea,ie){
+    find iea_OrGroup(iea,bsu_iea,ie);
+    find InternalElement_internalElement1009850015+(ies,iea);
+}
+
+pattern ax_OrGroup_ref(attrneg,ax,addInfo1,addInfoAXX){
+    find ax_OrGroup(ax,addInfo1,addInfoAXX);
+    find Attribute_attribute626955849(attrneg,ax);
+}
+
+pattern sutwo_OrGroup_ref(ieTwo,sutwo,bsu,ieTr,i,bc2,ie,nfamfam2){
+    find sutwo_OrGroup(sutwo,bsu,ieTr,i,ieTwo,bc2,ie,nfamfam2);
+    find InternalElement_systemUnitClass1372465609+(ieTwo,sutwo);
+}
+
+pattern addInfoAXX_OrGroup_ref(ax,addInfoAXX){
+    find addInfoAXX_OrGroup(addInfoAXX);
+    find AttributeFamily_additionalInformation967740021(ax,addInfoAXX);
+}
+
+pattern ien_OrGroup_ref(ie,ien,iet,ies,bsu_iea){
+    find ien_OrGroup(ien,iet,ies,bsu_iea,ie);
+    find InternalElement_internalElement1009850015(ie,ien);
+}
+
+pattern bsu_iea_OrGroup_ref(iea,bsu_iea,ie){
+    find bsu_iea_OrGroup(bsu_iea,ie);
+    find InternalElement_baseSystemUnit1852521919(iea,bsu_iea);
+}
+
+pattern attr_OrGroup_ref(suc,attr,attr2,ax,addInfo1,addInfoAXX){
+    find attr_OrGroup(attr,attr2,ax,addInfo1,addInfoAXX);
+    find SystemUnitFamily_attribute1511554260(suc,attr);
+}
+
+pattern addInfoAX_OrGroup_ref(ax,addInfoAX,addInfo1){
+    find addInfoAX_OrGroup(addInfoAX,addInfo1);
+    find AttributeFamily_additionalInformation967740021(ax,addInfoAX);
+}
+
+pattern iet_OrGroup_ref(ien,iet,ies,bsu_iea,ie){
+    find iet_OrGroup(iet,ies,bsu_iea,ie);
+    find InternalElement_internalElement1009850015+(ien,iet);
+}
+
+

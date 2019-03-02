@@ -1,0 +1,51 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement1158426797(result);
+}
+
+pattern i_OrGroup(elem:InternalElement){
+	InternalElement(elem);
+}
+
+pattern j_OrGroup(elem:InternalElement){
+    find InternalElement2065616144(elem);
+}
+
+pattern InternalElement1158426797(elem:InternalElement){
+    InternalElement(elem);
+    find i_OrGroup_ref(elem,i);
+    neg find j_OrGroup_ref(elem,j);
+    find count2082641351(elem, ref2082641351);
+    check(((ref2082641351)>=(4)));
+}
+
+pattern InternalElement2065616144(elem:InternalElement){
+    InternalElement(elem);
+    find n_CAEXObject_name_AttrEClass(elem,n);
+}
+
+pattern n_CAEXObject_name_AttrEClass(elem:InternalElement,n){
+	InternalElement.name(elem,n);
+	check(((n).equals("TEST_IE_X")));
+}
+
+pattern count2082641351(elem:InternalElement, result : java Integer){
+    result == count find i_OrGroup_ref(elem, i);
+}
+
+pattern InternalElement_internalElement1883684513(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern i_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find i_OrGroup(member);
+    find InternalElement_internalElement1883684513+(container,member);
+}
+
+pattern j_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find j_OrGroup(member);
+    find InternalElement_internalElement1883684513+(container,member);
+}
+

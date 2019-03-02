@@ -1,0 +1,104 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(f){
+	find lf_OrGroup(lf, o);
+	find f_OrGroup(f);
+	find f2_OrGroup(f2);
+	find myFolder_OrGroup(myFolder, c, c2);
+}
+
+pattern o_OrGroup(o){
+	File(o);
+}
+
+pattern lf_OrGroup(lf,o){
+    find LinkFile2129911177(lf,o);
+}
+or{
+    lf == o;
+    find LinkFile1167201695(lf);
+}
+
+pattern f2_OrGroup(f2){
+    find File1888531775(f2);
+}
+or{
+    find ImageFile637237343(f2);
+}
+
+pattern c2_OrGroup(c2){
+    find ImageFile350426478(c2);
+}
+
+pattern myFolder_OrGroup(myFolder,c,c2){
+    find Folder1759554160(myFolder,c,c2);
+}
+
+pattern f_OrGroup(f){
+	File(f);
+}
+
+pattern c_OrGroup(c,c2){
+    find Folder988441232(c,c2);
+}
+
+pattern Folder1759554160(myFolder:Folder,c:NamedObject,c2:NamedObject){
+    NamedObject(c2);
+    Folder(myFolder);
+    NamedObject(c);
+    find c_OrGroup_ref(myFolder,c,c2);
+}
+
+pattern ImageFile637237343(f2:ImageFile){
+    File(f2);
+}
+
+pattern LinkFile2129911177(lf:LinkFile,o:File){
+    File(o);
+    LinkFile(lf);
+    find o_OrGroup_ref(lf,o);
+}
+
+pattern Folder988441232(c:Folder,c2:NamedObject){
+    NamedObject(c2);
+    NamedObject(c);
+    find c2_OrGroup_ref(c,c2);
+}
+
+pattern LinkFile1167201695(lf:LinkFile){
+    LinkFile(lf);
+}
+
+pattern ImageFile350426478(c2:ImageFile){
+    NamedObject(c2);
+}
+
+pattern File1888531775(f2:File){
+    File(f2);
+}
+
+pattern Folder_contains1198581002(from:Folder, to:NamedObject){
+    Folder.contains(from, to);
+}
+
+pattern LinkFile_opens446008618(from:LinkFile, to:File){
+    LinkFile.opens(from, to);
+}
+
+pattern o_OrGroup_ref(lf,o){
+    find o_OrGroup(o);
+    find LinkFile_opens446008618(lf,o);
+}
+
+pattern c2_OrGroup_ref(c,c2){
+    find c2_OrGroup(c2);
+    find Folder_contains1198581002(c,c2);
+}
+
+pattern c_OrGroup_ref(myFolder,c,c2){
+    find c_OrGroup(c,c2);
+    find Folder_contains1198581002(myFolder,c);
+}
+
+

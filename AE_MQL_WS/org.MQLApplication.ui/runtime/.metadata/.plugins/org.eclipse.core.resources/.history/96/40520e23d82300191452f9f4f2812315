@@ -1,0 +1,8 @@
+Find
+
+Strudent s : Strudent{
+	name n : self.startsWith("Larry Lazy");
+	attends a;
+};
+
+Select a; 

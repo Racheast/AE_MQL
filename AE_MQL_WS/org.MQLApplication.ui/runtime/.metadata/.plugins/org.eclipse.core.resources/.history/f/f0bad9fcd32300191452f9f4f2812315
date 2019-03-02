@@ -1,0 +1,15 @@
+Find
+
+Course c1;
+ 
+Course c2 : Course{
+	name n2: self.startsWith("Advanced Ana");
+}; 
+ 
+Strudent s : Strudent{
+	attends! a1:c1;
+	attends! a2:c2; 
+};  
+
+
+Select s;  

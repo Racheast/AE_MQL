@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.m2m.atl.emftvm"
+      label="%featureName"
+      version="4.0.0.v201806040742"
+      provider-name="%providerName"
+      plugin="org.eclipse.m2m.atl.emftvm">
+
+   <description>
+      ATL EMFTVM
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%ModelingUpdateSiteName" url="http://www.eclipse.org/modeling/updates/"/>
+      <discovery label="%ModelingUpdateSiteName" url="http://www.eclipse.org/modeling/updates/"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore" version="2.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore.xmi" version="2.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2m.atl.common" version="3.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.emf.validation" version="1.4.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.ant" version="1.7.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ant.core" version="3.2.101" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.resources" version="3.5.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2m.atl.engine" version="3.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2m.atl.adt" version="3.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2m.atl.dsls" version="3.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.emf.ecore.edit"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.debug.core" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.debug.ui" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2m.atl.core.ui" version="3.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface.text" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.console" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2m.atl.adt.ui" version="3.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2m.atl.debug.core" version="3.1.0" match="greaterOrEqual"/>
+      <import plugin="org.objectweb.asm" version="5.0.1" match="compatible"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm"
+         download-size="788"
+         install-size="1918"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.source"
+         download-size="437"
+         install-size="2343"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.ant"
+         download-size="34"
+         install-size="47"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.ant.source"
+         download-size="26"
+         install-size="54"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.compiler"
+         download-size="107"
+         install-size="498"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.compiler.source"
+         download-size="36"
+         install-size="155"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.edit"
+         download-size="201"
+         install-size="384"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.edit.source"
+         download-size="126"
+         install-size="418"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.editor"
+         download-size="73"
+         install-size="144"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.editor.source"
+         download-size="27"
+         install-size="100"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.launcher"
+         download-size="98"
+         install-size="198"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.launcher.source"
+         download-size="38"
+         install-size="126"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.trace"
+         download-size="60"
+         install-size="174"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.trace.source"
+         download-size="49"
+         install-size="224"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.trace.edit"
+         download-size="36"
+         install-size="66"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.trace.edit.source"
+         download-size="21"
+         install-size="62"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.trace.editor"
+         download-size="73"
+         install-size="144"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.emftvm.trace.editor.source"
+         download-size="25"
+         install-size="95"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+</feature>

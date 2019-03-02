@@ -1,0 +1,70 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(c1){
+	find c1_OrGroup(c1, m,n);
+	find s_OrGroup(s, a, c1);
+}
+
+pattern c1_OrGroup(c1,m,n){
+    find Course335884555(c1,m,n);
+}
+
+pattern s_OrGroup(s,a,c1){
+    find Strudent1571255671(s,a,c1);
+}
+
+pattern a_OrGroup(a,c1){
+    Course(c1);
+    a == c1;
+}
+
+pattern m_OrGroup(m){
+	Course(m);
+}
+
+pattern Strudent1571255671(s:Strudent,a:Course,c1:Course){
+    Course(c1);
+    Strudent(s);
+    Course(a);
+    find a_OrGroup_ref(s,a,c1);
+    find count1702315677(s, ref1702315677);
+    check(((ref1702315677)>=(2)));
+}
+
+pattern Course335884555(c1:Course,m:Course,n){
+    Course(c1);
+    Course(m);
+    find n_Course_name_AttrEClass(c1,n);
+    find m_OrGroup_ref(c1,m);
+    n != m;
+}
+
+pattern n_Course_name_AttrEClass(c1:Course, n){
+    Course.name(c1, n);
+    check(((n).startsWith("Mathe")));
+}
+
+pattern count1702315677(s:Strudent, result : java Integer){
+    result == count find a_OrGroup_ref(s,a,c1);
+}
+
+pattern Course_mandatoryFor2000254253(from:Course, to:Course){
+    Course.mandatoryFor(from, to);
+}
+
+pattern Strudent_attends1333464558(from:Strudent, to:Course){
+    Strudent.attends(from, to);
+}
+
+pattern a_OrGroup_ref(s,a,c1){
+    find a_OrGroup(a,c1);
+    find Strudent_attends1333464558(s,a);
+}
+
+pattern m_OrGroup_ref(c1,m){
+    find m_OrGroup(m);
+    find Course_mandatoryFor2000254253(c1,m);
+}
+
+

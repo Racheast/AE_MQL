@@ -1,0 +1,39 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie1){
+	find ie1_OrGroup(ie1);
+}
+
+pattern ie1_OrGroup(elem:InternalElement){
+    find InternalElement1436234327(elem);
+}
+
+pattern InternalElement1436234327(elem:InternalElement){
+    InternalElement(elem);
+    find id1_CAEXObject_iD_AttrEClass(elem,id1);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+    id1 != n1;
+    find count2119586580(elem, ref2119586580);
+    check(((ref2119586580)>=(1)));
+}
+
+pattern id1_CAEXObject_iD_AttrEClass(elem:InternalElement,id1){
+	InternalElement.iD(elem,id1);
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	find count685024929(elem, ref685024929);
+	InternalElement.name(elem,n1);
+	check(((((n1).length()))>=(ref685024929)));
+}
+
+pattern count2119586580(elem:InternalElement, result : java Integer){
+    result == count find n1_CAEXObject_name_AttrEClass(elem, n1);
+}
+
+pattern count685024929(elem:InternalElement, result : java Integer){
+    result == count find id1_CAEXObject_iD_AttrEClass(elem, id1);
+}
+
+

@@ -1,0 +1,8 @@
+Find
+
+Student s:Student{
+	attends a;
+	eval: count(a).greaterEquals(3); 
+};
+
+Select s;

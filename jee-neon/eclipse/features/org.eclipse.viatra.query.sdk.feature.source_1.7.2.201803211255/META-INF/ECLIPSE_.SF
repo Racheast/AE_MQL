@@ -1,0 +1,29 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: ly57JIkvmVB+NF89cJrBf8tgDP0bj
+ B9fGpqD69Sn0Ok=
+SHA-256-Digest-Manifest: idux3xNAhRg2dThyV9ahSzp+DdAQF0cvpy1OIKUsg+c=
+Created-By: 1.8.0_162 (Oracle Corporation)
+
+Name: build.properties
+SHA-256-Digest: HWMnm5CtmkUHGRzYXobUrP9+eRjGz7On8cW/XWwM7CM=
+
+Name: epl-v10.html
+SHA-256-Digest: 8GSw4aNBim+4CHFc1TYSYQy3Ei4T2BVP57HxmJUvTBs=
+
+Name: feature.xml
+SHA-256-Digest: Et1bCdrXvy3hurkY79c2BVPz0i1GsxAqJe2oMBINEuE=
+
+Name: META-INF/maven/org.eclipse.viatra/org.eclipse.viatra.query.sdk.f
+ eature/pom.xml
+SHA-256-Digest: nfVPx5QAraK2VDHKF4ECrSe/2easVKNr8Df2ikiM2ys=
+
+Name: META-INF/maven/org.eclipse.viatra/org.eclipse.viatra.query.sdk.f
+ eature/pom.properties
+SHA-256-Digest: KvLczKV/9VopkmTVgPF1QUoIX2rDsph0H7nieptykFI=
+
+Name: feature.properties
+SHA-256-Digest: jsvWlApGMOtEtspCs2LbEvnhe76dMJ9nArKC+5TAYUY=
+
+Name: license.html
+SHA-256-Digest: gb5ZzrbOyFArzDLUIG4huZV/GHHBYb0EtixuMKXnhqs=
+

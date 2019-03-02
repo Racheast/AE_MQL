@@ -1,0 +1,13 @@
+Find 
+
+InternalElement i1 : InternalElement{
+	internalElement ie2 : InternalElement{
+		internalElement+ ie3 : InternalElement{
+			baseSystemUnit bsu_ie3 : ie2 OR ie3 OR i1 OR iex;
+		} OR InternalElement{
+			baseClass bc_ie3 : i1;
+			changeMode cm : change; 
+			internalElement iex : InternalElement;
+		};
+	};
+};

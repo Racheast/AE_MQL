@@ -1,0 +1,35 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement1888724585(result);
+}
+
+pattern ie1_OrGroup(elem:InternalElement){
+    find InternalElement1464903689(elem);
+}
+
+pattern InternalElement1464903689(elem:InternalElement){
+    InternalElement(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+}
+
+pattern InternalElement1888724585(elem:InternalElement){
+    InternalElement(elem);
+    find ie1_OrGroup_ref(elem,ie1);
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	InternalElement.name(elem,n1);
+	check(((n1).equals("R1_Stack")));
+}
+
+pattern InternalElement_internalElement139330608(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern ie1_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find ie1_OrGroup(member);
+    find InternalElement_internalElement139330608(container,member);
+}
+

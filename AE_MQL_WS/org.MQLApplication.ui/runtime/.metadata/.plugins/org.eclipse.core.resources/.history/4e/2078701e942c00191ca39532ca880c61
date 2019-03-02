@@ -1,0 +1,10 @@
+Find
+Course c1{
+	
+};
+
+Professor prof1{
+	lectures l:;
+};
+
+Select c1;

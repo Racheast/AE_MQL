@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: genie.viatra
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_162
+
+Name: META-INF/maven/org.eclipse.viatra/org.eclipse.viatra.addon.valid
+ ation.runtime.feature/pom.properties
+SHA-256-Digest: /hBStoG3lGCHN7dnqMSxvRCvgPEmxx0hNk3UzApDCkY=
+
+Name: epl-v10.html
+SHA-256-Digest: mpbQ2vmKpvtKpTDTmcdCxmEhsL2uSh9/+iLSE14d9/0=
+
+Name: META-INF/maven/org.eclipse.viatra/org.eclipse.viatra.addon.valid
+ ation.runtime.feature/pom.xml
+SHA-256-Digest: rMk3MmX1dNg4zot1r7pTAIqlzO9sv1HuwfrmGfqM3tc=
+
+Name: feature.xml
+SHA-256-Digest: jOJpOWIrgeM9GQj8nNhce218zJiWX5/K/zeZcsVD3nI=
+
+Name: feature.properties
+SHA-256-Digest: Cj8f6DIbxW4mqy5YLIr4zdOHaz3ynIjdl1ARUqAIdhU=
+
+Name: license.html
+SHA-256-Digest: X315zLynvdLZ4DaYSopgxruQUUEadA3FOPNviC+YO24=
+

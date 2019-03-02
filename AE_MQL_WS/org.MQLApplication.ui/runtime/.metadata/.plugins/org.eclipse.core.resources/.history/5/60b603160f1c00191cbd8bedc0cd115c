@@ -1,0 +1,46 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a, addInfoB){
+	find a_OrGroup(a);
+	find addInfoB_OrGroup(addInfoB);
+}
+
+pattern addInfo_OrGroup(addInfo:AdditionalInformation){
+    AdditionalInformation(addInfoB);
+    addInfo == addInfoB;
+}
+
+pattern addInfoB_OrGroup(addInfoB:AdditionalInformation){
+    find AdditionalInformation1776007309(addInfoB);
+}
+
+pattern a_OrGroup(a:Attribute){
+    find Attribute1202790292(a);
+}
+
+pattern Attribute1202790292(a:Attribute){
+    Attribute(a);
+    neg find addInfo_OrGroup_ref(a, addInfo, addInfoB);
+}
+
+pattern AdditionalInformation1776007309(addInfoB:AdditionalInformation){
+    AdditionalInformation(addInfoB);
+    find nb_Element_name_AttrEClass(addInfoB,nb);
+}
+
+pattern nb_Element_name_AttrEClass(addInfoB:AdditionalInformation, nb){
+    AdditionalInformation.name(addInfoB, nb);
+    check(((nb).endsWith("B")));
+}
+
+pattern Attribute_additionalInformation536384909(from:Attribute, to:AdditionalInformation){
+    Attribute.additionalInformation(from, to);
+}
+
+pattern addInfo_OrGroup_ref(a, addInfo, addInfoB){
+    find addInfo_OrGroup(addInfo, addInfoB);
+    find Attribute_additionalInformation536384909(a,addInfo);
+}
+
+

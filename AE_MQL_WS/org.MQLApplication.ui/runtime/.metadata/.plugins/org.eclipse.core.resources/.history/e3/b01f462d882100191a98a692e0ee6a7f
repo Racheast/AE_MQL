@@ -1,0 +1,58 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_OrGroup(i, s, r);
+}
+
+pattern i_OrGroup(i,s,r){
+    find InternalElement314421635(i,s,r);
+}
+
+pattern s_OrGroup(s){
+	SupportedRoleClass(s);
+}
+
+pattern r_OrGroup(r){
+	RoleRequirements(r);
+}
+
+pattern InternalElement314421635(i:InternalElement,s:SupportedRoleClass,r:RoleRequirements){
+    InternalElement(i);
+    SupportedRoleClass(s);
+    RoleRequirements(r);
+    find s_OrGroup_ref(i,s);
+    find r_OrGroup_ref(i,r);
+    s != r;
+    find count333994397(i, ref333994397);
+    find count929312274(i, ref929312274);
+    check(((ref333994397)>(ref929312274)));
+}
+
+pattern count333994397(i:InternalElement, result : java Integer){
+    result == count find r_OrGroup_ref(i,r);
+}
+
+pattern count929312274(i:InternalElement, result : java Integer){
+    result == count find s_OrGroup_ref(i,s);
+}
+
+pattern InternalElement_supportedRoleClass1913260907(from:InternalElement, to:SupportedRoleClass){
+    InternalElement.supportedRoleClass(from, to);
+}
+
+pattern InternalElement_roleRequirements306165867(from:InternalElement, to:RoleRequirements){
+    InternalElement.roleRequirements(from, to);
+}
+
+pattern s_OrGroup_ref(i,s){
+    find s_OrGroup(s);
+    find InternalElement_supportedRoleClass1913260907(i,s);
+}
+
+pattern r_OrGroup_ref(i,r){
+    find r_OrGroup(r);
+    find InternalElement_roleRequirements306165867(i,r);
+}
+
+

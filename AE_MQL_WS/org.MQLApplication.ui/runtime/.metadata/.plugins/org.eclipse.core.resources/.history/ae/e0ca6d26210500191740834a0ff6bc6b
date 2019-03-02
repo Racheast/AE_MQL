@@ -1,0 +1,43 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find Element246824891(result);
+}
+
+pattern Element246824891(elem:Element){
+    Element(elem);
+    find p_Element_powerLevelWatt_AttrEClass(elem,p);
+    find sum1227139248(elem, ref1227139248);
+    find min948496555(elem, ref948496555);
+    check(((ref1227139248)>=(ref948496555)));
+}
+
+pattern p_Element_powerLevelWatt_AttrEClass(elem:Element,p){
+	Element.powerLevelWatt(elem,p);
+}
+
+pattern min948496555(elem:Element, result : java Double){
+    result == min find argument_1963325146(elem, #);
+}
+
+pattern sum1227139248(elem:Element, result : java Number){
+    result == sum find argument_1863241722(elem, #);
+}
+
+pattern min1863241722(elem:Element, result : java Double){
+    result == min find argument_1277843371(elem, #);
+}
+
+pattern argument_1277843371(elem:Element, result: java Double){
+    find p_Element_powerLevelWatt_AttrEClass(elem, result);
+}
+
+pattern argument_1863241722(elem:Element, result: java Number){
+    find min1863241722(elem,result);
+}
+
+pattern argument_1963325146(elem:Element, result: java Double){
+    find p_Element_powerLevelWatt_AttrEClass(elem, result);
+}
+

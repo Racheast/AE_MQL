@@ -1,0 +1,30 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie){
+	find ie_OrGroup(ie);
+}
+
+pattern ie_OrGroup(ie){
+    find InternalElement784935222(ie);
+}
+
+pattern aiRef_OrGroup(aiRef){
+	AdditionalInformation(aiRef);
+}
+
+pattern InternalElement784935222(ie:InternalElement){
+    InternalElement(ie);
+    neg find aiRef_OrGroup_ref(ie,aiRef);
+}
+
+pattern InternalElement_additionalInformation1183628102(from:InternalElement, to:AdditionalInformation){
+    InternalElement.additionalInformation(from, to);
+}
+
+pattern aiRef_OrGroup_ref(ie,aiRef){
+    find aiRef_OrGroup(aiRef);
+    find InternalElement_additionalInformation1183628102(ie,aiRef);
+}
+
+

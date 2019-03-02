@@ -1,0 +1,14 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(p,c1,c2){
+	Course.name(c1,"Masters Defense Exam");
+	Course.name(c2,"Seminar for Masters");
+	Professor.lectures(p,c1);		
+}or{
+	Course.name(c1,"Masters Defense Exam");
+	Course.name(c2,"Seminar for Masters");
+	Professor.lectures(p,c2);
+}  
+
+

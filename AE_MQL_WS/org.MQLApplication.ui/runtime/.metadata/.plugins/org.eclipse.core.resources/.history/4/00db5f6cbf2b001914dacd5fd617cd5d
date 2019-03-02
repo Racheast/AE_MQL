@@ -1,0 +1,47 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(c){
+	find c_OrGroup(c, mastersDefense);
+	find mastersDefense_OrGroup(mastersDefense,n);
+}
+
+pattern m_OrGroup(m,mastersDefense){
+    Course(mastersDefense);
+    m == mastersDefense;
+}
+
+pattern mastersDefense_OrGroup(mastersDefense,n){
+    find Course2000354357(mastersDefense,n);
+}
+
+pattern c_OrGroup(c,mastersDefense){
+    find Course1817173269(c,mastersDefense);
+}
+
+pattern Course1817173269(c:Course,mastersDefense:Course){
+    Course(mastersDefense);
+    Course(c);
+    neg find m_OrGroup_ref(c,m,mastersDefense);
+}
+
+pattern Course2000354357(mastersDefense:Course,n){
+    Course(mastersDefense);
+    find n_Course_name_AttrEClass(mastersDefense,n);
+}
+
+pattern n_Course_name_AttrEClass(mastersDefense:Course, n){
+    Course.name(mastersDefense, n);
+    check(((n).equals("Masters Defense Exam")));
+}
+
+pattern Course_mandatoryFor475657902(from:Course, to:Course){
+    Course.mandatoryFor(from, to);
+}
+
+pattern m_OrGroup_ref(c,m,mastersDefense){
+    find m_OrGroup(m,mastersDefense);
+    find Course_mandatoryFor475657902+(c,m);
+}
+
+

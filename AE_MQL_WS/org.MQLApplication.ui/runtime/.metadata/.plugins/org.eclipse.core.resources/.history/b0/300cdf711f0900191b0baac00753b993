@@ -1,0 +1,11 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find RoleClassLib1204454465(result);
+}
+
+pattern RoleClassLib1204454465(elem:RoleClassLib){
+    RoleClassLib(elem);
+}
+

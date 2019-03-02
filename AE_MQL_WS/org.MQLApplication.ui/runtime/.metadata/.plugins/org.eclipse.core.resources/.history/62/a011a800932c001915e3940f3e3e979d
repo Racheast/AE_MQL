@@ -1,0 +1,7 @@
+Find
+Course c1{
+	courseType ct :PR;
+	eval: count(ct).greaterEquals(1);
+};
+
+Select c1;

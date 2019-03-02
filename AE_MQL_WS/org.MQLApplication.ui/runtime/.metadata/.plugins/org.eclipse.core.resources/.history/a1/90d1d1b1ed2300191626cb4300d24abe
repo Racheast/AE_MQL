@@ -1,0 +1,67 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s){
+	find c_OrGroup(c, e);
+	find s_OrGroup(s, a, c);
+}
+
+pattern e_OrGroup(e){
+    find Exam2086389345(e);
+}
+
+pattern a_OrGroup(a,c){
+    Course(c);
+    a == c;
+}
+
+pattern c_OrGroup(c,e){
+    find Course1800542427(c,e);
+}
+
+pattern s_OrGroup(s,a,c){
+    find Student1874672685(s,a,c);
+}
+
+pattern Student1874672685(s:Student,a:Course,c:Course){
+    Course(a);
+    Course(c);
+    Student(s);
+    find a_OrGroup_ref(s,a,c);
+}
+
+pattern Course1800542427(c:Course,e:Exam){
+    Exam(e);
+    Course(c);
+    find e_OrGroup_ref(c,e);
+    find count1896823403(c, ref1896823403);
+    check(((ref1896823403)>=(2)));
+}
+
+pattern Exam2086389345(e:Exam){
+    Exam(e);
+}
+
+pattern count1896823403(c:Course, result : java Integer){
+    result == count find e_OrGroup_ref(c,e);
+}
+
+pattern Student_attends1426324599(from:Student, to:Course){
+    Student.attends(from, to);
+}
+
+pattern Course_exam563974669(from:Course, to:Exam){
+    Course.exam(from, to);
+}
+
+pattern e_OrGroup_ref(c,e){
+    find e_OrGroup(e);
+    find Course_exam563974669(c,e);
+}
+
+pattern a_OrGroup_ref(s,a,c){
+    find a_OrGroup(a,c);
+    find Student_attends1426324599(s,a);
+}
+
+

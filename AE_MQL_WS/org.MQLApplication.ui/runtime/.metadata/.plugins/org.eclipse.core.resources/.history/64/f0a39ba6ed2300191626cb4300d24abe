@@ -1,0 +1,14 @@
+Find
+Course c: Course{
+	//name n: self.startsWith("A");
+	exam e: Exam{
+		
+	};
+	eval: count(e).greaterEquals(2);
+};
+
+Student s:Student{
+	attends a: c; 
+};
+
+Select s;

@@ -1,0 +1,5 @@
+Find SystemUnitClass{
+	name n;
+	attribute a;
+	eval:count(a).smallerThan(StringRef(n).length());
+}

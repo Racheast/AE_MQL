@@ -1,0 +1,16 @@
+Find
+
+Course c:Course{
+	//name n1: self.startsWith("A");
+};  
+ 
+Strudent s : Strudent{
+	attends! a:c;
+};  
+
+Professor p : Professor{
+	name n2: self.startsWith("Jane");
+	lectures l : c; 
+};
+
+Select s;  

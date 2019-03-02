@@ -1,0 +1,6 @@
+
+Find InternalElement i:InternalElement{
+	systemUnitClass s:SystemUnitFamily OR InternalElement{
+		changeMode c = create;
+	}; 
+} 

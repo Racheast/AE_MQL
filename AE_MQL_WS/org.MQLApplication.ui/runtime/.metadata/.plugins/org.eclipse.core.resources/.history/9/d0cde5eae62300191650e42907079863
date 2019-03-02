@@ -1,0 +1,67 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_OrGroup(i, a, a2,n);
+}
+
+pattern a_OrGroup(a,a2,n){
+    find Attribute984278652(a,a2,n);
+}
+
+pattern i_OrGroup(i,a,a2,n){
+    find InternalElement719838296(i,a,a2,n);
+}
+
+pattern a2_OrGroup(a2,n){
+    find Attribute613670345(a2,n);
+}
+
+pattern Attribute984278652(a:Attribute,a2:Attribute,n){
+    Attribute(a);
+    Attribute(a2);
+    find a2_OrGroup_ref(a,a2,n);
+}
+
+pattern Attribute613670345(a2:Attribute,n){
+    Attribute(a2);
+    find n_CAEXObject_name_AttrEClass(a2,n);
+}
+
+pattern InternalElement719838296(i:InternalElement,a:Attribute,a2:Attribute,n){
+    Attribute(a);
+    InternalElement(i);
+    Attribute(a2);
+    find a_OrGroup_ref(i,a,a2,n);
+    find count711254311(i, ref711254311);
+    check(((ref711254311)>=(2)));
+}
+
+pattern n_CAEXObject_name_AttrEClass(a2:Attribute, n){
+    Attribute.name(a2, n);
+    check(((n).equals("HAHAHAHA")));
+}
+
+pattern count711254311(i:InternalElement, result : java Integer){
+    result == count find a_OrGroup_ref(i,a,a2,n);
+}
+
+pattern InternalElement_attribute1467950512(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern Attribute_attribute51319711(from:Attribute, to:Attribute){
+    Attribute.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(i,a,a2,n){
+    find a_OrGroup(a,a2,n);
+    find InternalElement_attribute1467950512(i,a);
+}
+
+pattern a2_OrGroup_ref(a,a2,n){
+    find a2_OrGroup(a2,n);
+    find Attribute_attribute51319711(a,a2);
+}
+
+

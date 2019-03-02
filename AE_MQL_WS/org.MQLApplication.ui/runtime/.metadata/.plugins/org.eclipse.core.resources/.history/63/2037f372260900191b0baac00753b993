@@ -1,0 +1,139 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement1534123646(result);
+}
+
+pattern a1_OrGroup(elem:Attribute){
+    find Attribute11110107(elem);
+}
+
+pattern a3_OrGroup(elem:Attribute){
+    find Attribute1155665249(elem);
+}
+
+pattern a_OrGroup(elem:Attribute){
+	Attribute(elem);
+}
+
+pattern a2_OrGroup(elem:Attribute){
+    find Attribute1221814545(elem);
+}
+
+pattern ax_OrGroup(elem:Attribute){
+    find Attribute2072438316(elem);
+}
+
+pattern i_OrGroup(elem:InternalElement){
+    find InternalElement1642836621(elem);
+}
+
+pattern Attribute11110107(elem:Attribute){
+    Attribute(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+}
+
+pattern Attribute1221814545(elem:Attribute){
+    Attribute(elem);
+    find n2_CAEXObject_name_AttrEClass(elem,n2);
+}
+
+pattern Attribute1155665249(elem:Attribute){
+    Attribute(elem);
+    find n3_CAEXObject_name_AttrEClass(elem,n3);
+}
+
+pattern InternalElement1642836621(elem:InternalElement){
+    InternalElement(elem);
+    find c_CAEXBasicObject_changeMode_AttrEClass(elem);
+}
+
+pattern Attribute2072438316(elem:Attribute){
+    Attribute(elem);
+    find u_Attribute_unit_AttrEClass(elem,u);
+}
+
+pattern InternalElement1534123646(elem:InternalElement){
+    InternalElement(elem);
+    find a_OrGroup_ref(elem,a);
+    neg find ax_OrGroup_ref(elem,ax);
+    find a1_OrGroup_ref(elem,a1);
+    find a2_OrGroup_ref(elem,a2);
+    find a3_OrGroup_ref(elem,a3);
+    find i_OrGroup_ref(elem,i);
+    a1 != a3;
+    a3 != i;
+    a1 != i;
+    a3 != a2;
+    a2 != i;
+    a1 != a2;
+    find count1387701826(elem, ref1387701826);
+    check(((ref1387701826)>=(4)));
+}
+
+pattern u_Attribute_unit_AttrEClass(elem:Attribute,u){
+	Attribute.unit(elem,u);
+	check(!((u).equals("inch")));
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:Attribute,n1){
+	Attribute.name(elem,n1);
+	check(((n1).equals("R1_Length")));
+}
+
+pattern n2_CAEXObject_name_AttrEClass(elem:Attribute,n2){
+	Attribute.name(elem,n2);
+	check(((n2).equals("R1_Width")));
+}
+
+pattern n3_CAEXObject_name_AttrEClass(elem:Attribute,n3){
+	Attribute.name(elem,n3);
+	check(((n3).equals("R1_Heigth")));
+}
+
+pattern c_CAEXBasicObject_changeMode_AttrEClass(elem:InternalElement){
+	InternalElement.changeMode(elem,::delete);
+}
+pattern count1387701826(elem:InternalElement, result : java Integer){
+    result == count find a_OrGroup_ref(elem, a);
+}
+
+pattern InternalElement_internalElement1663411526(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern InternalElement_attribute2010244873(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a1_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a1_OrGroup(member);
+    find InternalElement_attribute2010244873(container,member);
+}
+
+pattern a3_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a3_OrGroup(member);
+    find InternalElement_attribute2010244873(container,member);
+}
+
+pattern a_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a_OrGroup(member);
+    find InternalElement_attribute2010244873(container,member);
+}
+
+pattern a2_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a2_OrGroup(member);
+    find InternalElement_attribute2010244873(container,member);
+}
+
+pattern ax_OrGroup_ref(container:InternalElement, member:Attribute){
+    find ax_OrGroup(member);
+    find InternalElement_attribute2010244873(container,member);
+}
+
+pattern i_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find i_OrGroup(member);
+    find InternalElement_internalElement1663411526(container,member);
+}
+

@@ -1,0 +1,37 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(c){
+	find c_OrGroup(c, e);
+}
+
+pattern e_OrGroup(e){
+	Exam(e);
+}
+
+pattern c_OrGroup(c,e){
+    find Course256713901(c,e);
+}
+
+pattern Course256713901(c:Course,e:Exam){
+    Exam(e);
+    Course(c);
+    find e_OrGroup_ref(c,e);
+    find count235679726(c, ref235679726);
+    check(((ref235679726)>=(2)));
+}
+
+pattern count235679726(c:Course, result : java Integer){
+    result == count find e_OrGroup_ref(c,e);
+}
+
+pattern Course_exam615322367(from:Course, to:Exam){
+    Course.exam(from, to);
+}
+
+pattern e_OrGroup_ref(c,e){
+    find e_OrGroup(e);
+    find Course_exam615322367(c,e);
+}
+
+

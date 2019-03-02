@@ -1,0 +1,52 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(root:SearchableElement, ie2){
+    find InternalElement1110677854(root, ie2);
+}
+
+pattern ie2_OrGroup(elem:InternalElement){
+	InternalElement(elem);
+}
+
+pattern ie_OrGroup(elem:InternalElement, ie2){
+    find InternalElement877945127(elem, ie2);
+}
+
+pattern InternalElement877945127(elem:InternalElement, ie2){
+    InternalElement(elem);
+    find n2_CAEXObject_name_AttrEClass(elem,n2);
+    find ie2_OrGroup_ref(elem,ie2);
+    n2 != ie2;
+}
+
+pattern InternalElement1110677854(elem:InternalElement, ie2){
+    InternalElement(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+    find ie_OrGroup_ref(elem,ie, ie2);
+    n1 != ie;
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	InternalElement.name(elem,n1);
+	check(((n1).contains("R1")));
+}
+
+pattern n2_CAEXObject_name_AttrEClass(elem:InternalElement,n2){
+	InternalElement.name(elem,n2);
+}
+
+pattern InternalElement_internalElement2019545481(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern ie2_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find ie2_OrGroup(member);
+    find InternalElement_internalElement2019545481(container,member);
+}
+
+pattern ie_OrGroup_ref(container:InternalElement, member:InternalElement, ie2){
+    find ie_OrGroup(member, ie2);
+    find InternalElement_internalElement2019545481(container,member);
+}
+

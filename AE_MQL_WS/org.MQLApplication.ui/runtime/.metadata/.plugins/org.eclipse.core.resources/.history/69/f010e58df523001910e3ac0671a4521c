@@ -1,0 +1,10 @@
+Find
+
+Course c;
+
+Student s:Student{
+	attends a:c;
+	eval: count(a).greaterEquals(4); 
+};
+
+Select s;

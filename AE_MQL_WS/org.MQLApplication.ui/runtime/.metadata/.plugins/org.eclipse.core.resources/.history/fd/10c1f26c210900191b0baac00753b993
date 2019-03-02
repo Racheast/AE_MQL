@@ -1,0 +1,56 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find SystemUnitClass1419985249(result);
+}
+
+pattern a_OrGroup(elem:Attribute){
+    find Attribute679691778(elem);
+}
+
+pattern b_OrGroup(elem:Attribute){
+    find Attribute133433710(elem);
+}
+
+pattern Attribute679691778(elem:Attribute){
+    Attribute(elem);
+    find n_CAEXObject_name_AttrEClass(elem,n);
+}
+
+pattern SystemUnitClass1419985249(elem:SystemUnitClass){
+    SystemUnitClass(elem);
+    find a_OrGroup_ref(elem,a);
+    find b_OrGroup_ref(elem,b);
+    a != b;
+}
+
+pattern Attribute133433710(elem:Attribute){
+    Attribute(elem);
+    find m_CAEXObject_name_AttrEClass(elem,m);
+}
+
+pattern n_CAEXObject_name_AttrEClass(elem:Attribute,n){
+	Attribute.name(elem,n);
+	check(((n).startsWith("R1_")));
+}
+
+pattern m_CAEXObject_name_AttrEClass(elem:Attribute,m){
+	Attribute.name(elem,m);
+	check(((m).contains("Power")));
+}
+
+pattern SystemUnitClass_attribute2010244873(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(container:SystemUnitClass, member:Attribute){
+    find a_OrGroup(member);
+    find SystemUnitClass_attribute2010244873(container,member);
+}
+
+pattern b_OrGroup_ref(container:SystemUnitClass, member:Attribute){
+    find b_OrGroup(member);
+    find SystemUnitClass_attribute2010244873(container,member);
+}
+

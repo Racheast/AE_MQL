@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fileManagementSystem" nsURI="/DMM/model/FileManagementSystem.ecore"
+    nsPrefix="fms">
+  <eClassifiers xsi:type="ecore:EEnum" name="AccessRight">
+    <eLiterals name="read"/>
+    <eLiterals name="write" value="1" literal="write"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FileFormat">
+    <eLiterals name="jpeg"/>
+    <eLiterals name="png" value="1"/>
+    <eLiterals name="bmp" value="2"/>
+    <eLiterals name="gif" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Domain">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="folder" upperBound="-1"
+        eType="#//Folder" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="user" upperBound="-1" eType="#//User"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="User">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="access" upperBound="-1"
+        eType="#//Access" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedObject" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Folder" eSuperTypes="#//NamedObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
+        eType="#//NamedObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="File" abstract="true" eSuperTypes="#//NamedObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImageFile" eSuperTypes="#//File">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fileFormat" eType="#//FileFormat"
+        defaultValueLiteral="png" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkFile" eSuperTypes="#//File">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="opens" lowerBound="1" eType="#//File"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Access">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="accessRight" lowerBound="1"
+        eType="#//AccessRight" defaultValueLiteral="read" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namedElement" lowerBound="1"
+        eType="#//NamedObject"/>
+  </eClassifiers>
+</ecore:EPackage>

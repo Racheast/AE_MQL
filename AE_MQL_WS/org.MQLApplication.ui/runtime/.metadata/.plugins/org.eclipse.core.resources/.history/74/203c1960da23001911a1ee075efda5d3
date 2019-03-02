@@ -1,0 +1,74 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s){
+	find c_OrGroup(c);
+	find s_OrGroup(s, c);
+	find p_OrGroup(p, l, c,n2);
+}
+
+pattern c_OrGroup(c){
+    find Course21546178(c);
+}
+
+pattern s_OrGroup(s,c){
+    find Student1744823993(s,c);
+}
+
+pattern a_OrGroup(a,c){
+    Course(c);
+    a == c;
+}
+
+pattern p_OrGroup(p,l,c,n2){
+    find Professor608983745(p,l,c,n2);
+}
+
+pattern l_OrGroup(l,c){
+    Course(c);
+    l == c;
+}
+
+pattern Student1744823993(s:Student,c:Course){
+    Course(c);
+    Student(s);
+    neg find a_OrGroup_ref(s,a,c);
+}
+
+pattern Course21546178(c:Course){
+    Course(c);
+}
+
+pattern Professor608983745(p:Professor,l:Course,c:Course,n2){
+    Course(c);
+    Professor(p);
+    Course(l);
+    find n2_Person_name_AttrEClass(p,n2);
+    find l_OrGroup_ref(p,l,c);
+    n2 != l;
+}
+
+pattern n2_Person_name_AttrEClass(p:Professor, n2){
+    Professor.name(p, n2);
+    check(((n2).startsWith("Laura")));
+}
+
+pattern Professor_lectures760591243(from:Professor, to:Course){
+    Professor.lectures(from, to);
+}
+
+pattern Student_attends1573989633(from:Student, to:Course){
+    Student.attends(from, to);
+}
+
+pattern a_OrGroup_ref(s,a,c){
+    find a_OrGroup(a,c);
+    find Student_attends1573989633(s,a);
+}
+
+pattern l_OrGroup_ref(p,l,c){
+    find l_OrGroup(l,c);
+    find Professor_lectures760591243(p,l);
+}
+
+

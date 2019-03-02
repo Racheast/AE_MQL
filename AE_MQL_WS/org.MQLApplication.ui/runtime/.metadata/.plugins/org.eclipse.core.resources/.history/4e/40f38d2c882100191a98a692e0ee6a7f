@@ -1,0 +1,5 @@
+Find InternalElement i:InternalElement{
+	roleRequirements r;
+	supportedRoleClass s;
+	eval:count(r).greaterThan(count(s)); 
+}; 

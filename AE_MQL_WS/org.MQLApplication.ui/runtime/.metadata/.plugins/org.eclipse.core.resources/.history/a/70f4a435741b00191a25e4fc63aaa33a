@@ -1,0 +1,7 @@
+Find InternalElement i :InternalElement{
+	internalElement! i2 : InternalElement{
+		
+	}; 
+	
+	baseSystemUnit b : i2;
+}

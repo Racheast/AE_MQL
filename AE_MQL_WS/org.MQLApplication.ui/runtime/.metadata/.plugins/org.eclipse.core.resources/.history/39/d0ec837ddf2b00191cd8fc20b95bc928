@@ -1,0 +1,10 @@
+Find
+Course c1 : Course{
+	name nc1 : self.contains("Masters Defense");
+};
+Course c2 : Course{
+	name nc2 : self.contains("Seminar for Masters");
+};   
+Professor p : Professor{
+	lectures l1 : c1 OR c2;    
+}; 

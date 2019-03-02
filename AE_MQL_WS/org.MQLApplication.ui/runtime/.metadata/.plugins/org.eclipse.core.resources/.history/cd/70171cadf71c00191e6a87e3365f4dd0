@@ -1,0 +1,68 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ai){
+	find ai_OrGroup(ai,n);
+	find ie_OrGroup(ie, ai, aiRef2);
+}
+
+pattern aiRef2_OrGroup(aiRef2,ai){
+    AdditionalInformation(ai);
+    aiRef2 == ai;
+}
+
+pattern ie_OrGroup(ie,ai,aiRef2){
+    ie == aiRef2;
+    find InternalElement1677406765(ie,ai);
+}
+or{
+    find InternalElement1503869646(ie,aiRef2,ai);
+}
+
+pattern aiRef_OrGroup(aiRef,ai){
+    AdditionalInformation(ai);
+    aiRef == ai;
+}
+
+pattern ai_OrGroup(ai,n){
+    find AdditionalInformation1144858608(ai,n);
+}
+
+pattern InternalElement1677406765(ie:InternalElement,ai:AdditionalInformation){
+    InternalElement(ie);
+    AdditionalInformation(ai);
+    neg find aiRef_OrGroup_ref(ie,aiRef,ai);
+}
+
+pattern AdditionalInformation1144858608(ai:AdditionalInformation,n){
+    AdditionalInformation(ai);
+    find n_Element_name_AttrEClass(ai,n);
+}
+
+pattern InternalElement1503869646(ie:InternalElement,aiRef2:AdditionalInformation,ai:AdditionalInformation){
+    AdditionalInformation(aiRef2);
+    InternalElement(ie);
+    AdditionalInformation(ai);
+    find aiRef2_OrGroup_ref(ie,aiRef2,ai);
+}
+
+pattern n_Element_name_AttrEClass(ai:AdditionalInformation, n){
+    AdditionalInformation.name(ai, n);
+    check(((n).equals("AutomationMLVersion A")));
+}
+
+pattern InternalElement_additionalInformation1183628102(from:InternalElement, to:AdditionalInformation){
+    InternalElement.additionalInformation(from, to);
+}
+
+pattern aiRef2_OrGroup_ref(ie,aiRef2,ai){
+    find aiRef2_OrGroup(aiRef2,ai);
+    find InternalElement_additionalInformation1183628102(ie,aiRef2);
+}
+
+pattern aiRef_OrGroup_ref(ie,aiRef,ai){
+    find aiRef_OrGroup(aiRef,ai);
+    find InternalElement_additionalInformation1183628102(ie,aiRef);
+}
+
+

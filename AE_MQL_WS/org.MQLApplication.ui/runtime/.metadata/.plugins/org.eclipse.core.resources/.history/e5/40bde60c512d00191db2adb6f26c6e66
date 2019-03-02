@@ -1,0 +1,100 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a1){
+	find a1_Attribute(a1, a2, a2rc, a4, a4rc,n1);
+}
+
+pattern a4_OrGroup(a4,a4rc,a5rc){
+    a4 == a4rc;
+    a4 == a5rc;
+    find a4rc_Attribute(a4rc);
+}
+
+pattern a6_OrGroup(a6){
+	Attribute(a6);
+}
+
+pattern a2_OrGroup(a2,a2rc,a3rc,a4rc,a5rc){
+    a2 == a2rc;
+    a2 == a3rc;
+    a2 == a5rc;
+    find a2rc_Attribute(a2rc,a4,a4rc);
+}
+
+pattern a3_OrGroup(a3,a3rc,a4rc,a5rc){
+    a3 == a3rc;
+    a3 == a5rc;
+    find a3rc_Attribute(a3rc,a4,a4rc);
+}
+
+pattern a5_OrGroup(a5,a5rc){
+    a5 == a5rc;
+    find a5rc_Attribute(a5rc);
+}
+
+pattern a2rc_Attribute(a2rc:Attribute,a4,a4rc){
+    Attribute(a2rc);
+    Attribute(a4rc);
+    neg find a3_OrGroup_ref(a2rc,a3,a3rc,a4,a4rc);
+}
+
+pattern a3rc_Attribute(a3rc:Attribute,a4,a4rc){
+    Attribute(a3rc);
+    Attribute(a4rc);
+    find a4_OrGroup_ref(a3rc,a4,a4rc);
+}
+
+pattern a5rc_Attribute(a5rc:Attribute){
+    Attribute(a5rc);
+    neg find a6_OrGroup_ref(a5rc,a6);
+}
+
+pattern a4rc_Attribute(a4rc:Attribute){
+    Attribute(a4rc);
+    neg find a5_OrGroup_ref(a4rc,a5,a5rc);
+}
+
+pattern a1_Attribute(a1:Attribute,a2,a2rc,a4,a4rc,n1){
+    Attribute(a2rc);
+    Attribute(a4rc);
+    Attribute(a1);
+    find n1_CAEXObject_name_AttrEClass(a1,n1);
+    find a2_OrGroup_ref(a1,a2,a2rc,a4,a4rc);
+    n1 != a2;
+}
+
+pattern n1_CAEXObject_name_AttrEClass(a1:Attribute, n1){
+    Attribute.name(a1, n1);
+}
+
+pattern Attribute_attribute485423874(from:Attribute, to:Attribute){
+    Attribute.attribute(from, to);
+}
+
+pattern a4_OrGroup_ref(a3rc,a4,a4rc){
+    find a4_OrGroup(a4,a4rc,a5rc);
+    find Attribute_attribute485423874(a3rc,a4);
+}
+
+pattern a6_OrGroup_ref(a5rc,a6){
+    find a6_OrGroup(a6);
+    find Attribute_attribute485423874(a5rc,a6);
+}
+
+pattern a2_OrGroup_ref(a1,a2,a2rc,a4,a4rc){
+    find a2_OrGroup(a2,a2rc,a3rc,a4rc,a5rc);
+    find Attribute_attribute485423874(a1,a2);
+}
+
+pattern a3_OrGroup_ref(a2rc,a3,a3rc,a4,a4rc){
+    find a3_OrGroup(a3,a3rc,a4rc,a5rc);
+    find Attribute_attribute485423874(a2rc,a3);
+}
+
+pattern a5_OrGroup_ref(a4rc,a5,a5rc){
+    find a5_OrGroup(a5,a5rc);
+    find Attribute_attribute485423874+(a4rc,a5);
+}
+
+

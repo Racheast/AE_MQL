@@ -1,0 +1,9 @@
+Find ie:InternalElement{
+	name n;
+	internalElement ie2:InternalElement;
+	baseSystemUnit b : su;
+	eval: count(n).greaterEquals(1);
+}, su:SystemUnitClass{
+	name n2:self.startsWith("R1");
+	systemUnitClass suX : SystemUnitClass;
+}

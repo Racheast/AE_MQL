@@ -1,0 +1,36 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_OrGroup(i, a);
+}
+
+pattern a_OrGroup(a:Attribute){
+	Attribute(a);
+}
+
+pattern i_OrGroup(i:InternalElement, a:Attribute){
+    find InternalElement712977141(i, a);
+}
+
+pattern InternalElement712977141(i:InternalElement, a:Attribute){
+    InternalElement(i);
+    find a_OrGroup_ref(i, a);
+    find count430310358(elem, ref430310358);
+    check(((ref430310358)<(2)));
+}
+
+pattern count430310358(elem:InternalElement, result : java Integer){
+    result == count find a_OrGroup_ref(elem, a);
+}
+
+pattern InternalElement_attribute263227892(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(i:InternalElement, a:Attribute){
+    find a_OrGroup(a);
+    find InternalElement_attribute263227892(i,a);
+}
+
+

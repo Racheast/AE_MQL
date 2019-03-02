@@ -1,0 +1,61 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s){
+	find s_OrGroup(s, a, b);
+}
+
+pattern a_OrGroup(a:Attribute){
+    find Attribute355088400(a);
+}
+
+pattern s_OrGroup(s:SystemUnitClass, a, b){
+    find SystemUnitClass1727496037(s, a, b);
+}
+
+pattern b_OrGroup(b:Attribute){
+    find Attribute1109681431(b);
+}
+
+pattern SystemUnitClass1727496037(s:SystemUnitClass, a, b){
+    SystemUnitClass(s);
+    find a_OrGroup_ref(s, a);
+    find b_OrGroup_ref(s, b);
+    a != b;
+}
+
+pattern Attribute1109681431(b:Attribute){
+    Attribute(b);
+    find m_CAEXObject_name_AttrEClass(b,m);
+}
+
+pattern Attribute355088400(a:Attribute){
+    Attribute(a);
+    find n_CAEXObject_name_AttrEClass(a,n);
+}
+
+pattern n_CAEXObject_name_AttrEClass(a:Attribute, n){
+    Attribute.name(a, n);
+    check(((n).startsWith("R1_")));
+}
+
+pattern m_CAEXObject_name_AttrEClass(b:Attribute, m){
+    Attribute.name(b, m);
+    check(((m).contains("Power")));
+}
+
+pattern SystemUnitClass_attribute1539928559(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(s, a){
+    find a_OrGroup(a);
+    find SystemUnitClass_attribute1539928559(s,a);
+}
+
+pattern b_OrGroup_ref(s, b){
+    find b_OrGroup(b);
+    find SystemUnitClass_attribute1539928559(s,b);
+}
+
+

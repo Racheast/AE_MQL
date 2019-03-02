@@ -1,0 +1,7 @@
+Find InternalElement ie: InternalElement{
+	version! v1ref : v1;
+	
+}, Version v1 : Version{
+	changeMode c1 = change;
+	value val1;
+} Select val1, ie, v1

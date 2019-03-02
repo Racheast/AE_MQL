@@ -1,0 +1,15 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find CAEXBasicObject198640423(result);
+}
+
+pattern CAEXBasicObject198640423(elem:CAEXBasicObject){
+    CAEXBasicObject(elem);
+    find c_CAEXBasicObject_changeMode_AttrEClass(elem);
+}
+
+pattern c_CAEXBasicObject_changeMode_AttrEClass(elem:CAEXBasicObject){
+	CAEXBasicObject.changeMode(elem,::create);
+}

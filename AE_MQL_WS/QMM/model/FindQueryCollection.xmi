@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qmm:FindQueryCollection
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:qmm="/QMM/model/QMM.ecore"
+    xsi:schemaLocation="/QMM/model/QMM.ecore QMM.ecore">
+  <findQueries>
+    <orGroup
+        xsi:type="qmm:InternalElement_Containment_OrGroup"
+        name="ie1">
+      <containment>
+        <baseSystemUnit>
+          <orGroup
+              name="suref"
+              reference="ie1"/>
+        </baseSystemUnit>
+      </containment>
+    </orGroup>
+    <orGroup
+        xsi:type="qmm:InternalElement_Containment_OrGroup"
+        name="ie2">
+      <containment>
+        <name_AttrEClass
+            name="asd"/>
+      </containment>
+    </orGroup>
+    <orGroup
+        xsi:type="qmm:SystemUnitClass_Containment_OrGroup"
+        name="sedfg">
+      <containment>
+        <systemUnitClass>
+          <orGroup
+              name="sedfg2">
+            <containment/>
+          </orGroup>
+        </systemUnitClass>
+      </containment>
+    </orGroup>
+  </findQueries>
+</qmm:FindQueryCollection>

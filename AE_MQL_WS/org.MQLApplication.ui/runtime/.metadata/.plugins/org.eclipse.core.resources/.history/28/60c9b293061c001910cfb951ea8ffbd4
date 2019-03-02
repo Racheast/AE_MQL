@@ -1,0 +1,4 @@
+Find SystemUnitClass s:SystemUnitClass{
+	attribute a;
+	name n : self.length().smallerThan(count(a));
+}

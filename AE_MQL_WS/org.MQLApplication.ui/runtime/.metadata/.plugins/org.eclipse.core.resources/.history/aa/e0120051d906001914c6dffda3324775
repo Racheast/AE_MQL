@@ -1,0 +1,11 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement96876409(result);
+}
+
+pattern InternalElement96876409(elem:InternalElement){
+    InternalElement(elem);
+}
+

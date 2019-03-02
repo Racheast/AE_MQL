@@ -1,0 +1,6 @@
+Find
+Course c1{
+	courseType ct :PR;
+};
+
+Select c1;

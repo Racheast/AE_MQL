@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.viatra.transformation.evm.transactions.feature"
+      label="EMF Transactions Integration for EVM"
+      version="1.7.2.201803211255"
+      provider-name="Eclipse VIATRA Project">
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <description>
+      EVM with EMF Transactions support.
+   </description>
+
+   <url>
+      <update label="VIATRA" url="http://download.eclipse.org/viatra/updates/release/"/>
+   </url>
+
+   <requires>
+      <import feature="org.eclipse.viatra.transformation.runtime.emf.feature" version="1.7.0" match="equivalent"/>
+      <import feature="org.eclipse.emf.transaction" version="1.4.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.viatra.transformation.evm.transactions"
+         download-size="23"
+         install-size="44"
+         version="1.7.2.201803211255"
+         unpack="false"/>
+
+</feature>

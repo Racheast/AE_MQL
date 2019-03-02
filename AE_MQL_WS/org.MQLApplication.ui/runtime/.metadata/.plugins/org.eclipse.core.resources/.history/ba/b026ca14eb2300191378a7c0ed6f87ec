@@ -1,0 +1,54 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s, a){
+	find c_OrGroup(c,n);
+	find s_OrGroup(s, a, c);
+}
+
+pattern c_OrGroup(c,n){
+    find Course692671296(c,n);
+}
+
+pattern a_OrGroup(a,c){
+    Course(c);
+    a == c;
+}
+
+pattern s_OrGroup(s,a,c){
+    find Student1135979529(s,a,c);
+}
+
+pattern Course692671296(c:Course,n){
+    Course(c);
+    find n_Course_name_AttrEClass(c,n);
+}
+
+pattern Student1135979529(s:Student,a:Course,c:Course){
+    Course(c);
+    Course(a);
+    Student(s);
+    find a_OrGroup_ref(s,a,c);
+    find count1928377683(s, ref1928377683);
+    check(((ref1928377683)>=(2)));
+}
+
+pattern n_Course_name_AttrEClass(c:Course, n){
+    Course.name(c, n);
+    check(((n).startsWith("A")));
+}
+
+pattern count1928377683(s:Student, result : java Integer){
+    result == count find a_OrGroup_ref(s,a,c);
+}
+
+pattern Student_attends1806669305(from:Student, to:Course){
+    Student.attends(from, to);
+}
+
+pattern a_OrGroup_ref(s,a,c){
+    find a_OrGroup(a,c);
+    find Student_attends1806669305(s,a);
+}
+
+

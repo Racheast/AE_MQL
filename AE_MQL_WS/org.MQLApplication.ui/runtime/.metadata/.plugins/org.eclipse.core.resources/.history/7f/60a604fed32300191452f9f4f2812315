@@ -1,0 +1,64 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s){
+	find c1_OrGroup(c1);
+	find c2_OrGroup(c2,n2);
+	find s_OrGroup(s, c1, c2);
+}
+
+pattern c2_OrGroup(c2,n2){
+    find Course1587394455(c2,n2);
+}
+
+pattern a2_OrGroup(a2,c2){
+    Course(c2);
+    a2 == c2;
+}
+
+pattern s_OrGroup(s,c1,c2){
+    find Strudent2091063947(s,c1,c2);
+}
+
+pattern a1_OrGroup(a1,c1){
+    Course(c1);
+    a1 == c1;
+}
+
+pattern c1_OrGroup(c1){
+	Course(c1);
+}
+
+pattern Strudent2091063947(s:Strudent,c1:Course,c2:Course){
+    Course(c2);
+    Strudent(s);
+    Course(c1);
+    neg find a1_OrGroup_ref(s,a1,c1);
+    neg find a2_OrGroup_ref(s,a2,c2);
+}
+
+pattern Course1587394455(c2:Course,n2){
+    Course(c2);
+    find n2_Course_name_AttrEClass(c2,n2);
+}
+
+pattern n2_Course_name_AttrEClass(c2:Course, n2){
+    Course.name(c2, n2);
+    check(((n2).startsWith("Advanced Ana")));
+}
+
+pattern Strudent_attends14523447(from:Strudent, to:Course){
+    Strudent.attends(from, to);
+}
+
+pattern a2_OrGroup_ref(s,a2,c2){
+    find a2_OrGroup(a2,c2);
+    find Strudent_attends14523447(s,a2);
+}
+
+pattern a1_OrGroup_ref(s,a1,c1){
+    find a1_OrGroup(a1,c1);
+    find Strudent_attends14523447(s,a1);
+}
+
+

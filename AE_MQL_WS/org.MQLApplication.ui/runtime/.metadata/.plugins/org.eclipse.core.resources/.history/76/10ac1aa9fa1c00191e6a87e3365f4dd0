@@ -1,0 +1,34 @@
+Find InstanceHierarchy ih : InstanceHierarchy{
+	changeMode c;
+	internalElement! ie1: InternalElement{
+		attribute a1 : Attribute{
+			additionalInformation addRef;
+			attribute!+ a2: Attribute{
+				additionalInformation addRef2;
+				attribute! a3: AttributeFamily{
+					additionalInformation addRef3 : addInf1 OR addInf1 OR addInf2;
+					attribute a4: Attribute{
+						additionalInformation addRef4 : addInf22 OR addInf2;
+					};
+				} OR AttributeFamily{
+					additionalInformation addRef5  :addInf2 OR addInf22;
+					attribute! a5;
+				};
+			};
+		};
+	};
+},AdditionalInformation addInf1, AdditionalInformation addInf2, AdditionalInformation addInf22
+Select addInf2, ih, addInf2, ih
+union
+Find CAEXObject co : InternalElement{
+	internalElement ie2 : InternalElement{
+		name! n2;
+		systemUnitClass su2 : SystemUnitClass{
+			name n22;
+			internalElement ie22 : InternalElement{
+				baseClass bc : ie2;
+				baseSystemUnit! bsu : ie2 OR su2;
+			};
+		};
+	};
+}

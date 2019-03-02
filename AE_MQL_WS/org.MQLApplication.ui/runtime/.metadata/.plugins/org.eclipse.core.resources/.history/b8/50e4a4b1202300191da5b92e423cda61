@@ -1,0 +1,38 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(f, f2){
+	find f_OrGroup(f, o, f2);
+	find f2_OrGroup(f2);
+}
+
+pattern f_OrGroup(f,o,f2){
+    find LinkFile1573380209(f,o,f2);
+}
+
+pattern f2_OrGroup(f2){
+	File(f2);
+}
+
+pattern o_OrGroup(o,f2){
+    File(f2);
+    o == f2;
+}
+
+pattern LinkFile1573380209(f:LinkFile,o:File,f2:File){
+    LinkFile(f);
+    File(f2);
+    File(o);
+    find o_OrGroup_ref(f,o,f2);
+}
+
+pattern LinkFile_opens1015839238(from:LinkFile, to:File){
+    LinkFile.opens(from, to);
+}
+
+pattern o_OrGroup_ref(f,o,f2){
+    find o_OrGroup(o,f2);
+    find LinkFile_opens1015839238(f,o);
+}
+
+

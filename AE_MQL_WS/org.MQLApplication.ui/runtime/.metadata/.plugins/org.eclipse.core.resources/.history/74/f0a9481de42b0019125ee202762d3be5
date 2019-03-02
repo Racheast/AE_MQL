@@ -1,0 +1,5 @@
+Find
+Course c : Course{
+	exam e;
+	eval:count(e).greaterEquals(2);
+};  

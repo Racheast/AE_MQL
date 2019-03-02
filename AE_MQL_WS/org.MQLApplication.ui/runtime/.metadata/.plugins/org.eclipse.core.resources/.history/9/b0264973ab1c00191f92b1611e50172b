@@ -1,0 +1,58 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie1){
+	find ie1_OrGroup(ie1, suc, bsu);
+}
+
+pattern bsu_OrGroup(bsu:SystemUnitClass, suc){
+    InternalElement(ie1);
+    SystemUnitClass(suc);
+    bsu == ie1;
+}
+or{
+    InternalElement(ie1);
+    SystemUnitClass(suc);
+    bsu == suc;
+}
+
+pattern ie1_OrGroup(ie1:InternalElement, suc, bsu){
+    find InternalElement1802162095(ie1, suc, bsu);
+}
+
+pattern suc_OrGroup(suc:SystemUnitClass){
+    find SystemUnitClass581551218(suc);
+}
+
+pattern InternalElement1802162095(ie1:InternalElement, suc, bsu){
+    InternalElement(ie1);
+    InternalElement(ie1);
+    SystemUnitClass(suc);
+    find suc_OrGroup_ref(ie1, suc);
+    find bsu_OrGroup_ref(ie1, bsu, suc);
+    bsu != suc;
+}
+
+pattern SystemUnitClass581551218(suc:SystemUnitClass){
+    SystemUnitClass(suc);
+}
+
+pattern InternalElement_systemUnitClass1007483565(from:InternalElement, to:SystemUnitClass){
+    InternalElement.systemUnitClass(from, to);
+}
+
+pattern InternalElement_baseSystemUnit1276961082(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern bsu_OrGroup_ref(ie1, bsu, suc){
+    find bsu_OrGroup(bsu, suc);
+    find InternalElement_baseSystemUnit1276961082(ie1,bsu);
+}
+
+pattern suc_OrGroup_ref(ie1, suc){
+    find suc_OrGroup(suc);
+    find InternalElement_systemUnitClass1007483565(ie1,suc);
+}
+
+

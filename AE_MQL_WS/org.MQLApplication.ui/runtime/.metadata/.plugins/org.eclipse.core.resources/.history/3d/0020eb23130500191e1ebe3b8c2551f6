@@ -1,0 +1,26 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find Element1114847268(result);
+}
+
+pattern Element1114847268(elem:Element){
+    Element(elem);
+    find p_Element_powerLevelWatt_AttrEClass(elem,p);
+    find sum1044903387(elem, ref1044903387);
+    check(((ref1044903387)>(10)));
+}
+
+pattern p_Element_powerLevelWatt_AttrEClass(elem:Element,p){
+	Element.powerLevelWatt(elem,p);
+}
+
+pattern sum1044903387(elem:Element, result:java Number_EvaluationOperation_Argument){
+    result == sum find argument_2049648843(elem, #);
+}
+
+pattern argument_2049648843(elem:Element, result: java Double){
+    find p_Element_powerLevelWatt_AttrEClass(elem, result);
+}
+

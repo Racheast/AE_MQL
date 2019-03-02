@@ -1,0 +1,8 @@
+Find InternalElement ie1 : InternalElement{
+	name n1 : self.length().greaterEquals(count(id1));
+	iD id1;
+	eval: count(n1).greaterEquals(1);
+},
+Attribute a: Attribute{
+	name n2;
+}

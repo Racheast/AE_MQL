@@ -1,0 +1,21 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(lf, f){
+	find lf_OrGroup(lf);
+	find f_OrGroup(f);
+}
+
+pattern f_OrGroup(f){
+	File(f);
+}
+
+pattern lf_OrGroup(lf){
+    find LinkFile541198682(lf);
+}
+
+pattern LinkFile541198682(lf:LinkFile){
+    LinkFile(lf);
+}
+
+

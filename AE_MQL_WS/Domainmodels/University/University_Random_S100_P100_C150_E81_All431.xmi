@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmm:UniversityManagementSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dmm="/DMM/model/DMM.ecore">
+  <course name="Marketing"
+      courseNumber="111">
+    <exam examID="marketing1"/>
+  </course>
+  <course name="Analysis"
+      courseNumber="222"
+      courseType="UE"
+      mandatoryFor="333">
+    <exam examID="analysis1"/>
+    <exam examID="analysis2"/>
+    <exam examID="analysis3"/>
+  </course>
+  <course name="Advanced Analysis"
+      courseNumber="333"
+      mandatoryFor="555">
+    <exam examID="advancedanalysis1"/>
+  </course>
+  <course name="Seminar for Masters"
+      courseNumber="444"
+      courseType="SEM"
+      mandatoryFor="555"/>
+  <course name="Masters Defense Exam"
+      courseNumber="555"
+      courseType="UE">
+    <exam examID="defense1"/>
+  </course>
+  <course name="Innovation"
+      courseNumber="666"
+      mandatoryFor="555">
+    <exam examID="innovation1"/>
+  </course>
+  <course name="Object-oriented Programming"
+      courseNumber="777"
+      courseType="UE"
+      mandatoryFor="888 999">
+    <exam examID="oop1"/>
+    <exam examID="oop2"/>
+  </course>
+  <course name="Software Engineering and Project Management"
+      courseNumber="888"
+      courseType="PR"
+      mandatoryFor="999"/>
+  <course name="Advanced Software Engineering"
+      courseNumber="999"
+      courseType="PR"
+      mandatoryFor="555"/>
+  <course name="Technical Russian 1"
+      courseNumber="1000"
+      mandatoryFor="2000">
+    <exam examID="technicalrussian1_1"/>
+  </course>
+  <course name="Econometrics"
+      courseNumber="111"
+      mandatoryFor="555">
+    <exam examID="econometrics1"/>
+  </course>
+  <course name="Technical Russian 2"
+      courseNumber="2000">
+    <exam examID="technicalrussian2_1"/>
+  </course>
+  <person xsi:type="dmm:Student"
+      name="Max Mustermann"
+      matriculationNumber="1265767"
+      attends="111 666 888 222">
+    <email>max.muster@mail.de</email>
+    <email>1265767@student.myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Student"
+      name="Martha Musterfrau"
+      matriculationNumber="1286947"
+      attends="333 444 999">
+    <email>1286947@student.myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Student"
+      name="John Doe"
+      matriculationNumber="1058674"
+      attends="777 1000"/>
+  <person xsi:type="dmm:Professor"
+      name="Jane Doe"
+      employeeNumber="87876565"
+      lectures="222 333">
+    <email>jane.doe@myuni.at</email>
+    <email>87876565@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Professor"
+      name="Peter Parker"
+      employeeNumber="6758234"
+      lectures="111 444 666 555">
+    <email>petie@gmail.com</email>
+  </person>
+  <person xsi:type="dmm:Professor"
+      name="Laura Müller"
+      employeeNumber="5748396"
+      lectures="777 888 999">
+    <email>laura.mueller@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Student"
+      name="Larry Lazy"
+      matriculationNumber="9212321">
+    <email>larry.l@gmail.com</email>
+  </person>
+  <person xsi:type="dmm:Professor"
+      name="Bernhard Bond"
+      employeeNumber="8765673"
+      lectures="1000"/>
+  <course name="Geography_v01" courseNumber="10000000" courseType="PR" mandatoryFor="10000010">
+    <exam examID="Geography_v01_1000"/>
+  </course>
+  <course name="Geography_v02" courseNumber="10000010" courseType="PR">
+    <exam examID="Geography_v02_1001"/>
+  </course>
+  <course name="Geography_v11" courseNumber="10000020" courseType="UE">
+    <exam examID="Geography_v11_1002"/>
+  </course>
+  <course name="Geography_v21" courseNumber="10000030"/>
+  <course name="Geography_v31" courseNumber="10000040" courseType="PR">
+    <exam examID="Geography_v31_1003"/>
+  </course>
+  <course name="Geography_v41" courseNumber="10000050" courseType="UE" mandatoryFor="10000060"/>
+  <course name="Geography_v42" courseNumber="10000060" courseType="UE">
+    <exam examID="Geography_v42_1004"/>
+  </course>
+  <course name="Biology_v01" courseNumber="10000070" mandatoryFor="10000080">
+    <exam examID="Biology_v01_1005"/>
+  </course>
+  <course name="Biology_v02" courseNumber="10000080">
+    <exam examID="Biology_v02_1006"/>
+  </course>
+  <course name="Biology_v11" courseNumber="10000090" courseType="PR" mandatoryFor="10000100">
+    <exam examID="Biology_v11_1007"/>
+  </course>
+  <course name="Biology_v12" courseNumber="10000100" courseType="PR"/>
+  <course name="Biology_v21" courseNumber="10000110" courseType="UE" mandatoryFor="10000120"/>
+  <course name="Biology_v22" courseNumber="10000120" courseType="UE"/>
+  <course name="Biology_v31" courseNumber="10000130" courseType="UE">
+    <exam examID="Biology_v31_1008"/>
+  </course>
+  <course name="Biology_v41" courseNumber="10000140" courseType="SEM" mandatoryFor="10000150">
+    <exam examID="Biology_v41_1009"/>
+  </course>
+  <course name="Biology_v42" courseNumber="10000150" courseType="SEM"/>
+  <course name="Ethics in Computing_v01" courseNumber="10000160" courseType="UE" mandatoryFor="10000170"/>
+  <course name="Ethics in Computing_v02" courseNumber="10000170" courseType="UE"/>
+  <course name="Ethics in Computing_v11" courseNumber="10000180" courseType="UE"/>
+  <course name="Ethics in Computing_v21" courseNumber="10000190" courseType="PR"/>
+  <course name="Ethics in Computing_v31" courseNumber="10000200" courseType="UE">
+    <exam examID="Ethics in Computing_v31_1010"/>
+  </course>
+  <course name="Ethics in Computing_v41" courseNumber="10000210" courseType="SEM" mandatoryFor="10000220"/>
+  <course name="Ethics in Computing_v42" courseNumber="10000220" courseType="SEM">
+    <exam examID="Ethics in Computing_v42_1011"/>
+  </course>
+  <course name="Technical Computing_v01" courseNumber="10000230" courseType="PR"/>
+  <course name="Technical Computing_v11" courseNumber="10000240" courseType="UE"/>
+  <course name="Technical Computing_v21" courseNumber="10000250">
+    <exam examID="Technical Computing_v21_1012"/>
+  </course>
+  <course name="Technical Computing_v31" courseNumber="10000260" mandatoryFor="10000270">
+    <exam examID="Technical Computing_v31_1013"/>
+  </course>
+  <course name="Technical Computing_v32" courseNumber="10000270"/>
+  <course name="Technical Computing_v41" courseNumber="10000280" courseType="UE" mandatoryFor="10000290">
+    <exam examID="Technical Computing_v41_1014"/>
+  </course>
+  <course name="Technical Computing_v42" courseNumber="10000290" courseType="UE"/>
+  <course name="Technical Japanese_v01" courseNumber="10000300">
+    <exam examID="Technical Japanese_v01_1015"/>
+  </course>
+  <course name="Technical Japanese_v11" courseNumber="10000310" courseType="PR" mandatoryFor="10000320">
+    <exam examID="Technical Japanese_v11_1016"/>
+  </course>
+  <course name="Technical Japanese_v12" courseNumber="10000320" courseType="PR"/>
+  <course name="Technical Japanese_v21" courseNumber="10000330" courseType="PR" mandatoryFor="10000340"/>
+  <course name="Technical Japanese_v22" courseNumber="10000340" courseType="PR"/>
+  <course name="Technical Japanese_v31" courseNumber="10000350" courseType="PR" mandatoryFor="10000360"/>
+  <course name="Technical Japanese_v32" courseNumber="10000360" courseType="PR">
+    <exam examID="Technical Japanese_v32_1017"/>
+  </course>
+  <course name="Technical Japanese_v41" courseNumber="10000370" courseType="UE" mandatoryFor="10000380">
+    <exam examID="Technical Japanese_v41_1018"/>
+  </course>
+  <course name="Technical Japanese_v42" courseNumber="10000380" courseType="UE">
+    <exam examID="Technical Japanese_v42_1019"/>
+  </course>
+  <course name="Technical English_v01" courseNumber="10000390" courseType="SEM"/>
+  <course name="Technical English_v11" courseNumber="10000400" courseType="UE">
+    <exam examID="Technical English_v11_1020"/>
+  </course>
+  <course name="Technical English_v21" courseNumber="10000410" courseType="SEM"/>
+  <course name="Technical English_v31" courseNumber="10000420" mandatoryFor="10000430"/>
+  <course name="Technical English_v32" courseNumber="10000430"/>
+  <course name="Technical English_v41" courseNumber="10000440" courseType="SEM" mandatoryFor="10000450">
+    <exam examID="Technical English_v41_1021"/>
+  </course>
+  <course name="Technical English_v42" courseNumber="10000450" courseType="SEM">
+    <exam examID="Technical English_v42_1022"/>
+  </course>
+  <course name="Technical Italian_v01" courseNumber="10000460" courseType="PR" mandatoryFor="10000470">
+    <exam examID="Technical Italian_v01_1023"/>
+  </course>
+  <course name="Technical Italian_v02" courseNumber="10000470" courseType="PR">
+    <exam examID="Technical Italian_v02_1024"/>
+  </course>
+  <course name="Technical Italian_v11" courseNumber="10000480"/>
+  <course name="Technical Italian_v21" courseNumber="10000490" courseType="UE" mandatoryFor="10000500">
+    <exam examID="Technical Italian_v21_1025"/>
+  </course>
+  <course name="Technical Italian_v22" courseNumber="10000500" courseType="UE"/>
+  <course name="Technical Italian_v31" courseNumber="10000510" courseType="PR"/>
+  <course name="Technical Italian_v41" courseNumber="10000520" courseType="SEM" mandatoryFor="10000530">
+    <exam examID="Technical Italian_v41_1026"/>
+  </course>
+  <course name="Technical Italian_v42" courseNumber="10000530" courseType="SEM">
+    <exam examID="Technical Italian_v42_1027"/>
+  </course>
+  <course name="Technical Spanish_v01" courseNumber="10000540" courseType="UE"/>
+  <course name="Technical Spanish_v11" courseNumber="10000550" courseType="PR" mandatoryFor="10000560">
+    <exam examID="Technical Spanish_v11_1028"/>
+  </course>
+  <course name="Technical Spanish_v12" courseNumber="10000560" courseType="PR"/>
+  <course name="Technical Spanish_v21" courseNumber="10000570">
+    <exam examID="Technical Spanish_v21_1029"/>
+  </course>
+  <course name="Technical Spanish_v31" courseNumber="10000580" courseType="UE" mandatoryFor="10000590">
+    <exam examID="Technical Spanish_v31_1030"/>
+  </course>
+  <course name="Technical Spanish_v32" courseNumber="10000590" courseType="UE">
+    <exam examID="Technical Spanish_v32_1031"/>
+  </course>
+  <course name="Technical Spanish_v41" courseNumber="10000600" courseType="SEM">
+    <exam examID="Technical Spanish_v41_1032"/>
+  </course>
+  <course name="Accounting_v01" courseNumber="10000610" courseType="SEM" mandatoryFor="10000620">
+    <exam examID="Accounting_v01_1033"/>
+  </course>
+  <course name="Accounting_v02" courseNumber="10000620" courseType="SEM"/>
+  <course name="Accounting_v11" courseNumber="10000630" courseType="SEM"/>
+  <course name="Accounting_v21" courseNumber="10000640" courseType="SEM" mandatoryFor="10000650">
+    <exam examID="Accounting_v21_1034"/>
+  </course>
+  <course name="Accounting_v22" courseNumber="10000650" courseType="SEM">
+    <exam examID="Accounting_v22_1035"/>
+  </course>
+  <course name="Accounting_v31" courseNumber="10000660" courseType="UE">
+    <exam examID="Accounting_v31_1036"/>
+  </course>
+  <course name="Accounting_v41" courseNumber="10000670"/>
+  <course name="Applied Statistics_v01" courseNumber="10000680" courseType="PR">
+    <exam examID="Applied Statistics_v01_1037"/>
+  </course>
+  <course name="Applied Statistics_v11" courseNumber="10000690">
+    <exam examID="Applied Statistics_v11_1038"/>
+  </course>
+  <course name="Applied Statistics_v21" courseNumber="10000700" courseType="SEM">
+    <exam examID="Applied Statistics_v21_1039"/>
+  </course>
+  <course name="Applied Statistics_v31" courseNumber="10000710" courseType="PR" mandatoryFor="10000720"/>
+  <course name="Applied Statistics_v32" courseNumber="10000720" courseType="PR">
+    <exam examID="Applied Statistics_v32_1040"/>
+  </course>
+  <course name="Applied Statistics_v41" courseNumber="10000730" courseType="PR" mandatoryFor="10000740">
+    <exam examID="Applied Statistics_v41_1041"/>
+  </course>
+  <course name="Applied Statistics_v42" courseNumber="10000740" courseType="PR"/>
+  <course name="Micro Economics_v01" courseNumber="10000750" mandatoryFor="10000760"/>
+  <course name="Micro Economics_v02" courseNumber="10000760">
+    <exam examID="Micro Economics_v02_1042"/>
+  </course>
+  <course name="Micro Economics_v11" courseNumber="10000770" mandatoryFor="10000780"/>
+  <course name="Micro Economics_v12" courseNumber="10000780">
+    <exam examID="Micro Economics_v12_1043"/>
+  </course>
+  <course name="Micro Economics_v21" courseNumber="10000790" courseType="PR">
+    <exam examID="Micro Economics_v21_1044"/>
+  </course>
+  <course name="Micro Economics_v31" courseNumber="10000800" courseType="SEM">
+    <exam examID="Micro Economics_v31_1045"/>
+  </course>
+  <course name="Micro Economics_v41" courseNumber="10000810" courseType="PR" mandatoryFor="10000820"/>
+  <course name="Micro Economics_v42" courseNumber="10000820" courseType="PR">
+    <exam examID="Micro Economics_v42_1046"/>
+  </course>
+  <course name="Macro Economics_v01" courseNumber="10000830" courseType="PR">
+    <exam examID="Macro Economics_v01_1047"/>
+  </course>
+  <course name="Macro Economics_v11" courseNumber="10000840" courseType="PR" mandatoryFor="10000850">
+    <exam examID="Macro Economics_v11_1048"/>
+  </course>
+  <course name="Macro Economics_v12" courseNumber="10000850" courseType="PR">
+    <exam examID="Macro Economics_v12_1049"/>
+  </course>
+  <course name="Macro Economics_v21" courseNumber="10000860">
+    <exam examID="Macro Economics_v21_1050"/>
+  </course>
+  <course name="Macro Economics_v31" courseNumber="10000870" courseType="PR" mandatoryFor="10000880"/>
+  <course name="Macro Economics_v32" courseNumber="10000880" courseType="PR">
+    <exam examID="Macro Economics_v32_1051"/>
+  </course>
+  <course name="Macro Economics_v41" courseNumber="10000890" mandatoryFor="10000900">
+    <exam examID="Macro Economics_v41_1052"/>
+  </course>
+  <course name="Macro Economics_v42" courseNumber="10000900">
+    <exam examID="Macro Economics_v42_1053"/>
+  </course>
+  <course name="Organisation_v01" courseNumber="10000910"/>
+  <course name="Organisation_v11" courseNumber="10000920" courseType="PR" mandatoryFor="10000930">
+    <exam examID="Organisation_v11_1054"/>
+  </course>
+  <course name="Organisation_v12" courseNumber="10000930" courseType="PR"/>
+  <course name="Organisation_v21" courseNumber="10000940" courseType="SEM">
+    <exam examID="Organisation_v21_1055"/>
+  </course>
+  <course name="Organisation_v31" courseNumber="10000950" courseType="PR">
+    <exam examID="Organisation_v31_1056"/>
+  </course>
+  <course name="Organisation_v41" courseNumber="10000960" mandatoryFor="10000970"/>
+  <course name="Organisation_v42" courseNumber="10000970"/>
+  <course name="Process Management_v01" courseNumber="10000980" courseType="UE" mandatoryFor="10000990">
+    <exam examID="Process Management_v01_1057"/>
+  </course>
+  <course name="Process Management_v02" courseNumber="10000990" courseType="UE">
+    <exam examID="Process Management_v02_1058"/>
+  </course>
+  <course name="Process Management_v11" courseNumber="10001000" courseType="SEM" mandatoryFor="10001010">
+    <exam examID="Process Management_v11_1059"/>
+  </course>
+  <course name="Process Management_v12" courseNumber="10001010" courseType="SEM">
+    <exam examID="Process Management_v12_1060"/>
+  </course>
+  <course name="Process Management_v21" courseNumber="10001020" courseType="SEM">
+    <exam examID="Process Management_v21_1061"/>
+  </course>
+  <course name="Process Management_v31" courseNumber="10001030" courseType="UE">
+    <exam examID="Process Management_v31_1062"/>
+  </course>
+  <course name="Process Management_v41" courseNumber="10001040" mandatoryFor="10001050"/>
+  <course name="Process Management_v42" courseNumber="10001050"/>
+  <course name="Seminar for Bachelors_v01" courseNumber="10001060" courseType="UE" mandatoryFor="10001070"/>
+  <course name="Seminar for Bachelors_v02" courseNumber="10001070" courseType="UE"/>
+  <course name="Seminar for Bachelors_v11" courseNumber="10001080" courseType="UE" mandatoryFor="10001090"/>
+  <course name="Seminar for Bachelors_v12" courseNumber="10001090" courseType="UE"/>
+  <course name="Seminar for Bachelors_v21" courseNumber="10001100" courseType="PR"/>
+  <course name="Seminar for Bachelors_v31" courseNumber="10001110" courseType="UE" mandatoryFor="10001120">
+    <exam examID="Seminar for Bachelors_v31_1063"/>
+  </course>
+  <course name="Seminar for Bachelors_v32" courseNumber="10001120" courseType="UE">
+    <exam examID="Seminar for Bachelors_v32_1064"/>
+  </course>
+  <course name="Seminar for Bachelors_v41" courseNumber="10001130" courseType="SEM">
+    <exam examID="Seminar for Bachelors_v41_1065"/>
+  </course>
+  <course name="Theoretical Computing_v01" courseNumber="10001140" mandatoryFor="10001150"/>
+  <course name="Theoretical Computing_v02" courseNumber="10001150">
+    <exam examID="Theoretical Computing_v02_1066"/>
+  </course>
+  <course name="Theoretical Computing_v11" courseNumber="10001160">
+    <exam examID="Theoretical Computing_v11_1067"/>
+  </course>
+  <course name="Theoretical Computing_v21" courseNumber="10001170" courseType="PR"/>
+  <course name="Theoretical Computing_v31" courseNumber="10001180">
+    <exam examID="Theoretical Computing_v31_1068"/>
+  </course>
+  <course name="Theoretical Computing_v41" courseNumber="10001190" courseType="UE">
+    <exam examID="Theoretical Computing_v41_1069"/>
+  </course>
+  <course name="Model Engineering_v01" courseNumber="10001200" courseType="PR" mandatoryFor="10001210"/>
+  <course name="Model Engineering_v02" courseNumber="10001210" courseType="PR"/>
+  <course name="Model Engineering_v11" courseNumber="10001220" courseType="UE"/>
+  <course name="Model Engineering_v21" courseNumber="10001230" courseType="UE" mandatoryFor="10001240"/>
+  <course name="Model Engineering_v22" courseNumber="10001240" courseType="UE">
+    <exam examID="Model Engineering_v22_1070"/>
+  </course>
+  <course name="Model Engineering_v31" courseNumber="10001250" courseType="SEM">
+    <exam examID="Model Engineering_v31_1071"/>
+  </course>
+  <course name="Model Engineering_v41" courseNumber="10001260" mandatoryFor="10001270"/>
+  <course name="Model Engineering_v42" courseNumber="10001270"/>
+  <course name="Modeling and Simulation_v01" courseNumber="10001280" mandatoryFor="10001290"/>
+  <course name="Modeling and Simulation_v02" courseNumber="10001290">
+    <exam examID="Modeling and Simulation_v02_1072"/>
+  </course>
+  <course name="Modeling and Simulation_v11" courseNumber="10001300">
+    <exam examID="Modeling and Simulation_v11_1073"/>
+  </course>
+  <course name="Modeling and Simulation_v21" courseNumber="10001310">
+    <exam examID="Modeling and Simulation_v21_1074"/>
+  </course>
+  <course name="Modeling and Simulation_v31" courseNumber="10001320" courseType="SEM" mandatoryFor="10001330"/>
+  <course name="Modeling and Simulation_v32" courseNumber="10001330" courseType="SEM"/>
+  <course name="Modeling and Simulation_v41" courseNumber="10001340" courseType="UE">
+    <exam examID="Modeling and Simulation_v41_1075"/>
+  </course>
+  <course name="Soft skills_v01" courseNumber="10001350" courseType="SEM"/>
+  <course name="Soft skills_v11" courseNumber="10001360"/>
+  <course name="Soft skills_v21" courseNumber="10001370" courseType="SEM" mandatoryFor="10001380"/>
+  <course name="Soft skills_v22" courseNumber="10001380" courseType="SEM"/>
+  <course name="Soft skills_v31" courseNumber="10001390" courseType="PR" mandatoryFor="10001400">
+    <exam examID="Soft skills_v31_1076"/>
+  </course>
+  <course name="Soft skills_v32" courseNumber="10001400" courseType="PR"/>
+  <course name="Soft skills_v41" courseNumber="10001410"/>
+  <course name="Hard skills_v01" courseNumber="10001420" courseType="UE"/>
+  <course name="Hard skills_v11" courseNumber="10001430" courseType="UE">
+    <exam examID="Hard skills_v11_1077"/>
+  </course>
+  <course name="Hard skills_v21" courseNumber="10001440" courseType="UE" mandatoryFor="10001450">
+    <exam examID="Hard skills_v21_1078"/>
+  </course>
+  <course name="Hard skills_v22" courseNumber="10001450" courseType="UE">
+    <exam examID="Hard skills_v22_1079"/>
+  </course>
+  <course name="Hard skills_v31" courseNumber="10001460" courseType="UE" mandatoryFor="10001470">
+    <exam examID="Hard skills_v31_1080"/>
+  </course>
+  <course name="Hard skills_v32" courseNumber="10001470" courseType="UE"/>
+  <course name="Hard skills_v41" courseNumber="10001480" courseType="UE" mandatoryFor="10001490"/>
+  <course name="Hard skills_v42" courseNumber="10001490" courseType="UE"/>
+  <person xsi:type="dmm:Student" name="Claudia Apfel" matriculationNumber="1000000410" attends="10000010 10000040 10000180 10001150">
+    <email>Claudia.Apfel274875@web.de</email>
+    <email>Claudia.Apfel309234@slowmail.com</email>
+    <email>Claudia.Apfel18902@geemail.to</email>
+    <email>Claudia.Apfel517004@hotmail.de</email>
+    <email>Claudia.Apfel367715@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christina Albrecht" matriculationNumber="1000000920" attends="10000920 10001340 10000180 10000000 10000380 10000720">
+    <email>Christina.Albrecht858358@hotmail.de</email>
+    <email>Christina.Albrecht642755@hotmail.de</email>
+    <email>Christina.Albrecht11429@yahoo.de</email>
+    <email>Christina.Albrecht65042@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christoph Stein" matriculationNumber="1000000670" attends="10000670 10000190 10001280 10000410 10001130 10000740 10000650">
+    <email>Christoph.Stein565713@chello.at</email>
+    <email>Christoph.Stein434713@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alfred Tanne" matriculationNumber="1000000400" attends="10001440 10000370 10001150"/>
+  <person xsi:type="dmm:Student" name="Clara Buchlink" matriculationNumber="1000000150" attends="10000590 10001240 10000730 10000810 10000310 10000210 10001450 10000710 10000180 10000150 10000980 10000740 10000280">
+    <email>Clara.Buchlink163333@myuni.at</email>
+    <email>Clara.Buchlink211652@fastmail.to</email>
+    <email>Clara.Buchlink68253@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Beate Müllberger" matriculationNumber="1000000660" attends="10000320 10000670 10001030 10001000 10000830 10000070 10001120">
+    <email>Beate.Müllberger785403@myuni.at</email>
+    <email>Beate.Müllberger912217@fastmail.to</email>
+    <email>Beate.Müllberger790588@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bastian Dosenbier" matriculationNumber="1000000650" attends="10001020 10000340 10000190 10000660 10001320 10000910 10000220">
+    <email>Bastian.Dosenbier362377@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Cornelia Gross" matriculationNumber="1000000910" attends="10000540 10001340 10001260 10001040 10000480 10000380">
+    <email>Cornelia.Gross351118@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alfred Grossmann" matriculationNumber="1000000140" attends="10001210 10000450 10001160 10001360 10001400 10001040 10000870 10000610 10001410 10000010 10001000 10000370 10000410">
+    <email>Alfred.Grossmann300323@yahoo.de</email>
+    <email>Alfred.Grossmann677100@geemail.to</email>
+    <email>Alfred.Grossmann214521@slowmail.com</email>
+    <email>Alfred.Grossmann34402@fastmail.to</email>
+    <email>Alfred.Grossmann885437@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christina Apfel" matriculationNumber="1000000130" attends="10000540 10000000 10001070">
+    <email>Christina.Apfel502770@fastmail.to</email>
+    <email>Christina.Apfel576086@slowmail.com</email>
+    <email>Christina.Apfel69044@slowmail.com</email>
+    <email>Christina.Apfel946209@web.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alexander Baumgarten" matriculationNumber="1000000640" attends="10000430 10000420 10001240 10000660 10000990 10000770 10000050 10001420 10000510 10000940">
+    <email>Alexander.Baumgarten531068@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Carl Müllberger" matriculationNumber="1000000390" attends="10000320 10000450 10000620 10000520 10000480 10000720 10001130">
+    <email>Carl.Müllberger120913@gmx.at</email>
+    <email>Carl.Müllberger702199@web.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Anton Baum" matriculationNumber="1000000900" attends="10000320 10001060 10000660 10000180 10001380 10000950 10000790 10000310 10000650"/>
+  <person xsi:type="dmm:Student" name="Arnold Baumgarten" matriculationNumber="1000000440" attends="10000290 10000230"/>
+  <person xsi:type="dmm:Student" name="Arnold Hartlinger" matriculationNumber="1000000190" attends="10000040 10000700 10000850 10001240 10000820 10001470 10001270 10000780 10001200 10001120 10000440 10000740">
+    <email>Arnold.Hartlinger139906@web.de</email>
+    <email>Arnold.Hartlinger304822@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christina Slava" matriculationNumber="1000000700" attends="10000570 10000750 10000000 10001090 10001200 10000760 10000940"/>
+  <person xsi:type="dmm:Student" name="Barbara Albrecht" matriculationNumber="1000000690" attends="10000730 10001450 10001250 10000770 10001340 10001300 10000050 10000640 10001430 10001090 10001370 10000610">
+    <email>Barbara.Albrecht826039@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christian Gross" matriculationNumber="1000000950" attends="10000130 10000140">
+    <email>Christian.Gross993044@yahoo.de</email>
+    <email>Christian.Gross741754@fastmail.to</email>
+    <email>Christian.Gross833689@yahoo.de</email>
+    <email>Christian.Gross732807@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bistro Freeman" matriculationNumber="1000000180" attends="10000130 10001100 10000810 10000960 10000640 10000220 10000780 10001080 10001410">
+    <email>Bistro.Freeman530454@slowmail.com</email>
+    <email>Bistro.Freeman527804@web.de</email>
+    <email>Bistro.Freeman702211@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Beate Deutscher" matriculationNumber="1000000170" attends="10000840 10000560 10000660 10000750 10001260 10000830 10000480 10001390 10001150 10001410">
+    <email>Beate.Deutscher156863@web.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bianca Wissen" matriculationNumber="1000000680" attends="10000470 10001170">
+    <email>Bianca.Wissen123367@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Barbara Altmann" matriculationNumber="1000000430" attends="10000590 10000540 10000900 10000300 10000140 10001250 10001110 10000220 10000650"/>
+  <person xsi:type="dmm:Student" name="Christine Klein" matriculationNumber="1000000940" attends="10000880 10000390 10000790">
+    <email>Christine.Klein287645@geemail.to</email>
+    <email>Christine.Klein300213@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bella Grossfrau" matriculationNumber="1000000930" attends="10000400 10001020 10000160 10000450 10000640 10000750 10000830 10000880 10000890 10001060 10000460 10000290 10000150 10000860">
+    <email>Bella.Grossfrau558261@hotmail.de</email>
+    <email>Bella.Grossfrau74606@gmx.at</email>
+    <email>Bella.Grossfrau649856@hotmail.de</email>
+    <email>Bella.Grossfrau9780@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Claudia Danzig" matriculationNumber="1000000160" attends="10000730 10000620 10000510 10000490 10000080 10000570 10001320 10000820 10001110 10001000 10000370 10001090 10001230 10000330 10000740">
+    <email>Claudia.Danzig837016@geemail.to</email>
+    <email>Claudia.Danzig946826@web.de</email>
+    <email>Claudia.Danzig188190@hotmail.de</email>
+    <email>Claudia.Danzig23976@hotmail.de</email>
+    <email>Claudia.Danzig637141@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alfred Grossmann" matriculationNumber="1000000420" attends="10000540 10000020 10000660 10001300 10001360 10000490 10000880 10001490 10000760 10000320 10000850 10001060 10000820 10001260">
+    <email>Alfred.Grossmann185149@fastmail.to</email>
+    <email>Alfred.Grossmann916375@web.de</email>
+    <email>Alfred.Grossmann637364@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Cornelia Trauma" matriculationNumber="1000000730" attends="10000840 10000540 10000730 10001100 10001280 10000930 10001260 10000860 10001040 10000740">
+    <email>Cornelia.Trauma326003@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Barbara Baum" matriculationNumber="1000000990" attends="10000900 10001100 10000850 10000690 10000660 10001360 10001000 10000260 10000740 10000100 10000720 10000650"/>
+  <person xsi:type="dmm:Student" name="Arnold Freeman" matriculationNumber="1000000220" attends="10000080 10000460 10000640 10001360 10001380 10000390 10001370 10000090 10001070">
+    <email>Arnold.Freeman190896@hotmail.de</email>
+    <email>Arnold.Freeman577136@yahoo.de</email>
+    <email>Arnold.Freeman559629@hotmail.de</email>
+    <email>Arnold.Freeman432238@web.de</email>
+    <email>Arnold.Freeman660218@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bastian Stein" matriculationNumber="1000000210" attends="10000430 10000060 10000960 10000780">
+    <email>Bastian.Stein141813@gmx.at</email>
+    <email>Bastian.Stein744194@yahoo.de</email>
+    <email>Bastian.Stein229122@yahoo.de</email>
+    <email>Bastian.Stein433431@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Arnold Tanne" matriculationNumber="1000000720" attends="10001350 10000160 10000770 10000270 10000050 10000640 10001440 10000680 10000610 10000580 10000820 10001000 10000070 10001330">
+    <email>Arnold.Tanne168503@slowmail.com</email>
+    <email>Arnold.Tanne423221@geemail.to</email>
+    <email>Arnold.Tanne873643@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Anastasia Meier" matriculationNumber="1000000470" attends="10000430 10000660 10000050 10000030 10000780">
+    <email>Anastasia.Meier334642@student.myuniversity.at</email>
+    <email>Anastasia.Meier494147@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Benedikt Stone" matriculationNumber="1000000980" attends="10001240 10000470 10000190 10000460 10000050 10000180 10000090 10000790 10000210">
+    <email>Benedikt.Stone85295@myuni.at</email>
+    <email>Benedikt.Stone265869@student.myuniversity.at</email>
+    <email>Benedikt.Stone694017@student.myuniversity.at</email>
+    <email>Benedikt.Stone159894@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Adriana Korn" matriculationNumber="1000000970" attends="10000540 10000420 10000130 10000660 10000810 10000030 10001190 10000480 10000120 10000440 10000260">
+    <email>Adriana.Korn855363@student.myuniversity.at</email>
+    <email>Adriana.Korn624509@geemail.to</email>
+    <email>Adriana.Korn920917@fastmail.to</email>
+    <email>Adriana.Korn92744@gmx.at</email>
+    <email>Adriana.Korn265304@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Andreas West" matriculationNumber="1000000200" attends="10001460 10000160 10000560 10000270 10001260 10001430 10001190 10000230 10000090">
+    <email>Andreas.West432185@web.de</email>
+    <email>Andreas.West793220@hotmail.de</email>
+    <email>Andreas.West654366@geemail.to</email>
+    <email>Andreas.West867512@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Claudia Bryant" matriculationNumber="1000000460" attends="10001320 10001340 10000410">
+    <email>Claudia.Bryant56522@gmx.at</email>
+    <email>Claudia.Bryant732488@geemail.to</email>
+    <email>Claudia.Bryant187179@slowmail.com</email>
+    <email>Claudia.Bryant920598@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Anton Stein" matriculationNumber="1000000450" attends="10001420 10000030 10001220">
+    <email>Anton.Stein76604@web.de</email>
+    <email>Anton.Stein267185@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bella Albrecht" matriculationNumber="1000000960" attends="10000670 10000160 10001250 10001030 10000630">
+    <email>Bella.Albrecht353394@web.de</email>
+    <email>Bella.Albrecht951704@student.myuniversity.at</email>
+    <email>Bella.Albrecht148061@web.de</email>
+    <email>Bella.Albrecht815975@fastmail.to</email>
+    <email>Bella.Albrecht953594@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alexander Grossmann" matriculationNumber="1000000710" attends="10000600 10000000 10001120">
+    <email>Alexander.Grossmann639931@web.de</email>
+    <email>Alexander.Grossmann315943@myuni.at</email>
+    <email>Alexander.Grossmann228157@geemail.to</email>
+    <email>Alexander.Grossmann284883@myuni.at</email>
+    <email>Alexander.Grossmann590410@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bistro Baum" matriculationNumber="1000000250" attends="10000850 10000820 10001000 10001470 10000980">
+    <email>Bistro.Baum635625@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Adriana Albrecht" matriculationNumber="1000000760" attends="10000010 10000890 10000690 10000290 10001150">
+    <email>Adriana.Albrecht98518@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Benedikt Lichtfeld" matriculationNumber="1000000510" attends="10001350 10000130 10000080 10001440 10001340 10000780 10000390 10001040 10000440 10000310">
+    <email>Benedikt.Lichtfeld231226@fastmail.to</email>
+    <email>Benedikt.Lichtfeld984660@web.de</email>
+    <email>Benedikt.Lichtfeld438215@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Arnold Albrecht" matriculationNumber="1000000240" attends="10000900 10000240 10000200 10000910 10001180 10000870 10001130">
+    <email>Arnold.Albrecht210347@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alfred Dosenbier" matriculationNumber="1000000500" attends="10000730 10000560 10001460 10000660 10001340 10001370 10001150">
+    <email>Alfred.Dosenbier524389@geemail.to</email>
+    <email>Alfred.Dosenbier564592@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Cornelia Gross" matriculationNumber="1000000490" attends="10000010 10000240 10000810 10001420 10000350 10001080 10001200 10000970 10000720">
+    <email>Cornelia.Gross6328@myuni.at</email>
+    <email>Cornelia.Gross27763@chello.at</email>
+    <email>Cornelia.Gross860070@myuni.at</email>
+    <email>Cornelia.Gross873028@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alexander Altmann" matriculationNumber="1000000750" attends="10000160 10000200 10000910 10001400 10000500 10000440 10000260 10000980 10000720 10000740">
+    <email>Alexander.Altmann507739@hotmail.de</email>
+    <email>Alexander.Altmann731538@chello.at</email>
+    <email>Alexander.Altmann384170@geemail.to</email>
+    <email>Alexander.Altmann355387@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Birgit Buchlink" matriculationNumber="1000000480" attends="10000430 10000460 10001030 10000930 10000180 10001360 10000370 10000090 10000120 10000250 10000330 10000740">
+    <email>Birgit.Buchlink105070@hotmail.de</email>
+    <email>Birgit.Buchlink134947@student.myuniversity.at</email>
+    <email>Birgit.Buchlink649728@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alexander Tanne" matriculationNumber="1000000230" attends="10000900 10000040 10000020 10000600 10000080 10001280 10001440 10000000 10000950">
+    <email>Alexander.Tanne118640@web.de</email>
+    <email>Alexander.Tanne738727@myuni.at</email>
+    <email>Alexander.Tanne851474@gmx.at</email>
+    <email>Alexander.Tanne995984@web.de</email>
+    <email>Alexander.Tanne609469@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bryan Svoboda" matriculationNumber="1000000740" attends="10001280 10000490 10000720">
+    <email>Bryan.Svoboda909264@gmx.at</email>
+    <email>Bryan.Svoboda186240@yahoo.de</email>
+    <email>Bryan.Svoboda22660@web.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Beate Dosenbier" matriculationNumber="1000000280" attends="10001210 10000170 10001480 10000190 10001190 10000350 10000860 10001090 10001470 10001230 10000760 10001050">
+    <email>Beate.Dosenbier804700@gmx.at</email>
+    <email>Beate.Dosenbier517194@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Anton Korn" matriculationNumber="1000000030" attends="10000170 10000470 10000660 10001320 10000990 10000270 10000820 10000960 10000150 10000480 10000410 10000330"/>
+  <person xsi:type="dmm:Student" name="Christian Trauma" matriculationNumber="1000000540" attends="10000700 10000600 10001350 10001010 10000990 10000810 10001170 10001270 10001080 10000980">
+    <email>Christian.Trauma601914@gmx.at</email>
+    <email>Christian.Trauma225465@chello.at</email>
+    <email>Christian.Trauma719392@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Birgit Müllberger" matriculationNumber="1000000530" attends="10000590 10000670 10001280 10000180 10001170 10001190 10000220 10001090 10000390 10000760 10001070 10001130">
+    <email>Birgit.Müllberger749720@student.myuniversity.at</email>
+    <email>Birgit.Müllberger274900@web.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christian Gross" matriculationNumber="1000000790" attends="10000470 10001440">
+    <email>Christian.Gross508642@geemail.to</email>
+    <email>Christian.Gross819720@student.myuniversity.at</email>
+    <email>Christian.Gross419784@web.de</email>
+    <email>Christian.Gross753545@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christina Tanne" matriculationNumber="1000000020" attends="10000920 10000320 10001440 10000480">
+    <email>Christina.Tanne202582@web.de</email>
+    <email>Christina.Tanne80784@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alfred Trauma" matriculationNumber="1000000010" attends="10000660 10001450 10000180 10000370 10000350 10000070 10000110 10000330">
+    <email>Alfred.Trauma863363@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christina Altmann" matriculationNumber="1000000520" attends="10000010 10001420">
+    <email>Christina.Altmann774914@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bistro Freeman" matriculationNumber="1000000270" attends="10001290 10001020 10000470">
+    <email>Bistro.Freeman687631@chello.at</email>
+    <email>Bistro.Freeman970720@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bastian Marindova" matriculationNumber="1000000780" attends="10000020 10001100 10000340 10001060 10001010 10001030 10000750 10000150 10001330 10001490 10000280 10000740">
+    <email>Bastian.Marindova397818@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Anna Apfel" matriculationNumber="1000000770" attends="10000420 10000010 10000300 10001060 10000230">
+    <email>Anna.Apfel224898@web.de</email>
+    <email>Anna.Apfel784835@gmx.at</email>
+    <email>Anna.Apfel10992@myuni.at</email>
+    <email>Anna.Apfel161790@web.de</email>
+    <email>Anna.Apfel623237@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Benedikt Freeman" matriculationNumber="1000000000" attends="10000920 10000320 10000140 10000570 10000350 10001410">
+    <email>Benedikt.Freeman191155@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Ariel Danzig" matriculationNumber="1000000260" attends="10000540 10000700 10000890 10001240 10000670 10001160 10000270 10000150 10001140 10000880 10000970 10000100">
+    <email>Ariel.Danzig334002@slowmail.com</email>
+    <email>Ariel.Danzig123679@gmx.at</email>
+    <email>Ariel.Danzig226713@chello.at</email>
+    <email>Ariel.Danzig597817@student.myuniversity.at</email>
+    <email>Ariel.Danzig670638@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Adriana Baum" matriculationNumber="1000000570" attends="10000700 10000360 10001160 10001000 10000830 10001190 10001090 10001270 10000500 10000870 10000380"/>
+  <person xsi:type="dmm:Student" name="Alena Marindo" matriculationNumber="1000000830" attends="10001020 10000830 10000490 10000500 10001130 10000080 10001060 10000990 10001380 10001220 10000980 10000330 10001070">
+    <email>Alena.Marindo318089@student.myuniversity.at</email>
+    <email>Alena.Marindo469305@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alexander Apfel" matriculationNumber="1000000060" attends="10001320 10001360 10001270 10000280"/>
+  <person xsi:type="dmm:Student" name="Arnold Hartlinger" matriculationNumber="1000000050" attends="10000850 10000690 10001000 10000980 10001410 10000100">
+    <email>Arnold.Hartlinger507396@slowmail.com</email>
+    <email>Arnold.Hartlinger660460@chello.at</email>
+    <email>Arnold.Hartlinger268572@web.de</email>
+    <email>Arnold.Hartlinger875267@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christina Anthony" matriculationNumber="1000000560" attends="10001260 10000710">
+    <email>Christina.Anthony329107@gmx.at</email>
+    <email>Christina.Anthony349838@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Arnold Meier" matriculationNumber="1000000310" attends="10000420 10000600 10000470 10001460 10000560 10000990 10000370 10000410 10000650">
+    <email>Arnold.Meier393084@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bella Müllberger" matriculationNumber="1000000820" attends="10000320 10000470">
+    <email>Bella.Müllberger971236@slowmail.com</email>
+    <email>Bella.Müllberger368631@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Adriana Altmann" matriculationNumber="1000000810" attends="10000430 10000010 10000140 10000850 10000570 10000180 10000070 10001470 10001040 10000090 10000500 10000940">
+    <email>Adriana.Altmann810159@web.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bettina Hartlinger" matriculationNumber="1000000040" attends="10000590 10001460 10000060 10001250 10000680 10000960 10001090 10001470 10000120 10000440 10000280">
+    <email>Bettina.Hartlinger147920@gmx.at</email>
+    <email>Bettina.Hartlinger828753@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Benedikt Hartlinger" matriculationNumber="1000000300" attends="10000620 10001110 10000250"/>
+  <person xsi:type="dmm:Student" name="Adriana Wissen" matriculationNumber="1000000290" attends="10000730 10000450 10000270 10001340 10000220 10000760 10000650 10000670 10001320 10001220 10001140 10001330 10000380">
+    <email>Adriana.Wissen28578@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Adriana Lichtfeld" matriculationNumber="1000000800" attends="10000600 10001010 10000050 10000350 10000880 10001080 10000120 10000940 10001150 10001410 10000430 10001260 10000630 10000330 10000790">
+    <email>Adriana.Lichtfeld824066@yahoo.de</email>
+    <email>Adriana.Lichtfeld430017@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bastian Wissen" matriculationNumber="1000000550" attends="10000300 10001290 10001240 10000770 10000750 10001470 10001060 10000560 10000570 10000990 10001230 10000380 10001070">
+    <email>Bastian.Wissen759353@hotmail.de</email>
+    <email>Bastian.Wissen876939@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Birgit Freeman" matriculationNumber="1000000090" attends="10000840 10000690 10000480">
+    <email>Birgit.Freeman318726@gmx.at</email>
+    <email>Birgit.Freeman440683@hotmail.de</email>
+    <email>Birgit.Freeman965712@fastmail.to</email>
+    <email>Birgit.Freeman322973@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bastian Hartlinger" matriculationNumber="1000000600" attends="10000690 10000260">
+    <email>Bastian.Hartlinger377186@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alena Danzig" matriculationNumber="1000000350" attends="10001210 10000620 10000360 10000470 10001340 10001000 10000490 10000830 10000630">
+    <email>Alena.Danzig750588@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Adriana Deutscher" matriculationNumber="1000000860" attends="10000730 10000130 10000670 10000930 10001330"/>
+  <person xsi:type="dmm:Student" name="Bistro Baum" matriculationNumber="1000000850" attends="10000170 10000930 10000710 10000000 10001430 10000500 10001390 10001410">
+    <email>Bistro.Baum371298@web.de</email>
+    <email>Bistro.Baum960710@myuni.at</email>
+    <email>Bistro.Baum710401@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Anton Tanne" matriculationNumber="1000000080" attends="10000600 10001240 10001170 10000610 10000970 10000280">
+    <email>Anton.Tanne277663@chello.at</email>
+    <email>Anton.Tanne73987@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Carl Marindo" matriculationNumber="1000000340" attends="10000700 10001100 10000750 10000220 10001050 10001130">
+    <email>Carl.Marindo232382@slowmail.com</email>
+    <email>Carl.Marindo550579@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christoph Anthony" matriculationNumber="1000000330" attends="10000770 10000270 10000720 10000310 10001410 10000130 10000560 10001280 10000820 10000200 10000710 10001200 10000740">
+    <email>Christoph.Anthony172431@gmx.at</email>
+    <email>Christoph.Anthony735564@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Ariel Stein" matriculationNumber="1000000840" attends="10001240 10000660 10000810 10001180 10000500 10000760 10000940 10001410 10000010 10000240 10000560 10001280 10000260 10000790">
+    <email>Ariel.Stein572358@web.de</email>
+    <email>Ariel.Stein857907@slowmail.com</email>
+    <email>Ariel.Stein491348@gmx.at</email>
+    <email>Ariel.Stein337795@web.de</email>
+    <email>Ariel.Stein997794@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alena Dosenbier" matriculationNumber="1000000590" attends="10000560 10001060 10000820 10000390 10000440 10000530">
+    <email>Alena.Dosenbier73325@hotmail.de</email>
+    <email>Alena.Dosenbier171847@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christina Korn" matriculationNumber="1000000320" attends="10000420 10000850 10000680 10000710 10000200 10001430 10001400 10001270 10000970 10000410">
+    <email>Christina.Korn615665@geemail.to</email>
+    <email>Christina.Korn614043@gmx.at</email>
+    <email>Christina.Korn827000@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bryan Stein" matriculationNumber="1000000070" attends="10001350 10000080 10001100 10000690 10000520 10001340 10001110 10001140 10000390 10000500 10001130">
+    <email>Bryan.Stein35313@myuni.at</email>
+    <email>Bryan.Stein570177@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Beate Stone" matriculationNumber="1000000580" attends="10000920 10000580 10000060 10001110 10001200 10000760 10000310 10000100">
+    <email>Beate.Stone531907@chello.at</email>
+    <email>Beate.Stone848110@fastmail.to</email>
+    <email>Beate.Stone931736@hotmail.de</email>
+    <email>Beate.Stone521215@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alfred Klein" matriculationNumber="1000000890" attends="10000360 10001260 10001180">
+    <email>Alfred.Klein2625@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christine Klein" matriculationNumber="1000000120" attends="10000340 10001170">
+    <email>Christine.Klein509342@geemail.to</email>
+    <email>Christine.Klein174532@slowmail.com</email>
+    <email>Christine.Klein778441@student.myuniversity.at</email>
+    <email>Christine.Klein126097@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bastian Buchlink" matriculationNumber="1000000380" attends="10000690 10000550 10000880">
+    <email>Bastian.Buchlink753467@student.myuniversity.at</email>
+    <email>Bastian.Buchlink558951@chello.at</email>
+    <email>Bastian.Buchlink465213@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Cornelia Buchlink" matriculationNumber="1000000370" attends="10000800 10000440 10000210"/>
+  <person xsi:type="dmm:Student" name="Benedikt Deutscher" matriculationNumber="1000000880" attends="10000550 10001380 10001370 10001310">
+    <email>Benedikt.Deutscher258663@gmx.at</email>
+    <email>Benedikt.Deutscher138161@myuni.at</email>
+    <email>Benedikt.Deutscher843558@chello.at</email>
+    <email>Benedikt.Deutscher333234@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Alfred Dosenbier" matriculationNumber="1000000630" attends="10000420 10000430 10001210 10000450 10000620 10000190 10000290 10000090 10001200 10000310">
+    <email>Alfred.Dosenbier601954@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Carl Korn" matriculationNumber="1000000360" attends="10000700 10001460 10000270">
+    <email>Carl.Korn116351@web.de</email>
+    <email>Carl.Korn548715@gmx.at</email>
+    <email>Carl.Korn879152@web.de</email>
+    <email>Carl.Korn928139@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Bettina Dosenbier" matriculationNumber="1000000110" attends="10000010 10000360 10000060 10000470 10000520 10001030 10000880 10000780 10000480">
+    <email>Bettina.Dosenbier622346@slowmail.com</email>
+    <email>Bettina.Dosenbier571232@chello.at</email>
+    <email>Bettina.Dosenbier143478@gmx.at</email>
+    <email>Bettina.Dosenbier243330@web.de</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Arnold Freeman" matriculationNumber="1000000620" attends="10000040 10001020 10001250 10001490 10000940 10000340 10000360 10001060 10001170 10000630 10001120 10001070 10000100 10000790">
+    <email>Arnold.Freeman661345@chello.at</email>
+    <email>Arnold.Freeman142724@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Christina Stone" matriculationNumber="1000000610" attends="10001480 10000080 10000240 10000520 10000990 10001420 10000830 10001040 10001470">
+    <email>Christina.Stone492833@gmx.at</email>
+    <email>Christina.Stone136863@slowmail.com</email>
+    <email>Christina.Stone853636@gmx.at</email>
+    <email>Christina.Stone483929@chello.at</email>
+    <email>Christina.Stone658935@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Benedikt Freeman" matriculationNumber="1000000870" attends="10001480 10000080 10000160 10000810 10000370 10000070 10001470 10001050">
+    <email>Benedikt.Freeman943411@chello.at</email>
+    <email>Benedikt.Freeman970454@fastmail.to</email>
+    <email>Benedikt.Freeman891705@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Student" name="Benedikt Müllberger" matriculationNumber="1000000100" attends="10000040 10001210 10001350 10001020 10000270 10000950 10001180 10000870 10000970 10001280 10000460 10000410 10000100">
+    <email>Benedikt.Müllberger537538@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Christoph Klein" employeeNumber="1000000410" lectures="10000590 10001290 10000300 10000160 10000520 10001450 10000800 10000860 10000440 10001330 10001150">
+    <email>Christoph.Klein874750@slowmail.com</email>
+    <email>Christoph.Klein468193@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Anton Danzig" employeeNumber="1000000920" lectures="10000420 10000690 10001030 10001150">
+    <email>Anton.Danzig452527@chello.at</email>
+    <email>Anton.Danzig958199@yahoo.de</email>
+    <email>Anton.Danzig455601@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bistro Altmann" employeeNumber="1000000670" lectures="10000580 10001350 10000890 10000670 10000690 10000820 10001430 10000310">
+    <email>Bistro.Altmann37002@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Brigitte Danzig" employeeNumber="1000000400" lectures="10001020 10000620 10000820 10001000 10001360 10000200 10000880 10000480 10000100">
+    <email>Brigitte.Danzig797695@hotmail.de</email>
+    <email>Brigitte.Danzig345959@web.de</email>
+    <email>Brigitte.Danzig180120@web.de</email>
+    <email>Brigitte.Danzig787938@fastmail.to</email>
+    <email>Brigitte.Danzig992712@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Alena Anthony" employeeNumber="1000000150" lectures="10001320 10001380 10000350 10000530"/>
+  <person xsi:type="dmm:Professor" name="Adriana Grossfrau" employeeNumber="1000000660" lectures="10000430 10000460 10001300 10000290 10001470 10000440 10000740">
+    <email>Adriana.Grossfrau164013@hotmail.de</email>
+    <email>Adriana.Grossfrau809716@slowmail.com</email>
+    <email>Adriana.Grossfrau891432@myuni.at</email>
+    <email>Adriana.Grossfrau724486@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Adriana Grossmann" employeeNumber="1000000650" lectures="10000700 10000890 10001010 10000930 10000490 10000880 10000950 10001370 10001230 10001120">
+    <email>Adriana.Grossmann946705@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bettina Altmann" employeeNumber="1000000910" lectures="10000170 10000750 10001360 10000950 10001470 10001310 10000580 10000670 10001170 10000370 10001380 10000910 10000860 10000390 10001070">
+    <email>Bettina.Altmann500527@myuni.at</email>
+    <email>Bettina.Altmann535173@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Ariel Lichtfeld" employeeNumber="1000000140" lectures="10000320 10001460 10000120 10001390 10000940"/>
+  <person xsi:type="dmm:Professor" name="Andreas Korn" employeeNumber="1000000130" lectures="10001250">
+    <email>Andreas.Korn689326@myuni.at</email>
+    <email>Andreas.Korn8825@gmx.at</email>
+    <email>Andreas.Korn305677@web.de</email>
+    <email>Andreas.Korn707384@yahoo.de</email>
+    <email>Andreas.Korn27073@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Adriana Baumgarten" employeeNumber="1000000640" lectures="10001250 10001110 10001150 10000650">
+    <email>Adriana.Baumgarten813796@geemail.to</email>
+    <email>Adriana.Baumgarten146121@slowmail.com</email>
+    <email>Adriana.Baumgarten420829@myuni.at</email>
+    <email>Adriana.Baumgarten704954@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Clara Grossfrau" employeeNumber="1000000390" lectures="10001350 10000570 10000950">
+    <email>Clara.Grossfrau169592@chello.at</email>
+    <email>Clara.Grossfrau107774@gmx.at</email>
+    <email>Clara.Grossfrau353804@geemail.to</email>
+    <email>Clara.Grossfrau397677@student.myuniversity.at</email>
+    <email>Clara.Grossfrau557115@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Christian Grossmann" employeeNumber="1000000900" lectures="10001360 10000090 10000780 10000610 10001050">
+    <email>Christian.Grossmann259723@yahoo.de</email>
+    <email>Christian.Grossmann352188@fastmail.to</email>
+    <email>Christian.Grossmann84178@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Carl Müllberger" employeeNumber="1000000440" lectures="10000730 10000550 10000800 10000120">
+    <email>Carl.Müllberger448134@geemail.to</email>
+    <email>Carl.Müllberger55431@web.de</email>
+    <email>Carl.Müllberger676178@fastmail.to</email>
+    <email>Carl.Müllberger747740@hotmail.de</email>
+    <email>Carl.Müllberger435574@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Alfred Buchlink" employeeNumber="1000000190" lectures="10000770 10000030 10000490 10001120">
+    <email>Alfred.Buchlink889072@chello.at</email>
+    <email>Alfred.Buchlink826809@myuni.at</email>
+    <email>Alfred.Buchlink106391@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Alena Apfel" employeeNumber="1000000700" lectures="10000010 10000840 10001350 10000080 10000670 10001010 10001030 10000000 10001490 10000110">
+    <email>Alena.Apfel972035@web.de</email>
+    <email>Alena.Apfel372490@geemail.to</email>
+    <email>Alena.Apfel239196@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Birgit Deutscher" employeeNumber="1000000690" lectures="10000130 10000320 10000670 10001010 10001250 10000180 10000000 10000870 10001390 10001050">
+    <email>Birgit.Deutscher142604@myuni.at</email>
+    <email>Birgit.Deutscher790426@hotmail.de</email>
+    <email>Birgit.Deutscher418649@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Carina Stein" employeeNumber="1000000950" lectures="10000010 10000170 10000890 10000020 10000690 10001470 10000090 10001310 10000330 10001410">
+    <email>Carina.Stein967432@slowmail.com</email>
+    <email>Carina.Stein23296@myuni.at</email>
+    <email>Carina.Stein844815@slowmail.com</email>
+    <email>Carina.Stein841103@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Christoph Buchlink" employeeNumber="1000000180" lectures="10000590 10001290 10000730 10000340 10000990 10000030 10000860 10001470 10000780 10001270 10000480 10000720">
+    <email>Christoph.Buchlink125888@geemail.to</email>
+    <email>Christoph.Buchlink344410@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bryan West" employeeNumber="1000000170" lectures="10001460 10001010 10001310">
+    <email>Bryan.West972519@student.myuniversity.at</email>
+    <email>Bryan.West966171@geemail.to</email>
+    <email>Bryan.West165027@hotmail.de</email>
+    <email>Bryan.West457367@myuni.at</email>
+    <email>Bryan.West261833@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Anna Baum" employeeNumber="1000000680" lectures="10001020 10000600 10001460 10000690 10000770 10000200 10000500 10000870 10000310">
+    <email>Anna.Baum516601@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Christina Müllberger" employeeNumber="1000000430" lectures="10000540 10001210 10000800 10000350 10000860 10000480 10000610">
+    <email>Christina.Müllberger443892@hotmail.de</email>
+    <email>Christina.Müllberger49684@gmx.at</email>
+    <email>Christina.Müllberger885085@web.de</email>
+    <email>Christina.Müllberger902452@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Christina Gross" employeeNumber="1000000940" lectures="10000130 10000570 10001320 10000930 10000030 10000650">
+    <email>Christina.Gross600836@fastmail.to</email>
+    <email>Christina.Gross43516@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bianca Altmann" employeeNumber="1000000930" lectures="10000170 10000240 10000180 10001380 10000090 10001200">
+    <email>Bianca.Altmann753197@fastmail.to</email>
+    <email>Bianca.Altmann41091@yahoo.de</email>
+    <email>Bianca.Altmann458641@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Clara Tanne" employeeNumber="1000000160" lectures="10000600 10000820 10000870">
+    <email>Clara.Tanne279700@gmx.at</email>
+    <email>Clara.Tanne497263@myuni.at</email>
+    <email>Clara.Tanne368895@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Ariel Svoboda" employeeNumber="1000000420" lectures="10000900 10000840 10000690 10001420 10000950 10000340 10000130 10000670 10000180 10000860 10000390 10000070 10000330"/>
+  <person xsi:type="dmm:Professor" name="Alena Klein" employeeNumber="1000000730" lectures="10000900 10000850 10001010 10000990 10000640 10001470 10000530 10000650 10000100">
+    <email>Alena.Klein238060@student.myuniversity.at</email>
+    <email>Alena.Klein529313@student.myuniversity.at</email>
+    <email>Alena.Klein327647@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Clara Marindo" employeeNumber="1000000990" lectures="10000490 10000880 10001140 10001180 10001490 10001330 10001410">
+    <email>Clara.Marindo15132@web.de</email>
+    <email>Clara.Marindo747887@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Carl Müllberger" employeeNumber="1000000220" lectures="10001440 10000350 10001330 10000250">
+    <email>Carl.Müllberger485858@myuni.at</email>
+    <email>Carl.Müllberger237473@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Andreas Stone" employeeNumber="1000000210" lectures="10000690 10000810 10000710 10001140 10001080">
+    <email>Andreas.Stone127081@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Claudia Freeman" employeeNumber="1000000720" lectures="10001210 10000430 10000590 10000450 10000360 10001170 10001360 10001430 10000630 10001230 10001490">
+    <email>Claudia.Freeman853418@gmx.at</email>
+    <email>Claudia.Freeman946046@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Claudia Korn" employeeNumber="1000000470" lectures="10000750 10000910">
+    <email>Claudia.Korn308526@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Claudia Klein" employeeNumber="1000000980" lectures="10000140 10001100 10000470 10000000 10000910 10001490 10000250">
+    <email>Claudia.Klein922519@fastmail.to</email>
+    <email>Claudia.Klein275722@fastmail.to</email>
+    <email>Claudia.Klein313947@chello.at</email>
+    <email>Claudia.Klein888140@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Adriana Stone" employeeNumber="1000000970" lectures="10001490">
+    <email>Adriana.Stone609474@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Brigitte Dosenbier" employeeNumber="1000000200" lectures="10000900 10000470 10000460 10001340 10001080 10000410">
+    <email>Brigitte.Dosenbier175182@slowmail.com</email>
+    <email>Brigitte.Dosenbier18064@fastmail.to</email>
+    <email>Brigitte.Dosenbier964335@fastmail.to</email>
+    <email>Brigitte.Dosenbier833386@gmx.at</email>
+    <email>Brigitte.Dosenbier723838@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Brigitte Tanne" employeeNumber="1000000460" lectures="10000160 10000060 10001160 10000680 10000880 10000760 10001100 10000320 10000290 10001380 10001230 10001050 10000980">
+    <email>Brigitte.Tanne563680@gmx.at</email>
+    <email>Brigitte.Tanne885307@gmx.at</email>
+    <email>Brigitte.Tanne442289@hotmail.de</email>
+    <email>Brigitte.Tanne161699@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Anna Korn" employeeNumber="1000000450" lectures="10000160">
+    <email>Anna.Korn198306@myuni.at</email>
+    <email>Anna.Korn302922@fastmail.to</email>
+    <email>Anna.Korn272603@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Arnold Marindova" employeeNumber="1000000960" lectures="10000770 10000380"/>
+  <person xsi:type="dmm:Professor" name="Cornelia Korn" employeeNumber="1000000710" lectures="10000240 10000640 10000680 10000480"/>
+  <person xsi:type="dmm:Professor" name="Bryan Stone" employeeNumber="1000000250" lectures="10000900 10000890 10000130 10001460 10001300 10000050 10000710 10000000 10001140 10000480">
+    <email>Bryan.Stone140158@hotmail.de</email>
+    <email>Bryan.Stone723087@web.de</email>
+    <email>Bryan.Stone849560@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Alfred Anthony" employeeNumber="1000000760" lectures="10000400 10001460 10001320 10000750 10001400 10001090 10000230 10001080 10000440 10000970 10000650">
+    <email>Alfred.Anthony155377@chello.at</email>
+    <email>Alfred.Anthony840112@hotmail.de</email>
+    <email>Alfred.Anthony690326@hotmail.de</email>
+    <email>Alfred.Anthony274311@web.de</email>
+    <email>Alfred.Anthony235667@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bastian Trauma" employeeNumber="1000000510" lectures="10000320 10000270 10000610 10000380 10000760 10000260 10000790"/>
+  <person xsi:type="dmm:Professor" name="Anna Lichtfeld" employeeNumber="1000000240" lectures="10000730 10000130 10000560 10000550 10000570 10000610 10000790"/>
+  <person xsi:type="dmm:Professor" name="Christine Hartlinger" employeeNumber="1000000500" lectures="10001020 10000890 10000060 10000690 10000520 10000270 10000930 10000220 10000280">
+    <email>Christine.Hartlinger692033@myuni.at</email>
+    <email>Christine.Hartlinger990192@chello.at</email>
+    <email>Christine.Hartlinger301927@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Christine Svoboda" employeeNumber="1000000490" lectures="10000430 10000580 10001480 10000490 10000480">
+    <email>Christine.Svoboda671946@gmx.at</email>
+    <email>Christine.Svoboda185799@student.myuniversity.at</email>
+    <email>Christine.Svoboda595713@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Ariel Altmann" employeeNumber="1000000750" lectures="10000920 10001020 10000320 10000670 10001460 10001010 10000030 10001220 10000860 10001080 10001200">
+    <email>Ariel.Altmann738553@yahoo.de</email>
+    <email>Ariel.Altmann54199@fastmail.to</email>
+    <email>Ariel.Altmann473177@student.myuniversity.at</email>
+    <email>Ariel.Altmann507505@myuni.at</email>
+    <email>Ariel.Altmann299293@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Andreas Buchlink" employeeNumber="1000000480" lectures="10000050 10000030 10001110 10001230 10001200 10001150 10001130"/>
+  <person xsi:type="dmm:Professor" name="Ariel Anthony" employeeNumber="1000000230" lectures="10001250 10000680 10000860 10000630 10001150">
+    <email>Ariel.Anthony458299@slowmail.com</email>
+    <email>Ariel.Anthony828128@fastmail.to</email>
+    <email>Ariel.Anthony218095@chello.at</email>
+    <email>Ariel.Anthony759633@hotmail.de</email>
+    <email>Ariel.Anthony49544@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Anastasia Wissen" employeeNumber="1000000740" lectures="10000920 10000360 10000640 10000710 10001260 10001270 10000090 10001330 10001490 10000410">
+    <email>Anastasia.Wissen553642@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Benedikt Svoboda" employeeNumber="1000000280" lectures="10001470 10001130 10000650">
+    <email>Benedikt.Svoboda71762@gmx.at</email>
+    <email>Benedikt.Svoboda47998@yahoo.de</email>
+    <email>Benedikt.Svoboda207298@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Barbara Meier" employeeNumber="1000000030" lectures="10000190 10000990 10000200 10001140 10000090 10001180 10001120 10000790 10000720">
+    <email>Barbara.Meier952861@web.de</email>
+    <email>Barbara.Meier494018@gmx.at</email>
+    <email>Barbara.Meier354547@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bettina Apfel" employeeNumber="1000000540" lectures="10001210 10000020 10000730 10000620 10000690 10001010 10000030 10001390 10000670 10000290 10000800 10000910 10000480 10000790">
+    <email>Bettina.Apfel808368@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Cornelia Wissen" employeeNumber="1000000530" lectures="10001480 10000240 10000810 10001340 10001310 10001390 10001070">
+    <email>Cornelia.Wissen514731@slowmail.com</email>
+    <email>Cornelia.Wissen287495@chello.at</email>
+    <email>Cornelia.Wissen681570@myuni.at</email>
+    <email>Cornelia.Wissen625853@fastmail.to</email>
+    <email>Cornelia.Wissen975754@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bettina Buchlink" employeeNumber="1000000790" lectures="10000470 10000550 10000000 10000880 10000210 10000430 10000920 10001480 10000560 10000670 10001060 10000570 10001450 10000390 10000980">
+    <email>Bettina.Buchlink638982@chello.at</email>
+    <email>Bettina.Buchlink743603@myuni.at</email>
+    <email>Bettina.Buchlink651319@chello.at</email>
+    <email>Bettina.Buchlink993147@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Birgit Anthony" employeeNumber="1000000020" lectures="10001480 10000320">
+    <email>Birgit.Anthony400638@web.de</email>
+    <email>Birgit.Anthony479001@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Ariel Trauma" employeeNumber="1000000010" lectures="10000010 10000670 10000550 10000910 10000950 10000380">
+    <email>Ariel.Trauma113454@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bettina Grossmann" employeeNumber="1000000520" lectures="10000170 10000070 10000720">
+    <email>Bettina.Grossmann147220@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Andreas Apfel" employeeNumber="1000000270" lectures="10000450 10000680">
+    <email>Andreas.Apfel625210@geemail.to</email>
+    <email>Andreas.Apfel386817@student.myuniversity.at</email>
+    <email>Andreas.Apfel441932@yahoo.de</email>
+    <email>Andreas.Apfel35761@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Arnold Grossfrau" employeeNumber="1000000780" lectures="10000680 10000200 10000490 10000390 10000720 10000210">
+    <email>Arnold.Grossfrau33824@gmx.at</email>
+    <email>Arnold.Grossfrau195913@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Carina Bryant" employeeNumber="1000000770" lectures="10001260 10001200 10001050">
+    <email>Carina.Bryant994501@slowmail.com</email>
+    <email>Carina.Bryant854869@geemail.to</email>
+    <email>Carina.Bryant804415@yahoo.de</email>
+    <email>Carina.Bryant726641@fastmail.to</email>
+    <email>Carina.Bryant747442@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Christina Hartlinger" employeeNumber="1000000000" lectures="10000270 10001250 10001430 10000490 10001490 10000210 10000430 10000920 10000820 10001000 10000910 10000070 10000980">
+    <email>Christina.Hartlinger344164@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Anastasia Anthony" employeeNumber="1000000260" lectures="10000040 10000900 10000600 10000300 10000360 10001160 10001200">
+    <email>Anastasia.Anthony742449@gmx.at</email>
+    <email>Anastasia.Anthony382691@chello.at</email>
+    <email>Anastasia.Anthony307124@geemail.to</email>
+    <email>Anastasia.Anthony720807@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Adriana Trauma" employeeNumber="1000000570" lectures="10000690 10000110">
+    <email>Adriana.Trauma599428@slowmail.com</email>
+    <email>Adriana.Trauma283938@hotmail.de</email>
+    <email>Adriana.Trauma726664@chello.at</email>
+    <email>Adriana.Trauma558221@myuni.at</email>
+    <email>Adriana.Trauma913807@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Christian Stone" employeeNumber="1000000830" lectures="10001250 10001360 10000220 10001090 10000500">
+    <email>Christian.Stone877898@slowmail.com</email>
+    <email>Christian.Stone636194@slowmail.com</email>
+    <email>Christian.Stone310704@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Anastasia Lichtfeld" employeeNumber="1000000060" lectures="10000470 10000620 10001030 10001300 10000510 10000830 10000490 10000580 10001100 10001450 10000710 10001190 10000150 10001140">
+    <email>Anastasia.Lichtfeld108560@fastmail.to</email>
+    <email>Anastasia.Lichtfeld887995@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Alena Freeman" employeeNumber="1000000050" lectures="10000140 10000130 10001450 10000820 10000750 10000230 10001370 10000120 10000870 10000440">
+    <email>Alena.Freeman50414@geemail.to</email>
+    <email>Alena.Freeman185547@fastmail.to</email>
+    <email>Alena.Freeman926863@geemail.to</email>
+    <email>Alena.Freeman226304@gmx.at</email>
+    <email>Alena.Freeman736379@geemail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Alena Korn" employeeNumber="1000000560" lectures="10000140 10000550 10000680 10000050 10000070 10000870 10001150 10001130">
+    <email>Alena.Korn7409@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Cornelia Baum" employeeNumber="1000000310" lectures="10000700 10000920 10001100 10001250 10001420 10001000 10001120 10000760 10000310">
+    <email>Cornelia.Baum106053@chello.at</email>
+    <email>Cornelia.Baum972895@yahoo.de</email>
+    <email>Cornelia.Baum962689@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Alena Grossfrau" employeeNumber="1000000820" lectures="10000580 10000500 10000970 10001070">
+    <email>Alena.Grossfrau780665@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Andreas Svoboda" employeeNumber="1000000810" lectures="10000930 10000180 10001000 10000070 10000940"/>
+  <person xsi:type="dmm:Professor" name="Christina Albrecht" employeeNumber="1000000040" lectures="10000240 10000160 10000450 10000180 10000710 10001140 10001470 10001180 10001080 10000870 10000250 10000410">
+    <email>Christina.Albrecht184216@slowmail.com</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bettina Müllberger" employeeNumber="1000000300" lectures="10000900"/>
+  <person xsi:type="dmm:Professor" name="Carlo Danzig" employeeNumber="1000000290" lectures="10001420 10001110 10001430 10000780 10001470 10000610">
+    <email>Carlo.Danzig438121@gmx.at</email>
+    <email>Carlo.Danzig662682@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Barbara Danzig" employeeNumber="1000000800" lectures="10000010 10000990 10000050 10000530">
+    <email>Barbara.Danzig962645@hotmail.de</email>
+    <email>Barbara.Danzig617445@student.myuniversity.at</email>
+    <email>Barbara.Danzig459240@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Alfred Danzig" employeeNumber="1000000550" lectures="10000840 10000540 10000300 10000190 10000660 10000270 10000640 10000230 10000130 10001480 10001000 10001330 10000440 10000110">
+    <email>Alfred.Danzig511545@hotmail.de</email>
+    <email>Alfred.Danzig705331@myuni.at</email>
+    <email>Alfred.Danzig830038@student.myuniversity.at</email>
+    <email>Alfred.Danzig635399@chello.at</email>
+    <email>Alfred.Danzig699335@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bella Tanne" employeeNumber="1000000090" lectures="10000590 10001020 10000300 10000690 10000660 10000680 10000800 10000030">
+    <email>Bella.Tanne863327@yahoo.de</email>
+    <email>Bella.Tanne278699@hotmail.de</email>
+    <email>Bella.Tanne920287@chello.at</email>
+    <email>Bella.Tanne78980@yahoo.de</email>
+    <email>Bella.Tanne381455@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Carina Tanne" employeeNumber="1000000600" lectures="10001020 10001350 10000140 10000060 10000560 10001010 10001420 10001190 10000440 10000610 10000970">
+    <email>Carina.Tanne554240@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Anton Klein" employeeNumber="1000000350" lectures="10000830"/>
+  <person xsi:type="dmm:Professor" name="Anastasia Buchlink" employeeNumber="1000000860" lectures="10001210 10000300 10000890 10000240 10001160 10000520 10000460 10000290 10000000 10000380 10000260 10000100">
+    <email>Anastasia.Buchlink292505@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Beate Tanne" employeeNumber="1000000850" lectures="10000470 10000620 10000550 10000640 10000680 10000220 10000940 10000210 10000360 10000520 10000860 10001200 10000790"/>
+  <person xsi:type="dmm:Professor" name="Christina Altmann" employeeNumber="1000000080" lectures="10000670 10000470 10000520 10001250 10000370 10001220 10000350 10001430 10000440 10000380 10001410 10000280">
+    <email>Christina.Altmann879487@geemail.to</email>
+    <email>Christina.Altmann47758@student.myuniversity.at</email>
+    <email>Christina.Altmann60951@student.myuniversity.at</email>
+    <email>Christina.Altmann287478@student.myuniversity.at</email>
+    <email>Christina.Altmann452936@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Arnold Wissen" employeeNumber="1000000340" lectures="10000600 10000640 10001420 10001340 10001360 10000350 10000120 10001060 10000820 10000910 10001090 10001230 10000250">
+    <email>Arnold.Wissen506500@myuni.at</email>
+    <email>Arnold.Wissen252747@yahoo.de</email>
+    <email>Arnold.Wissen410643@geemail.to</email>
+    <email>Arnold.Wissen239583@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Brigitte Buchlink" employeeNumber="1000000330" lectures="10000820 10001430 10000230">
+    <email>Brigitte.Buchlink945240@student.myuniversity.at</email>
+    <email>Brigitte.Buchlink796611@web.de</email>
+    <email>Brigitte.Buchlink336606@hotmail.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Carina Svoboda" employeeNumber="1000000840" lectures="10001240 10000730 10001010 10000640 10001420 10000920 10000320 10000800 10000290 10000200 10001220 10000910 10000630">
+    <email>Carina.Svoboda470753@geemail.to</email>
+    <email>Carina.Svoboda675714@yahoo.de</email>
+    <email>Carina.Svoboda463956@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Brigitte Stein" employeeNumber="1000000590" lectures="10000340 10000320 10000670 10000660 10001250 10000680 10001310 10001330 10001490 10000210">
+    <email>Brigitte.Stein553205@student.myuniversity.at</email>
+    <email>Brigitte.Stein713372@myuni.at</email>
+    <email>Brigitte.Stein138905@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Beate Buchlink" employeeNumber="1000000320" lectures="10000960 10001220 10000390">
+    <email>Beate.Buchlink246507@slowmail.com</email>
+    <email>Beate.Buchlink40316@hotmail.de</email>
+    <email>Beate.Buchlink489235@fastmail.to</email>
+    <email>Beate.Buchlink754789@web.de</email>
+    <email>Beate.Buchlink634669@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Arnold Trauma" employeeNumber="1000000070" lectures="10000020 10000190 10001030 10000960 10001000 10001110 10001370 10001270 10001490 10000980 10000720">
+    <email>Arnold.Trauma977926@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bella Freeman" employeeNumber="1000000580" lectures="10000300 10000320 10000140 10000080 10001480 10000520 10001110 10000370">
+    <email>Bella.Freeman129328@hotmail.de</email>
+    <email>Bella.Freeman489893@fastmail.to</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Anton Bryant" employeeNumber="1000000890" lectures="10000340 10000730 10001380 10000950 10001390 10001200">
+    <email>Anton.Bryant705379@yahoo.de</email>
+    <email>Anton.Bryant76901@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Carina West" employeeNumber="1000000120" lectures="10001350 10000270 10001000 10001470 10000260">
+    <email>Carina.West401428@geemail.to</email>
+    <email>Carina.West42471@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bistro Svoboda" employeeNumber="1000000380" lectures="10000170 10000130 10000160 10000180 10000370 10001400 10001390 10000410 10000720">
+    <email>Bistro.Svoboda993567@gmx.at</email>
+    <email>Bistro.Svoboda513351@yahoo.de</email>
+    <email>Bistro.Svoboda274058@chello.at</email>
+    <email>Bistro.Svoboda122148@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Clara Altmann" employeeNumber="1000000370" lectures="10000820 10001190 10000630 10001400 10000090 10000480 10000070 10001200 10000870 10000330">
+    <email>Clara.Altmann286067@chello.at</email>
+    <email>Clara.Altmann478237@slowmail.com</email>
+    <email>Clara.Altmann201284@chello.at</email>
+    <email>Clara.Altmann261832@slowmail.com</email>
+    <email>Clara.Altmann754680@yahoo.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Beate Klein" employeeNumber="1000000880" lectures="10000430 10000400 10000470 10000460 10000640 10001170 10000830 10001120 10001490 10000940">
+    <email>Beate.Klein178808@hotmail.de</email>
+    <email>Beate.Klein613274@slowmail.com</email>
+    <email>Beate.Klein881812@chello.at</email>
+    <email>Beate.Klein829731@slowmail.com</email>
+    <email>Beate.Klein133249@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Anna Svoboda" employeeNumber="1000000630" lectures="10000040 10001460 10000290 10000750 10000180 10000230 10000090 10000440 10001050">
+    <email>Anna.Svoboda983209@student.myuniversity.at</email>
+    <email>Anna.Svoboda894827@slowmail.com</email>
+    <email>Anna.Svoboda295420@fastmail.to</email>
+    <email>Anna.Svoboda366431@hotmail.de</email>
+    <email>Anna.Svoboda298726@gmx.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Christina Danzig" employeeNumber="1000000360" lectures="10001020 10001010 10001450 10000050 10000000 10000910 10001140 10000440 10000120 10001330 10000740">
+    <email>Christina.Danzig309669@gmx.at</email>
+    <email>Christina.Danzig195795@web.de</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Carlo Stone" employeeNumber="1000000110" lectures="10000160 10000660 10000290 10001180 10001200 10000530"/>
+  <person xsi:type="dmm:Professor" name="Anna Freeman" employeeNumber="1000000620" lectures="10000420 10001010 10000200 10001380 10000000 10000350 10000230 10000090 10000760 10000280">
+    <email>Anna.Freeman742216@myuni.at</email>
+    <email>Anna.Freeman526732@web.de</email>
+    <email>Anna.Freeman761413@myuni.at</email>
+    <email>Anna.Freeman799828@myuni.at</email>
+    <email>Anna.Freeman833677@chello.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Anastasia Lichtfeld" employeeNumber="1000000610" lectures="10000040 10000580 10000620 10001250 10001360 10001140 10000500 10000380">
+    <email>Anastasia.Lichtfeld296690@slowmail.com</email>
+    <email>Anastasia.Lichtfeld257745@myuni.at</email>
+    <email>Anastasia.Lichtfeld471439@myuni.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Anastasia Albrecht" employeeNumber="1000000870" lectures="10000170 10000190">
+    <email>Anastasia.Albrecht409863@yahoo.de</email>
+    <email>Anastasia.Albrecht228735@web.de</email>
+    <email>Anastasia.Albrecht21448@student.myuniversity.at</email>
+  </person>
+  <person xsi:type="dmm:Professor" name="Bettina Trauma" employeeNumber="1000000100" lectures="10000140 10000460">
+    <email>Bettina.Trauma155366@myuni.at</email>
+    <email>Bettina.Trauma94387@slowmail.com</email>
+  </person>
+</dmm:UniversityManagementSystem>

@@ -1,0 +1,9 @@
+Find InternalElement ie1 : InternalElement{
+	name n1 : self.length().greaterEquals(count(id1));
+	iD id1; 
+	changeMode c = change;
+	internalElement ie1_1 : InternalElement{
+		internalElement ie1_1_1;
+	}; 
+	  
+}

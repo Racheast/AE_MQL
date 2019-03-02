@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.eclipse.viatra.query.runtime.feature.source" version="1.7.2.201803211255" label="VIATRA Query Runtime Developer Resources" provider-name="Eclipse VIATRA Project">
+  <includes id="org.eclipse.viatra.query.runtime.feature" version="1.7.2.201803211255"/>
+  <description>
+      VIATRA Query runtime feature. This is the minimum dependency to execute VIATRA Query matchers.
+   </description>
+  <license url="%licenseURL">
+      %license
+   </license>
+  <plugin id="org.eclipse.viatra.query.runtime.source" version="1.7.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.query.runtime.rete.source" version="1.7.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.query.runtime.base.source" version="1.7.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.query.runtime.base.itc.source" version="1.7.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.query.runtime.matchers.source" version="1.7.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.query.runtime.rete.recipes.source" version="1.7.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.viatra.query.runtime.localsearch.source" version="1.7.2.201803211255" download-size="0" install-size="0" unpack="false"/>
+</feature>

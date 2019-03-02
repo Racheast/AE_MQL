@@ -1,0 +1,36 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find Compound178509079(result);
+}
+
+pattern e1_OrGroup(elem:Element){
+	Element(elem);
+}
+
+pattern e2_OrGroup(elem:Element){
+	Element(elem);
+}
+
+pattern Compound178509079(elem:Compound){
+    Compound(elem);
+    find e1_OrGroup_ref(elem,e1);
+    find e2_OrGroup_ref(elem,e2);
+    e1 != e2;
+}
+
+pattern Compound_element1512880357(from:Compound, to:Element){
+    Compound.element(from, to);
+}
+
+pattern e1_OrGroup_ref(container:Compound, member:Element){
+    find e1_OrGroup(member);
+    find Compound_element1512880357(container,member);
+}
+
+pattern e2_OrGroup_ref(container:Compound, member:Element){
+    find e2_OrGroup(member);
+    find Compound_element1512880357(container,member);
+}
+

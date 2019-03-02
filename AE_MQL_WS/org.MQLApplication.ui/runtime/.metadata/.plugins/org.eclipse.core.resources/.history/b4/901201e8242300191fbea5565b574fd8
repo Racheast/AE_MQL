@@ -1,0 +1,19 @@
+Find 
+
+
+LinkFile lf : LinkFile{
+	opens o;
+} OR LinkFile{
+	
+};
+
+File f;
+
+File f2 : File{
+	
+} OR ImageFile{
+	
+};
+
+
+

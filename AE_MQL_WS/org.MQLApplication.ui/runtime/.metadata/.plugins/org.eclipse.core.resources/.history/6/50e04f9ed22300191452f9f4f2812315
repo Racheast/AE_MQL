@@ -1,0 +1,45 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(c){
+	find c_OrGroup(c);
+	find p_OrGroup(p, l, c,n);
+}
+
+pattern c_OrGroup(c){
+	Course(c);
+}
+
+pattern l_OrGroup(l,c){
+    Course(c);
+    l == c;
+}
+
+pattern p_OrGroup(p,l,c,n){
+    find Professor552140392(p,l,c,n);
+}
+
+pattern Professor552140392(p:Professor,l:Course,c:Course,n){
+    Course(c);
+    Course(l);
+    Professor(p);
+    find n_Person_name_AttrEClass(p,n);
+    find l_OrGroup_ref(p,l,c);
+    l != n;
+}
+
+pattern n_Person_name_AttrEClass(p:Professor, n){
+    Professor.name(p, n);
+    check(((n).startsWith("Jane")));
+}
+
+pattern Professor_lectures1573989633(from:Professor, to:Course){
+    Professor.lectures(from, to);
+}
+
+pattern l_OrGroup_ref(p,l,c){
+    find l_OrGroup(l,c);
+    find Professor_lectures1573989633(p,l);
+}
+
+

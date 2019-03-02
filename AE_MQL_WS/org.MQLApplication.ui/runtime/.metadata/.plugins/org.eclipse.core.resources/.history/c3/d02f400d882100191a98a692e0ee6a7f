@@ -1,0 +1,4 @@
+Find InternalElement i : InternalElement{
+	name n : self.equals("R1_Stack");
+	internalElement+ j;
+} Select j;

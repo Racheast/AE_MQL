@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+SCM-Revision: 342d7cfba850c02493a36eeac70e6d309769b504
+Archiver-Version: Plexus Archiver
+Built-By: genie.viatra
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+
+Name: META-INF/maven/org.eclipse.viatra/org.eclipse.viatra.transformat
+ ion.evm.transactions.feature/pom.xml
+SHA-256-Digest: uKMPxGex5jka/ZE1tssUxYVsnNCkb5jNxq3t4Tnw0F8=
+
+Name: build.properties
+SHA-256-Digest: BojFM5EuQUO81UqCbaG0vL6K6RAhcQZxQv67wY5X9rs=
+
+Name: epl-v10.html
+SHA-256-Digest: mpbQ2vmKpvtKpTDTmcdCxmEhsL2uSh9/+iLSE14d9/0=
+
+Name: feature.xml
+SHA-256-Digest: ZJbSf+vnrb8HgxAgPTwv9q1JY9p7Kbu2RYhP9jCdR+o=
+
+Name: META-INF/maven/org.eclipse.viatra/org.eclipse.viatra.transformat
+ ion.evm.transactions.feature/pom.properties
+SHA-256-Digest: 6VexU1SqlzJ+Dc3qvuFlt9vJG7/aSa+zVlDi1HpqBgk=
+
+Name: feature.properties
+SHA-256-Digest: UEuoFoQ6gJtXFX8QMMSI1HJ7+9wvho8cqPfbaNQysRg=
+
+Name: license.html
+SHA-256-Digest: ZPcWT+RA2U0NZV/Hr4/R34K2EI57/1SEd6GAKmcYeg0=
+

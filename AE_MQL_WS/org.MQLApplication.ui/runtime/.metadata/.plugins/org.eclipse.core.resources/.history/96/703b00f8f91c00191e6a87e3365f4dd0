@@ -1,0 +1,9 @@
+Find 
+ 
+
+InternalElement ie : InternalElement{
+	additionalInformation! aiRef;
+} 
+
+Select ie
+  

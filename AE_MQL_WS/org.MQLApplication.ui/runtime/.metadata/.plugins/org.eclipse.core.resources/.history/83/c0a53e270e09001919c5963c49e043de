@@ -1,0 +1,50 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find SystemUnitClass2147343334(result);
+}
+
+pattern a_OrGroup(elem:Attribute){
+    find Attribute1935374020(elem);
+}
+
+pattern SystemUnitClass2147343334(elem:SystemUnitClass){
+    SystemUnitClass(elem);
+    find a_OrGroup_ref(elem,a);
+}
+
+pattern Attribute1935374020(elem:Attribute){
+    Attribute(elem);
+    find n_CAEXObject_name_AttrEClass(elem,n);
+    find v_Attribute_value_AttrEClass(elem,v);
+    find u_Attribute_unit_AttrEClass(elem,u);
+    n != v;
+    v != u;
+    n != u;
+}
+
+pattern n_CAEXObject_name_AttrEClass(elem:Attribute,n){
+	Attribute.name(elem,n);
+	check(((n).equals("color")));
+}
+
+pattern v_Attribute_value_AttrEClass(elem:Attribute,v){
+	Attribute.value(elem,v);
+	check(((v).equals("#40f2dc")));
+}
+
+pattern u_Attribute_unit_AttrEClass(elem:Attribute,u){
+	Attribute.unit(elem,u);
+	check(((u).equals("hex")));
+}
+
+pattern SystemUnitClass_attribute1558495578(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(container:SystemUnitClass, member:Attribute){
+    find a_OrGroup(member);
+    find SystemUnitClass_attribute1558495578(container,member);
+}
+

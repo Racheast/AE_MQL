@@ -1,0 +1,46 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+
+pattern query(e:Element){
+	Element.name(e,n);
+	s == sum find clength(e,#);
+	check(s>n.length);
+}
+
+
+pattern nlength(e:Element,cl:java Integer){
+	Element.code(e,c);
+	cl == eval(Element.code(e,c).length);
+}
+
+//generated code		
+pattern queryOrig(result:SearchableElement){
+    find Element481202388(result);
+}
+
+pattern Element481202388(elem:Element){
+    Element(elem);
+    find c_Element_code_AttrEClass(elem,c);
+    find n_Element_name_AttrEClass(elem,n);
+    n != c;
+    find sum18685090(elem, ref18685090);
+    check(((ref18685090)>(((n).length()))));
+}
+
+pattern c_Element_code_AttrEClass(elem:Element,c){
+	Element.code(elem,c);
+}
+
+pattern n_Element_name_AttrEClass(elem:Element,n){
+	Element.name(elem,n);
+}
+
+pattern sum18685090(elem:Element, result : java Integer){
+    result == sum find argument_1670983173(elem, #);
+}
+
+pattern argument_1670983173(elem:Element, result: java Integer){
+    find c_Element_code_AttrEClass(elem, c);
+    result == eval(((c).length()));
+}
+

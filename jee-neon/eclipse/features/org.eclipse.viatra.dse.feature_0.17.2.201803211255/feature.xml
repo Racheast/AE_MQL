@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.viatra.dse.feature"
+      label="VIATRA-DSE framework (Incubation)"
+      version="0.17.2.201803211255"
+      provider-name="Eclipse VIATRA Project">
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <description url="http://www.example.com/description">
+      VIATRA DSE framework
+   </description>
+
+   <requires>
+      <import feature="org.eclipse.viatra.transformation.runtime.emf.feature" version="1.7.0" match="equivalent"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.viatra.dse"
+         download-size="178"
+         install-size="380"
+         version="0.17.2.201803211255"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.viatra.dse.genetic"
+         download-size="77"
+         install-size="143"
+         version="0.17.2.201803211255"
+         unpack="false"/>
+
+</feature>

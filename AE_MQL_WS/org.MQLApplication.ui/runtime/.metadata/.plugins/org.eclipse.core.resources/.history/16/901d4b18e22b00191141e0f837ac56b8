@@ -1,0 +1,8 @@
+Find
+Course c : Course{
+	mandatoryFor+! m : mastersDefense;
+};
+Course mastersDefense : Course{
+	name n : self.equals("Masters Defense Exam");
+};
+Select c; s

@@ -1,0 +1,5 @@
+Find InstanceHierarchy ih : InstanceHierarchy{
+	internalElement ie:InternalElement{
+		internalElement+ ie2;
+	};
+}

@@ -1,0 +1,36 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement818392756(result);
+}
+
+pattern s_OrGroup(elem:SystemUnitClass){
+    find SystemUnitFamily1463589694(elem);
+}
+or{
+    find InternalElement2147239164(elem);
+}
+
+pattern InternalElement2147239164(elem:InternalElement){
+    InternalElement(elem);
+}
+
+pattern SystemUnitFamily1463589694(elem:SystemUnitFamily){
+    SystemUnitFamily(elem);
+}
+
+pattern InternalElement818392756(elem:InternalElement){
+    InternalElement(elem);
+    find s_OrGroup_ref(elem,s);
+}
+
+pattern InternalElement_systemUnitClass450544178(from:InternalElement, to:SystemUnitClass){
+    InternalElement.systemUnitClass(from, to);
+}
+
+pattern s_OrGroup_ref(container:InternalElement, member:SystemUnitClass){
+    find s_OrGroup(member);
+    find InternalElement_systemUnitClass450544178(container,member);
+}
+

@@ -1,0 +1,75 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find Compound887214166(result);
+}
+
+pattern e2_OrGroup(elem:Element){
+	Element(elem);
+}
+
+pattern e4_OrGroup(elem:Element){
+	Element(elem);
+}
+
+pattern e3_OrGroup(elem:Element){
+	Element(elem);
+}
+
+pattern e5_OrGroup(elem:Element){
+	Element(elem);
+}
+
+pattern e1_OrGroup(elem:Element){
+	Element(elem);
+}
+
+pattern Compound887214166(elem:Compound){
+    Compound(elem);
+    find e1_OrGroup_ref(elem,e1);
+    find e2_OrGroup_ref(elem,e2);
+    find e3_OrGroup_ref(elem,e3);
+    find e4_OrGroup_ref(elem,e4);
+    find e5_OrGroup_ref(elem,e5);
+    e2 != e1;
+    e2 != e4;
+    e3 != e5;
+    e4 != e1;
+    e3 != e1;
+    e4 != e5;
+    e2 != e3;
+    e2 != e5;
+    e4 != e3;
+    e5 != e1;
+}
+
+pattern Compound_element1776092064(from:Compound, to:Element){
+    Compound.element(from, to);
+}
+
+pattern e2_OrGroup_ref(container:Compound, member:Element){
+    find e2_OrGroup(member);
+    find Compound_element1776092064(container,member);
+}
+
+pattern e4_OrGroup_ref(container:Compound, member:Element){
+    find e4_OrGroup(member);
+    find Compound_element1776092064(container,member);
+}
+
+pattern e3_OrGroup_ref(container:Compound, member:Element){
+    find e3_OrGroup(member);
+    find Compound_element1776092064(container,member);
+}
+
+pattern e5_OrGroup_ref(container:Compound, member:Element){
+    find e5_OrGroup(member);
+    find Compound_element1776092064(container,member);
+}
+
+pattern e1_OrGroup_ref(container:Compound, member:Element){
+    find e1_OrGroup(member);
+    find Compound_element1776092064(container,member);
+}
+

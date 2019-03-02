@@ -1,0 +1,92 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a1){
+	find a1_OrGroup(a1, a2, a4);
+}
+
+pattern a1_OrGroup(a1,a2,a4){
+    find Attribute1871152472(a1, a2, a4);
+}
+
+pattern a4_OrGroup(a4){
+    find Attribute1147434877(a4);
+}
+
+pattern a3_OrGroup(a3,a4){
+    find Attribute1532576660(a3, a4);
+}
+
+pattern a2_OrGroup(a2,a4){
+    find Attribute1710212877(a2, a4);
+}
+
+pattern a6_OrGroup(a6){
+	Attribute(a6);
+}
+
+pattern a5_OrGroup(a5){
+    find Attribute183313226(a5);
+}
+
+pattern Attribute1710212877(a2:Attribute, a4){
+    Attribute(a2);
+    neg find a3_OrGroup_ref(a2,a3, a4);
+}
+
+pattern Attribute183313226(a5:Attribute){
+    Attribute(a5);
+    neg find a6_OrGroup_ref(a5,a6);
+}
+
+pattern Attribute1147434877(a4:Attribute){
+    Attribute(a4);
+    neg find a5_OrGroup_ref(a4,a5);
+}
+
+pattern Attribute1532576660(a3:Attribute, a4){
+    Attribute(a3);
+    find a4_OrGroup_ref(a3, a4);
+}
+
+pattern Attribute1871152472(a1:Attribute, a2, a4){
+    Attribute(a1);
+    find n1_CAEXObject_name_AttrEClass(a1,n1);
+    find a2_OrGroup_ref(a1, a2, a4);
+    a2 != n1;
+}
+
+pattern n1_CAEXObject_name_AttrEClass(a1:Attribute, n1){
+    Attribute.name(a1, n1);
+}
+
+pattern Attribute_attribute1677262317(from:Attribute, to:Attribute){
+    Attribute.attribute(from, to);
+}
+
+pattern a4_OrGroup_ref(a3, a4){
+    find a4_OrGroup(a4);
+    find Attribute_attribute1677262317(a3,a4);
+}
+
+pattern a3_OrGroup_ref(a2, a3, a4){
+    find a3_OrGroup(a3,a4);
+    find Attribute_attribute1677262317(a2,a3);
+}
+
+pattern a2_OrGroup_ref(a1, a2, a4){
+    find a2_OrGroup(a2,a4);
+    find Attribute_attribute1677262317(a1,a2);
+}
+
+pattern a6_OrGroup_ref(a5, a6){
+    find a6_OrGroup(a6);
+    find Attribute_attribute1677262317(a5,a6);
+}
+
+pattern a5_OrGroup_ref(a4, a5){
+    find a5_OrGroup(a5);
+    find Attribute_attribute1677262317+(a4,a5);
+}
+
+

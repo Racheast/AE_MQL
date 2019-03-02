@@ -1,0 +1,27 @@
+Find 
+
+
+LinkFile lf : LinkFile{
+	opens o;
+} OR LinkFile{
+	
+};
+
+File f;
+
+File f2 : File{
+	
+} OR ImageFile{
+	
+};
+
+Folder myFolder : Folder{
+	contains c:Folder{
+		contains c2: ImageFile{
+			
+		};	
+	};
+};
+
+
+Select f;

@@ -1,0 +1,26 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: KcdIkdFBVX4WJtbFXCiNquVHcJpXF
+ /hm8F0ZA3t+Mxs=
+SHA-256-Digest-Manifest: aHOfYSGKY7SND0CB0qPtu2cGF6kSSGXnM9aHVogiRyE=
+Created-By: 1.8.0_162 (Oracle Corporation)
+
+Name: META-INF/maven/org.eclipse.viatra/org.eclipse.viatra.addon.datab
+ inding.runtime.feature/pom.xml
+SHA-256-Digest: yc3+FmKGz7cx/GxQ0AfZQd3g1y1i4bGpMDgOQcbKiwA=
+
+Name: epl-v10.html
+SHA-256-Digest: 8GSw4aNBim+4CHFc1TYSYQy3Ei4T2BVP57HxmJUvTBs=
+
+Name: META-INF/maven/org.eclipse.viatra/org.eclipse.viatra.addon.datab
+ inding.runtime.feature/pom.properties
+SHA-256-Digest: Hv1ks+ftprsNLI39d0LZsX5cNeRP4NrsKwCfz8Qqf+c=
+
+Name: feature.xml
+SHA-256-Digest: n8J4XPaSvRLgb2jJ5t8eIzYnOz/m2SA2QR2RgAAcnMg=
+
+Name: feature.properties
+SHA-256-Digest: 2ikgkG5h/VvKvQtutQMyUgckz6IJBRgAdRLpc2edoOg=
+
+Name: license.html
+SHA-256-Digest: 7O6JDyWXXwTTgISWyKYwsgngv1K82K+oQcHLreGLySU=
+

@@ -1,0 +1,42 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find Element1364130083(result);
+}
+
+pattern Element1364130083(elem:Element){
+    Element(elem);
+    find c_Element_code_AttrEClass(elem,c);
+    find c2_Element_code_AttrEClass(elem,c2);
+    find c3_Element_code_AttrEClass(elem,c3);
+    c2 != c3;
+    c != c2;
+    c != c3;
+    find min1852763500(elem, ref1852763500);
+    check(((ref1852763500).equals(2)));
+}
+
+pattern c_Element_code_AttrEClass(elem:Element,c){
+	Element.code(elem,c);
+	check(((((c).length()))>(3)));
+}
+
+pattern c2_Element_code_AttrEClass(elem:Element,c2){
+	Element.code(elem,c2);
+	check(((((c2).length()))>(4)));
+}
+
+pattern c3_Element_code_AttrEClass(elem:Element,c3){
+	Element.code(elem,c3);
+}
+
+pattern min1852763500(elem:Element, result : java Integer){
+    result == min find argument_1670039766(elem, #);
+}
+
+pattern argument_1670039766(elem:Element, result: java Integer){
+    find c3_Element_code_AttrEClass(elem, c3);
+    result == eval(((c3).length()));
+}
+

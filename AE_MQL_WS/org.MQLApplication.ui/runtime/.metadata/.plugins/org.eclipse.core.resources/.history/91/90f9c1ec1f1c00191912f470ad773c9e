@@ -1,0 +1,21 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a1){
+	find a1_OrGroup(a1);
+}
+
+pattern a1_OrGroup(a1:Attribute){
+    find Attribute644624507(a1);
+}
+
+pattern Attribute644624507(a1:Attribute){
+    Attribute(a1);
+    find n0_CAEXObject_name_AttrEClass(a1,n0);
+}
+
+pattern n0_CAEXObject_name_AttrEClass(a1:Attribute, n0){
+    Attribute.name(a1, n0);
+}
+
+

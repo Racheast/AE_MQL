@@ -1,0 +1,79 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i1){
+	find i1_OrGroup(i1, ie3, bsu_oe3);
+}
+
+pattern i1_OrGroup(i1,ie3,bsu_oe3){
+    find InternalElement151758370(i1,ie3,bsu_oe3);
+}
+
+pattern bsu_oe3_OrGroup(bsu_oe3,i1){
+    InternalElement(i1);
+    bsu_oe3 == i1;
+}
+
+pattern ie2_OrGroup(ie2,ie3,bsu_oe3,i1){
+    find InternalElement598970002(ie2,ie3,bsu_oe3,i1);
+}
+
+pattern ie3_OrGroup(ie3,bsu_oe3,i1){
+    find InternalElement1496663115(ie3,bsu_oe3,i1);
+}
+or{
+    ie3 == bsu_oe3;
+    ie3 == i1;
+    find InternalElement2040238829(ie3);
+}
+
+pattern InternalElement598970002(ie2:InternalElement,ie3:InternalElement,bsu_oe3:SystemUnitClass,i1:InternalElement){
+    InternalElement(i1);
+    SystemUnitClass(bsu_oe3);
+    InternalElement(ie2);
+    InternalElement(ie3);
+    find ie3_OrGroup_ref(ie2,ie3,bsu_oe3,i1);
+}
+
+pattern InternalElement2040238829(ie3:InternalElement){
+    InternalElement(ie3);
+}
+
+pattern InternalElement151758370(i1:InternalElement,ie3:InternalElement,bsu_oe3:SystemUnitClass){
+    InternalElement(i1);
+    SystemUnitClass(bsu_oe3);
+    InternalElement(ie3);
+    neg find ie2_OrGroup_ref(i1,ie2,ie3,bsu_oe3);
+}
+
+pattern InternalElement1496663115(ie3:InternalElement,bsu_oe3:SystemUnitClass,i1:InternalElement){
+    InternalElement(i1);
+    SystemUnitClass(bsu_oe3);
+    InternalElement(ie3);
+    find bsu_oe3_OrGroup_ref(ie3,bsu_oe3,i1);
+}
+
+pattern InternalElement_internalElement949600074(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern InternalElement_baseSystemUnit1793661572(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern bsu_oe3_OrGroup_ref(ie3,bsu_oe3,i1){
+    find bsu_oe3_OrGroup(bsu_oe3,i1);
+    find InternalElement_baseSystemUnit1793661572(ie3,bsu_oe3);
+}
+
+pattern ie2_OrGroup_ref(i1,ie2,ie3,bsu_oe3){
+    find ie2_OrGroup(ie2,ie3,bsu_oe3,i1);
+    find InternalElement_internalElement949600074(i1,ie2);
+}
+
+pattern ie3_OrGroup_ref(ie2,ie3,bsu_oe3,i1){
+    find ie3_OrGroup(ie3,bsu_oe3,i1);
+    find InternalElement_internalElement949600074+(ie2,ie3);
+}
+
+

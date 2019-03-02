@@ -1,0 +1,6 @@
+Find InternalElement ie1:InternalElement{
+	 systemUnitClass suc : SystemUnitClass{
+	 	
+	 };
+	 baseSystemUnit bsu : ie1 OR suc;
+}   

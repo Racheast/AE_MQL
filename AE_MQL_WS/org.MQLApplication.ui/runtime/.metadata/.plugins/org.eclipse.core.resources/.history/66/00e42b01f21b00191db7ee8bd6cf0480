@@ -1,0 +1,65 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie1, suc, ie2){
+	find ie1_OrGroup(ie1, n, suc, ie2);
+	find suc_OrGroup(suc);
+	find ie2_OrGroup(ie2);
+}
+
+pattern n_OrGroup(n:SystemUnitClass, suc, ie2){
+    SystemUnitClass(suc);
+    InternalElement(ie2);
+    n == suc;
+}
+or{
+    SystemUnitClass(suc);
+    InternalElement(ie2);
+    n == ie2;
+}
+
+pattern ie2_OrGroup(ie2:InternalElement){
+    find InternalElement543878431(ie2);
+}
+
+pattern ie1_OrGroup(ie1:InternalElement, n, suc, ie2){
+    find InternalElement2008333439(ie1, n, suc, ie2);
+}
+
+pattern suc_OrGroup(suc:SystemUnitClass){
+    find InternalElement604674584(suc);
+}
+
+pattern InternalElement604674584(suc:InternalElement){
+    InternalElement(suc);
+    find sucName_CAEXObject_name_AttrEClass(suc,sucName);
+}
+
+pattern InternalElement543878431(ie2:InternalElement){
+    InternalElement(ie2);
+    find ie2Name_CAEXObject_name_AttrEClass(ie2,ie2Name);
+}
+
+pattern InternalElement2008333439(ie1:InternalElement, n, suc, ie2){
+    InternalElement(ie1);
+    find n_OrGroup_ref(ie1, n, suc, ie2);
+}
+
+pattern sucName_CAEXObject_name_AttrEClass(suc:InternalElement, sucName){
+    InternalElement.name(suc, sucName);
+}
+
+pattern ie2Name_CAEXObject_name_AttrEClass(ie2:InternalElement, ie2Name){
+    InternalElement.name(ie2, ie2Name);
+}
+
+pattern InternalElement_baseSystemUnit2086416690(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern n_OrGroup_ref(ie1, n, suc, ie2){
+    find n_OrGroup(n, suc, ie2);
+    find InternalElement_baseSystemUnit2086416690(ie1,n);
+}
+
+

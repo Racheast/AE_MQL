@@ -1,0 +1,11 @@
+Find InternalElement i:InternalElement{
+	attribute a : Attribute{
+		name n1;
+		attribute a2 : Attribute{
+			name n2;
+		} OR Attribute{
+			name n3;
+		};
+	};
+	eval:count(a2).greaterThan(2);
+}     

@@ -1,0 +1,7 @@
+Find
+Course c {
+	courseType ct:VO;
+	eval: count(ct).greaterEquals(1);
+};
+
+

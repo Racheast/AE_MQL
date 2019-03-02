@@ -1,0 +1,48 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ih){
+	find ih_OrGroup(ih, ie, ie2);
+}
+
+pattern ie_OrGroup(ie,ie2){
+    find InternalElement1947447232(ie, ie2);
+}
+
+pattern ih_OrGroup(ih,ie,ie2){
+    find InstanceHierarchy299591195(ih, ie, ie2);
+}
+
+pattern ie2_OrGroup(ie2){
+	InternalElement(ie2);
+}
+
+pattern InstanceHierarchy299591195(ih:InstanceHierarchy, ie, ie2){
+    InstanceHierarchy(ih);
+    find ie_OrGroup_ref(ih, ie, ie2);
+}
+
+pattern InternalElement1947447232(ie:InternalElement, ie2){
+    InternalElement(ie);
+    find ie2_OrGroup_ref(ie, ie2);
+}
+
+pattern InstanceHierarchy_internalElement1295856566(from:InstanceHierarchy, to:InternalElement){
+    InstanceHierarchy.internalElement(from, to);
+}
+
+pattern InternalElement_internalElement645344852(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern ie_OrGroup_ref(ih, ie, ie2){
+    find ie_OrGroup(ie,ie2);
+    find InstanceHierarchy_internalElement1295856566(ih,ie);
+}
+
+pattern ie2_OrGroup_ref(ie, ie2){
+    find ie2_OrGroup(ie2);
+    find InternalElement_internalElement645344852+(ie,ie2);
+}
+
+

@@ -1,0 +1,49 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(f1, f2, folder1){
+	find f1_OrGroup(f1);
+	find f2_OrGroup(f2);
+	find folder1_OrGroup(folder1, c, f1,nfolder1);
+}
+
+pattern f2_OrGroup(f2){
+	File(f2);
+}
+
+pattern folder1_OrGroup(folder1,c,f1,nfolder1){
+    find Folder6151794(folder1,c,f1,nfolder1);
+}
+
+pattern c_OrGroup(c,f1){
+    File(f1);
+    c == f1;
+}
+
+pattern f1_OrGroup(f1){
+	File(f1);
+}
+
+pattern Folder6151794(folder1:Folder,c:NamedObject_Containment,f1:File,nfolder1){
+    Folder(folder1);
+    NamedObject_Containment(c);
+    File(f1);
+    find nfolder1_NamedObject_name_AttrEClass(folder1,nfolder1);
+    find c_OrGroup_ref(folder1,c,f1);
+    c != nfolder1;
+}
+
+pattern nfolder1_NamedObject_name_AttrEClass(folder1:Folder, nfolder1){
+    Folder.name(folder1, nfolder1);
+}
+
+pattern Folder_contains413118226(from:Folder, to:NamedObject){
+    Folder.contains(from, to);
+}
+
+pattern c_OrGroup_ref(folder1,c,f1){
+    find c_OrGroup(c,f1);
+    find Folder_contains413118226(folder1,c);
+}
+
+

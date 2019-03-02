@@ -1,0 +1,47 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find Element350422752(result);
+}
+
+pattern Element350422752(elem:Element){
+    Element(elem);
+    find c1_Element_code_AttrEClass(elem,c1);
+    find c2_Element_code_AttrEClass(elem,c2);
+    find c3_Element_code_AttrEClass(elem,c3);
+    find c4_Element_code_AttrEClass(elem,c4);
+    find c5_Element_code_AttrEClass(elem,c5);
+    find c6_Element_code_AttrEClass(elem,c6);
+    c1 != c4;
+    c3 != c2;
+    c4 != c2;
+    c1 != c2;
+    c1 != c3;
+    c4 != c3;
+}
+
+pattern c1_Element_code_AttrEClass(elem:Element,c1){
+	Element.code(elem,c1);
+}
+
+pattern c2_Element_code_AttrEClass(elem:Element,c2){
+	Element.code(elem,c2);
+}
+
+pattern c3_Element_code_AttrEClass(elem:Element,c3){
+	Element.code(elem,c3);
+}
+
+pattern c4_Element_code_AttrEClass(elem:Element,c4){
+	Element.code(elem,c4);
+}
+
+pattern c5_Element_code_AttrEClass(elem:Element,c5){
+	Element.code(elem,c5);
+}
+
+pattern c6_Element_code_AttrEClass(elem:Element,c6){
+	Element.code(elem,c6);
+}
+

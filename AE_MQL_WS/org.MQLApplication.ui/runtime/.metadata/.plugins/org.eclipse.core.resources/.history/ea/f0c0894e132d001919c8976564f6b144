@@ -1,0 +1,5 @@
+Find InternalElement i{
+	internalElement j:InternalElement j1 {
+		name n:Or(self.startsWith("R1"),self.startsWith("R3"));				
+	};
+};

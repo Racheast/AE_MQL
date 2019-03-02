@@ -1,0 +1,47 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie){
+	find addInfo_OrGroup(addInfo,n);
+	find ie_OrGroup(ie, addInfo);
+}
+
+pattern addInfo_OrGroup(addInfo,n){
+    find AdditionalInformation1441500965(addInfo,n);
+}
+
+pattern aiRef_OrGroup(aiRef,addInfo){
+    AdditionalInformation(addInfo);
+    aiRef == addInfo;
+}
+
+pattern ie_OrGroup(ie,addInfo){
+    find Attribute1775577736(ie,addInfo);
+}
+
+pattern Attribute1775577736(ie:Attribute,addInfo:AdditionalInformation){
+    AdditionalInformation(addInfo);
+    Attribute(ie);
+    neg find aiRef_OrGroup_ref(ie,aiRef,addInfo);
+}
+
+pattern AdditionalInformation1441500965(addInfo:AdditionalInformation,n){
+    AdditionalInformation(addInfo);
+    find n_Element_name_AttrEClass(addInfo,n);
+}
+
+pattern n_Element_name_AttrEClass(addInfo:AdditionalInformation, n){
+    AdditionalInformation.name(addInfo, n);
+    check(((n).equals("AutomationMLVersion A")));
+}
+
+pattern Attribute_additionalInformation1183628102(from:Attribute, to:AdditionalInformation){
+    Attribute.additionalInformation(from, to);
+}
+
+pattern aiRef_OrGroup_ref(ie,aiRef,addInfo){
+    find aiRef_OrGroup(aiRef,addInfo);
+    find Attribute_additionalInformation1183628102(ie,aiRef);
+}
+
+

@@ -1,0 +1,59 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie1){
+	find ie1_OrGroup(ie1, ie1_1,n1);
+}
+
+pattern ie1_OrGroup(ie1,ie1_1,n1){
+    find InternalElement772927477(ie1,ie1_1,n1);
+}
+
+pattern ie1_1_OrGroup(ie1_1,n1){
+    find InternalElement872764917(ie1_1,n1);
+}
+
+pattern ie_1_2_OrGroup(ie_1_2){
+    find InternalElement1576135457(ie_1_2);
+}
+
+pattern InternalElement872764917(ie1_1:InternalElement,n1){
+    InternalElement(ie1_1);
+    find n1_CAEXObject_name_AttrEClass(ie1_1,n1);
+}
+
+pattern InternalElement1576135457(ie_1_2:InternalElement){
+    InternalElement(ie_1_2);
+    neg find n_CAEXObject_name_AttrEClass(ie_1_2,n);
+}
+
+pattern InternalElement772927477(ie1:InternalElement,ie1_1:InternalElement,n1){
+    InternalElement(ie1);
+    InternalElement(ie1_1);
+    find ie1_1_OrGroup_ref(ie1,ie1_1,n1);
+    neg find ie_1_2_OrGroup_ref(ie1,ie_1_2);
+}
+
+pattern n1_CAEXObject_name_AttrEClass(ie1_1:InternalElement, n1){
+    InternalElement.name(ie1_1, n1);
+}
+
+pattern n_CAEXObject_name_AttrEClass(ie_1_2:InternalElement, n){
+    InternalElement.name(ie_1_2, n);
+}
+
+pattern InternalElement_internalElement1653397144(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern ie1_1_OrGroup_ref(ie1,ie1_1,n1){
+    find ie1_1_OrGroup(ie1_1,n1);
+    find InternalElement_internalElement1653397144(ie1,ie1_1);
+}
+
+pattern ie_1_2_OrGroup_ref(ie1,ie_1_2){
+    find ie_1_2_OrGroup(ie_1_2);
+    find InternalElement_internalElement1653397144+(ie1,ie_1_2);
+}
+
+

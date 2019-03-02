@@ -1,0 +1,48 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a1){
+	find a1_OrGroup(a1);
+}
+
+pattern a1_OrGroup(a1:Attribute){
+    find Attribute943753069(a1);
+}
+
+pattern a3_OrGroup(a3:Attribute){
+    find Attribute921462226(a3);
+}
+
+pattern a2_OrGroup(a2:Attribute){
+    find Attribute492129761(a2);
+}
+
+pattern Attribute492129761(a2:Attribute){
+    Attribute(a2);
+    neg find a3_OrGroup_ref(a2);
+}
+
+pattern Attribute943753069(a1:Attribute){
+    Attribute(a1);
+    neg find a2_OrGroup_ref(a1);
+}
+
+pattern Attribute921462226(a3:Attribute){
+    Attribute(a3);
+}
+
+pattern Attribute_attribute1833872311(from:Attribute, to:Attribute){
+    Attribute.attribute(from, to);
+}
+
+pattern a3_OrGroup_ref(a2){
+    find a3_OrGroup(a3);
+    find Attribute_attribute1833872311(a2,a3);
+}
+
+pattern a2_OrGroup_ref(a1){
+    find a2_OrGroup(a2);
+    find Attribute_attribute1833872311(a1,a2);
+}
+
+

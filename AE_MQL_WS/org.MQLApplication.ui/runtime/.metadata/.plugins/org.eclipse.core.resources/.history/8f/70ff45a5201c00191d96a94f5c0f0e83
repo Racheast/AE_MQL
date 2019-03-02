@@ -1,0 +1,55 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s){
+	find s_OrGroup(s, a);
+}
+
+pattern s_OrGroup(s:SystemUnitClass, a){
+    find SystemUnitClass1522736047(s, a);
+}
+
+pattern a_OrGroup(a:Attribute){
+    find Attribute547301238(a);
+}
+
+pattern Attribute547301238(a:Attribute){
+    Attribute(a);
+    find n_CAEXObject_name_AttrEClass(a,n);
+    find v_Attribute_value_AttrEClass(a,v);
+    find u_Attribute_unit_AttrEClass(a,u);
+    u != v;
+    v != n;
+    u != n;
+}
+
+pattern SystemUnitClass1522736047(s:SystemUnitClass, a){
+    SystemUnitClass(s);
+    find a_OrGroup_ref(s, a);
+}
+
+pattern n_CAEXObject_name_AttrEClass(a:Attribute, n){
+    Attribute.name(a, n);
+    check(((n).equals("color")));
+}
+
+pattern v_Attribute_value_AttrEClass(a:Attribute, v){
+    Attribute.value(a, v);
+    check(((v).equals("#40f2dc")));
+}
+
+pattern u_Attribute_unit_AttrEClass(a:Attribute, u){
+    Attribute.unit(a, u);
+    check(((u).equals("hex")));
+}
+
+pattern SystemUnitClass_attribute1539928559(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(s, a){
+    find a_OrGroup(a);
+    find SystemUnitClass_attribute1539928559(s,a);
+}
+
+

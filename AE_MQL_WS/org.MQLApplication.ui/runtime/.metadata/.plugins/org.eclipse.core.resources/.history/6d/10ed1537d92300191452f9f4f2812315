@@ -1,0 +1,74 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s){
+	find c_OrGroup(c);
+	find s_OrGroup(s, c);
+	find p_OrGroup(p, l, c,n2);
+}
+
+pattern a_OrGroup(a,c){
+    Course(c);
+    a == c;
+}
+
+pattern l_OrGroup(l,c){
+    Course(c);
+    l == c;
+}
+
+pattern s_OrGroup(s,c){
+    find Strudent1406696468(s,c);
+}
+
+pattern c_OrGroup(c){
+    find Course608608460(c);
+}
+
+pattern p_OrGroup(p,l,c,n2){
+    find Professor1606874336(p,l,c,n2);
+}
+
+pattern Professor1606874336(p:Professor,l:Course,c:Course,n2){
+    Course(l);
+    Course(c);
+    Professor(p);
+    find n2_Person_name_AttrEClass(p,n2);
+    find l_OrGroup_ref(p,l,c);
+    l != n2;
+}
+
+pattern Course608608460(c:Course){
+    Course(c);
+}
+
+pattern Strudent1406696468(s:Strudent,c:Course){
+    Strudent(s);
+    Course(c);
+    neg find a_OrGroup_ref(s,a,c);
+}
+
+pattern n2_Person_name_AttrEClass(p:Professor, n2){
+    Professor.name(p, n2);
+    check(((n2).startsWith("Bernhard Boring")));
+}
+
+pattern Professor_lectures1573989633(from:Professor, to:Course){
+    Professor.lectures(from, to);
+}
+
+pattern Strudent_attends14523447(from:Strudent, to:Course){
+    Strudent.attends(from, to);
+}
+
+pattern a_OrGroup_ref(s,a,c){
+    find a_OrGroup(a,c);
+    find Strudent_attends14523447(s,a);
+}
+
+pattern l_OrGroup_ref(p,l,c){
+    find l_OrGroup(l,c);
+    find Professor_lectures1573989633(p,l);
+}
+
+

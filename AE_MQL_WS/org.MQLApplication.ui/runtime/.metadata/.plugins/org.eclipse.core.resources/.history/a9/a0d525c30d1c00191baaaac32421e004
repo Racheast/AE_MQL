@@ -1,0 +1,28 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a){
+	find a_OrGroup(a);
+}
+
+pattern a_OrGroup(a:Attribute){
+    find Attribute1638849952(a);
+}
+
+pattern addInfo_OrGroup(addInfo:AdditionalInformation){
+
+pattern Attribute1638849952(a:Attribute){
+    Attribute(a);
+    neg find addInfo_OrGroup_ref(a, addInfo);
+}
+
+pattern Attribute_additionalInformation1835936469(from:Attribute, to:AdditionalInformation){
+    Attribute.additionalInformation(from, to);
+}
+
+pattern addInfo_OrGroup_ref(a, addInfo){
+    find addInfo_OrGroup(addInfo);
+    find Attribute_additionalInformation1835936469(a,addInfo);
+}
+
+

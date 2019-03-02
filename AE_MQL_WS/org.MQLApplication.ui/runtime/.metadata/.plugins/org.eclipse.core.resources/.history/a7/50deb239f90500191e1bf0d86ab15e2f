@@ -1,0 +1,4 @@
+Find Element{
+	powerLevelWatt p;
+	eval: sum_Double(DoubleRef(p)).greaterEquals(min_Integer(DoubleRef(p).toString().length()));
+}

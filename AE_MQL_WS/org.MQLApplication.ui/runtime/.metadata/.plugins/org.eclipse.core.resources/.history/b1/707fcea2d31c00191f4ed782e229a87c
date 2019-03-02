@@ -1,0 +1,12 @@
+Find CAEXObject co : InternalElement{
+	internalElement ie2 : InternalElement{
+		name! n2;
+		systemUnitClass su2 : SystemUnitClass{
+			name n22;
+			internalElement ie22 : InternalElement{
+				baseClass bc : ie2;
+				baseSystemUnit! bsu : ie2 OR su2;      
+			};      
+		};   
+	}; 
+} 

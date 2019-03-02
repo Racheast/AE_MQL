@@ -1,0 +1,11 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query(c){
+	Course(c)
+	nr == count find courseExam(c,e);
+	check(nr>=2);
+}
+pattern courseExam(c,e){
+	Course.exam(c,e);
+} 

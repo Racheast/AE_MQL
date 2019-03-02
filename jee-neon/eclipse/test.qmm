@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<qmm:FindQuery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:qmm="/LocalQMM/model/QMM.ecore">
+  <where xsi:type="qmm:InternalElement">
+    <changeMode_AttrEClass name="c1">
+      <operator/>
+    </changeMode_AttrEClass>
+    <iD_AttrEClass name="i1" negated="true">
+      <operator xsi:type="qmm:contains_FunctionalOperator">
+        <charSequence>
+          <argument xsi:type="qmm:String_CalculateableElementReferenceArgument" reference="qmm:CAEXObject_name_AttrEClass test.qmm#n1"/>
+        </charSequence>
+      </operator>
+    </iD_AttrEClass>
+    <name_AttrEClass name="n1">
+      <operator xsi:type="qmm:contains_FunctionalOperator">
+        <charSequence>
+          <argument xsi:type="qmm:String_PrimitiveArgument" value="R1"/>
+        </charSequence>
+      </operator>
+    </name_AttrEClass>
+    <internalElement name="ie1" transitive="true">
+      <internalelement_containment>
+        <name_AttrEClass name="n2">
+          <operator xsi:type="qmm:String_And_BitOperator">
+            <connects xsi:type="qmm:contains_FunctionalOperator">
+              <charSequence>
+                <argument xsi:type="qmm:String_PrimitiveArgument" value="ALEX"/>
+              </charSequence>
+            </connects>
+            <connects xsi:type="qmm:CharSequence_String_length_FunctionalOperator">
+              <operator xsi:type="qmm:greaterThan_FunctionalOperator">
+                <i>
+                  <argument xsi:type="qmm:Integer_PrimitiveArgument" value="1"/>
+                </i>
+              </operator>
+            </connects>
+          </operator>
+        </name_AttrEClass>
+      </internalelement_containment>
+    </internalElement>
+  </where>
+</qmm:FindQuery>

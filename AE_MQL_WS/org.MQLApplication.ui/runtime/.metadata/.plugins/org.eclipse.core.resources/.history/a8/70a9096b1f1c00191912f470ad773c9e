@@ -1,0 +1,4 @@
+Find Attribute a1 : Attribute{
+	name n0;
+	additionalInformation  aiRef;
+} 

@@ -1,0 +1,13 @@
+Find
+Course c1{
+	
+};
+
+Student s1{
+	
+};
+Professor prof1{
+	lectures l:c1
+};
+
+Select c1, s1;

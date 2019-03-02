@@ -1,0 +1,14 @@
+pattern query(ie:InternalElement){
+	neg find ie2ie(ie,x);
+}
+
+pattern ie2ie(from:InternalElement,to:InternalElement){
+	InternalElement.internalElement+(from,to);
+	InternalElement.name(to,name);
+	nrAttr == count find ie2attr(to,#);
+	check(name.contains("TEST") && nrAttr>1);
+}
+
+pattern ie2attr(from:InternalElement,to:Attribute){
+	InternalElement.attribute(from,to);
+}

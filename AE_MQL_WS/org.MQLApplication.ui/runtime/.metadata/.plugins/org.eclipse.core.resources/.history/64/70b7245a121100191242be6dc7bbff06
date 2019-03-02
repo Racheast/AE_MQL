@@ -1,0 +1,4 @@
+Find InternalElement{
+	name n1 : self.equals("R1_Stack");
+	attribute a2;
+}

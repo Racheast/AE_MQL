@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.viatra.query.language.feature"
+      label="VIATRA Query Runtime - Pattern Language Support"
+      version="1.7.2.201803211255"
+      provider-name="Eclipse VIATRA Project">
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <description>
+      VIATRA Query runtime feature. This is the minimum dependency to execute VIATRA Query matchers from textual queries.
+   </description>
+
+   <url>
+      <update label="VIATRA" url="http://download.eclipse.org/viatra/updates/release/"/>
+   </url>
+
+   <requires>
+      <import feature="org.eclipse.viatra.query.runtime.feature" version="1.7.0" match="equivalent"/>
+      <import feature="org.eclipse.xtext.runtime" version="2.9.0" match="compatible"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.viatra.query.patternlanguage"
+         download-size="657"
+         install-size="1924"
+         version="1.7.2.201803211255"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.viatra.query.patternlanguage.emf"
+         download-size="1121"
+         install-size="3188"
+         version="1.7.2.201803211255"
+         unpack="false"/>
+
+   <plugin
+         id="com.google.inject"
+         download-size="508"
+         install-size="1162"
+         version="3.0.0.v201312141243"
+         unpack="false"/>
+
+   <plugin
+         id="com.google.inject.multibindings"
+         download-size="41"
+         install-size="100"
+         version="3.0.0.v201402270930"
+         fragment="true"
+         unpack="false"/>
+
+</feature>

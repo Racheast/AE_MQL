@@ -1,0 +1,16 @@
+Find 
+
+InternalElement i: InternalElement{
+	internalElement+ ie : InternalElement{
+		attribute a;
+		name n;
+		internalElement+ ie2 : InternalElement{
+			baseSystemUnit bsu : i OR ie OR ie2;
+		};
+	};
+	eval:count(ie).greaterEquals(0);
+};
+
+InternalElement ie: InternalElement{
+	
+};

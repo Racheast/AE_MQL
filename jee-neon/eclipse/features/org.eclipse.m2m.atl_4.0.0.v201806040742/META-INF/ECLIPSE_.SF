@@ -1,0 +1,29 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: blhl4pDoF2N5padtX9uBkooscr67G
+ IdLvftKS8kgxFo=
+SHA-256-Digest-Manifest: wZMzMhzPwjD5GiTuQxfPFocaXQgp3W9eZ7H7HZ7JiLc=
+Created-By: 1.8.0_162 (Oracle Corporation)
+
+Name: META-INF/maven/org.eclipse.m2m.atl.features/org.eclipse.m2m.atl/
+ pom.properties
+SHA-256-Digest: wJw3lhjTyS8CAS9VSriveh4M3HugHj0kQ62udNLWCGA=
+
+Name: META-INF/maven/org.eclipse.m2m.atl.features/org.eclipse.m2m.atl/
+ pom.xml
+SHA-256-Digest: 38tBkzp00NvXm9d++W7GR4qz7dqAkq9JklYyipe7RA4=
+
+Name: epl-v10.html
+SHA-256-Digest: A62Qg/ilwpE5q5rWhaW5lWcu9wqjo/z1OkWFc7eRzkQ=
+
+Name: feature.xml
+SHA-256-Digest: HmIirUV7dUZjLhBJWT9UD/tUn8S9pf5yAM+231O2hXI=
+
+Name: feature.properties
+SHA-256-Digest: Fun1zrkL4cAPdIcuA0Riq6lq68oR9GdjugMC7+rN03g=
+
+Name: license.html
+SHA-256-Digest: Z1FFdCx2qjeJBHIywt3DAHrbLE968DQosdftaXqfAKs=
+
+Name: modeling32.png
+SHA-256-Digest: CgS/5RX+HpcveJj25BP7XwIrPI3o7AtCMO2apmBLMZ0=
+

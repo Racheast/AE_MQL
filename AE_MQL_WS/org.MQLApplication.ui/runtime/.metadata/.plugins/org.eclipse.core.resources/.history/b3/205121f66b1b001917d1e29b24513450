@@ -1,0 +1,10 @@
+Find 
+SystemUnitClass c:InternalElement{
+	name n1;
+	internalElement!+ i2:InternalElement;
+	baseSystemUnit asdasd: c;
+}, 
+InternalElement i:InternalElement{
+	systemUnitClass su:SystemUnitFamily;
+	baseSystemUnit b: i;
+} 

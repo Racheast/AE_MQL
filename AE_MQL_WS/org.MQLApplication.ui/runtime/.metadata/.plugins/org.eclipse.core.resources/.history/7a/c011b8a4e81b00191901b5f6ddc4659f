@@ -1,0 +1,43 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie1, suc){
+	find ie1_OrGroup(ie1, n, suc);
+	find suc_OrGroup(suc);
+}
+
+pattern n_OrGroup(n:){
+	org.eclipse.emf.ecore.impl.EClassImpl@23fbc6b2 (name: SystemUnitClass_OrGroup_Type) (instanceClassName: null) (abstract: true, interface: false)(n);
+}
+
+pattern ie1_OrGroup(ie1:, n, suc){
+    find InternalElement78673336(ie1, n, suc);
+}
+
+pattern suc_OrGroup(suc:){
+    find InternalElement1197096363(suc);
+}
+
+pattern InternalElement1197096363(suc:InternalElement){
+    InternalElement(suc);
+    find sucName_CAEXObject_name_AttrEClass(suc,sucName);
+}
+
+pattern InternalElement78673336(ie1:InternalElement, n, suc){
+    InternalElement(ie1);
+    find n_OrGroup_ref(ie1, n, suc);
+}
+
+pattern sucName_CAEXObject_name_AttrEClass(suc:InternalElement, sucName){
+    InternalElement.name(suc, sucName);
+}
+
+pattern InternalElement_baseSystemUnit507361937(from:InternalElement, to:){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern n_OrGroup_ref(ie1, n, suc){
+    find InternalElement_baseSystemUnit507361937(ie1,n);
+}
+
+

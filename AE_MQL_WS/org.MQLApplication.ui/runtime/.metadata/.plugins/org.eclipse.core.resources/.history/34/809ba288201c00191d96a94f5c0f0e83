@@ -1,0 +1,53 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a1){
+	find a1_OrGroup(a1, aiRef, addInfo);
+	find addInfo_OrGroup(addInfo);
+}
+
+pattern addInfo_OrGroup(addInfo:AdditionalInformation){
+    find AdditionalInformation1737292831(addInfo);
+}
+
+pattern aiRef_OrGroup(aiRef:AdditionalInformation, addInfo){
+    AdditionalInformation(addInfo);
+    aiRef == addInfo;
+}
+
+pattern a1_OrGroup(a1:Attribute, aiRef, addInfo){
+    find Attribute2075465088(a1, aiRef, addInfo);
+}
+
+pattern AdditionalInformation1737292831(addInfo:AdditionalInformation){
+    AdditionalInformation(addInfo);
+    find n_Element_name_AttrEClass(addInfo,n);
+}
+
+pattern Attribute2075465088(a1:Attribute, aiRef, addInfo){
+    Attribute(a1);
+    AdditionalInformation(addInfo);
+    find n0_CAEXObject_name_AttrEClass(a1,n0);
+    find aiRef_OrGroup_ref(a1, aiRef, addInfo);
+    n0 != aiRef;
+}
+
+pattern n0_CAEXObject_name_AttrEClass(a1:Attribute, n0){
+    Attribute.name(a1, n0);
+}
+
+pattern n_Element_name_AttrEClass(addInfo:AdditionalInformation, n){
+    AdditionalInformation.name(addInfo, n);
+    check(((n).endsWith("B")));
+}
+
+pattern Attribute_additionalInformation692419282(from:Attribute, to:AdditionalInformation){
+    Attribute.additionalInformation(from, to);
+}
+
+pattern aiRef_OrGroup_ref(a1, aiRef, addInfo){
+    find aiRef_OrGroup(aiRef, addInfo);
+    find Attribute_additionalInformation692419282(a1,aiRef);
+}
+
+

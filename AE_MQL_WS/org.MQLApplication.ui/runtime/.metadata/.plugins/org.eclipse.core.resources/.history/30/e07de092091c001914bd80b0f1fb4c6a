@@ -1,0 +1,81 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_OrGroup(i, a, a2);
+}
+
+pattern i_OrGroup(i:InternalElement, a, a2){
+    find InternalElement1216629763(i, a, a2);
+}
+
+pattern a_OrGroup(a:Attribute, a2){
+    find Attribute1955965967(a, a2);
+}
+
+pattern a2_OrGroup(a2:Attribute){
+    find Attribute1749318529(a2);
+}
+or{
+    find Attribute1896046054(a2);
+}
+
+pattern Attribute1749318529(a2:Attribute){
+    Attribute(a2);
+    find n2_CAEXObject_name_AttrEClass(a2,n2);
+}
+
+pattern Attribute1896046054(a2:Attribute){
+    Attribute(a2);
+    find n3_CAEXObject_name_AttrEClass(a2,n3);
+}
+
+pattern InternalElement1216629763(i:InternalElement, a, a2){
+    InternalElement(i);
+    find a_OrGroup_ref(i, a, a2);
+    find count195385596(i, ref195385596);
+    check(((ref195385596)>(2)));
+}
+
+pattern Attribute1955965967(a:Attribute, a2){
+    Attribute(a);
+    find n1_CAEXObject_name_AttrEClass(a,n1);
+    find a2_OrGroup_ref(a, a2);
+    n1 != a2;
+}
+
+pattern n1_CAEXObject_name_AttrEClass(a:Attribute, n1){
+    Attribute.name(a, n1);
+}
+
+pattern n2_CAEXObject_name_AttrEClass(a2:Attribute, n2){
+    Attribute.name(a2, n2);
+}
+
+pattern n3_CAEXObject_name_AttrEClass(a2:Attribute, n3){
+    Attribute.name(a2, n3);
+}
+
+pattern count195385596(elem:InternalElement, result : java Integer){
+    result == count find a_OrGroup_ref(elema, a2);
+}
+
+pattern Attribute_attribute1191667822(from:Attribute, to:Attribute){
+    Attribute.attribute(from, to);
+}
+
+pattern InternalElement_attribute1419886138(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(i, a, a2){
+    find a_OrGroup(a, a2);
+    find InternalElement_attribute1419886138(i,a);
+}
+
+pattern a2_OrGroup_ref(a, a2){
+    find a2_OrGroup(a2);
+    find Attribute_attribute1191667822(a,a2);
+}
+
+

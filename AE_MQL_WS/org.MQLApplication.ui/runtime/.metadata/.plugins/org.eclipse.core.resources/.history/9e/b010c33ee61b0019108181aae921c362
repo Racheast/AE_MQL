@@ -1,0 +1,43 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie1, suc){
+	find ie1_OrGroup(ie1, n);
+	find suc_OrGroup(suc);
+}
+
+pattern n_OrGroup(n:SystemUnitClass_OrGroup_Type){
+	SystemUnitClass_OrGroup_Type(n);
+}
+
+pattern suc_OrGroup(suc:SystemUnitClass){
+    find InternalElement995319017(suc);
+}
+
+pattern ie1_OrGroup(ie1:InternalElement, n){
+    find InternalElement1255497628(ie1, n);
+}
+
+pattern InternalElement1255497628(ie1:InternalElement, n){
+    InternalElement(ie1);
+    find n_OrGroup_ref(ie1, n);
+}
+
+pattern InternalElement995319017(suc:InternalElement){
+    InternalElement(suc);
+    find sucName_CAEXObject_name_AttrEClass(suc,sucName);
+}
+
+pattern sucName_CAEXObject_name_AttrEClass(suc:InternalElement, sucName){
+    InternalElement.name(suc, sucName);
+}
+
+pattern InternalElement_baseSystemUnit735615886(from:InternalElement, to:SystemUnitClass_Reference_OrGroup){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern n_OrGroup_ref(ie1, n){
+    find InternalElement_baseSystemUnit735615886(ie1,n);
+}
+
+

@@ -1,0 +1,144 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(co){
+	find co_OrGroup(co, ie2, su2, ie22, bc);
+}
+
+pattern bc_OrGroup(bc,ie2){
+    InternalElement(ie2);
+    bc == ie2;
+}
+
+pattern bsu_OrGroup(bsu,ie2,su2){
+    InternalElement(ie2);
+    SystemUnitClass(su2);
+    bsu == ie2;
+}
+or{
+    InternalElement(ie2);
+    SystemUnitClass(su2);
+    bsu == su2;
+}
+
+pattern ie22_OrGroup(ie22,bc,ie2,su2){
+    find InternalElement1343112512(ie22,bc,ie2,su2);
+}
+
+pattern co_OrGroup(co,ie2,su2,ie22,bc){
+    find InternalElement1143672602(co,ie2,su2,ie22,bc);
+}
+
+pattern ie2_OrGroup(ie2,su2,ie22,bc){
+    find InternalElement271523887(ie2,su2,ie22,bc);
+}
+
+pattern su2_OrGroup(su2,ie22,bc,ie2){
+    find SystemUnitClass140176903(su2,ie22,bc,ie2);
+}
+
+pattern InternalElement271523887(su2,ie2,ie22,bc){
+    InternalElement(ie2);
+    InternalElement(ie2);
+    InternalElement(ie2);
+    SystemUnitClass(su2);
+    SystemUnitClass(su2);
+    InternalElement(ie22);
+    SystemUnitClass(bc);
+    InternalElement(ie2);
+    neg find n2_CAEXObject_name_AttrEClass(ie2,n2);
+    find ie2_OrGroup_ref(ie2,su2,su2,ie22,bc,ie2);
+}
+
+pattern InternalElement1143672602(ie2,co,su2,ie22,bc){
+    InternalElement(co);
+    InternalElement(ie2);
+    InternalElement(ie2);
+    SystemUnitClass(su2);
+    InternalElement(ie2);
+    SystemUnitClass(su2);
+    InternalElement(ie22);
+    SystemUnitClass(bc);
+    find co_OrGroup_ref(co,ie2,ie2,su2,ie22,bc);
+}
+
+pattern SystemUnitClass140176903(ie22,su2,bc,ie2){
+    SystemUnitClass(su2);
+    InternalElement(ie2);
+    InternalElement(ie2);
+    SystemUnitClass(su2);
+    InternalElement(ie22);
+    SystemUnitClass(bc);
+    InternalElement(ie2);
+    SystemUnitClass(su2);
+    find n22_CAEXObject_name_AttrEClass(su2,n22);
+    find su2_OrGroup_ref(su2,ie22,ie22,bc,ie2,su2);
+    n22 != ie22;
+}
+
+pattern InternalElement1343112512(bc,ie22,ie2,su2){
+    InternalElement(ie22);
+    InternalElement(ie2);
+    InternalElement(ie2);
+    SystemUnitClass(su2);
+    SystemUnitClass(bc);
+    InternalElement(ie2);
+    SystemUnitClass(su2);
+    find ie22_OrGroup_ref(ie22,bc,bc,ie2);
+    neg find ie22_OrGroup_ref(ie22,bsu,ie2,su2);
+}
+
+pattern n2_CAEXObject_name_AttrEClass(ie2:InternalElement, n2){
+    InternalElement.name(ie2, n2);
+}
+
+pattern n22_CAEXObject_name_AttrEClass(su2:SystemUnitClass, n22){
+    SystemUnitClass.name(su2, n22);
+}
+
+pattern InternalElement_systemUnitClass1216807623(from:InternalElement, to:SystemUnitClass){
+    InternalElement.systemUnitClass(from, to);
+}
+
+pattern InternalElement_baseClass420434474(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseClass(from, to);
+}
+
+pattern InternalElement_internalElement680475334(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern InternalElement_baseSystemUnit1630548569(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern SystemUnitClass_internalElement680475334(from:SystemUnitClass, to:InternalElement){
+    SystemUnitClass.internalElement(from, to);
+}
+
+pattern bc_OrGroup_ref(ie22,bc,ie2){
+    find bc_OrGroup(bc,ie2);
+    find InternalElement_baseClass420434474(ie22,bc);
+}
+
+pattern bsu_OrGroup_ref(ie22,bsu,ie2,su2){
+    find bsu_OrGroup(bsu,ie2,su2);
+    find InternalElement_baseSystemUnit1630548569(ie22,bsu);
+}
+
+pattern ie22_OrGroup_ref(su2,ie22,bc,ie2){
+    find ie22_OrGroup(ie22,bc,ie2,su2);
+    find SystemUnitClass_internalElement680475334(su2,ie22);
+}
+
+pattern ie2_OrGroup_ref(co,ie2,su2,ie22,bc){
+    find ie2_OrGroup(ie2,su2,ie22,bc);
+    find InternalElement_internalElement680475334(co,ie2);
+}
+
+pattern su2_OrGroup_ref(ie2,su2,ie22,bc){
+    find su2_OrGroup(su2,ie22,bc,ie2);
+    find InternalElement_systemUnitClass1216807623(ie2,su2);
+}
+
+

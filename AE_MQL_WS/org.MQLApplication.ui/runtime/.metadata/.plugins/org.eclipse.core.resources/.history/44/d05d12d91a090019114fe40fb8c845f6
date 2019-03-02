@@ -1,0 +1,37 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find SystemUnitClass1543072783(result);
+}
+
+pattern a_OrGroup(elem:Attribute){
+	Attribute(elem);
+}
+
+pattern SystemUnitClass1543072783(elem:SystemUnitClass){
+    SystemUnitClass(elem);
+    find n_CAEXObject_name_AttrEClass(elem,n);
+    find a_OrGroup_ref(elem,a);
+    a != n;
+    find count1496772454(elem, ref1496772454);
+    check(((ref1496772454)>(((n).length()))));
+}
+
+pattern n_CAEXObject_name_AttrEClass(elem:SystemUnitClass,n){
+	SystemUnitClass.name(elem,n);
+}
+
+pattern count1496772454(elem:SystemUnitClass, result : java Integer){
+    result == count find a_OrGroup_ref(elem, a);
+}
+
+pattern SystemUnitClass_attribute450544178(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(container:SystemUnitClass, member:Attribute){
+    find a_OrGroup(member);
+    find SystemUnitClass_attribute450544178(container,member);
+}
+

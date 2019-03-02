@@ -1,0 +1,51 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie, v1){
+	find ie_OrGroup(ie, v1);
+	find v1_OrGroup(v1,val1);
+}
+
+pattern ie_OrGroup(ie,v1){
+    find InternalElement122046862(ie,v1);
+}
+
+pattern v1_OrGroup(v1,val1){
+    find Version1607143722(v1,val1);
+}
+
+pattern v1ref_OrGroup(v1ref,v1){
+    Version(v1);
+    v1ref == v1;
+}
+
+pattern Version1607143722(v1:Version,val1){
+    Version(v1);
+    find val1_Version_value_AttrEClass(v1,val1);
+    find c1_Version_changeMode_AttrEClass(v1);
+}
+
+pattern InternalElement122046862(ie:InternalElement,v1:Version){
+    InternalElement(ie);
+    Version(v1);
+    neg find v1ref_OrGroup_ref(ie,v1ref,v1);
+}
+
+pattern val1_Version_value_AttrEClass(v1:Version, val1){
+    Version.value(v1, val1);
+}
+
+pattern c1_Version_changeMode_AttrEClass(v1:Version){
+	Version.changeMode(v1,::change);
+}
+
+pattern InternalElement_version1158310481(from:InternalElement, to:Version){
+    InternalElement.version(from, to);
+}
+
+pattern v1ref_OrGroup_ref(ie,v1ref,v1){
+    find v1ref_OrGroup(v1ref,v1);
+    find InternalElement_version1158310481(ie,v1ref);
+}
+
+

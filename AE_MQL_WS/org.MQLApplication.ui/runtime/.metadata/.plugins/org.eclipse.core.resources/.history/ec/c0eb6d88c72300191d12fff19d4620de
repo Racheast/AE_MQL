@@ -1,0 +1,38 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(c1){
+	find c1_OrGroup(c1, m,n);
+}
+
+pattern c1_OrGroup(c1,m,n){
+    find Course1075180728(c1,m,n);
+}
+
+pattern m_OrGroup(m){
+	Course(m);
+}
+
+pattern Course1075180728(c1:Course,m:Course,n){
+    Course(c1);
+    Course(m);
+    find n_Course_name_AttrEClass(c1,n);
+    find m_OrGroup_ref(c1,m);
+    m != n;
+}
+
+pattern n_Course_name_AttrEClass(c1:Course, n){
+    Course.name(c1, n);
+    check(((n).startsWith("Mathe")));
+}
+
+pattern Course_mandatoryFor2000254253(from:Course, to:Course){
+    Course.mandatoryFor(from, to);
+}
+
+pattern m_OrGroup_ref(c1,m){
+    find m_OrGroup(m);
+    find Course_mandatoryFor2000254253(c1,m);
+}
+
+

@@ -1,0 +1,70 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie1){
+	find ie1_OrGroup(ie1);
+}
+
+pattern ie1_1_1_OrGroup(ie1_1_1:InternalElement){
+	InternalElement(ie1_1_1);
+}
+
+pattern ie1_1_OrGroup(ie1_1:InternalElement){
+    find InternalElement903168466(ie1_1);
+}
+
+pattern ie1_OrGroup(ie1:InternalElement){
+    find InternalElement1616490218(ie1);
+}
+
+pattern InternalElement1616490218(ie1:InternalElement){
+    InternalElement(ie1);
+    find c_CAEXBasicObject_changeMode_AttrEClass(ie1);
+    find id1_CAEXObject_iD_AttrEClass(ie1,id1);
+    find n1_CAEXObject_name_AttrEClass(ie1,n1);
+    find ie1_1_OrGroup_ref(ie1,ie1_1);
+    ie1_1 != id1;
+    n1 != id1;
+    n1 != ie1_1;
+}
+
+pattern InternalElement903168466(ie1_1:InternalElement){
+    InternalElement(ie1_1);
+    find ie1_1_1_OrGroup_ref(ie1_1,ie1_1_1);
+}
+
+pattern c_CAEXBasicObject_changeMode_AttrEClass(ie1:InternalElement){
+	InternalElement.changeMode(ie1,::change);
+}
+
+pattern id1_CAEXObject_iD_AttrEClass(ie1:InternalElement, id1){
+    InternalElement.iD(ie1, id1);
+    find n1_CAEXObject_name_AttrEClass(ie1,n1);
+    n1 != id1;
+
+}
+
+pattern n1_CAEXObject_name_AttrEClass(ie1:InternalElement, n1){
+    find count469722503(ie1, ref469722503);
+    InternalElement.name(ie1, n1);
+}
+
+pattern count469722503(elem:InternalElement, result : java Integer){
+    result == count find id1_CAEXObject_iD_AttrEClass(elem, id1);
+}
+
+pattern InternalElement_internalElement1994096368(from:InternalElement, to:InternalElement_Containment_OrGroup){
+    InternalElement.internalElement(from, to);
+}
+
+pattern ie1_1_1_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find ie1_1_1_OrGroup(member);
+    find InternalElement_internalElement1994096368(container,member);
+}
+
+pattern ie1_1_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find ie1_1_OrGroup(member);
+    find InternalElement_internalElement1994096368(container,member);
+}
+
+

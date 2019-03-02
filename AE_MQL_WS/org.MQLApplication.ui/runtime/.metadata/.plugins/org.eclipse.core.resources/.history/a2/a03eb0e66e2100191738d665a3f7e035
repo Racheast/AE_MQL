@@ -1,0 +1,16 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i1){
+	find i1_OrGroup(i1);
+}
+
+pattern i1_OrGroup(i1){
+    find InternalElement388986421(i1);
+}
+
+pattern InternalElement388986421(i1:InternalElement){
+    InternalElement(i1);
+}
+
+

@@ -1,0 +1,41 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_OrGroup(i, a,n);
+}
+
+pattern i_OrGroup(i,a,n){
+    find InternalElement1208270291(i,a,n);
+}
+
+pattern a_OrGroup(a,n){
+    find Attribute327696754(a,n);
+}
+
+pattern InternalElement1208270291(i:InternalElement,a:Attribute,n){
+    InternalElement(i);
+    Attribute(a);
+    find a_OrGroup_ref(i,a,n);
+}
+
+pattern Attribute327696754(a:Attribute,n){
+    Attribute(a);
+    find n_CAEXObject_name_AttrEClass(a,n);
+}
+
+pattern n_CAEXObject_name_AttrEClass(a:Attribute, n){
+    Attribute.name(a, n);
+    check(((n).equals("R1_Height")));
+}
+
+pattern InternalElement_attribute1467950512(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(i,a,n){
+    find a_OrGroup(a,n);
+    find InternalElement_attribute1467950512(i,a);
+}
+
+

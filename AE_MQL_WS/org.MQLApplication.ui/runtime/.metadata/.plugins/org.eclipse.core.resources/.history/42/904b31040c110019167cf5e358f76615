@@ -1,0 +1,32 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(root:SearchableElement, ie){
+    find InternalElement71845428(root, ie);
+}
+
+pattern ie_OrGroup(elem:InternalElement){
+	InternalElement(elem);
+}
+
+pattern InternalElement71845428(elem:InternalElement){
+    InternalElement(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+    find ie_OrGroup_ref(elem,ie);
+    n1 != ie;
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	InternalElement.name(elem,n1);
+	check(((n1).contains("R1")));
+}
+
+pattern InternalElement_internalElement826338857(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern ie_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find ie_OrGroup(member);
+    find InternalElement_internalElement826338857(container,member);
+}
+

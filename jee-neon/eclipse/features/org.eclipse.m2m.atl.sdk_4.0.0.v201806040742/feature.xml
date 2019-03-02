@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.m2m.atl.sdk"
+      label="%featureName"
+      version="4.0.0.v201806040742"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%ModelingUpdateSiteName" url="http://www.eclipse.org/modeling/updates/"/>
+      <discovery label="%ModelingUpdateSiteName" url="http://www.eclipse.org/modeling/updates/"/>
+   </url>
+
+   <includes
+         id="org.eclipse.m2m.atl.doc"
+         version="4.0.0.v201806040742"/>
+
+   <includes
+         id="org.eclipse.m2m.atl"
+         version="4.0.0.v201806040742"/>
+
+   <includes
+         id="org.eclipse.m2m.atl.examples"
+         version="4.0.0.v201806040742"/>
+
+   <includes
+         id="org.eclipse.m2m.atl.profiler"
+         version="4.0.0.v201806040742"/>
+
+   <includes
+         id="org.eclipse.m2m.atl.emftvm"
+         version="4.0.0.v201806040742"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.examples.source"
+         download-size="41"
+         install-size="57"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.engine.emfvm.source"
+         download-size="76"
+         install-size="289"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.adt.debug.source"
+         download-size="20"
+         install-size="43"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.adt.editor.source"
+         download-size="288"
+         install-size="1072"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.drivers.emf4atl.source"
+         download-size="31"
+         install-size="89"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.drivers.uml24atl.source"
+         download-size="16"
+         install-size="32"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.engine.source"
+         download-size="369"
+         install-size="3050"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.engine.vm.source"
+         download-size="129"
+         install-size="362"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.dsls.source"
+         download-size="268"
+         install-size="2387"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.adt.source"
+         download-size="37"
+         install-size="103"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.adt.ui.source"
+         download-size="49"
+         install-size="137"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.core.source"
+         download-size="24"
+         install-size="71"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.core.emf.source"
+         download-size="20"
+         install-size="47"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.core.ui.source"
+         download-size="41"
+         install-size="131"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.core.ui.vm.source"
+         download-size="26"
+         install-size="68"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.common.source"
+         download-size="244"
+         install-size="1519"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.core.ant.source"
+         download-size="29"
+         install-size="62"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.engine.emfvm.launch.source"
+         download-size="17"
+         install-size="37"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.debug.core.source"
+         download-size="48"
+         install-size="133"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.profiler.core.source"
+         download-size="25"
+         install-size="56"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.profiler.model.source"
+         download-size="79"
+         install-size="303"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.profiler.ui.source"
+         download-size="45"
+         install-size="102"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.profiler.vm.source"
+         download-size="12"
+         install-size="21"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.profiler.exportmodel.source"
+         download-size="49"
+         install-size="182"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.profiler.exportmodel.editor.source"
+         download-size="31"
+         install-size="101"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2m.atl.profiler.emfvm.source"
+         download-size="12"
+         install-size="20"
+         version="4.0.0.v201806040742"
+         unpack="false"/>
+
+</feature>

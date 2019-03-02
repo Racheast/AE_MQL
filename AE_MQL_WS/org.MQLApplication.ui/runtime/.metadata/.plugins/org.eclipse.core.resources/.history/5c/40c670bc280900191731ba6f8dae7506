@@ -1,0 +1,29 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement1351392622(result);
+}
+
+pattern InternalElement1351392622(elem:InternalElement){
+    InternalElement(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+    find n2_CAEXObject_name_AttrEClass(elem,n2);
+    find n3_CAEXObject_name_AttrEClass(elem,n3);
+    n2 != n3;
+    n1 != n2;
+    n1 != n3;
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	InternalElement.name(elem,n1);
+}
+
+pattern n2_CAEXObject_name_AttrEClass(elem:InternalElement,n2){
+	InternalElement.name(elem,n2);
+}
+
+pattern n3_CAEXObject_name_AttrEClass(elem:InternalElement,n3){
+	InternalElement.name(elem,n3);
+}
+

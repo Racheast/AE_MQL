@@ -1,0 +1,18 @@
+Find InternalElement{
+	attribute ax* : Attribute{
+		unit u : self.equals("inch");
+	}
+	attribute ay*;
+	attribute a1 : Attribute{
+		name n1:self.equals("R1_Length");
+	}
+	attribute a2 : Attribute{
+		name n2:self.equals("R1_Width");
+	}
+	attribute a3 : Attribute{
+		name n3:self.equals("R1_Height");
+	}
+	internalElement i : InternalElement{
+		changeMode c = delete;
+	}
+}

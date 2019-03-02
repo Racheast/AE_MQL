@@ -1,0 +1,69 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a1){
+	find a1_OrGroup(a1, addInfo, addInfo2);
+	find addInfo_OrGroup(addInfo);
+	find addInfo2_OrGroup(addInfo2);
+}
+
+pattern addInfo_OrGroup(addInfo:AdditionalInformation){
+    find AdditionalInformation1036155613(addInfo);
+}
+
+pattern a1_OrGroup(a1:Attribute, addInfo, addInfo2){
+    find Attribute507320266(a1, addInfo, addInfo2);
+}
+
+pattern aiRef_OrGroup(aiRef:AdditionalInformation, addInfo, addInfo2){
+    AdditionalInformation(addInfo);
+    AdditionalInformation(addInfo2);
+    aiRef == addInfo;
+}
+or{
+    AdditionalInformation(addInfo);
+    AdditionalInformation(addInfo2);
+    aiRef == addInfo2;
+}
+
+pattern addInfo2_OrGroup(addInfo2:AdditionalInformation){
+    find AdditionalInformation1644634322(addInfo2);
+}
+
+pattern AdditionalInformation1644634322(addInfo2:AdditionalInformation){
+    AdditionalInformation(addInfo2);
+    find n2_Element_name_AttrEClass(addInfo2,n2);
+}
+
+pattern Attribute507320266(a1:Attribute, addInfo, addInfo2){
+    Attribute(a1);
+    AdditionalInformation(addInfo);
+    AdditionalInformation(addInfo2);
+    neg find aiRef_OrGroup_ref(a1, addInfo, addInfo2);
+}
+
+pattern AdditionalInformation1036155613(addInfo:AdditionalInformation){
+    AdditionalInformation(addInfo);
+    find n_Element_name_AttrEClass(addInfo,n);
+}
+
+pattern n_Element_name_AttrEClass(addInfo:AdditionalInformation, n){
+    AdditionalInformation.name(addInfo, n);
+    check(((n).endsWith("B")));
+}
+
+pattern n2_Element_name_AttrEClass(addInfo2:AdditionalInformation, n2){
+    AdditionalInformation.name(addInfo2, n2);
+    check(((n2).endsWith("A")));
+}
+
+pattern Attribute_additionalInformation1616745516(from:Attribute, to:AdditionalInformation){
+    Attribute.additionalInformation(from, to);
+}
+
+pattern aiRef_OrGroup_ref(a1, addInfo, addInfo2){
+    find aiRef_OrGroup(aiRef, addInfo, addInfo2);
+    find Attribute_additionalInformation1616745516(a1,aiRef);
+}
+
+

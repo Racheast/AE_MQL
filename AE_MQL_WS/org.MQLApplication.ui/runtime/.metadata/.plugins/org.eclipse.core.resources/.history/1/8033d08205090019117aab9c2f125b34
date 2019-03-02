@@ -1,0 +1,55 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement1477758397(result);
+}
+
+pattern i2_OrGroup(elem:InternalElement){
+    find InternalElement1391662866(elem);
+}
+
+pattern i_OrGroup(elem:InternalElement){
+    find InternalElement1563681245(elem);
+}
+
+pattern InternalElement1391662866(elem:InternalElement){
+    InternalElement(elem);
+    find n2_CAEXObject_name_AttrEClass(elem,n2);
+}
+
+pattern InternalElement1477758397(elem:InternalElement){
+    InternalElement(elem);
+    neg find i_OrGroup_ref(elem,i);
+    neg find i2_OrGroup_ref(elem,i2);
+}
+
+pattern InternalElement1563681245(elem:InternalElement){
+    InternalElement(elem);
+    find n_CAEXObject_name_AttrEClass(elem,n);
+}
+
+pattern n_CAEXObject_name_AttrEClass(elem:InternalElement,n){
+	InternalElement.name(elem,n);
+	check(((n).equals("Motor_Band")));
+}
+
+pattern n2_CAEXObject_name_AttrEClass(elem:InternalElement,n2){
+	InternalElement.name(elem,n2);
+	check(((n2).equals("Gestell")));
+}
+
+pattern InternalElement_internalElement2091845413(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern i2_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find i2_OrGroup(member);
+    find InternalElement_internalElement2091845413+(container,member);
+}
+
+pattern i_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find i_OrGroup(member);
+    find InternalElement_internalElement2091845413+(container,member);
+}
+

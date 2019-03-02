@@ -1,0 +1,10 @@
+Find
+
+Course c;
+ 
+Strudent s : Strudent{
+	attends! a:c;
+};  
+
+
+Select s;  

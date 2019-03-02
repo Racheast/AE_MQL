@@ -1,0 +1,12 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(f){
+	find f_OrGroup(f);
+}
+
+pattern f_OrGroup(f){
+	File(f);
+}
+
+

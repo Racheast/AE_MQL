@@ -1,0 +1,43 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s){
+	find s_OrGroup(s, a,n);
+}
+
+pattern s_OrGroup(s,a,n){
+    find SystemUnitClass1554643436(s,a,n);
+}
+
+pattern a_OrGroup(a){
+	Attribute(a);
+}
+
+pattern SystemUnitClass1554643436(s:SystemUnitClass,a:Attribute,n){
+    SystemUnitClass(s);
+    Attribute(a);
+    find n_CAEXObject_name_AttrEClass(s,n);
+    find a_OrGroup_ref(s,a);
+    n != a;
+}
+
+pattern n_CAEXObject_name_AttrEClass(s:SystemUnitClass, n){
+    find count1543311835(s, ref1543311835);
+    SystemUnitClass.name(s, n);
+    check(((((n).length()))<(ref1543311835)));
+}
+
+pattern count1543311835(s:SystemUnitClass, result : java Integer){
+    result == count find a_OrGroup_ref(s,a);
+}
+
+pattern SystemUnitClass_attribute116706504(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(s,a){
+    find a_OrGroup(a);
+    find SystemUnitClass_attribute116706504(s,a);
+}
+
+

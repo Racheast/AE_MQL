@@ -1,0 +1,5 @@
+Find Element{
+ 	code c:self.length().greaterThan(3);
+ 	code c2:self.length().greaterThan(4);
+ 	eval:min_Integer(StringRef(c).length()).equals(2);
+}

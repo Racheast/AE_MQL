@@ -1,0 +1,4 @@
+Find InternalElement{
+	internalElement ie+;
+	eval:count(ie).greaterEquals(4);
+} 

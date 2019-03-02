@@ -1,0 +1,112 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i1){
+	find i1_OrGroup(i1, ie3, bsu_ie3, ie2, bc_ie3);
+}
+
+pattern bc_ie3_OrGroup(bc_ie3,i1){
+    InternalElement(i1);
+    bc_ie3 == i1;
+}
+
+pattern ie2_OrGroup(ie2,ie3,bsu_ie3,bc_ie3,i1){
+    find InternalElement963341614(ie2,ie3,bsu_ie3,bc_ie3,i1);
+}
+
+pattern bsu_ie3_OrGroup(bsu_ie3,ie2,ie3){
+    InternalElement(ie2);
+    InternalElement(ie3);
+    bsu_ie3 == ie2;
+}
+or{
+    InternalElement(ie2);
+    InternalElement(ie3);
+    bsu_ie3 == ie3;
+}
+
+pattern i1_OrGroup(i1,ie3,bsu_ie3,ie2,bc_ie3){
+    find InternalElement508568182(i1,ie3,bsu_ie3,ie2,bc_ie3);
+}
+
+pattern ie3_OrGroup(ie3,bsu_ie3,ie2,bc_ie3,i1){
+    ie3 == bc_ie3;
+    ie3 == i1;
+    find InternalElement35605217(ie3,bsu_ie3,ie2);
+}
+or{
+    ie3 == bsu_ie3;
+    ie3 == ie2;
+    find InternalElement1434605077(ie3,bc_ie3,i1);
+}
+
+pattern InternalElement963341614(ie2:InternalElement,ie3:InternalElement,bsu_ie3:SystemUnitClass,bc_ie3:SystemUnitClass,i1:InternalElement){
+    SystemUnitClass(bc_ie3);
+    InternalElement(ie2);
+    SystemUnitClass(bsu_ie3);
+    InternalElement(i1);
+    InternalElement(ie3);
+    find ie3_OrGroup_ref(ie2,ie3,bsu_ie3,bc_ie3,i1);
+}
+
+pattern InternalElement508568182(i1:InternalElement,ie3:InternalElement,bsu_ie3:SystemUnitClass,ie2:InternalElement,bc_ie3:SystemUnitClass){
+    SystemUnitClass(bc_ie3);
+    InternalElement(ie2);
+    SystemUnitClass(bsu_ie3);
+    InternalElement(i1);
+    InternalElement(ie3);
+    neg find ie2_OrGroup_ref(i1,ie2,ie3,bsu_ie3,bc_ie3);
+}
+
+pattern InternalElement1434605077(ie3:InternalElement,bc_ie3:SystemUnitClass,i1:InternalElement){
+    SystemUnitClass(bc_ie3);
+    InternalElement(i1);
+    InternalElement(ie3);
+    find cm_CAEXBasicObject_changeMode_AttrEClass(ie3);
+    find bc_ie3_OrGroup_ref(ie3,bc_ie3,i1);
+}
+
+pattern InternalElement35605217(ie3:InternalElement,bsu_ie3:SystemUnitClass,ie2:InternalElement){
+    InternalElement(ie2);
+    SystemUnitClass(bsu_ie3);
+    InternalElement(ie3);
+    find bsu_ie3_OrGroup_ref(ie3,bsu_ie3,ie2);
+}
+
+pattern cm_CAEXBasicObject_changeMode_AttrEClass(ie3:InternalElement){
+	InternalElement.changeMode(ie3,::change);
+}
+
+pattern InternalElement_baseSystemUnit682740945(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern InternalElement_baseClass2119379094(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseClass(from, to);
+}
+
+pattern InternalElement_internalElement349314233(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern bc_ie3_OrGroup_ref(ie3,bc_ie3,i1){
+    find bc_ie3_OrGroup(bc_ie3,i1);
+    find InternalElement_baseClass2119379094(ie3,bc_ie3);
+}
+
+pattern ie2_OrGroup_ref(i1,ie2,ie3,bsu_ie3,bc_ie3){
+    find ie2_OrGroup(ie2,ie3,bsu_ie3,bc_ie3,i1);
+    find InternalElement_internalElement349314233(i1,ie2);
+}
+
+pattern bsu_ie3_OrGroup_ref(ie3,bsu_ie3,ie2){
+    find bsu_ie3_OrGroup(bsu_ie3,ie2,ie3);
+    find InternalElement_baseSystemUnit682740945(ie3,bsu_ie3);
+}
+
+pattern ie3_OrGroup_ref(ie2,ie3,bsu_ie3,bc_ie3,i1){
+    find ie3_OrGroup(ie3,bsu_ie3,ie2,bc_ie3,i1);
+    find InternalElement_internalElement349314233+(ie2,ie3);
+}
+
+

@@ -1,0 +1,5 @@
+Find Element{
+	name n;
+	code c;
+	eval: sum_Integer(StringRef(c).length()).greaterThan(StringRef(n).length());
+}

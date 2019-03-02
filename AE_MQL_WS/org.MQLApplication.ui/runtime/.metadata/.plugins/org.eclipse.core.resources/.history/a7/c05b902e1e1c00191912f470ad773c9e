@@ -1,0 +1,12 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(r){
+	find r_OrGroup(r);
+}
+
+pattern r_OrGroup(r:RoleClassLib){
+	RoleClassLib(r);
+}
+
+

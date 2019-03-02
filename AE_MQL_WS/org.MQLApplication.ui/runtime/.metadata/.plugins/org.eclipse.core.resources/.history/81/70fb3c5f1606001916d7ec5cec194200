@@ -1,0 +1,24 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find Element1773972943(result);
+}
+
+pattern Element1773972943(elem:Element){
+    Element(elem);
+    find c1_Element_code_AttrEClass(elem,c1);
+    find c2_Element_code_AttrEClass(elem,c2);
+    c2 != c1;
+}
+
+pattern c1_Element_code_AttrEClass(elem:Element,c1){
+	Element.code(elem,c1);
+	check(((((c1).length()))>(3)));
+}
+
+pattern c2_Element_code_AttrEClass(elem:Element,c2){
+	Element.code(elem,c2);
+	check(((((c2).length()))>(4)));
+}
+

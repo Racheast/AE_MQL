@@ -1,0 +1,7 @@
+Course c : Course{
+	exam e: Exam{
+		examID ei1: self.startsWith("analysis");
+	}OR Exam{
+		examID ei2: self.startsWith("innovation");
+	};
+};

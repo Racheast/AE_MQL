@@ -1,0 +1,145 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_OrGroup(i, a, a1, a2, a3, j);
+}
+
+pattern a_OrGroup(a:Attribute){
+	Attribute(a);
+}
+
+pattern a2_OrGroup(a2:Attribute){
+    find Attribute1934747376(a2);
+}
+
+pattern j_OrGroup(j:InternalElement){
+    find InternalElement1834302543(j);
+}
+
+pattern ax_OrGroup(ax:Attribute){
+    find Attribute1420390681(ax);
+}
+
+pattern a1_OrGroup(a1:Attribute){
+    find Attribute2095200227(a1);
+}
+
+pattern i_OrGroup(i:InternalElement, a, a1, a2, a3, j){
+    find InternalElement1665648509(i, a, ax, a1, a2, a3, j);
+}
+
+pattern a3_OrGroup(a3:Attribute){
+    find Attribute1961430386(a3);
+}
+
+pattern Attribute1420390681(ax:Attribute){
+    Attribute(ax);
+    find u_Attribute_unit_AttrEClass(ax,u);
+}
+
+pattern Attribute2095200227(a1:Attribute){
+    Attribute(a1);
+    find n1_CAEXObject_name_AttrEClass(a1,n1);
+}
+
+pattern Attribute1934747376(a2:Attribute){
+    Attribute(a2);
+    find n2_CAEXObject_name_AttrEClass(a2,n2);
+}
+
+pattern InternalElement1665648509(i:InternalElement, a, a1, a2, a3, j){
+    InternalElement(i);
+    find a_OrGroup_ref(i, a);
+    neg find ax_OrGroup_ref(i);
+    find a1_OrGroup_ref(i, a1);
+    find a2_OrGroup_ref(i, a2);
+    find a3_OrGroup_ref(i, a3);
+    find j_OrGroup_ref(i, j);
+    a1 != a3;
+    a2 != a3;
+    j != a1;
+    a2 != j;
+    a2 != a1;
+    j != a3;
+    find count546111930(i, ref546111930);
+    check(((ref546111930)>=(4)));
+}
+
+pattern InternalElement1834302543(j:InternalElement){
+    InternalElement(j);
+    find c_CAEXBasicObject_changeMode_AttrEClass(j);
+}
+
+pattern Attribute1961430386(a3:Attribute){
+    Attribute(a3);
+    find n3_CAEXObject_name_AttrEClass(a3,n3);
+}
+
+pattern u_Attribute_unit_AttrEClass(ax:Attribute, u){
+    Attribute.unit(ax, u);
+    check(!((u).equals("inch")));
+}
+
+pattern n1_CAEXObject_name_AttrEClass(a1:Attribute, n1){
+    Attribute.name(a1, n1);
+    check(((n1).equals("R1_Length")));
+}
+
+pattern n2_CAEXObject_name_AttrEClass(a2:Attribute, n2){
+    Attribute.name(a2, n2);
+    check(((n2).contains("Width")));
+}
+
+pattern n3_CAEXObject_name_AttrEClass(a3:Attribute, n3){
+    Attribute.name(a3, n3);
+    check(((n3).startsWith("R1")));
+}
+
+pattern c_CAEXBasicObject_changeMode_AttrEClass(j:InternalElement){
+	InternalElement.changeMode(j,::delete);
+}
+
+pattern count546111930(elem:InternalElement, result : java Integer){
+    result == count find a_OrGroup_ref(elem, a);
+}
+
+pattern InternalElement_internalElement1251955067(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern InternalElement_attribute2047701460(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(i, a){
+    find a_OrGroup(a);
+    find InternalElement_attribute2047701460(i,a);
+}
+
+pattern a2_OrGroup_ref(i, a2){
+    find a2_OrGroup(a2);
+    find InternalElement_attribute2047701460(i,a2);
+}
+
+pattern j_OrGroup_ref(i, j){
+    find j_OrGroup(j);
+    find InternalElement_internalElement1251955067(i,j);
+}
+
+pattern ax_OrGroup_ref(i, ax){
+    find ax_OrGroup(ax);
+    find InternalElement_attribute2047701460(i,ax);
+}
+
+pattern a1_OrGroup_ref(i, a1){
+    find a1_OrGroup(a1);
+    find InternalElement_attribute2047701460(i,a1);
+}
+
+pattern a3_OrGroup_ref(i, a3){
+    find a3_OrGroup(a3);
+    find InternalElement_attribute2047701460(i,a3);
+}
+
+

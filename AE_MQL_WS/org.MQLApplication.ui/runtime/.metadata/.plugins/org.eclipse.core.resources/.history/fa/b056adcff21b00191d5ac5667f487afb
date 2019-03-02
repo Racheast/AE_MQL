@@ -1,0 +1,8 @@
+Find InternalElement ie : InternalElement{
+	systemUnitClass suc : InternalElement{
+		name n1 : self.startsWith("R1");
+	}OR SystemUnitClass{
+		name n2; 
+		
+	};
+}

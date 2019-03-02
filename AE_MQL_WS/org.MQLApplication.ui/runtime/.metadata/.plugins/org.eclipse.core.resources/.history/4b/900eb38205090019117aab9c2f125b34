@@ -1,0 +1,8 @@
+Find InternalElement{
+	internalElement i+! : InternalElement{
+		name n:self.equals("Motor_Band");
+	}
+	internalElement i2+! : InternalElement{
+		name n2:self.equals("Gestell"); 
+	}
+} 

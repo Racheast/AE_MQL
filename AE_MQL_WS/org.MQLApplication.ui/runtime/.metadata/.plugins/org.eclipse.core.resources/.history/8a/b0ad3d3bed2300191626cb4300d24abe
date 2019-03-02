@@ -1,0 +1,9 @@
+Find
+Course c: Course{
+	//name n: self.startsWith("A");
+	exam e: Exam{
+		
+	};
+	eval: count(e).greaterEquals(3);
+};
+

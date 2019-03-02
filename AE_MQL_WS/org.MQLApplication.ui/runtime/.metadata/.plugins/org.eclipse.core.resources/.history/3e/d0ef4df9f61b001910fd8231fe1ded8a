@@ -1,0 +1,126 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie){
+	find ie_OrGroup(ie, suc, ie2, ie3);
+}
+
+pattern ie_OrGroup(ie:InternalElement, suc, ie2, ie3){
+    find InternalElement185608135(ie, suc, ie2, ie3);
+}
+
+pattern ie3_OrGroup(ie3:InternalElement){
+    find InternalElement1012518192(ie3);
+}
+or{
+    find InternalElement1394312725(ie3);
+}
+
+pattern suc_OrGroup(suc:SystemUnitClass, ie2, ie3){
+    suc == ie2;
+    suc == ie3;
+    find InternalElement358616744(suc);
+}
+or{
+    find SystemUnitClass1994680050(suc, ie2, ie3);
+}
+
+pattern ie2_OrGroup(ie2:InternalElement, ie3){
+    ie2 == ie3;
+    find InternalElement97831555(ie2);
+}
+or{
+    find InternalElement140408576(ie2, ie3);
+}
+
+pattern SystemUnitClass1994680050(suc:SystemUnitClass, ie2, ie3){
+    SystemUnitClass(suc);
+    find n2_CAEXObject_name_AttrEClass(suc,n2);
+    find ie2_OrGroup_ref(suc, ie2, ie3);
+    n2 != ie2;
+}
+
+pattern InternalElement185608135(ie:InternalElement, suc, ie2, ie3){
+    InternalElement(ie);
+    find suc_OrGroup_ref(ie, suc, ie2, ie3);
+}
+
+pattern InternalElement97831555(ie2:InternalElement){
+    InternalElement(ie2);
+    neg find n3_CAEXObject_name_AttrEClass(ie2,n3);
+}
+
+pattern InternalElement358616744(suc:InternalElement){
+    InternalElement(suc);
+    find n1_CAEXObject_name_AttrEClass(suc,n1);
+}
+
+pattern InternalElement1012518192(ie3:InternalElement){
+    InternalElement(ie3);
+    find n5_CAEXObject_name_AttrEClass(ie3,n5);
+}
+
+pattern InternalElement140408576(ie2:InternalElement, ie3){
+    InternalElement(ie2);
+    find n4_CAEXObject_name_AttrEClass(ie2,n4);
+    find ie3_OrGroup_ref(ie2, ie3);
+    ie3 != n4;
+}
+
+pattern InternalElement1394312725(ie3:InternalElement){
+    InternalElement(ie3);
+    find n6_CAEXObject_name_AttrEClass(ie3,n6);
+}
+
+pattern n1_CAEXObject_name_AttrEClass(suc:InternalElement, n1){
+    InternalElement.name(suc, n1);    check(((n1).startsWith("R1")));
+}
+
+pattern n2_CAEXObject_name_AttrEClass(suc:SystemUnitClass, n2){
+    SystemUnitClass.name(suc, n2);
+}
+
+pattern n3_CAEXObject_name_AttrEClass(ie2:InternalElement, n3){
+    InternalElement.name(ie2, n3);
+}
+
+pattern n4_CAEXObject_name_AttrEClass(ie2:InternalElement, n4){
+    InternalElement.name(ie2, n4);
+}
+
+pattern n5_CAEXObject_name_AttrEClass(ie3:InternalElement, n5){
+    InternalElement.name(ie3, n5);    check(((n5).equals("n5")));
+}
+
+pattern n6_CAEXObject_name_AttrEClass(ie3:InternalElement, n6){
+    InternalElement.name(ie3, n6);    check(((n6).equals("n6")));
+}
+
+pattern InternalElement_internalElement311198191(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern InternalElement_systemUnitClass374412585(from:InternalElement, to:SystemUnitClass){
+    InternalElement.systemUnitClass(from, to);
+}
+
+pattern SystemUnitClass_internalElement311198191(from:SystemUnitClass, to:InternalElement){
+    SystemUnitClass.internalElement(from, to);
+}
+
+pattern ie3_OrGroup_ref(ie2, ie3){
+    find ie3_OrGroup(ie3);
+    find InternalElement_internalElement311198191(ie2,ie3);
+}
+
+pattern suc_OrGroup_ref(ie, suc, ie2, ie3){
+    find suc_OrGroup(suc, ie2, ie3);
+    find InternalElement_systemUnitClass374412585(ie,suc);
+}
+
+pattern ie2_OrGroup_ref(suc, ie2, ie3){
+    find ie2_OrGroup(ie2, ie3);
+    find SystemUnitClass_internalElement311198191(suc,ie2);
+}
+
+

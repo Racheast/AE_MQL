@@ -1,0 +1,46 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_OrGroup(i, j);
+}
+
+pattern j_OrGroup(j:InternalElement){
+    find InternalElement1024767219(j);
+}
+
+pattern i_OrGroup(i:InternalElement, j){
+    find InternalElement1463461866(i, j);
+}
+
+pattern InternalElement1463461866(i:InternalElement, j){
+    InternalElement(i);
+    find j_OrGroup_ref(i, j);
+    find count1607520443(i, ref1607520443);
+    check(((ref1607520443)>=(5)));
+}
+
+pattern InternalElement1024767219(j:InternalElement){
+    InternalElement(j);
+    find n_CAEXObject_name_AttrEClass(j,n);
+}
+
+pattern n_CAEXObject_name_AttrEClass(j:InternalElement, n){
+    InternalElement.name(j, n);
+    check(!((n).contains("TEST_IE_V")));
+}
+
+pattern count1607520443(elem:InternalElement, result : java Integer){
+    result == count find j_OrGroup_ref(elem, j);
+}
+
+pattern InternalElement_internalElement713810312(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern j_OrGroup_ref(i, j){
+    find j_OrGroup(j);
+    find InternalElement_internalElement713810312+(i,j);
+}
+
+

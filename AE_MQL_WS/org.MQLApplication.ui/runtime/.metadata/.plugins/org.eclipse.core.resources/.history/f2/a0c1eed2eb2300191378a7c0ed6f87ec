@@ -1,0 +1,12 @@
+Find
+Course c: Course{
+	name n: self.startsWith("A");
+	//courseType ct:VO;
+};
+
+Student s: Student{
+	attends a: c; 
+	eval: count(a).greaterEquals(4);    
+};
+ 
+Select s,a;  

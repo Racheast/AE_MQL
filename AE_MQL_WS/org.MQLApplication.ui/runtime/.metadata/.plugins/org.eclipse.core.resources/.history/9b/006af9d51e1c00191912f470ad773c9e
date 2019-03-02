@@ -1,0 +1,7 @@
+Find Attribute a1 : Attribute{
+	attribute!+ a2 : Attribute{
+		attribute! a3 : Attribute{
+			name n;
+		}; 
+	};
+}

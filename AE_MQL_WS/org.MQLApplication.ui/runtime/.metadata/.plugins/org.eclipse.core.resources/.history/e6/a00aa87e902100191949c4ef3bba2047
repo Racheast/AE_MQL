@@ -1,0 +1,5 @@
+Find 
+InternalElement ie: InternalElement{
+	changeMode c: change or state;
+	eval: count(c).greaterEquals(1);	
+}; 

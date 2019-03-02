@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- contextQualifierLength=14 -->
+<!-- contextQualifierLength=14 -->
+<feature
+      id="org.eclipse.ocl.examples.classic"
+      label="%featureName"
+      version="5.2.1.v20160808-1416"
+      provider-name="%providerName"
+      plugin="org.eclipse.ocl.examples.classic">
+
+   <description url="http://www.eclipse.org/modeling/mdt/ocl">
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://www.eclipse.org/modeling/updates"/>
+      <discovery label="%updateSiteName" url="http://www.eclipse.org/modeling/updates"/>
+   </url>
+
+   <includes
+         id="org.eclipse.ocl.examples.classic.source"
+         version="5.2.1.v20160808-1416"/>
+
+   <includes
+         id="org.eclipse.ocl.all.sdk"
+         version="5.2.0.v20160523-1914"/>
+
+   <plugin
+         id="org.eclipse.ocl.examples.eventmanager"
+         download-size="0"
+         install-size="0"
+         version="3.3.300.v20150611-1921"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl.examples.impactanalyzer"
+         download-size="0"
+         install-size="0"
+         version="3.2.400.v20160523-1914"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl.examples.impactanalyzer.ui"
+         download-size="0"
+         install-size="0"
+         version="3.2.400.v20150611-1921"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl.examples.impactanalyzer.util"
+         download-size="0"
+         install-size="0"
+         version="3.2.400.v20150611-1921"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl.examples.interpreter"
+         download-size="0"
+         install-size="0"
+         version="4.1.1.v20160808-1416"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl.examples.classic"
+         download-size="0"
+         install-size="0"
+         version="5.2.1.v20160808-1416"
+         unpack="false"/>
+
+</feature>

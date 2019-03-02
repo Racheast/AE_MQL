@@ -1,0 +1,10 @@
+Find 
+InternalElement ie1{
+	 systemUnitClass suc : SystemUnitClass s1{
+	 	
+	 };
+	 baseSystemUnit bsu : ie1 OR s1;
+};   
+
+Select ie1;
+  

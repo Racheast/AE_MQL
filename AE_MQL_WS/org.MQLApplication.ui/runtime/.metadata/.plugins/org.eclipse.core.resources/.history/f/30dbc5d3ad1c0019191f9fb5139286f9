@@ -1,0 +1,5 @@
+Find Attribute a1 : Attribute{
+	additionalInformation! aiRef : addInfo; 
+}, AdditionalInformation addInfo : AdditionalInformation{
+	name n : self.endsWith("B");
+}  

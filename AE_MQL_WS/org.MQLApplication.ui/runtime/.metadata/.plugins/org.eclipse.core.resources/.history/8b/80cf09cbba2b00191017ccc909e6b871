@@ -1,0 +1,8 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(c){
+	Course.exam(c,e);
+	Exam.examID(e,ei);
+	check(ei.startsWith("analysis") || ei.startsWith("innovation"));
+} 

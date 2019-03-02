@@ -1,0 +1,250 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+
+pattern query_0(p){
+	find p_Person(p);
+}
+
+
+pattern query_1(p2){
+	find p2_Professor(p2,e2);
+}
+
+
+pattern query_2(p3){
+	find p3_Person(p3);
+}
+
+
+pattern query_3(s){
+	find c_Course(c);
+	find p4_Professor(p4, l, c,n);
+	find s_Student(s, a, c);
+}
+
+
+pattern query_4(c2){
+	find c2_Course(c2, ex);
+}
+
+
+pattern query_5(c3){
+	find c3_Course(c3, m, mastersDefense);
+	find mastersDefense_Course(mastersDefense,nm);
+}
+
+
+pattern query_6(c4){
+	find c4_Course(c4, mastersDefenseEx);
+	find mastersDefenseEx_Course(mastersDefenseEx,nme);
+}
+
+
+pattern query_7(sxy){
+	find sxy_Student(sxy, aRef, cx, cy);
+	find cx_Course(cx);
+	find cy_Course(cy);
+}
+
+pattern a_OrGroup(a,c){
+	Course(a);
+    Course(c);
+    a == c;
+}
+
+pattern m_OrGroup(m,mastersDefense){
+	Course(m);
+    Course(mastersDefense);
+    m == mastersDefense;
+}
+
+pattern aRef_OrGroup(aRef,cx,cy){
+	Course(aRef);
+    Course(cy);
+    Course(cx);
+    aRef == cx;
+}
+or{
+	Course(aRef);
+    Course(cy);
+    Course(cx);
+    aRef == cy;
+}
+
+pattern ex_OrGroup(ex){
+	Exam(ex);
+}
+
+pattern mn_OrGroup(mn,mastersDefenseEx){
+    Course(mastersDefenseEx);
+    mn == mastersDefenseEx;
+}
+
+pattern l_OrGroup(l,c){
+	Course(l);
+    Course(c);
+    l == c;
+}
+
+pattern mastersDefense_Course(mastersDefense:Course,nm){
+    Course(mastersDefense);
+    find nm_Course_name_AttrEClass(mastersDefense,nm);
+}
+
+pattern cy_Course(cy:Course){
+    Course(cy);
+}
+
+pattern p2_Professor(p2:Professor,e2){
+    Professor(p2);
+    find e2_Person_email_AttrEClass(p2,e2);
+}
+
+pattern sxy_Student(sxy:Student,aRef,cx,cy){
+    Course(cy);
+    Course(aRef);
+    Course(cx);
+    Student(sxy);
+    find aRef_OrGroup_ref(sxy,aRef,cx,cy);
+}
+
+pattern c4_Course(c4:Course,mastersDefenseEx){
+    Course(c4);
+    Course(mastersDefenseEx);
+    neg find mn_OrGroup_ref(c4,mn,mastersDefenseEx);
+}
+
+pattern s_Student(s:Student,a,c){
+    Course(a);
+    Course(c);
+    Student(s);
+    find a_OrGroup_ref(s,a,c);
+}
+
+pattern mastersDefenseEx_Course(mastersDefenseEx:Course,nme){
+    Course(mastersDefenseEx);
+    find nme_Course_name_AttrEClass(mastersDefenseEx,nme);
+}
+
+pattern c2_Course(c2:Course,ex){
+    Course(c2);
+    Exam(ex);
+    find ex_OrGroup_ref(c2,ex);
+    find count1292214681(c2, ref1292214681);
+    check(((ref1292214681)>=(2)));
+}
+
+pattern cx_Course(cx:Course){
+    Course(cx);
+}
+
+pattern c_Course(c:Course){
+    Course(c);
+}
+
+pattern p_Person(p:Person){
+    Person(p);
+}
+
+pattern p4_Professor(p4:Professor,l,c,n){
+    Course(c);
+    Professor(p4);
+    Course(l);
+    find n_Person_name_AttrEClass(p4,n);
+    find l_OrGroup_ref(p4,l,c);
+    n != l;
+}
+
+pattern c3_Course(c3:Course,m,mastersDefense){
+    Course(mastersDefense);
+    Course(m);
+    Course(c3);
+    find m_OrGroup_ref(c3,m,mastersDefense);
+}
+
+pattern p3_Person(p3:Person){
+    Person(p3);
+    neg find e3_Person_email_AttrEClass(p3,e3);
+}
+
+
+pattern n_Person_name_AttrEClass(p4:Professor, n){
+    Professor.name(p4, n);
+    check(((n).equals("Peter Parker")));
+}
+
+
+pattern nm_Course_name_AttrEClass(mastersDefense:Course, nm){
+    Course.name(mastersDefense, nm);
+    check(((nm).equals("Masters Defense Exam")));
+}
+
+
+pattern e3_Person_email_AttrEClass(p3:Person, e3){
+    Person.email(p3, e3);
+    check(((e3).endsWith("myuni.at")));
+}
+
+
+pattern nme_Course_name_AttrEClass(mastersDefenseEx:Course, nme){
+    Course.name(mastersDefenseEx, nme);
+    check(((nme).equals("Masters Defense Exam")));
+}
+
+
+pattern e2_Person_email_AttrEClass(p2:Professor, e2){
+    Professor.email(p2, e2);
+    check(((e2).endsWith("gmail.com")));
+}
+
+pattern count1292214681(c2:Course, result : java Integer){
+    result == count find ex_OrGroup_ref(c2,ex);
+}
+
+pattern Student_attends538328131(from:Student, to:Course){
+    Student.attends(from, to);
+}
+
+pattern Professor_lectures2053071151(from:Professor, to:Course){
+    Professor.lectures(from, to);
+}
+
+pattern Course_exam602493547(from:Course, to:Exam){
+    Course.exam(from, to);
+}
+
+pattern Course_mandatoryFor582883594(from:Course, to:Course){
+    Course.mandatoryFor(from, to);
+}
+
+	pattern a_OrGroup_ref(s,a,c){
+	    find a_OrGroup(a,c);
+	    find Student_attends538328131(s,a);
+	}
+	
+	pattern m_OrGroup_ref(c3,m,mastersDefense){
+	    find m_OrGroup(m,mastersDefense);
+	    find Course_mandatoryFor582883594+(c3,m);
+	}
+	
+	pattern aRef_OrGroup_ref(sxy,aRef,cx,cy){
+	    find aRef_OrGroup(aRef,cx,cy);
+	    find Student_attends538328131(sxy,aRef);
+	}
+	
+	pattern ex_OrGroup_ref(c2,ex){
+	    find ex_OrGroup(ex);
+	    find Course_exam602493547(c2,ex);
+	}
+	
+	pattern mn_OrGroup_ref(c4,mn,mastersDefenseEx){
+	    find mn_OrGroup(mn,mastersDefenseEx);
+	    find Course_mandatoryFor582883594+(c4,mn);
+	}
+	
+	pattern l_OrGroup_ref(p4,l,c){
+	    find l_OrGroup(l,c);
+	    find Professor_lectures2053071151(p4,l);
+	}
+	
