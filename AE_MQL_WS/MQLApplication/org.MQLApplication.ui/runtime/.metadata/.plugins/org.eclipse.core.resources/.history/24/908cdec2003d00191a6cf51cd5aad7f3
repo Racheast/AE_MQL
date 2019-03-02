@@ -1,0 +1,4 @@
+Find SystemUnitClass s{
+	attribute a;
+	name n : self.length().smallerThan(count(a));
+};

@@ -136,32 +136,22 @@ public class String_CalculateableParameterItemProvider extends String_TypeItemPr
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
-				 QmmFactory.eINSTANCE.createIntegerParseInt_ClassOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
-				 QmmFactory.eINSTANCE.createDateTime_CalculateableElementReferenceArgument()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
-				 QmmFactory.eINSTANCE.createString_CalculateableElementReferenceArgument()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
-				 QmmFactory.eINSTANCE.createCount_AggregationOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
 				 QmmFactory.eINSTANCE.createMin_AggregationOperator_Double()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
-				 QmmFactory.eINSTANCE.createAttributeDataType_CalculateableElementReferenceArgument()));
+				 QmmFactory.eINSTANCE.createIntegerParseInt_ClassOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
+				 QmmFactory.eINSTANCE.createMax_AggregationOperator_Double()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
+				 QmmFactory.eINSTANCE.createString_CalculateableElementReferenceArgument()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -176,22 +166,22 @@ public class String_CalculateableParameterItemProvider extends String_TypeItemPr
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
-				 QmmFactory.eINSTANCE.createMax_AggregationOperator_Double()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
-				 QmmFactory.eINSTANCE.createSum_AggregationOperator_Double()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
-				 QmmFactory.eINSTANCE.createEFeatureMapEntry_CalculateableElementReferenceArgument()));
+				 QmmFactory.eINSTANCE.createCount_AggregationOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
 				 QmmFactory.eINSTANCE.createMin_AggregationOperator_Integer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
+				 QmmFactory.eINSTANCE.createInteger_CalculateableElementReferenceArgument()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getCalculateableParameter_Argument(),
+				 QmmFactory.eINSTANCE.createSum_AggregationOperator_Double()));
 	}
 
 }

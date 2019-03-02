@@ -1,0 +1,6 @@
+Find InternalElement i{
+	internalElement+ j:InternalElement jrc{
+		name n:self.contains!("TEST_IE_V"); 
+	}; 
+	eval:count(j).greaterEquals(5); 
+}; 

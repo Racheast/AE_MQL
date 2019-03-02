@@ -1,0 +1,55 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_InternalElement(i, s, src, irc);
+}
+
+pattern s_OrGroup(s,src,irc){
+	SystemUnitClass(s);
+    SystemUnitClass(src);
+    s == src;
+    SystemUnitClass(irc);
+    s == irc;
+    find src_SystemUnitFamily(src);
+}
+or{
+	SystemUnitClass(s);
+    SystemUnitClass(src);
+    s == src;
+    SystemUnitClass(irc);
+    s == irc;
+    find irc_InternalElement(irc);
+}
+
+pattern i_InternalElement(i:InternalElement,s,src,irc){
+    InternalElement(i);
+    SystemUnitClass(irc);
+    SystemUnitClass(s);
+    SystemUnitClass(src);
+    find s_OrGroup_ref(i,s,src,irc);
+}
+
+pattern irc_InternalElement(irc:InternalElement){
+    InternalElement(irc);
+    find c_CAEXBasicObject_changeMode_AttrEClass(irc);
+}
+
+pattern src_SystemUnitFamily(src:SystemUnitFamily){
+    SystemUnitFamily(src);
+}
+
+
+pattern c_CAEXBasicObject_changeMode_AttrEClass(irc:InternalElement){
+	InternalElement.changeMode(irc,::create);
+}
+
+pattern InternalElement_systemUnitClass(from:InternalElement, to:SystemUnitClass){
+    InternalElement.systemUnitClass(from, to);
+}
+
+pattern s_OrGroup_ref(i,s,src,irc){
+    find s_OrGroup(s,src,irc);
+    find InternalElement_systemUnitClass(i,s);
+}
+

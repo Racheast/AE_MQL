@@ -1,0 +1,69 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s, s2, c){
+	find s_Student(s, cRef, c,n);
+	find s2_Student(s2, cRef2, c,n2);
+	find c_Course(c);
+}
+
+pattern cRef2_OrGroup(cRef2,c){
+	Course(cRef2);
+    Course(c);
+    cRef2 == c;
+}
+
+pattern cRef_OrGroup(cRef,c){
+	Course(cRef);
+    Course(c);
+    cRef == c;
+}
+
+pattern s_Student(s:Student,cRef,c,n){
+    Student(s);
+    Course(c);
+    Course(cRef);
+    find n_Person_name_AttrEClass(s,n);
+    find cRef_OrGroup_ref(s,cRef,c);
+    cRef != n;
+}
+
+pattern s2_Student(s2:Student,cRef2,c,n2){
+    Course(cRef2);
+    Student(s2);
+    Course(c);
+    find n2_Person_name_AttrEClass(s2,n2);
+    find cRef2_OrGroup_ref(s2,cRef2,c);
+    cRef2 != n2;
+}
+
+pattern c_Course(c:Course){
+    Course(c);
+}
+
+
+pattern n2_Person_name_AttrEClass(s2:Student, n2){
+    Student.name(s2, n2);
+    check(((n2).contains("Max")));
+}
+
+
+pattern n_Person_name_AttrEClass(s:Student, n){
+    Student.name(s, n);
+    check(!((n).contains("Max")));
+}
+
+pattern Student_attends(from:Student, to:Course){
+    Student.attends(from, to);
+}
+
+pattern cRef2_OrGroup_ref(s2,cRef2,c){
+    find cRef2_OrGroup(cRef2,c);
+    find Student_attends(s2,cRef2);
+}
+
+pattern cRef_OrGroup_ref(s,cRef,c){
+    find cRef_OrGroup(cRef,c);
+    find Student_attends(s,cRef);
+}
+

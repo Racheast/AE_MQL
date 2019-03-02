@@ -1,0 +1,11 @@
+Find
+Student s {
+	name n: self.contains("Max");
+	attends cRef: c;
+};
+
+Course c {
+	
+};
+
+Select cRef;

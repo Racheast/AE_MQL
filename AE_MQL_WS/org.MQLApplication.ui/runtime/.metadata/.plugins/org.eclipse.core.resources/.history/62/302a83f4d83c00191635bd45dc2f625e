@@ -1,7 +1,0 @@
-// Find all persons
-  
-Find
-Person p{
-	name n: self.contains("Lazy"); 
-};
-    

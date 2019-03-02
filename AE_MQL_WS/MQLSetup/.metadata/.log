@@ -294,3 +294,48 @@ Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\
 
 !ENTRY org.eclipse.core.resources 2 10035 2019-03-02 12:00:36.353
 !MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2019-03-02 15:52:23.562 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.application/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-03-02 15:52:24.793
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-02 15:52:25.064
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-02 15:52:37.042
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2019-03-02 16:23:33.211 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup.application/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-03-02 16:23:34.397
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-02 16:23:34.687
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-02 16:23:43.480
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2019-03-02 16:44:55.857 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -application MQLSetup.application
+Command-line arguments:  -application MQLSetup.application -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLSetup -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLSetup/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-03-02 16:44:57.238
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-02 16:44:57.711
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

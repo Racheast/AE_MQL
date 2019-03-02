@@ -154,17 +154,7 @@ public class Integer_BitOperatorItemProvider extends Integer_ExpressionOperatorI
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getInteger_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createNumber_Integer_Object_Number_equals_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getInteger_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createNumber_Integer_greaterThan_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getInteger_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createInteger_And_BitOperator()));
+				 QmmFactory.eINSTANCE.createInteger_Or_BitOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -174,12 +164,7 @@ public class Integer_BitOperatorItemProvider extends Integer_ExpressionOperatorI
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getInteger_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createdoubleValue_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getInteger_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createNumber_Integer_smallerEquals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Integer_smallerThan_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -189,17 +174,32 @@ public class Integer_BitOperatorItemProvider extends Integer_ExpressionOperatorI
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getInteger_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createNumber_Integer_greaterThan_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getInteger_BitOperator_Connects(),
 				 QmmFactory.eINSTANCE.createNumber_Integer_greaterEquals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getInteger_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createNumber_Integer_smallerThan_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Integer_Object_Number_equals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getInteger_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createInteger_Or_BitOperator()));
+				 QmmFactory.eINSTANCE.createInteger_And_BitOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getInteger_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createNumber_Integer_smallerEquals_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getInteger_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createdoubleValue_FunctionalOperator()));
 	}
 
 }

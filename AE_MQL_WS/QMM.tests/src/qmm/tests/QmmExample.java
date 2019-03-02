@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 
 import org.eclipse.emf.ecore.util.Diagnostician;
 
-import qmm.AttributeFamily;
+import qmm.Person;
 import qmm.QmmFactory;
 import qmm.QmmPackage;
 
@@ -60,7 +60,7 @@ public class QmmExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.qmm"));
-				AttributeFamily root = QmmFactory.eINSTANCE.createAttributeFamily();
+				Person root = QmmFactory.eINSTANCE.createPerson();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

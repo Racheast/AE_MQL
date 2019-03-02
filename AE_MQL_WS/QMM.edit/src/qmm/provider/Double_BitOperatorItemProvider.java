@@ -154,17 +154,12 @@ public class Double_BitOperatorItemProvider extends Double_ExpressionOperatorIte
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getDouble_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createNumber_Double_smallerEquals_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getDouble_BitOperator_Connects(),
 				 QmmFactory.eINSTANCE.createDouble_And_BitOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getDouble_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createNumber_Double_Object_Number_toString_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Double_Object_Number_hashCode_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -179,7 +174,12 @@ public class Double_BitOperatorItemProvider extends Double_ExpressionOperatorIte
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getDouble_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createNumber_Double_greaterThan_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Double_greaterEquals_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getDouble_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createNumber_Double_Object_Number_toString_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -189,12 +189,12 @@ public class Double_BitOperatorItemProvider extends Double_ExpressionOperatorIte
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getDouble_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createNumber_Double_greaterEquals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Double_smallerEquals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getDouble_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createNumber_Double_Object_Number_hashCode_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Double_greaterThan_FunctionalOperator()));
 	}
 
 }

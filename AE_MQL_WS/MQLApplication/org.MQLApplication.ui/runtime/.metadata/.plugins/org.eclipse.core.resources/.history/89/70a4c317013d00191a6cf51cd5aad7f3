@@ -1,0 +1,22 @@
+Find 
+Attribute a1{
+	name n1;
+	attribute a2 : Attribute a2rc{
+		attribute! a3 : Attribute a3rc{
+			attribute a4 : Attribute a4rc{
+				attribute!+ a5 : Attribute a5rc{
+					attribute! a6 : Attribute a6rc{
+						attribute! a7 : Attribute a7rc{
+							attribute a8;
+							additionalInformation addInfRef : addInfo; 
+						};
+					};
+				};
+			};
+		};
+	}; 
+}; 
+
+AdditionalInformation addInfo{
+	name n : self.endsWith("B");
+}; 

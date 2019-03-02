@@ -1,0 +1,35 @@
+!SESSION 2019-03-02 10:41:25.324 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -product org.MQLApplication.product
+Command-line arguments:  -product org.MQLApplication.product -data C:\Users\a_2th\repositories\mql\master_thesis\implementation\MQLApplication\org.MQLApplication.ui/ -dev file:C:/Users/a_2th/workspace/.metadata/.plugins/org.eclipse.pde.core/MQLApplication/dev.properties -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-03-02 10:41:29.302
+!MESSAGE Both 'MQLSetup' and 'MQLSetup' register a package for '/MQLSetup/model/QMM.ecore'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-03-02 10:41:29.313
+!MESSAGE Both 'MQLSetup' and 'QMM' register an extension parser for 'qmm'
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-02 10:41:33.654
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\a_2th'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.oomph.setup.ui 2 0 2019-03-02 10:41:34.877
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:443)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$5(SetupUIPlugin.java:414)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:253)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2019-03-02 10:41:37.452
+!MESSAGE Setup tasks were performed during startup updating 1 preference. See 'C:\Users\a_2th\workspace\.metadata\.plugins\org.eclipse.pde.core\MQLApplication\org.eclipse.oomph.setup\setup.log' for details
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-02 10:41:41.043
+!MESSAGE The workspace will exit with unsaved changes in this session.

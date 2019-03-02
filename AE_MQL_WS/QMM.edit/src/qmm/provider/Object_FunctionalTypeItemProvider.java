@@ -125,17 +125,17 @@ public class Object_FunctionalTypeItemProvider extends Object_TypeItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getObject_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createequals_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getObject_FunctionalType_Operator(),
 				 QmmFactory.eINSTANCE.createtoString_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getObject_FunctionalType_Operator(),
 				 QmmFactory.eINSTANCE.createhashCode_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getObject_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createequals_FunctionalOperator()));
 	}
 
 }

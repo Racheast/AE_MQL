@@ -1,9 +1,0 @@
-grammar org.xtext.MQL with org.eclipse.xtext.common.Terminals
-
-generate mQL "http://www.xtext.org/MQL"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';

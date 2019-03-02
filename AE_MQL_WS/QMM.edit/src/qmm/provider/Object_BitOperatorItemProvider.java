@@ -154,6 +154,11 @@ public class Object_BitOperatorItemProvider extends Object_ExpressionOperatorIte
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getObject_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createequals_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getObject_BitOperator_Connects(),
 				 QmmFactory.eINSTANCE.createtoString_FunctionalOperator()));
 
 		newChildDescriptors.add
@@ -164,17 +169,12 @@ public class Object_BitOperatorItemProvider extends Object_ExpressionOperatorIte
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getObject_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createObject_Or_BitOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getObject_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createequals_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getObject_BitOperator_Connects(),
 				 QmmFactory.eINSTANCE.createObject_And_BitOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getObject_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createObject_Or_BitOperator()));
 	}
 
 }

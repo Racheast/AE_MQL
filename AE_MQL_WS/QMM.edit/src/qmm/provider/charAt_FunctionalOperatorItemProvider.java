@@ -143,12 +143,12 @@ public class charAt_FunctionalOperatorItemProvider extends String_Original_Funct
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCharacter_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createObject_Character_hashCode_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createObject_Character_equals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCharacter_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createObject_Character_equals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createObject_Character_hashCode_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><dmm:UniversityManagementSystem xmlns:dmm="/DMM/model/DMM.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0" xsi:schemaLocation="/DMM/model/DMM.ecore ../DMM/model/DMM.ecore">
+  <course courseNumber="111" name="Marketing">
+    <exam examID="marketing1"/>
+  </course>
+  <course courseNumber="222" courseType="UE" mandatoryFor="333" name="Analysis">
+    <exam examID="analysis1"/>
+    <exam examID="analysis2"/>
+    <exam examID="analysis3"/>
+  </course>
+  <course courseNumber="333" mandatoryFor="555" name="Advanced Analysis">
+    <exam examID="advancedanalysis1"/>
+  </course>
+  <course courseNumber="444" courseType="SEM" mandatoryFor="555" name="Seminar for Masters"/>
+  <course courseNumber="555" courseType="UE" name="Masters Defense Exam">
+    <exam examID="defense1"/>
+  </course>
+  <course courseNumber="666" mandatoryFor="555" name="Innovation">
+    <exam examID="innovation1"/>
+  </course>
+  <course courseNumber="777" courseType="UE" mandatoryFor="888 999" name="Object-oriented Programming">
+    <exam examID="oop1"/>
+    <exam examID="oop2"/>
+  </course>
+  <course courseNumber="888" courseType="PR" mandatoryFor="999" name="Software Engineering and Project Management"/>
+  <course courseNumber="999" courseType="PR" mandatoryFor="555" name="Advanced Software Engineering"/>
+  <course courseNumber="1000" mandatoryFor="2000" name="Technical Russian 1">
+    <exam examID="technicalrussian1_1"/>
+  </course>
+  <course courseNumber="111" mandatoryFor="555" name="Econometrics">
+    <exam examID="econometrics1"/>
+  </course>
+  <course courseNumber="2000" name="Technical Russian 2">
+    <exam examID="technicalrussian2_1"/>
+  </course>
+  <person attends="111 666 888 222" matriculationNumber="1265767" name="Max Mustermann" xsi:type="dmm:Student">
+    <email>max.muster@mail.de</email>
+    <email>1265767@student.myuni.at</email>
+  </person>
+  <person attends="333 444 999" matriculationNumber="1286947" name="Martha Musterfrau" xsi:type="dmm:Student">
+    <email>1286947@student.myuni.at</email>
+  </person>
+  <person attends="777 1000" matriculationNumber="1058674" name="John Doe" xsi:type="dmm:Student"/>
+  <person employeeNumber="87876565" lectures="222 333" name="Jane Doe" xsi:type="dmm:Professor">
+    <email>jane.doe@myuni.at</email>
+    <email>87876565@myuni.at</email>
+  </person>
+  <person employeeNumber="6758234" lectures="111 444 666 555" name="Peter Parker" xsi:type="dmm:Professor">
+    <email>petie@gmail.com</email>
+  </person>
+  <person employeeNumber="5748396" lectures="777 888 999" name="Laura Müller" xsi:type="dmm:Professor">
+    <email>laura.mueller@myuni.at</email>
+  </person>
+  <person matriculationNumber="9212321" name="Larry Lazy" xsi:type="dmm:Student">
+    <email>larry.l@gmail.com</email>
+  </person>
+  <person employeeNumber="8765673" lectures="1000" name="Bernhard Bond" xsi:type="dmm:Professor"/>
+</dmm:UniversityManagementSystem>

@@ -1,0 +1,68 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s){
+	find s_SystemUnitClass(s, a, arc, b, brc,n,m);
+}
+
+pattern a_OrGroup(a,arc,n){
+	Attribute(a);
+    Attribute(arc);
+    a == arc;
+    find arc_Attribute(arc,n);
+}
+
+pattern b_OrGroup(b,brc,m){
+	Attribute(b);
+    Attribute(brc);
+    b == brc;
+    find brc_Attribute(brc,m);
+}
+
+pattern s_SystemUnitClass(s:SystemUnitClass,a,arc,b,brc,n,m){
+    SystemUnitClass(s);
+    Attribute(a);
+    Attribute(brc);
+    Attribute(arc);
+    Attribute(b);
+    find a_OrGroup_ref(s,a,arc,n);
+    find b_OrGroup_ref(s,b,brc,m);
+    a != b;
+}
+
+pattern brc_Attribute(brc:Attribute,m){
+    Attribute(brc);
+    find m_CAEXObject_name_AttrEClass(brc,m);
+}
+
+pattern arc_Attribute(arc:Attribute,n){
+    Attribute(arc);
+    find n_CAEXObject_name_AttrEClass(arc,n);
+}
+
+
+pattern n_CAEXObject_name_AttrEClass(arc:Attribute, n){
+    Attribute.name(arc, n);
+    check(((n).startsWith("R1_")));
+}
+
+
+pattern m_CAEXObject_name_AttrEClass(brc:Attribute, m){
+    Attribute.name(brc, m);
+    check(((m).contains("Power")));
+}
+
+pattern SystemUnitClass_attribute(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(s,a,arc,n){
+    find a_OrGroup(a,arc,n);
+    find SystemUnitClass_attribute(s,a);
+}
+
+pattern b_OrGroup_ref(s,b,brc,m){
+    find b_OrGroup(b,brc,m);
+    find SystemUnitClass_attribute(s,b);
+}
+

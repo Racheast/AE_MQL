@@ -2,7 +2,7 @@
 <?artifactRepository version='1.1.0'?>
 <repository name='C:\Users\a_2th\repositories\AE_MQL\jee-neon\eclipse\.eclipseextension' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
   <properties size='3'>
-    <property name='p2.timestamp' value='1551526530243'/>
+    <property name='p2.timestamp' value='1551542592169'/>
     <property name='org.eclipse.update.site.policy' value='USER-EXCLUDE'/>
     <property name='org.eclipse.update.site.list' value=''/>
   </properties>
@@ -11,26 +11,5 @@
     <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
-  <artifacts size='2'>
-    <artifact classifier='osgi.bundle' id='javax.activation-api' version='1.2.0'>
-      <properties size='2'>
-        <property name='artifact.size' value='56674'/>
-        <property name='download.size' value='56674'/>
-      </properties>
-      <repositoryProperties size='2'>
-        <property name='artifact.reference' value='file:/C:/Users/a_2th/repositories/AE_MQL/jee-neon/eclipse/plugins/javax.activation-api-1.2.0.jar'/>
-        <property name='file.name' value='C:\Users\a_2th\repositories\AE_MQL\jee-neon\eclipse\plugins\javax.activation-api-1.2.0.jar'/>
-      </repositoryProperties>
-    </artifact>
-    <artifact classifier='osgi.bundle' id='jaxb-api' version='2.4.0.b1808300359'>
-      <properties size='2'>
-        <property name='artifact.size' value='128032'/>
-        <property name='download.size' value='128032'/>
-      </properties>
-      <repositoryProperties size='2'>
-        <property name='artifact.reference' value='file:/C:/Users/a_2th/repositories/AE_MQL/jee-neon/eclipse/plugins/jaxb-api-2.4.0-b180830.0359.jar'/>
-        <property name='file.name' value='C:\Users\a_2th\repositories\AE_MQL\jee-neon\eclipse\plugins\jaxb-api-2.4.0-b180830.0359.jar'/>
-      </repositoryProperties>
-    </artifact>
-  </artifacts>
+  <artifacts size='0'/>
 </repository>

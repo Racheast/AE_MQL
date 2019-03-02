@@ -1,0 +1,58 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s){
+	find s_SystemUnitClass(s, a, arc,n,v,u);
+}
+
+pattern a_OrGroup(a,arc,n,v,u){
+	Attribute(a);
+    Attribute(arc);
+    a == arc;
+    find arc_Attribute(arc,n,v,u);
+}
+
+pattern s_SystemUnitClass(s:SystemUnitClass,a,arc,n,v,u){
+    Attribute(a);
+    SystemUnitClass(s);
+    Attribute(arc);
+    find a_OrGroup_ref(s,a,arc,n,v,u);
+}
+
+pattern arc_Attribute(arc:Attribute,n,v,u){
+    Attribute(arc);
+    find n_CAEXObject_name_AttrEClass(arc,n);
+    find v_Attribute_value_AttrEClass(arc,v);
+    find u_Attribute_unit_AttrEClass(arc,u);
+    n != u;
+    n != v;
+    v != u;
+}
+
+
+pattern n_CAEXObject_name_AttrEClass(arc:Attribute, n){
+    Attribute.name(arc, n);
+    check(((n).equals("color")));
+}
+
+
+pattern v_Attribute_value_AttrEClass(arc:Attribute, v){
+    Attribute.value(arc, v);
+    check(((v).equals("#40f2dc")));
+}
+
+
+pattern u_Attribute_unit_AttrEClass(arc:Attribute, u){
+    Attribute.unit(arc, u);
+    check(((u).equals("hex")));
+}
+
+pattern SystemUnitClass_attribute(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(s,a,arc,n,v,u){
+    find a_OrGroup(a,arc,n,v,u);
+    find SystemUnitClass_attribute(s,a);
+}
+

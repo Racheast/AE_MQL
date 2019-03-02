@@ -136,92 +136,12 @@ public class Number_Double_Object_Number_toString_FunctionalOperatorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createtrim_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createindexOfCharFromIndex_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
 				 QmmFactory.eINSTANCE.createtoLowerCase_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createendsWith_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createoffsetByCodePoints_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_toString_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createindexOfChar_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createcontains_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_equals_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createstartsWith_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createsubstring_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createcodePointAt_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createisEmpty_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createstartsWithOffset_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createindexOfString_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createCharSequence_String_length_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createequalsIgnoreCase_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createtoUpperCase_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createcodePointBefore_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -231,17 +151,12 @@ public class Number_Double_Object_Number_toString_FunctionalOperatorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createcompareToStringIgnoreCase_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createcontains_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createcharAt_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createcodePointBefore_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_toString_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -252,6 +167,91 @@ public class Number_Double_Object_Number_toString_FunctionalOperatorItemProvider
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
 				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_hashCode_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createindexOfChar_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createequalsIgnoreCase_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createisEmpty_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createcodePointAt_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createoffsetByCodePoints_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createindexOfCharFromIndex_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createendsWith_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createstartsWithOffset_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createCharSequence_String_length_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createindexOfString_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createtrim_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createstartsWith_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createcharAt_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createcompareToStringIgnoreCase_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_equals_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createtoUpperCase_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createsubstring_FunctionalOperator()));
 	}
 
 }

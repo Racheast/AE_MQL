@@ -1,0 +1,16 @@
+Find
+Student s {
+	//name n: self.contains("Max");
+	attends! cRef: c;
+};
+
+/* 
+Student s2 {
+	name n2: self.contains("Martha");
+	attends cRef2 : c;
+};
+*/
+Course c {
+	
+};
+

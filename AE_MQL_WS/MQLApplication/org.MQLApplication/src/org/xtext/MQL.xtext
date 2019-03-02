@@ -1,0 +1,887 @@
+grammar org.xtext.MQL with org.eclipse.xtext.common.Terminals
+import "/QMM/model/QMM.ecore"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.eclipse.org/emf/2003/XMLType" as type
+
+FindQueryCollection returns FindQueryCollection:
+		{FindQueryCollection}
+		findQueries+=FindQuery ('union' findQueries+=FindQuery)*
+;
+
+FindQuery returns FindQuery:
+		{FindQuery}
+		'Find' (rootClass+=RootClass ';')+
+		('Select' select=SelectClause)?
+;
+
+SelectClause returns SelectClause:
+		{SelectClause}
+		namedElements+=[NamedElement|ID] (',' namedElements+=[NamedElement|ID])* ';'
+;
+
+Person_Type returns Person:
+	Person | Professor | Student
+;
+
+Exam_Type returns Exam:
+	Exam
+;
+
+Professor_Type returns Professor:
+	Professor
+;
+
+UniversityManagementSystem_Type returns UniversityManagementSystem:
+	UniversityManagementSystem
+;
+
+Course_Type returns Course:
+	Course
+;
+
+Student_Type returns Student:
+	Student
+;
+
+RootClass returns RootClass:
+	Person | Student | Professor | Course | UniversityManagementSystem | Exam
+;
+
+Person returns Person:
+		{Person}
+		'Person' name=ID ('{'
+			(('eval:'EvaluationOperator+=EvaluationOperator';') | email_AttrEClass+=Person_email_AttrEClass | name_AttrEClass+=Person_name_AttrEClass)*
+			
+		'}')?
+;
+
+Student returns Student:
+		{Student}
+		'Student' name=ID ('{'
+			(('eval:'EvaluationOperator+=EvaluationOperator';') | email_AttrEClass+=Person_email_AttrEClass | matriculationNumber_AttrEClass+=Student_matriculationNumber_AttrEClass | name_AttrEClass+=Person_name_AttrEClass | attends+=Student_attends_OrGroup)*
+			
+		'}')?
+;
+
+Professor returns Professor:
+		{Professor}
+		'Professor' name=ID ('{'
+			(('eval:'EvaluationOperator+=EvaluationOperator';') | email_AttrEClass+=Person_email_AttrEClass | name_AttrEClass+=Person_name_AttrEClass | employeeNumber_AttrEClass+=Professor_employeeNumber_AttrEClass | lectures+=Professor_lectures_OrGroup)*
+			
+		'}')?
+;
+
+Course returns Course:
+		{Course}
+		'Course' name=ID ('{'
+			(('eval:'EvaluationOperator+=EvaluationOperator';') | courseNumber_AttrEClass+=Course_courseNumber_AttrEClass | exam+=Course_exam_OrGroup | mandatoryFor+=Course_mandatoryFor_OrGroup | name_AttrEClass+=Course_name_AttrEClass)*
+			((courseType_AttrEClass=Course_courseType_AttrEClass (('eval:'EvaluationOperator+=EvaluationOperator';') | courseNumber_AttrEClass+=Course_courseNumber_AttrEClass | exam+=Course_exam_OrGroup | mandatoryFor+=Course_mandatoryFor_OrGroup | name_AttrEClass+=Course_name_AttrEClass)*)?)
+		'}')?
+;
+
+UniversityManagementSystem returns UniversityManagementSystem:
+		{UniversityManagementSystem}
+		'UniversityManagementSystem' name=ID ('{'
+			(('eval:'EvaluationOperator+=EvaluationOperator';') | person+=UniversityManagementSystem_person_OrGroup | course+=UniversityManagementSystem_course_OrGroup)*
+			
+		'}')?
+;
+
+Exam returns Exam:
+		{Exam}
+		'Exam' name=ID ('{'
+			(('eval:'EvaluationOperator+=EvaluationOperator';') | examID_AttrEClass+=Exam_examID_AttrEClass)*
+			
+		'}')?
+;
+
+Professor_employeeNumber_AttrEClass returns Professor_employeeNumber_AttrEClass:
+		{Professor_employeeNumber_AttrEClass}
+		'employeeNumber' ((negated?='!')? & (generalized?='*')?) name=ID (':' operator=Integer_ExpressionOperator)?';'
+;
+
+Student_matriculationNumber_AttrEClass returns Student_matriculationNumber_AttrEClass:
+		{Student_matriculationNumber_AttrEClass}
+		'matriculationNumber' ((negated?='!')? & (generalized?='*')?) name=ID (':' operator=Integer_ExpressionOperator)?';'
+;
+
+Person_name_AttrEClass returns Person_name_AttrEClass:
+		{Person_name_AttrEClass}
+		'name' ((negated?='!')? & (generalized?='*')?) name=ID (':' operator=String_ExpressionOperator)?';'
+;
+
+Course_courseType_AttrEClass returns Course_courseType_AttrEClass:
+		{Course_courseType_AttrEClass}
+		'courseType' ((negated?='!')?) name=ID (':' operator=CourseType_EnumerationOperator)?';'
+;
+
+Course_courseNumber_AttrEClass returns Course_courseNumber_AttrEClass:
+		{Course_courseNumber_AttrEClass}
+		'courseNumber' ((negated?='!')? & (generalized?='*')?) name=ID (':' operator=Integer_ExpressionOperator)?';'
+;
+
+Person_email_AttrEClass returns Person_email_AttrEClass:
+		{Person_email_AttrEClass}
+		'email' ((negated?='!')? & (generalized?='*')?) name=ID (':' operator=String_ExpressionOperator)?';'
+;
+
+Course_name_AttrEClass returns Course_name_AttrEClass:
+		{Course_name_AttrEClass}
+		'name' ((negated?='!')? & (generalized?='*')?) name=ID (':' operator=String_ExpressionOperator)?';'
+;
+
+Exam_examID_AttrEClass returns Exam_examID_AttrEClass:
+		{Exam_examID_AttrEClass}
+		'examID' ((negated?='!')? & (generalized?='*')?) name=ID (':' operator=String_ExpressionOperator)?';'
+;
+
+Student_attends_OrGroup returns Course_Reference_OrGroup:
+		{Course_Reference_OrGroup}
+		'attends'((negated?='!')? & (transitive?='+')? & (generalized?='*')?) name=ID (':' reference+=[Course|ID]
+('OR' reference+=[Course|ID])*)?';'
+;
+
+Professor_lectures_OrGroup returns Course_Reference_OrGroup:
+		{Course_Reference_OrGroup}
+		'lectures'((negated?='!')? & (transitive?='+')? & (generalized?='*')?) name=ID (':' reference+=[Course|ID]
+('OR' reference+=[Course|ID])*)?';'
+;
+
+Course_exam_OrGroup returns Exam_Containment_OrGroup:
+		{Exam_Containment_OrGroup}
+		'exam'((negated?='!')? & (transitive?='+')? & (generalized?='*')?) name=ID (':' containment+=Exam_Type
+('OR' containment+=Exam_Type)*)? ';'
+;
+
+Course_mandatoryFor_OrGroup returns Course_Reference_OrGroup:
+		{Course_Reference_OrGroup}
+		'mandatoryFor'((negated?='!')? & (transitive?='+')? & (generalized?='*')?) name=ID (':' reference+=[Course|ID]
+('OR' reference+=[Course|ID])*)?';'
+;
+
+UniversityManagementSystem_person_OrGroup returns Person_Containment_OrGroup:
+		{Person_Containment_OrGroup}
+		'person'((negated?='!')? & (transitive?='+')? & (generalized?='*')?) name=ID (':' containment+=Person_Type
+('OR' containment+=Person_Type)*)? ';'
+;
+
+UniversityManagementSystem_course_OrGroup returns Course_Containment_OrGroup:
+		{Course_Containment_OrGroup}
+		'course'((negated?='!')? & (transitive?='+')? & (generalized?='*')?) name=ID (':' containment+=Course_Type
+('OR' containment+=Course_Type)*)? ';'
+;
+
+FunctionalArgument returns FunctionalArgument:
+		PrimitiveArgument | Calculateable_Argument
+;
+
+Calculateable_Argument returns Calculateable_Argument:
+		CalculateableElement_ReferenceArgument | EvaluationOperation_Argument
+;
+
+PrimitiveArgument returns PrimitiveArgument:
+		Integer_PrimitiveArgument | String_PrimitiveArgument
+;
+
+Integer_PrimitiveArgument returns Integer_PrimitiveArgument:
+		{Integer_PrimitiveArgument}
+		value=INT (operator=Integer_FunctionalOperator)?
+;
+
+String_PrimitiveArgument returns String_PrimitiveArgument:
+		{String_PrimitiveArgument}
+		value=STRING (operator=String_FunctionalOperator)?
+;
+
+CalculateableElement_ReferenceArgument returns CalculateableElement_ReferenceArgument:
+		Integer_CalculateableElementReferenceArgument | String_CalculateableElementReferenceArgument
+;
+
+Integer_CalculateableElementReferenceArgument returns Integer_CalculateableElementReferenceArgument:
+		{Integer_CalculateableElementReferenceArgument}'IntegerRef('reference=[Integer_CalculateableElement|ID]')'(operator=Integer_FunctionalOperator)?
+;
+
+String_CalculateableElementReferenceArgument returns String_CalculateableElementReferenceArgument:
+		{String_CalculateableElementReferenceArgument}'StringRef('reference=[String_CalculateableElement|ID]')'(operator=String_FunctionalOperator)?
+;
+
+EvaluationOperation_Argument returns EvaluationOperation_Argument:
+		Integer_EvaluationOperation_Argument | Double_EvaluationOperation_Argument
+;
+
+Integer_EvaluationOperation_Argument returns Integer_EvaluationOperation_Argument:
+	Count_AggregationOperator | Sum_AggregationOperator_Integer | Min_AggregationOperator_Integer | Max_AggregationOperator_Integer | IntegerParseInt_ClassOperator
+;
+
+Double_EvaluationOperation_Argument returns Double_EvaluationOperation_Argument:
+	Sum_AggregationOperator_Double | Min_AggregationOperator_Double | Max_AggregationOperator_Double
+;
+
+Countable_ReferenceArgument returns Countable_ReferenceArgument:
+		{Countable_ReferenceArgument}
+		reference=[Countable|ID]
+;
+
+Integer_FunctionalParameter returns Integer_FunctionalParameter:
+		{Integer_FunctionalParameter}
+		argument=FunctionalArgument
+;
+
+Character_FunctionalParameter returns Character_FunctionalParameter:
+		{Character_FunctionalParameter}
+		argument=FunctionalArgument
+;
+
+Number_FunctionalParameter returns Number_FunctionalParameter:
+		{Number_FunctionalParameter}
+		argument=FunctionalArgument
+;
+
+CharSequence_FunctionalParameter returns CharSequence_FunctionalParameter:
+		{CharSequence_FunctionalParameter}
+		argument=FunctionalArgument
+;
+
+Object_FunctionalParameter returns Object_FunctionalParameter:
+		{Object_FunctionalParameter}
+		argument=FunctionalArgument
+;
+
+String_FunctionalParameter returns String_FunctionalParameter:
+		{String_FunctionalParameter}
+		argument=FunctionalArgument
+;
+
+Boolean_FunctionalParameter returns Boolean_FunctionalParameter:
+		{Boolean_FunctionalParameter}
+		argument=FunctionalArgument
+;
+
+Double_FunctionalParameter returns Double_FunctionalParameter:
+		{Double_FunctionalParameter}
+		argument=FunctionalArgument
+;
+
+CountableReferenceParameter returns CountableReferenceParameter:
+		{CountableReferenceParameter}
+		argument=Countable_ReferenceArgument
+;
+
+Integer_CalculateableParameter returns Integer_CalculateableParameter:
+		{Integer_CalculateableParameter}
+		argument=Calculateable_Argument
+;
+
+Character_CalculateableParameter returns Character_CalculateableParameter:
+		{Character_CalculateableParameter}
+		argument=Calculateable_Argument
+;
+
+Number_CalculateableParameter returns Number_CalculateableParameter:
+		{Number_CalculateableParameter}
+		argument=Calculateable_Argument
+;
+
+CharSequence_CalculateableParameter returns CharSequence_CalculateableParameter:
+		{CharSequence_CalculateableParameter}
+		argument=Calculateable_Argument
+;
+
+Object_CalculateableParameter returns Object_CalculateableParameter:
+		{Object_CalculateableParameter}
+		argument=Calculateable_Argument
+;
+
+String_CalculateableParameter returns String_CalculateableParameter:
+		{String_CalculateableParameter}
+		argument=Calculateable_Argument
+;
+
+Boolean_CalculateableParameter returns Boolean_CalculateableParameter:
+		{Boolean_CalculateableParameter}
+		argument=Calculateable_Argument
+;
+
+Double_CalculateableParameter returns Double_CalculateableParameter:
+		{Double_CalculateableParameter}
+		argument=Calculateable_Argument
+;
+
+CourseType_EnumerationOperator returns CourseType_EnumerationOperator:
+		{CourseType_EnumerationOperator}
+		argument=CourseType('or' or=CourseType_EnumerationOperator)?
+;
+
+enum CourseType returns CourseType:
+		VO = 'VO' | UE = 'UE' | SEM = 'SEM' | PR = 'PR'
+;
+
+Integer_ExpressionOperator returns Integer_ExpressionOperator:
+		(Integer_BitOperator | Integer_FunctionalOperator_Begin)
+;
+
+Integer_BitOperator returns Integer_BitOperator:
+		(Integer_And_BitOperator | Integer_Or_BitOperator)
+;
+
+Integer_And_BitOperator returns Integer_And_BitOperator:		{Integer_And_BitOperator}
+		'And'(negated?='!')?'('connects+=Integer_ExpressionOperator(',' connects+=Integer_ExpressionOperator)+')'
+;
+
+Integer_Or_BitOperator returns Integer_Or_BitOperator:		{Integer_Or_BitOperator}
+		'Or'(negated?='!')?'('connects+=Integer_ExpressionOperator(',' connects+=Integer_ExpressionOperator)+')'
+;
+
+Integer_FunctionalOperator_Begin returns Integer_FunctionalOperator:
+		'self'Integer_FunctionalOperator
+;
+
+Number_ExpressionOperator returns Number_ExpressionOperator:
+		(Number_BitOperator | Number_FunctionalOperator_Begin)
+;
+
+Number_BitOperator returns Number_BitOperator:
+		(Number_And_BitOperator | Number_Or_BitOperator)
+;
+
+Number_And_BitOperator returns Number_And_BitOperator:		{Number_And_BitOperator}
+		'And'(negated?='!')?'('connects+=Number_ExpressionOperator(',' connects+=Number_ExpressionOperator)+')'
+;
+
+Number_Or_BitOperator returns Number_Or_BitOperator:		{Number_Or_BitOperator}
+		'Or'(negated?='!')?'('connects+=Number_ExpressionOperator(',' connects+=Number_ExpressionOperator)+')'
+;
+
+Number_FunctionalOperator_Begin returns Number_FunctionalOperator:
+		'self'Number_FunctionalOperator
+;
+
+Character_ExpressionOperator returns Character_ExpressionOperator:
+		(Character_BitOperator | Character_FunctionalOperator_Begin)
+;
+
+Character_BitOperator returns Character_BitOperator:
+		(Character_And_BitOperator | Character_Or_BitOperator)
+;
+
+Character_And_BitOperator returns Character_And_BitOperator:		{Character_And_BitOperator}
+		'And'(negated?='!')?'('connects+=Character_ExpressionOperator(',' connects+=Character_ExpressionOperator)+')'
+;
+
+Character_Or_BitOperator returns Character_Or_BitOperator:		{Character_Or_BitOperator}
+		'Or'(negated?='!')?'('connects+=Character_ExpressionOperator(',' connects+=Character_ExpressionOperator)+')'
+;
+
+Character_FunctionalOperator_Begin returns Character_FunctionalOperator:
+		'self'Character_FunctionalOperator
+;
+
+CharSequence_ExpressionOperator returns CharSequence_ExpressionOperator:
+		(CharSequence_BitOperator | CharSequence_FunctionalOperator_Begin)
+;
+
+CharSequence_BitOperator returns CharSequence_BitOperator:
+		(CharSequence_And_BitOperator | CharSequence_Or_BitOperator)
+;
+
+CharSequence_And_BitOperator returns CharSequence_And_BitOperator:		{CharSequence_And_BitOperator}
+		'And'(negated?='!')?'('connects+=CharSequence_ExpressionOperator(',' connects+=CharSequence_ExpressionOperator)+')'
+;
+
+CharSequence_Or_BitOperator returns CharSequence_Or_BitOperator:		{CharSequence_Or_BitOperator}
+		'Or'(negated?='!')?'('connects+=CharSequence_ExpressionOperator(',' connects+=CharSequence_ExpressionOperator)+')'
+;
+
+CharSequence_FunctionalOperator_Begin returns CharSequence_FunctionalOperator:
+		'self'CharSequence_FunctionalOperator
+;
+
+Object_ExpressionOperator returns Object_ExpressionOperator:
+		(Object_BitOperator | Object_FunctionalOperator_Begin)
+;
+
+Object_BitOperator returns Object_BitOperator:
+		(Object_And_BitOperator | Object_Or_BitOperator)
+;
+
+Object_And_BitOperator returns Object_And_BitOperator:		{Object_And_BitOperator}
+		'And'(negated?='!')?'('connects+=Object_ExpressionOperator(',' connects+=Object_ExpressionOperator)+')'
+;
+
+Object_Or_BitOperator returns Object_Or_BitOperator:		{Object_Or_BitOperator}
+		'Or'(negated?='!')?'('connects+=Object_ExpressionOperator(',' connects+=Object_ExpressionOperator)+')'
+;
+
+Object_FunctionalOperator_Begin returns Object_FunctionalOperator:
+		'self'Object_FunctionalOperator
+;
+
+String_ExpressionOperator returns String_ExpressionOperator:
+		(String_BitOperator | String_FunctionalOperator_Begin)
+;
+
+String_BitOperator returns String_BitOperator:
+		(String_And_BitOperator | String_Or_BitOperator)
+;
+
+String_And_BitOperator returns String_And_BitOperator:		{String_And_BitOperator}
+		'And'(negated?='!')?'('connects+=String_ExpressionOperator(',' connects+=String_ExpressionOperator)+')'
+;
+
+String_Or_BitOperator returns String_Or_BitOperator:		{String_Or_BitOperator}
+		'Or'(negated?='!')?'('connects+=String_ExpressionOperator(',' connects+=String_ExpressionOperator)+')'
+;
+
+String_FunctionalOperator_Begin returns String_FunctionalOperator:
+		'self'String_FunctionalOperator
+;
+
+Boolean_ExpressionOperator returns Boolean_ExpressionOperator:
+		(Boolean_BitOperator | Boolean_FunctionalOperator_Begin)
+;
+
+Boolean_BitOperator returns Boolean_BitOperator:
+		(Boolean_And_BitOperator | Boolean_Or_BitOperator)
+;
+
+Boolean_And_BitOperator returns Boolean_And_BitOperator:		{Boolean_And_BitOperator}
+		'And'(negated?='!')?'('connects+=Boolean_ExpressionOperator(',' connects+=Boolean_ExpressionOperator)+')'
+;
+
+Boolean_Or_BitOperator returns Boolean_Or_BitOperator:		{Boolean_Or_BitOperator}
+		'Or'(negated?='!')?'('connects+=Boolean_ExpressionOperator(',' connects+=Boolean_ExpressionOperator)+')'
+;
+
+Boolean_FunctionalOperator_Begin returns Boolean_FunctionalOperator:
+		'self'Boolean_FunctionalOperator
+;
+
+Double_ExpressionOperator returns Double_ExpressionOperator:
+		(Double_BitOperator | Double_FunctionalOperator_Begin)
+;
+
+Double_BitOperator returns Double_BitOperator:
+		(Double_And_BitOperator | Double_Or_BitOperator)
+;
+
+Double_And_BitOperator returns Double_And_BitOperator:		{Double_And_BitOperator}
+		'And'(negated?='!')?'('connects+=Double_ExpressionOperator(',' connects+=Double_ExpressionOperator)+')'
+;
+
+Double_Or_BitOperator returns Double_Or_BitOperator:		{Double_Or_BitOperator}
+		'Or'(negated?='!')?'('connects+=Double_ExpressionOperator(',' connects+=Double_ExpressionOperator)+')'
+;
+
+Double_FunctionalOperator_Begin returns Double_FunctionalOperator:
+		'self'Double_FunctionalOperator
+;
+
+Integer_FunctionalOperator returns Integer_FunctionalOperator:
+		doubleValue_FunctionalOperator | Number_Integer_greaterThan_FunctionalOperator | Number_Integer_greaterEquals_FunctionalOperator | Number_Integer_smallerThan_FunctionalOperator | Number_Integer_smallerEquals_FunctionalOperator | Number_Integer_Object_Number_equals_FunctionalOperator | Number_Integer_Object_Number_toString_FunctionalOperator | Number_Integer_Object_Number_hashCode_FunctionalOperator
+;
+
+Number_FunctionalOperator returns Number_FunctionalOperator:
+		greaterThan_FunctionalOperator | greaterEquals_FunctionalOperator | smallerThan_FunctionalOperator | smallerEquals_FunctionalOperator | Object_Number_equals_FunctionalOperator | Object_Number_toString_FunctionalOperator | Object_Number_hashCode_FunctionalOperator
+;
+
+Character_FunctionalOperator returns Character_FunctionalOperator:
+		Object_Character_equals_FunctionalOperator | Object_Character_toString_FunctionalOperator | Object_Character_hashCode_FunctionalOperator
+;
+
+CharSequence_FunctionalOperator returns CharSequence_FunctionalOperator:
+		length_FunctionalOperator | Object_CharSequence_equals_FunctionalOperator | Object_CharSequence_toString_FunctionalOperator | Object_CharSequence_hashCode_FunctionalOperator
+;
+
+Object_FunctionalOperator returns Object_FunctionalOperator:
+		equals_FunctionalOperator | toString_FunctionalOperator | hashCode_FunctionalOperator
+;
+
+String_FunctionalOperator returns String_FunctionalOperator:
+		charAt_FunctionalOperator | codePointAt_FunctionalOperator | codePointBefore_FunctionalOperator | compareToString_FunctionalOperator | compareToStringIgnoreCase_FunctionalOperator | contains_FunctionalOperator | substring_FunctionalOperator | concat_FunctionalOperator | endsWith_FunctionalOperator | equalsIgnoreCase_FunctionalOperator | indexOfString_FunctionalOperator | indexOfChar_FunctionalOperator | indexOfCharFromIndex_FunctionalOperator | isEmpty_FunctionalOperator | offsetByCodePoints_FunctionalOperator | startsWith_FunctionalOperator | startsWithOffset_FunctionalOperator | toLowerCase_FunctionalOperator | toUpperCase_FunctionalOperator | trim_FunctionalOperator | CharSequence_String_length_FunctionalOperator | CharSequence_String_Object_CharSequence_equals_FunctionalOperator | CharSequence_String_Object_CharSequence_toString_FunctionalOperator | CharSequence_String_Object_CharSequence_hashCode_FunctionalOperator
+;
+
+Boolean_FunctionalOperator returns Boolean_FunctionalOperator:
+		parseBoolean_FunctionalOperator | compareToBoolean_FunctionalOperator | Object_Boolean_equals_FunctionalOperator | Object_Boolean_toString_FunctionalOperator | Object_Boolean_hashCode_FunctionalOperator
+;
+
+Double_FunctionalOperator returns Double_FunctionalOperator:
+		Number_Double_greaterThan_FunctionalOperator | Number_Double_greaterEquals_FunctionalOperator | Number_Double_smallerThan_FunctionalOperator | Number_Double_smallerEquals_FunctionalOperator | Number_Double_Object_Number_equals_FunctionalOperator | Number_Double_Object_Number_toString_FunctionalOperator | Number_Double_Object_Number_hashCode_FunctionalOperator
+;
+
+doubleValue_FunctionalOperator returns doubleValue_FunctionalOperator:
+		{doubleValue_FunctionalOperator}
+		'.doubleValue''()'(operator=Double_FunctionalOperator)?
+;
+
+Number_Integer_greaterThan_FunctionalOperator returns Number_Integer_greaterThan_FunctionalOperator:
+		{Number_Integer_greaterThan_FunctionalOperator}
+		'.greaterThan'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Number_Integer_greaterEquals_FunctionalOperator returns Number_Integer_greaterEquals_FunctionalOperator:
+		{Number_Integer_greaterEquals_FunctionalOperator}
+		'.greaterEquals'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Number_Integer_smallerThan_FunctionalOperator returns Number_Integer_smallerThan_FunctionalOperator:
+		{Number_Integer_smallerThan_FunctionalOperator}
+		'.smallerThan'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Number_Integer_smallerEquals_FunctionalOperator returns Number_Integer_smallerEquals_FunctionalOperator:
+		{Number_Integer_smallerEquals_FunctionalOperator}
+		'.smallerEquals'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Number_Integer_Object_Number_equals_FunctionalOperator returns Number_Integer_Object_Number_equals_FunctionalOperator:
+		{Number_Integer_Object_Number_equals_FunctionalOperator}
+		'.equals'(negated?='!')?'('obj=Object_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Number_Integer_Object_Number_toString_FunctionalOperator returns Number_Integer_Object_Number_toString_FunctionalOperator:
+		{Number_Integer_Object_Number_toString_FunctionalOperator}
+		'.toString''()'(operator=String_FunctionalOperator)?
+;
+
+Number_Integer_Object_Number_hashCode_FunctionalOperator returns Number_Integer_Object_Number_hashCode_FunctionalOperator:
+		{Number_Integer_Object_Number_hashCode_FunctionalOperator}
+		'.hashCode''()'(operator=Integer_FunctionalOperator)?
+;
+
+greaterThan_FunctionalOperator returns greaterThan_FunctionalOperator:
+		{greaterThan_FunctionalOperator}
+		'.greaterThan'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+greaterEquals_FunctionalOperator returns greaterEquals_FunctionalOperator:
+		{greaterEquals_FunctionalOperator}
+		'.greaterEquals'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+smallerThan_FunctionalOperator returns smallerThan_FunctionalOperator:
+		{smallerThan_FunctionalOperator}
+		'.smallerThan'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+smallerEquals_FunctionalOperator returns smallerEquals_FunctionalOperator:
+		{smallerEquals_FunctionalOperator}
+		'.smallerEquals'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Object_Number_equals_FunctionalOperator returns Object_Number_equals_FunctionalOperator:
+		{Object_Number_equals_FunctionalOperator}
+		'.equals'(negated?='!')?'('obj=Object_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Object_Number_toString_FunctionalOperator returns Object_Number_toString_FunctionalOperator:
+		{Object_Number_toString_FunctionalOperator}
+		'.toString''()'(operator=String_FunctionalOperator)?
+;
+
+Object_Number_hashCode_FunctionalOperator returns Object_Number_hashCode_FunctionalOperator:
+		{Object_Number_hashCode_FunctionalOperator}
+		'.hashCode''()'(operator=Integer_FunctionalOperator)?
+;
+
+Object_Character_equals_FunctionalOperator returns Object_Character_equals_FunctionalOperator:
+		{Object_Character_equals_FunctionalOperator}
+		'.equals'(negated?='!')?'('obj=Object_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Object_Character_toString_FunctionalOperator returns Object_Character_toString_FunctionalOperator:
+		{Object_Character_toString_FunctionalOperator}
+		'.toString''()'(operator=String_FunctionalOperator)?
+;
+
+Object_Character_hashCode_FunctionalOperator returns Object_Character_hashCode_FunctionalOperator:
+		{Object_Character_hashCode_FunctionalOperator}
+		'.hashCode''()'(operator=Integer_FunctionalOperator)?
+;
+
+length_FunctionalOperator returns length_FunctionalOperator:
+		{length_FunctionalOperator}
+		'.length''()'(operator=Integer_FunctionalOperator)?
+;
+
+Object_CharSequence_equals_FunctionalOperator returns Object_CharSequence_equals_FunctionalOperator:
+		{Object_CharSequence_equals_FunctionalOperator}
+		'.equals'(negated?='!')?'('obj=Object_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Object_CharSequence_toString_FunctionalOperator returns Object_CharSequence_toString_FunctionalOperator:
+		{Object_CharSequence_toString_FunctionalOperator}
+		'.toString''()'(operator=String_FunctionalOperator)?
+;
+
+Object_CharSequence_hashCode_FunctionalOperator returns Object_CharSequence_hashCode_FunctionalOperator:
+		{Object_CharSequence_hashCode_FunctionalOperator}
+		'.hashCode''()'(operator=Integer_FunctionalOperator)?
+;
+
+equals_FunctionalOperator returns equals_FunctionalOperator:
+		{equals_FunctionalOperator}
+		'.equals'(negated?='!')?'('obj=Object_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+toString_FunctionalOperator returns toString_FunctionalOperator:
+		{toString_FunctionalOperator}
+		'.toString''()'(operator=String_FunctionalOperator)?
+;
+
+hashCode_FunctionalOperator returns hashCode_FunctionalOperator:
+		{hashCode_FunctionalOperator}
+		'.hashCode''()'(operator=Integer_FunctionalOperator)?
+;
+
+charAt_FunctionalOperator returns charAt_FunctionalOperator:
+		{charAt_FunctionalOperator}
+		'.charAt''('i=Integer_FunctionalParameter')'(operator=Character_FunctionalOperator)?
+;
+
+codePointAt_FunctionalOperator returns codePointAt_FunctionalOperator:
+		{codePointAt_FunctionalOperator}
+		'.codePointAt''('index=Integer_FunctionalParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+codePointBefore_FunctionalOperator returns codePointBefore_FunctionalOperator:
+		{codePointBefore_FunctionalOperator}
+		'.codePointBefore''('index=Integer_FunctionalParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+compareToString_FunctionalOperator returns compareToString_FunctionalOperator:
+		{compareToString_FunctionalOperator}
+		'.compareToString''('anotherString=String_FunctionalParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+compareToStringIgnoreCase_FunctionalOperator returns compareToStringIgnoreCase_FunctionalOperator:
+		{compareToStringIgnoreCase_FunctionalOperator}
+		'.compareToStringIgnoreCase''('str=String_FunctionalParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+contains_FunctionalOperator returns contains_FunctionalOperator:
+		{contains_FunctionalOperator}
+		'.contains'(negated?='!')?'('charSequence=CharSequence_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+substring_FunctionalOperator returns substring_FunctionalOperator:
+		{substring_FunctionalOperator}
+		'.substring''('startIndex=Integer_FunctionalParameter','endIndex=Integer_FunctionalParameter')'(operator=String_FunctionalOperator)?
+;
+
+concat_FunctionalOperator returns concat_FunctionalOperator:
+		{concat_FunctionalOperator}
+		'.concat''('str=String_FunctionalParameter')'(operator=String_FunctionalOperator)?
+;
+
+endsWith_FunctionalOperator returns endsWith_FunctionalOperator:
+		{endsWith_FunctionalOperator}
+		'.endsWith'(negated?='!')?'('suffix=String_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+equalsIgnoreCase_FunctionalOperator returns equalsIgnoreCase_FunctionalOperator:
+		{equalsIgnoreCase_FunctionalOperator}
+		'.equalsIgnoreCase'(negated?='!')?'('anotherString=String_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+indexOfString_FunctionalOperator returns indexOfString_FunctionalOperator:
+		{indexOfString_FunctionalOperator}
+		'.indexOfString''('str=String_FunctionalParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+indexOfChar_FunctionalOperator returns indexOfChar_FunctionalOperator:
+		{indexOfChar_FunctionalOperator}
+		'.indexOfChar''('ch=Integer_FunctionalParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+indexOfCharFromIndex_FunctionalOperator returns indexOfCharFromIndex_FunctionalOperator:
+		{indexOfCharFromIndex_FunctionalOperator}
+		'.indexOfCharFromIndex''('ch=Integer_FunctionalParameter','fromIndex=Integer_FunctionalParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+isEmpty_FunctionalOperator returns isEmpty_FunctionalOperator:
+		{isEmpty_FunctionalOperator}
+		'.isEmpty'(negated?='!')?'()'(operator=Boolean_FunctionalOperator)?
+;
+
+offsetByCodePoints_FunctionalOperator returns offsetByCodePoints_FunctionalOperator:
+		{offsetByCodePoints_FunctionalOperator}
+		'.offsetByCodePoints''('index=Integer_FunctionalParameter','codePointOffset=Integer_FunctionalParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+startsWith_FunctionalOperator returns startsWith_FunctionalOperator:
+		{startsWith_FunctionalOperator}
+		'.startsWith'(negated?='!')?'('prefix=String_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+startsWithOffset_FunctionalOperator returns startsWithOffset_FunctionalOperator:
+		{startsWithOffset_FunctionalOperator}
+		'.startsWithOffset'(negated?='!')?'('prefix=String_FunctionalParameter','toffset=Integer_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+toLowerCase_FunctionalOperator returns toLowerCase_FunctionalOperator:
+		{toLowerCase_FunctionalOperator}
+		'.toLowerCase''()'(operator=String_FunctionalOperator)?
+;
+
+toUpperCase_FunctionalOperator returns toUpperCase_FunctionalOperator:
+		{toUpperCase_FunctionalOperator}
+		'.toUpperCase''()'(operator=String_FunctionalOperator)?
+;
+
+trim_FunctionalOperator returns trim_FunctionalOperator:
+		{trim_FunctionalOperator}
+		'.trim''()'(operator=String_FunctionalOperator)?
+;
+
+CharSequence_String_length_FunctionalOperator returns CharSequence_String_length_FunctionalOperator:
+		{CharSequence_String_length_FunctionalOperator}
+		'.length''()'(operator=Integer_FunctionalOperator)?
+;
+
+CharSequence_String_Object_CharSequence_equals_FunctionalOperator returns CharSequence_String_Object_CharSequence_equals_FunctionalOperator:
+		{CharSequence_String_Object_CharSequence_equals_FunctionalOperator}
+		'.equals'(negated?='!')?'('obj=Object_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+CharSequence_String_Object_CharSequence_toString_FunctionalOperator returns CharSequence_String_Object_CharSequence_toString_FunctionalOperator:
+		{CharSequence_String_Object_CharSequence_toString_FunctionalOperator}
+		'.toString''()'(operator=String_FunctionalOperator)?
+;
+
+CharSequence_String_Object_CharSequence_hashCode_FunctionalOperator returns CharSequence_String_Object_CharSequence_hashCode_FunctionalOperator:
+		{CharSequence_String_Object_CharSequence_hashCode_FunctionalOperator}
+		'.hashCode''()'(operator=Integer_FunctionalOperator)?
+;
+
+parseBoolean_FunctionalOperator returns parseBoolean_FunctionalOperator:
+		{parseBoolean_FunctionalOperator}
+		'.parseBoolean'(negated?='!')?'('s=String_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+compareToBoolean_FunctionalOperator returns compareToBoolean_FunctionalOperator:
+		{compareToBoolean_FunctionalOperator}
+		'.compareToBoolean''('b=Boolean_FunctionalParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+Object_Boolean_equals_FunctionalOperator returns Object_Boolean_equals_FunctionalOperator:
+		{Object_Boolean_equals_FunctionalOperator}
+		'.equals'(negated?='!')?'('obj=Object_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Object_Boolean_toString_FunctionalOperator returns Object_Boolean_toString_FunctionalOperator:
+		{Object_Boolean_toString_FunctionalOperator}
+		'.toString''()'(operator=String_FunctionalOperator)?
+;
+
+Object_Boolean_hashCode_FunctionalOperator returns Object_Boolean_hashCode_FunctionalOperator:
+		{Object_Boolean_hashCode_FunctionalOperator}
+		'.hashCode''()'(operator=Integer_FunctionalOperator)?
+;
+
+Number_Double_greaterThan_FunctionalOperator returns Number_Double_greaterThan_FunctionalOperator:
+		{Number_Double_greaterThan_FunctionalOperator}
+		'.greaterThan'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Number_Double_greaterEquals_FunctionalOperator returns Number_Double_greaterEquals_FunctionalOperator:
+		{Number_Double_greaterEquals_FunctionalOperator}
+		'.greaterEquals'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Number_Double_smallerThan_FunctionalOperator returns Number_Double_smallerThan_FunctionalOperator:
+		{Number_Double_smallerThan_FunctionalOperator}
+		'.smallerThan'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Number_Double_smallerEquals_FunctionalOperator returns Number_Double_smallerEquals_FunctionalOperator:
+		{Number_Double_smallerEquals_FunctionalOperator}
+		'.smallerEquals'(negated?='!')?'('i=Number_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Number_Double_Object_Number_equals_FunctionalOperator returns Number_Double_Object_Number_equals_FunctionalOperator:
+		{Number_Double_Object_Number_equals_FunctionalOperator}
+		'.equals'(negated?='!')?'('obj=Object_FunctionalParameter')'(operator=Boolean_FunctionalOperator)?
+;
+
+Number_Double_Object_Number_toString_FunctionalOperator returns Number_Double_Object_Number_toString_FunctionalOperator:
+		{Number_Double_Object_Number_toString_FunctionalOperator}
+		'.toString''()'(operator=String_FunctionalOperator)?
+;
+
+Number_Double_Object_Number_hashCode_FunctionalOperator returns Number_Double_Object_Number_hashCode_FunctionalOperator:
+		{Number_Double_Object_Number_hashCode_FunctionalOperator}
+		'.hashCode''()'(operator=Integer_FunctionalOperator)?
+;
+
+EvaluationOperator returns EvaluationOperator:
+		EvaluationBitOperator | EvaluationFunctionalOperator
+;
+
+EvaluationBitOperator returns EvaluationBitOperator:
+ And_EvaluationBitOperator | Or_EvaluationBitOperator
+;
+
+And_EvaluationBitOperator returns And_EvaluationBitOperator:
+ 'And'(negated?='!')?'('connects+=EvaluationOperator(',' connects+=EvaluationOperator)+')'
+;
+
+Or_EvaluationBitOperator returns Or_EvaluationBitOperator:
+ 'Or'(negated?='!')?'('connects+=EvaluationOperator(',' connects+=EvaluationOperator)+')'
+;
+
+EvaluationFunctionalOperator returns EvaluationFunctionalOperator:
+		AggregationOperator /*| ClassOperator */
+;
+
+AggregationOperator returns AggregationOperator:
+		CalculatingAggregationOperator | CountingAggregationOperator
+;
+
+CountingAggregationOperator returns CountingAggregationOperator:
+		Count_AggregationOperator
+;
+
+CalculatingAggregationOperator returns CalculatingAggregationOperator:
+		Sum_AggregationOperator_Integer | Min_AggregationOperator_Integer | Max_AggregationOperator_Integer | Sum_AggregationOperator_Double | Min_AggregationOperator_Double | Max_AggregationOperator_Double
+;
+
+Count_AggregationOperator returns Count_AggregationOperator:
+		{Count_AggregationOperator}
+		'count('countable=CountableReferenceParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+Sum_AggregationOperator_Integer returns Sum_AggregationOperator_Integer:
+		{Sum_AggregationOperator_Integer}
+		'sum_Integer('calculateable=Integer_CalculateableParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+Min_AggregationOperator_Integer returns Min_AggregationOperator_Integer:
+		{Min_AggregationOperator_Integer}
+		'min_Integer('calculateable=Integer_CalculateableParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+Max_AggregationOperator_Integer returns Max_AggregationOperator_Integer:
+		{Max_AggregationOperator_Integer}
+		'max_Integer('calculateable=Integer_CalculateableParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+IntegerParseInt_ClassOperator returns IntegerParseInt_ClassOperator:
+		{IntegerParseInt_ClassOperator}
+		'Integer.parseInt('calculateable=String_FunctionalParameter')'(operator=Integer_FunctionalOperator)?
+;
+
+Sum_AggregationOperator_Double returns Sum_AggregationOperator_Double:
+		{Sum_AggregationOperator_Double}
+		'sum_Double('calculateable=Double_CalculateableParameter')'(operator=Double_FunctionalOperator)?
+;
+
+Min_AggregationOperator_Double returns Min_AggregationOperator_Double:
+		{Min_AggregationOperator_Double}
+		'min_Double('calculateable=Double_CalculateableParameter')'(operator=Double_FunctionalOperator)?
+;
+
+Max_AggregationOperator_Double returns Max_AggregationOperator_Double:
+		{Max_AggregationOperator_Double}
+		'max_Double('calculateable=Double_CalculateableParameter')'(operator=Double_FunctionalOperator)?
+;
+

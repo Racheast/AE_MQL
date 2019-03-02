@@ -1,0 +1,21 @@
+Find
+InternalElement ie{
+	name n: self.contains("R1");	 
+	internalElement i1Ref : InternalElement i1{
+		
+		internalElement i1_1Ref : InternalElement i1_1{
+			baseClass bc1_1Ref : i1;
+			baseSystemUnit bsuRef : ie OR i1_1 OR ix;
+		};
+	}  OR InternalElement i2{
+		baseClass bcRef : i2 OR ie; 
+		baseClass!*+ bcTransRef : ie OR i2; 
+	};
+	
+	internalElement! ixRef : InternalElement ix{
+		
+	};
+	baseClass bc;
+}; 
+
+Select ie;

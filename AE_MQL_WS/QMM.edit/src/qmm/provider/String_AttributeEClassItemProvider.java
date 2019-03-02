@@ -128,37 +128,17 @@ public class String_AttributeEClassItemProvider extends RegularAttributeEClassIt
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createtrim_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createindexOfCharFromIndex_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
 				 QmmFactory.eINSTANCE.createtoLowerCase_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createendsWith_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createcodePointBefore_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createoffsetByCodePoints_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_toString_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createindexOfChar_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createcompareToString_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -168,7 +148,77 @@ public class String_AttributeEClassItemProvider extends RegularAttributeEClassIt
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_equals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_toString_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createconcat_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_hashCode_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createindexOfChar_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createequalsIgnoreCase_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createisEmpty_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createcodePointAt_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createString_Or_BitOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createoffsetByCodePoints_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createindexOfCharFromIndex_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createendsWith_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createstartsWithOffset_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createCharSequence_String_length_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createindexOfString_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
+				 QmmFactory.eINSTANCE.createtrim_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -183,47 +233,7 @@ public class String_AttributeEClassItemProvider extends RegularAttributeEClassIt
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createsubstring_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createcodePointAt_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createisEmpty_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createstartsWithOffset_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createindexOfString_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createCharSequence_String_length_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createequalsIgnoreCase_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createtoUpperCase_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createcompareToString_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createcharAt_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -233,27 +243,17 @@ public class String_AttributeEClassItemProvider extends RegularAttributeEClassIt
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createcharAt_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_equals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createcodePointBefore_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createtoUpperCase_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createconcat_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createString_Or_BitOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_AttributeEClass_Operator(),
-				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_hashCode_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createsubstring_FunctionalOperator()));
 	}
 
 }

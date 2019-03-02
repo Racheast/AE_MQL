@@ -160,202 +160,32 @@ public class FindQueryItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createCAEXBasicObject()));
+				 QmmFactory.eINSTANCE.createPerson()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createCAEXObject()));
+				 QmmFactory.eINSTANCE.createStudent()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createAttribute()));
+				 QmmFactory.eINSTANCE.createProfessor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createAttributeFamily()));
+				 QmmFactory.eINSTANCE.createCourse()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createAttributeNameMapping()));
+				 QmmFactory.eINSTANCE.createUniversityManagementSystem()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createAttributeLib()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createAttributeValueRequirement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createCAEXFile()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createDocumentRoot()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createInterfaceClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createExternalInterface()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createExternalReferenceType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createInstanceHierarchy()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createInterfaceClassLib()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createInterfaceFamily()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createInterfaceIDMapping()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createSystemUnitClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createInternalElement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createInternalLink()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createMapping()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createNominalScaledType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createOrdinalScaledType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createRefSemantic()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createRoleClassLib()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createRoleClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createRoleFamily()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createRoleRequirements()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createSourceDocumentInformation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createSupportedRoleClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createSystemUnitClassLib()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createSystemUnitFamily()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createUnknownType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createCopyright()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createDescription()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createRevision()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createVersion()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createElement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createGenericElement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createAdditionalInformation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getFindQuery_RootClass(),
-				 QmmFactory.eINSTANCE.createGenericAttribute()));
+				 QmmFactory.eINSTANCE.createExam()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -154,7 +154,17 @@ public class Boolean_BitOperatorItemProvider extends Boolean_ExpressionOperatorI
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getBoolean_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createObject_Boolean_equals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createBoolean_Or_BitOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getBoolean_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createObject_Boolean_toString_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getBoolean_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createcompareToBoolean_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -169,22 +179,12 @@ public class Boolean_BitOperatorItemProvider extends Boolean_ExpressionOperatorI
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getBoolean_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createObject_Boolean_toString_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getBoolean_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createBoolean_Or_BitOperator()));
+				 QmmFactory.eINSTANCE.createObject_Boolean_equals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getBoolean_BitOperator_Connects(),
 				 QmmFactory.eINSTANCE.createObject_Boolean_hashCode_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getBoolean_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createcompareToBoolean_FunctionalOperator()));
 	}
 
 }

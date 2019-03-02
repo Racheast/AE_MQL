@@ -1,0 +1,39 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(a1, addInfo){
+	find a1_Attribute(a1, addInfo);
+	find addInfo_AdditionalInformation(addInfo,n);
+}
+
+pattern aiRef_OrGroup(aiRef,addInfo){
+    AdditionalInformation(addInfo);
+    aiRef == addInfo;
+}
+
+pattern addInfo_AdditionalInformation(addInfo:AdditionalInformation,n){
+    AdditionalInformation(addInfo);
+    find n_Element_name_AttrEClass(addInfo,n);
+}
+
+pattern a1_Attribute(a1:Attribute,addInfo){
+    AdditionalInformation(addInfo);
+    Attribute(a1);
+    neg find aiRef_OrGroup_ref(a1,aiRef,addInfo);
+}
+
+
+pattern n_Element_name_AttrEClass(addInfo:AdditionalInformation, n){
+    AdditionalInformation.name(addInfo, n);
+    check(((n).endsWith("B")));
+}
+
+pattern Attribute_additionalInformation(from:Attribute, to:AdditionalInformation){
+    Attribute.additionalInformation(from, to);
+}
+
+pattern aiRef_OrGroup_ref(a1,aiRef,addInfo){
+    find aiRef_OrGroup(aiRef,addInfo);
+    find Attribute_additionalInformation(a1,aiRef);
+}
+

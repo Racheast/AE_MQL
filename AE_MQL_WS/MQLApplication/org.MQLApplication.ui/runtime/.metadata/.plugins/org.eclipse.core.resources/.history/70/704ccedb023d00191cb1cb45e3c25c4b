@@ -1,0 +1,25 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie){
+	find ie_InternalElement(ie);
+}
+
+pattern ie_InternalElement(ie:InternalElement){
+    InternalElement(ie);
+    find c_CAEXBasicObject_changeMode_AttrEClass(ie);
+    find count128731569(ie, ref128731569);
+    check(((ref128731569)>=(1)));
+}
+
+
+pattern c_CAEXBasicObject_changeMode_AttrEClass(ie:InternalElement){
+	InternalElement.changeMode(ie,::change);
+}or{
+	InternalElement.changeMode(ie,::state);
+}
+
+pattern count128731569(ie:InternalElement, result : java Integer){
+    result == count find c_CAEXBasicObject_changeMode_AttrEClass(ie);
+}
+

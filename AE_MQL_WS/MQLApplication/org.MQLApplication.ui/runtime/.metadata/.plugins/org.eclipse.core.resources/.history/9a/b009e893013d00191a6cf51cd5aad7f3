@@ -1,0 +1,127 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_InternalElement(i, ie, ierc, a, ie2, ie2rc, bsu,n);
+}
+
+pattern a_OrGroup(a){
+	Attribute(a);
+}
+
+pattern bsu_OrGroup(bsu,i,ierc,ie2rc){
+	SystemUnitClass(bsu);
+    InternalElement(ie2rc);
+    InternalElement(ierc);
+    InternalElement(i);
+    bsu == i;
+}
+or{
+	SystemUnitClass(bsu);
+    InternalElement(ie2rc);
+    InternalElement(ierc);
+    InternalElement(i);
+    bsu == ierc;
+}
+or{
+	SystemUnitClass(bsu);
+    InternalElement(ie2rc);
+    InternalElement(ierc);
+    InternalElement(i);
+    bsu == ie2rc;
+}
+
+pattern ie_OrGroup(ie,ierc,a,ie2,ie2rc,bsu,i,n){
+	InternalElement(ie);
+    InternalElement(ierc);
+    ie == ierc;
+    InternalElement(i);
+    find ierc_InternalElement(ierc,a,ie2,ie2rc,bsu,i,n);
+}
+
+pattern ie2_OrGroup(ie2,ie2rc,bsu,i,ierc){
+	InternalElement(ie2);
+    InternalElement(ie2rc);
+    ie2 == ie2rc;
+    InternalElement(i);
+    InternalElement(ierc);
+    find ie2rc_InternalElement(ie2rc,bsu,i,ierc);
+}
+
+pattern ie2rc_InternalElement(ie2rc:InternalElement,bsu,i,ierc){
+    InternalElement(ie2rc);
+    InternalElement(ierc);
+    SystemUnitClass(bsu);
+    InternalElement(i);
+    find bsu_OrGroup_ref(ie2rc,bsu,i,ierc);
+}
+
+pattern ierc_InternalElement(ierc:InternalElement,a,ie2,ie2rc,bsu,i,n){
+    InternalElement(ie2rc);
+    Attribute(a);
+    InternalElement(ierc);
+    SystemUnitClass(bsu);
+    InternalElement(ie2);
+    InternalElement(i);
+    find n_CAEXObject_name_AttrEClass(ierc,n);
+    find a_OrGroup_ref(ierc,a);
+    find ie2_OrGroup_ref(ierc,ie2,ie2rc,bsu,i);
+    a != ie2;
+    a != n;
+    n != ie2;
+}
+
+pattern i_InternalElement(i:InternalElement,ie,ierc,a,ie2,ie2rc,bsu,n){
+    InternalElement(ie2rc);
+    Attribute(a);
+    InternalElement(ierc);
+    SystemUnitClass(bsu);
+    InternalElement(ie);
+    InternalElement(ie2);
+    InternalElement(i);
+    find ie_OrGroup_ref(i,ie,ierc,a,ie2,ie2rc,bsu,n);
+    find count317279004(i, ref317279004);
+    check(((ref317279004)>=(0)));
+}
+
+
+pattern n_CAEXObject_name_AttrEClass(ierc:InternalElement, n){
+    InternalElement.name(ierc, n);
+}
+
+pattern count317279004(i:InternalElement, result : java Integer){
+    result == count find ie_OrGroup_ref(i,ie,ierc,a,ie2,ie2rc,bsu,n);
+}
+
+pattern InternalElement_internalElement(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern InternalElement_baseSystemUnit(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern InternalElement_attribute(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a_OrGroup_ref(ierc,a){
+    find a_OrGroup(a);
+    find InternalElement_attribute(ierc,a);
+}
+
+pattern bsu_OrGroup_ref(ie2rc,bsu,i,ierc){
+    find bsu_OrGroup(bsu,i,ierc,ie2rc);
+    find InternalElement_baseSystemUnit(ie2rc,bsu);
+}
+
+pattern ie_OrGroup_ref(i,ie,ierc,a,ie2,ie2rc,bsu,n){
+    find ie_OrGroup(ie,ierc,a,ie2,ie2rc,bsu,i,n);
+    find InternalElement_internalElement+(i,ie);
+}
+
+pattern ie2_OrGroup_ref(ierc,ie2,ie2rc,bsu,i){
+    find ie2_OrGroup(ie2,ie2rc,bsu,i,ierc);
+    find InternalElement_internalElement+(ierc,ie2);
+}
+

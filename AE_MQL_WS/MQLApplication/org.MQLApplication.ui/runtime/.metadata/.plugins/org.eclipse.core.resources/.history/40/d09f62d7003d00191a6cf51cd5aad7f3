@@ -1,0 +1,20 @@
+Find 
+InternalElement i{
+	attribute* a;
+	attribute! ax : Attribute axrc {
+		unit u : self.equals!("inch");
+	};
+	attribute a1 : Attribute a1rc{
+		name n1:self.equals("R1_Length");
+	};
+	attribute a2 : Attribute a2rc{
+		name n2:self.contains("Width");
+	};
+	attribute a3 : Attribute a3rc{
+		name n3:self.startsWith("R1");
+	};
+	internalElement j : InternalElement jrc{
+		changeMode c: delete;
+	};
+	eval:count(a).greaterEquals(4);
+};  

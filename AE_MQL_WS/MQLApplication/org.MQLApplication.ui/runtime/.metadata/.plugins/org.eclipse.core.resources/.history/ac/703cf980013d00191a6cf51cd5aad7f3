@@ -1,0 +1,16 @@
+Find InternalElement i{
+	internalElement ie1 : InternalElement ie1rc;
+	internalElement ie2;
+	internalElement ie3: InternalElement ie3rc1{
+		name n123 : self.equals("ABC").toString().length().greaterEquals(2);
+	}OR InternalElement ie3ec2{
+		iD i1;
+		iD* i2;
+		systemUnitClass!+* su: SystemUnitClass surc{
+			additionalInformation adi;
+			baseClass!*+ bc : i OR ie1rc;
+			description! d;
+			
+		};
+	};
+};

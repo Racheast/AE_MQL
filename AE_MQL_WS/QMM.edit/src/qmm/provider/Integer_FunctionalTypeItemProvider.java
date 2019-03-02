@@ -125,27 +125,12 @@ public class Integer_FunctionalTypeItemProvider extends Integer_TypeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getInteger_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createNumber_Integer_Object_Number_equals_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getInteger_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createNumber_Integer_greaterThan_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getInteger_FunctionalType_Operator(),
 				 QmmFactory.eINSTANCE.createNumber_Integer_Object_Number_hashCode_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getInteger_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createdoubleValue_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getInteger_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createNumber_Integer_smallerEquals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Integer_smallerThan_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -155,12 +140,27 @@ public class Integer_FunctionalTypeItemProvider extends Integer_TypeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getInteger_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createNumber_Integer_greaterThan_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getInteger_FunctionalType_Operator(),
 				 QmmFactory.eINSTANCE.createNumber_Integer_greaterEquals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getInteger_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createNumber_Integer_smallerThan_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Integer_Object_Number_equals_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getInteger_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createNumber_Integer_smallerEquals_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getInteger_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createdoubleValue_FunctionalOperator()));
 	}
 
 }

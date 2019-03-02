@@ -154,32 +154,17 @@ public class EvaluationBitOperatorItemProvider extends EvaluationOperatorItemPro
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createMin_AggregationOperator_Double()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
 				 QmmFactory.eINSTANCE.createIntegerParseInt_ClassOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
 				 QmmFactory.eINSTANCE.createOr_EvaluationBitOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createCount_AggregationOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createMin_AggregationOperator_Double()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createMax_AggregationOperator_Integer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createSum_AggregationOperator_Integer()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -194,12 +179,27 @@ public class EvaluationBitOperatorItemProvider extends EvaluationOperatorItemPro
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createSum_AggregationOperator_Double()));
+				 QmmFactory.eINSTANCE.createMax_AggregationOperator_Integer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createSum_AggregationOperator_Integer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createCount_AggregationOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
 				 QmmFactory.eINSTANCE.createMin_AggregationOperator_Integer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getEvaluationBitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createSum_AggregationOperator_Double()));
 	}
 
 }

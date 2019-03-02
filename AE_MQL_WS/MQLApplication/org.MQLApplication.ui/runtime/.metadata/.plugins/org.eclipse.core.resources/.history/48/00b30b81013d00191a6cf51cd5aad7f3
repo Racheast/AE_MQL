@@ -1,0 +1,185 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_InternalElement(i, ie1, ie1rc, ie2, ie3, ie3rc1, ie3ec2, adi);
+}
+
+pattern su_OrGroup(su,surc,adi,i,ie1rc){
+    su == surc;
+    InternalElement(i);
+    InternalElement(ie1rc);
+    find surc_SystemUnitClass(surc,adi,i,ie1rc);
+}
+
+pattern d_OrGroup(d){
+	Description(d);
+}
+
+pattern ie2_OrGroup(ie2){
+	InternalElement(ie2);
+}
+
+pattern ie1_OrGroup(ie1,ie1rc){
+	InternalElement(ie1);
+    InternalElement(ie1rc);
+    ie1 == ie1rc;
+    find ie1rc_InternalElement(ie1rc);
+}
+
+pattern ie3_OrGroup(ie3,ie3rc1,ie3ec2,surc,adi,i,ie1rc){
+	InternalElement(ie3);
+    InternalElement(ie3rc1);
+    ie3 == ie3rc1;
+    InternalElement(ie3ec2);
+    ie3 == ie3ec2;
+    ie3 == surc;
+    AdditionalInformation(adi);
+    InternalElement(i);
+    InternalElement(ie1rc);
+    find ie3rc1_InternalElement(ie3rc1);
+}
+or{
+	InternalElement(ie3);
+    InternalElement(ie3rc1);
+    ie3 == ie3rc1;
+    InternalElement(ie3ec2);
+    ie3 == ie3ec2;
+    ie3 == surc;
+    InternalElement(i);
+    InternalElement(ie1rc);
+    find ie3ec2_InternalElement(ie3ec2,adi,i,ie1rc);
+}
+
+pattern bc_OrGroup(bc,i,ie1rc){
+    InternalElement(i);
+    InternalElement(ie1rc);
+    bc == i;
+}
+or{
+    InternalElement(i);
+    InternalElement(ie1rc);
+    bc == ie1rc;
+}
+
+pattern adi_OrGroup(adi){
+	AdditionalInformation(adi);
+}
+
+pattern ie3ec2_InternalElement(ie3ec2:InternalElement,adi,i,ie1rc){
+    InternalElement(ie3ec2);
+    InternalElement(i);
+    InternalElement(ie1rc);
+    AdditionalInformation(adi);
+    find i1_CAEXObject_iD_AttrEClass(ie3ec2,i1);
+    find i2_CAEXObject_iD_AttrEClass(ie3ec2,i2);
+    neg find su_OrGroup_ref(ie3ec2,su,surc,adi,i,ie1rc);
+}
+
+pattern i_InternalElement(i:InternalElement,ie1,ie1rc,ie2,ie3,ie3rc1,ie3ec2,adi){
+    InternalElement(ie3ec2);
+    InternalElement(i);
+    InternalElement(ie2);
+    InternalElement(ie1);
+    InternalElement(ie3);
+    InternalElement(ie3rc1);
+    InternalElement(ie1rc);
+    AdditionalInformation(adi);
+    find ie1_OrGroup_ref(i,ie1,ie1rc);
+    find ie2_OrGroup_ref(i,ie2);
+    find ie3_OrGroup_ref(i,ie3,ie3rc1,ie3ec2,adi,ie1rc);
+    ie2 != ie3;
+    ie1 != ie3;
+    ie2 != ie1;
+}
+
+pattern ie3rc1_InternalElement(ie3rc1:InternalElement){
+    InternalElement(ie3rc1);
+    find n123_CAEXObject_name_AttrEClass(ie3rc1,n123);
+}
+
+pattern ie1rc_InternalElement(ie1rc:InternalElement){
+    InternalElement(ie1rc);
+}
+
+pattern surc_SystemUnitClass(surc:SystemUnitClass,adi,i,ie1rc){
+    InternalElement(i);
+    InternalElement(ie1rc);
+    AdditionalInformation(adi);
+    SystemUnitClass(surc);
+    neg find d_OrGroup_ref(surc,d);
+    find adi_OrGroup_ref(surc,adi);
+    neg find bc_OrGroup_ref(surc,bc,i,ie1rc);
+}
+
+
+pattern n123_CAEXObject_name_AttrEClass(ie3rc1:InternalElement, n123){
+    InternalElement.name(ie3rc1, n123);
+    check(((((((((n123).equals("ABC"))).toString())).length()))>=(2)));
+}
+
+
+pattern i2_CAEXObject_iD_AttrEClass(ie3ec2:InternalElement, i2){
+    InternalElement.iD(ie3ec2, i2);
+}
+
+
+pattern i1_CAEXObject_iD_AttrEClass(ie3ec2:InternalElement, i1){
+    InternalElement.iD(ie3ec2, i1);
+}
+
+pattern SystemUnitClass_additionalInformation(from:SystemUnitClass, to:AdditionalInformation){
+    SystemUnitClass.additionalInformation(from, to);
+}
+
+pattern SystemUnitClass_description(from:SystemUnitClass, to:Description){
+    SystemUnitClass.description(from, to);
+}
+
+pattern SystemUnitClass_baseClass(from:SystemUnitClass, to:SystemUnitClass){
+    SystemUnitClass.baseClass(from, to);
+}
+
+pattern InternalElement_internalElement(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern InternalElement_systemUnitClass(from:InternalElement, to:SystemUnitClass){
+    InternalElement.systemUnitClass(from, to);
+}
+
+pattern su_OrGroup_ref(ie3ec2,su,surc,adi,i,ie1rc){
+    find su_OrGroup(su,surc,adi,i,ie1rc);
+    find InternalElement_systemUnitClass+(ie3ec2,su);
+}
+
+pattern d_OrGroup_ref(surc,d){
+    find d_OrGroup(d);
+    find SystemUnitClass_description(surc,d);
+}
+
+pattern ie2_OrGroup_ref(i,ie2){
+    find ie2_OrGroup(ie2);
+    find InternalElement_internalElement(i,ie2);
+}
+
+pattern ie1_OrGroup_ref(i,ie1,ie1rc){
+    find ie1_OrGroup(ie1,ie1rc);
+    find InternalElement_internalElement(i,ie1);
+}
+
+pattern ie3_OrGroup_ref(i,ie3,ie3rc1,ie3ec2,adi,ie1rc){
+    find ie3_OrGroup(ie3,ie3rc1,ie3ec2,surc,adi,i,ie1rc);
+    find InternalElement_internalElement(i,ie3);
+}
+
+pattern bc_OrGroup_ref(surc,bc,i,ie1rc){
+    find bc_OrGroup(bc,i,ie1rc);
+    find SystemUnitClass_baseClass+(surc,bc);
+}
+
+pattern adi_OrGroup_ref(surc,adi){
+    find adi_OrGroup(adi);
+    find SystemUnitClass_additionalInformation(surc,adi);
+}
+

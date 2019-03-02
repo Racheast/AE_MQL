@@ -1,0 +1,136 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(ie){
+	find ie_InternalElement(ie, i1Ref, i1, i1_1Ref, i1_1, bc1_1Ref, bsuRef, ixRef, ix,n);
+}
+
+pattern i1Ref_OrGroup(i1Ref,i1,i1_1Ref,i1_1,bc1_1Ref,bsuRef,ie){
+	InternalElement(i1Ref);
+    InternalElement(i1);
+    i1Ref == i1;
+    InternalElement(ie);
+    find i1_InternalElement(i1,i1_1Ref,i1_1,bc1_1Ref,bsuRef,ie);
+}
+
+pattern bc1_1Ref_OrGroup(bc1_1Ref,i1){
+	SystemUnitClass(bc1_1Ref);
+    InternalElement(i1);
+    bc1_1Ref == i1;
+}
+
+pattern i1_1Ref_OrGroup(i1_1Ref,i1_1,bc1_1Ref,i1,bsuRef,ie){
+	InternalElement(i1_1Ref);
+    InternalElement(i1_1);
+    i1_1Ref == i1_1;
+    InternalElement(i1);
+    InternalElement(ie);
+    find i1_1_InternalElement(i1_1,bc1_1Ref,i1,bsuRef,ie);
+}
+
+pattern bsuRef_OrGroup(bsuRef,ie,i1_1){
+	SystemUnitClass(bsuRef);
+    InternalElement(ie);
+    InternalElement(i1_1);
+    bsuRef == ie;
+}
+or{
+	SystemUnitClass(bsuRef);
+    InternalElement(ie);
+    InternalElement(i1_1);
+    bsuRef == i1_1;
+}
+
+pattern ixRef_OrGroup(ixRef,ix){
+	InternalElement(ixRef);
+    InternalElement(ix);
+    ixRef == ix;
+    find ix_InternalElement(ix);
+}
+
+pattern i1_InternalElement(i1:InternalElement,i1_1Ref,i1_1,bc1_1Ref,bsuRef,ie){
+    InternalElement(i1);
+    SystemUnitClass(bc1_1Ref);
+    InternalElement(ie);
+    InternalElement(i1_1);
+    InternalElement(i1_1Ref);
+    SystemUnitClass(bsuRef);
+    find i1_1Ref_OrGroup_ref(i1,i1_1Ref,i1_1,bc1_1Ref,bsuRef,ie);
+}
+
+pattern ix_InternalElement(ix:InternalElement){
+    InternalElement(ix);
+}
+
+pattern ie_InternalElement(ie:InternalElement,i1Ref,i1,i1_1Ref,i1_1,bc1_1Ref,bsuRef,ixRef,ix,n){
+    InternalElement(i1);
+    InternalElement(i1Ref);
+    SystemUnitClass(bc1_1Ref);
+    InternalElement(ix);
+    InternalElement(i1_1);
+    InternalElement(ie);
+    InternalElement(i1_1Ref);
+    SystemUnitClass(bsuRef);
+    InternalElement(ixRef);
+    find n_CAEXObject_name_AttrEClass(ie,n);
+    find i1Ref_OrGroup_ref(ie,i1Ref,i1,i1_1Ref,i1_1,bc1_1Ref,bsuRef);
+    find ixRef_OrGroup_ref(ie,ixRef,ix);
+    n != ixRef;
+    i1Ref != ixRef;
+    i1Ref != n;
+}
+
+pattern i1_1_InternalElement(i1_1:InternalElement,bc1_1Ref,i1,bsuRef,ie){
+    InternalElement(i1);
+    SystemUnitClass(bc1_1Ref);
+    InternalElement(ie);
+    InternalElement(i1_1);
+    SystemUnitClass(bsuRef);
+    find bc1_1Ref_OrGroup_ref(i1_1,bc1_1Ref,i1);
+    find bsuRef_OrGroup_ref(i1_1,bsuRef,ie);
+    bc1_1Ref != bsuRef;
+}
+
+
+pattern n_CAEXObject_name_AttrEClass(ie:InternalElement, n){
+    InternalElement.name(ie, n);
+    check(((n).contains("R1")));
+}
+
+pattern InternalElement_baseSystemUnit(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseSystemUnit(from, to);
+}
+
+pattern InternalElement_internalElement(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern InternalElement_baseClass(from:InternalElement, to:SystemUnitClass){
+    InternalElement.baseClass(from, to);
+}
+
+pattern i1Ref_OrGroup_ref(ie,i1Ref,i1,i1_1Ref,i1_1,bc1_1Ref,bsuRef){
+    find i1Ref_OrGroup(i1Ref,i1,i1_1Ref,i1_1,bc1_1Ref,bsuRef,ie);
+    find InternalElement_internalElement(ie,i1Ref);
+}
+
+pattern bc1_1Ref_OrGroup_ref(i1_1,bc1_1Ref,i1){
+    find bc1_1Ref_OrGroup(bc1_1Ref,i1);
+    find InternalElement_baseClass(i1_1,bc1_1Ref);
+}
+
+pattern i1_1Ref_OrGroup_ref(i1,i1_1Ref,i1_1,bc1_1Ref,bsuRef,ie){
+    find i1_1Ref_OrGroup(i1_1Ref,i1_1,bc1_1Ref,i1,bsuRef,ie);
+    find InternalElement_internalElement(i1,i1_1Ref);
+}
+
+pattern bsuRef_OrGroup_ref(i1_1,bsuRef,ie){
+    find bsuRef_OrGroup(bsuRef,ie,i1_1);
+    find InternalElement_baseSystemUnit(i1_1,bsuRef);
+}
+
+pattern ixRef_OrGroup_ref(ie,ixRef,ix){
+    find ixRef_OrGroup(ixRef,ix);
+    find InternalElement_internalElement(ie,ixRef);
+}
+

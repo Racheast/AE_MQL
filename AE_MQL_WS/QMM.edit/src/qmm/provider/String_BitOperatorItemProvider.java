@@ -154,37 +154,17 @@ public class String_BitOperatorItemProvider extends String_ExpressionOperatorIte
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createtrim_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createindexOfCharFromIndex_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
 				 QmmFactory.eINSTANCE.createtoLowerCase_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createendsWith_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createcodePointBefore_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createoffsetByCodePoints_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_toString_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createindexOfChar_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createcompareToString_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -194,7 +174,77 @@ public class String_BitOperatorItemProvider extends String_ExpressionOperatorIte
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_equals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_toString_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createconcat_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_hashCode_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createindexOfChar_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createequalsIgnoreCase_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createisEmpty_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createcodePointAt_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createString_Or_BitOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createoffsetByCodePoints_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createindexOfCharFromIndex_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createendsWith_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createstartsWithOffset_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createCharSequence_String_length_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createindexOfString_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
+				 QmmFactory.eINSTANCE.createtrim_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -209,47 +259,7 @@ public class String_BitOperatorItemProvider extends String_ExpressionOperatorIte
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createsubstring_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createcodePointAt_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createisEmpty_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createstartsWithOffset_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createindexOfString_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createCharSequence_String_length_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createequalsIgnoreCase_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createtoUpperCase_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createcompareToString_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createcharAt_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -259,27 +269,17 @@ public class String_BitOperatorItemProvider extends String_ExpressionOperatorIte
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createcharAt_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_equals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createcodePointBefore_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createtoUpperCase_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createconcat_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createString_Or_BitOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getString_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createCharSequence_String_Object_CharSequence_hashCode_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createsubstring_FunctionalOperator()));
 	}
 
 }

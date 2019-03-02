@@ -154,7 +154,12 @@ public class Boolean_FunctionalTypeItemProvider extends Boolean_TypeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getBoolean_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createObject_Boolean_equals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createObject_Boolean_toString_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getBoolean_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createcompareToBoolean_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -164,17 +169,12 @@ public class Boolean_FunctionalTypeItemProvider extends Boolean_TypeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getBoolean_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createObject_Boolean_toString_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createObject_Boolean_equals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getBoolean_FunctionalType_Operator(),
 				 QmmFactory.eINSTANCE.createObject_Boolean_hashCode_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getBoolean_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createcompareToBoolean_FunctionalOperator()));
 	}
 
 }

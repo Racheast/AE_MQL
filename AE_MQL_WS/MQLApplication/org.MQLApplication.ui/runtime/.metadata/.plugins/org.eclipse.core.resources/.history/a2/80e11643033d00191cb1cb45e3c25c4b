@@ -1,0 +1,42 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(cRef){
+	find s_Student(s, cRef, c,n);
+	find c_Course(c);
+}
+
+pattern cRef_OrGroup(cRef,c){
+	Course(cRef);
+    Course(c);
+    cRef == c;
+}
+
+pattern c_Course(c:Course){
+    Course(c);
+}
+
+pattern s_Student(s:Student,cRef,c,n){
+    Course(c);
+    Course(cRef);
+    Student(s);
+    find n_Person_name_AttrEClass(s,n);
+    find cRef_OrGroup_ref(s,cRef,c);
+    n != cRef;
+}
+
+
+pattern n_Person_name_AttrEClass(s:Student, n){
+    Student.name(s, n);
+    check(((n).contains("Max")));
+}
+
+pattern Student_attends(from:Student, to:Course){
+    Student.attends(from, to);
+}
+
+pattern cRef_OrGroup_ref(s,cRef,c){
+    find cRef_OrGroup(cRef,c);
+    find Student_attends(s,cRef);
+}
+

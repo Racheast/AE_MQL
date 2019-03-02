@@ -1,0 +1,9 @@
+Find
+Student s {
+	email e;
+	attends cRef: c;
+};
+
+Course c {
+	
+};

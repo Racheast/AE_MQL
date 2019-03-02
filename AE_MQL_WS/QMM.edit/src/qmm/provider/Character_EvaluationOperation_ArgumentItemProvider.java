@@ -130,12 +130,12 @@ public class Character_EvaluationOperation_ArgumentItemProvider extends Evaluati
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCharacter_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createObject_Character_hashCode_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createObject_Character_equals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCharacter_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createObject_Character_equals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createObject_Character_hashCode_FunctionalOperator()));
 	}
 
 }

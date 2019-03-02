@@ -1,0 +1,53 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(i){
+	find i_InternalElement(i, s, r);
+}
+
+pattern s_OrGroup(s){
+	SupportedRoleClass(s);
+}
+
+pattern r_OrGroup(r){
+	RoleRequirements(r);
+}
+
+pattern i_InternalElement(i:InternalElement,s,r){
+    InternalElement(i);
+    SupportedRoleClass(s);
+    RoleRequirements(r);
+    find s_OrGroup_ref(i,s);
+    find r_OrGroup_ref(i,r);
+    s != r;
+    find count34829710(i, ref34829710);
+    find count387980650(i, ref387980650);
+    check(((ref34829710)>(ref387980650)));
+}
+
+pattern count387980650(i:InternalElement, result : java Integer){
+    result == count find s_OrGroup_ref(i,s);
+}
+
+pattern count34829710(i:InternalElement, result : java Integer){
+    result == count find r_OrGroup_ref(i,r);
+}
+
+pattern InternalElement_supportedRoleClass(from:InternalElement, to:SupportedRoleClass){
+    InternalElement.supportedRoleClass(from, to);
+}
+
+pattern InternalElement_roleRequirements(from:InternalElement, to:RoleRequirements){
+    InternalElement.roleRequirements(from, to);
+}
+
+pattern s_OrGroup_ref(i,s){
+    find s_OrGroup(s);
+    find InternalElement_supportedRoleClass(i,s);
+}
+
+pattern r_OrGroup_ref(i,r){
+    find r_OrGroup(r);
+    find InternalElement_roleRequirements(i,r);
+}
+

@@ -1,0 +1,12 @@
+Find 
+
+InternalElement i{
+	internalElement+ ie : InternalElement ierc{
+		attribute a;
+		name n;
+		internalElement+ ie2 : InternalElement ie2rc{
+			baseSystemUnit bsu : i OR ierc OR ie2rc;
+		};
+	};
+	eval:count(ie).greaterEquals(0);
+}; 

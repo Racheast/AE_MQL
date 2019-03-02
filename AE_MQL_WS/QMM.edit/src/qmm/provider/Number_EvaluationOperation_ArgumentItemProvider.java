@@ -125,22 +125,12 @@ public class Number_EvaluationOperation_ArgumentItemProvider extends EvaluationO
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getNumber_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createObject_Number_equals_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getNumber_FunctionalType_Operator(),
 				 QmmFactory.eINSTANCE.createsmallerEquals_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getNumber_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.creategreaterThan_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getNumber_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createObject_Number_toString_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getNumber_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.creategreaterEquals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -155,7 +145,17 @@ public class Number_EvaluationOperation_ArgumentItemProvider extends EvaluationO
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getNumber_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createObject_Number_equals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createObject_Number_toString_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getNumber_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.creategreaterEquals_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getNumber_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.creategreaterThan_FunctionalOperator()));
 	}
 
 }

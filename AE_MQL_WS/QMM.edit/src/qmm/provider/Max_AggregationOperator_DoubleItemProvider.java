@@ -138,12 +138,7 @@ public class Max_AggregationOperator_DoubleItemProvider extends CalculatingAggre
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getDouble_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createNumber_Double_smallerEquals_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getDouble_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createNumber_Double_Object_Number_toString_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Double_Object_Number_hashCode_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -153,7 +148,12 @@ public class Max_AggregationOperator_DoubleItemProvider extends CalculatingAggre
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getDouble_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createNumber_Double_greaterThan_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Double_greaterEquals_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getDouble_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createNumber_Double_Object_Number_toString_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -163,12 +163,12 @@ public class Max_AggregationOperator_DoubleItemProvider extends CalculatingAggre
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getDouble_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createNumber_Double_greaterEquals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Double_smallerEquals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getDouble_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createNumber_Double_Object_Number_hashCode_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createNumber_Double_greaterThan_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter

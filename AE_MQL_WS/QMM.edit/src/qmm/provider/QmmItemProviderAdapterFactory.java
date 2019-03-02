@@ -72,7018 +72,141 @@ public class QmmItemProviderAdapterFactory extends QmmAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeFamily} instances.
+	 * This keeps track of the one adapter used for all {@link qmm.Person} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttributeFamilyItemProvider attributeFamilyItemProvider;
+	protected PersonItemProvider personItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qmm.AttributeFamily}.
+	 * This creates an adapter for a {@link qmm.Person}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttributeFamilyAdapter() {
-		if (attributeFamilyItemProvider == null) {
-			attributeFamilyItemProvider = new AttributeFamilyItemProvider(this);
+	public Adapter createPersonAdapter() {
+		if (personItemProvider == null) {
+			personItemProvider = new PersonItemProvider(this);
 		}
 
-		return attributeFamilyItemProvider;
+		return personItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeNameMapping} instances.
+	 * This keeps track of the one adapter used for all {@link qmm.Student} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttributeNameMappingItemProvider attributeNameMappingItemProvider;
+	protected StudentItemProvider studentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qmm.AttributeNameMapping}.
+	 * This creates an adapter for a {@link qmm.Student}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttributeNameMappingAdapter() {
-		if (attributeNameMappingItemProvider == null) {
-			attributeNameMappingItemProvider = new AttributeNameMappingItemProvider(this);
+	public Adapter createStudentAdapter() {
+		if (studentItemProvider == null) {
+			studentItemProvider = new StudentItemProvider(this);
 		}
 
-		return attributeNameMappingItemProvider;
+		return studentItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Attribute} instances.
+	 * This keeps track of the one adapter used for all {@link qmm.Professor} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttributeItemProvider attributeItemProvider;
+	protected ProfessorItemProvider professorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qmm.Attribute}.
+	 * This creates an adapter for a {@link qmm.Professor}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttributeAdapter() {
-		if (attributeItemProvider == null) {
-			attributeItemProvider = new AttributeItemProvider(this);
+	public Adapter createProfessorAdapter() {
+		if (professorItemProvider == null) {
+			professorItemProvider = new ProfessorItemProvider(this);
 		}
 
-		return attributeItemProvider;
+		return professorItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeLib} instances.
+	 * This keeps track of the one adapter used for all {@link qmm.Course} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttributeLibItemProvider attributeLibItemProvider;
+	protected CourseItemProvider courseItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qmm.AttributeLib}.
+	 * This creates an adapter for a {@link qmm.Course}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttributeLibAdapter() {
-		if (attributeLibItemProvider == null) {
-			attributeLibItemProvider = new AttributeLibItemProvider(this);
+	public Adapter createCourseAdapter() {
+		if (courseItemProvider == null) {
+			courseItemProvider = new CourseItemProvider(this);
 		}
 
-		return attributeLibItemProvider;
+		return courseItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeValueRequirement} instances.
+	 * This keeps track of the one adapter used for all {@link qmm.UniversityManagementSystem} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttributeValueRequirementItemProvider attributeValueRequirementItemProvider;
+	protected UniversityManagementSystemItemProvider universityManagementSystemItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qmm.AttributeValueRequirement}.
+	 * This creates an adapter for a {@link qmm.UniversityManagementSystem}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttributeValueRequirementAdapter() {
-		if (attributeValueRequirementItemProvider == null) {
-			attributeValueRequirementItemProvider = new AttributeValueRequirementItemProvider(this);
+	public Adapter createUniversityManagementSystemAdapter() {
+		if (universityManagementSystemItemProvider == null) {
+			universityManagementSystemItemProvider = new UniversityManagementSystemItemProvider(this);
 		}
 
-		return attributeValueRequirementItemProvider;
+		return universityManagementSystemItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXBasicObject} instances.
+	 * This keeps track of the one adapter used for all {@link qmm.Exam} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CAEXBasicObjectItemProvider caexBasicObjectItemProvider;
+	protected ExamItemProvider examItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qmm.CAEXBasicObject}.
+	 * This creates an adapter for a {@link qmm.Exam}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCAEXBasicObjectAdapter() {
-		if (caexBasicObjectItemProvider == null) {
-			caexBasicObjectItemProvider = new CAEXBasicObjectItemProvider(this);
+	public Adapter createExamAdapter() {
+		if (examItemProvider == null) {
+			examItemProvider = new ExamItemProvider(this);
 		}
 
-		return caexBasicObjectItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXFile} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXFileItemProvider caexFileItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXFile}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXFileAdapter() {
-		if (caexFileItemProvider == null) {
-			caexFileItemProvider = new CAEXFileItemProvider(this);
-		}
-
-		return caexFileItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXObject} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXObjectItemProvider caexObjectItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXObject}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXObjectAdapter() {
-		if (caexObjectItemProvider == null) {
-			caexObjectItemProvider = new CAEXObjectItemProvider(this);
-		}
-
-		return caexObjectItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.DocumentRoot} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DocumentRootItemProvider documentRootItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.DocumentRoot}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDocumentRootAdapter() {
-		if (documentRootItemProvider == null) {
-			documentRootItemProvider = new DocumentRootItemProvider(this);
-		}
-
-		return documentRootItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.ExternalInterface} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExternalInterfaceItemProvider externalInterfaceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.ExternalInterface}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExternalInterfaceAdapter() {
-		if (externalInterfaceItemProvider == null) {
-			externalInterfaceItemProvider = new ExternalInterfaceItemProvider(this);
-		}
-
-		return externalInterfaceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.ExternalReferenceType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExternalReferenceTypeItemProvider externalReferenceTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.ExternalReferenceType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExternalReferenceTypeAdapter() {
-		if (externalReferenceTypeItemProvider == null) {
-			externalReferenceTypeItemProvider = new ExternalReferenceTypeItemProvider(this);
-		}
-
-		return externalReferenceTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InstanceHierarchy} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InstanceHierarchyItemProvider instanceHierarchyItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InstanceHierarchy}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInstanceHierarchyAdapter() {
-		if (instanceHierarchyItemProvider == null) {
-			instanceHierarchyItemProvider = new InstanceHierarchyItemProvider(this);
-		}
-
-		return instanceHierarchyItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceClassLib} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceClassLibItemProvider interfaceClassLibItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceClassLib}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceClassLibAdapter() {
-		if (interfaceClassLibItemProvider == null) {
-			interfaceClassLibItemProvider = new InterfaceClassLibItemProvider(this);
-		}
-
-		return interfaceClassLibItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceClassItemProvider interfaceClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceClassAdapter() {
-		if (interfaceClassItemProvider == null) {
-			interfaceClassItemProvider = new InterfaceClassItemProvider(this);
-		}
-
-		return interfaceClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceFamily} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceFamilyItemProvider interfaceFamilyItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceFamily}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceFamilyAdapter() {
-		if (interfaceFamilyItemProvider == null) {
-			interfaceFamilyItemProvider = new InterfaceFamilyItemProvider(this);
-		}
-
-		return interfaceFamilyItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceIDMapping} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceIDMappingItemProvider interfaceIDMappingItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceIDMapping}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceIDMappingAdapter() {
-		if (interfaceIDMappingItemProvider == null) {
-			interfaceIDMappingItemProvider = new InterfaceIDMappingItemProvider(this);
-		}
-
-		return interfaceIDMappingItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InternalElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InternalElementItemProvider internalElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InternalElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInternalElementAdapter() {
-		if (internalElementItemProvider == null) {
-			internalElementItemProvider = new InternalElementItemProvider(this);
-		}
-
-		return internalElementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InternalLink} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InternalLinkItemProvider internalLinkItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InternalLink}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInternalLinkAdapter() {
-		if (internalLinkItemProvider == null) {
-			internalLinkItemProvider = new InternalLinkItemProvider(this);
-		}
-
-		return internalLinkItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Mapping} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MappingItemProvider mappingItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Mapping}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMappingAdapter() {
-		if (mappingItemProvider == null) {
-			mappingItemProvider = new MappingItemProvider(this);
-		}
-
-		return mappingItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.NominalScaledType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NominalScaledTypeItemProvider nominalScaledTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.NominalScaledType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNominalScaledTypeAdapter() {
-		if (nominalScaledTypeItemProvider == null) {
-			nominalScaledTypeItemProvider = new NominalScaledTypeItemProvider(this);
-		}
-
-		return nominalScaledTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.OrdinalScaledType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OrdinalScaledTypeItemProvider ordinalScaledTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.OrdinalScaledType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOrdinalScaledTypeAdapter() {
-		if (ordinalScaledTypeItemProvider == null) {
-			ordinalScaledTypeItemProvider = new OrdinalScaledTypeItemProvider(this);
-		}
-
-		return ordinalScaledTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RefSemantic} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RefSemanticItemProvider refSemanticItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RefSemantic}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRefSemanticAdapter() {
-		if (refSemanticItemProvider == null) {
-			refSemanticItemProvider = new RefSemanticItemProvider(this);
-		}
-
-		return refSemanticItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleClassLib} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleClassLibItemProvider roleClassLibItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleClassLib}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleClassLibAdapter() {
-		if (roleClassLibItemProvider == null) {
-			roleClassLibItemProvider = new RoleClassLibItemProvider(this);
-		}
-
-		return roleClassLibItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleClassItemProvider roleClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleClassAdapter() {
-		if (roleClassItemProvider == null) {
-			roleClassItemProvider = new RoleClassItemProvider(this);
-		}
-
-		return roleClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleFamily} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleFamilyItemProvider roleFamilyItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleFamily}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleFamilyAdapter() {
-		if (roleFamilyItemProvider == null) {
-			roleFamilyItemProvider = new RoleFamilyItemProvider(this);
-		}
-
-		return roleFamilyItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleRequirements} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleRequirementsItemProvider roleRequirementsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleRequirements}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleRequirementsAdapter() {
-		if (roleRequirementsItemProvider == null) {
-			roleRequirementsItemProvider = new RoleRequirementsItemProvider(this);
-		}
-
-		return roleRequirementsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformationItemProvider sourceDocumentInformationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformationAdapter() {
-		if (sourceDocumentInformationItemProvider == null) {
-			sourceDocumentInformationItemProvider = new SourceDocumentInformationItemProvider(this);
-		}
-
-		return sourceDocumentInformationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SupportedRoleClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SupportedRoleClassItemProvider supportedRoleClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SupportedRoleClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSupportedRoleClassAdapter() {
-		if (supportedRoleClassItemProvider == null) {
-			supportedRoleClassItemProvider = new SupportedRoleClassItemProvider(this);
-		}
-
-		return supportedRoleClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SystemUnitClassLib} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemUnitClassLibItemProvider systemUnitClassLibItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SystemUnitClassLib}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemUnitClassLibAdapter() {
-		if (systemUnitClassLibItemProvider == null) {
-			systemUnitClassLibItemProvider = new SystemUnitClassLibItemProvider(this);
-		}
-
-		return systemUnitClassLibItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SystemUnitClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemUnitClassItemProvider systemUnitClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SystemUnitClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemUnitClassAdapter() {
-		if (systemUnitClassItemProvider == null) {
-			systemUnitClassItemProvider = new SystemUnitClassItemProvider(this);
-		}
-
-		return systemUnitClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SystemUnitFamily} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemUnitFamilyItemProvider systemUnitFamilyItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SystemUnitFamily}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemUnitFamilyAdapter() {
-		if (systemUnitFamilyItemProvider == null) {
-			systemUnitFamilyItemProvider = new SystemUnitFamilyItemProvider(this);
-		}
-
-		return systemUnitFamilyItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.UnknownType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UnknownTypeItemProvider unknownTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.UnknownType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUnknownTypeAdapter() {
-		if (unknownTypeItemProvider == null) {
-			unknownTypeItemProvider = new UnknownTypeItemProvider(this);
-		}
-
-		return unknownTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Copyright} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CopyrightItemProvider copyrightItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Copyright}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCopyrightAdapter() {
-		if (copyrightItemProvider == null) {
-			copyrightItemProvider = new CopyrightItemProvider(this);
-		}
-
-		return copyrightItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Description} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DescriptionItemProvider descriptionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Description}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDescriptionAdapter() {
-		if (descriptionItemProvider == null) {
-			descriptionItemProvider = new DescriptionItemProvider(this);
-		}
-
-		return descriptionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Revision} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RevisionItemProvider revisionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Revision}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRevisionAdapter() {
-		if (revisionItemProvider == null) {
-			revisionItemProvider = new RevisionItemProvider(this);
-		}
-
-		return revisionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Version} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VersionItemProvider versionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Version}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVersionAdapter() {
-		if (versionItemProvider == null) {
-			versionItemProvider = new VersionItemProvider(this);
-		}
-
-		return versionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AdditionalInformation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AdditionalInformationItemProvider additionalInformationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AdditionalInformation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAdditionalInformationAdapter() {
-		if (additionalInformationItemProvider == null) {
-			additionalInformationItemProvider = new AdditionalInformationItemProvider(this);
-		}
-
-		return additionalInformationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Element} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ElementItemProvider elementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Element}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createElementAdapter() {
-		if (elementItemProvider == null) {
-			elementItemProvider = new ElementItemProvider(this);
-		}
-
-		return elementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.GenericElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GenericElementItemProvider genericElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.GenericElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGenericElementAdapter() {
-		if (genericElementItemProvider == null) {
-			genericElementItemProvider = new GenericElementItemProvider(this);
-		}
-
-		return genericElementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.GenericAttribute} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GenericAttributeItemProvider genericAttributeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.GenericAttribute}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGenericAttributeAdapter() {
-		if (genericAttributeItemProvider == null) {
-			genericAttributeItemProvider = new GenericAttributeItemProvider(this);
-		}
-
-		return genericAttributeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeDataType_And_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeDataType_And_BitOperatorItemProvider attributeDataType_And_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeDataType_And_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeDataType_And_BitOperatorAdapter() {
-		if (attributeDataType_And_BitOperatorItemProvider == null) {
-			attributeDataType_And_BitOperatorItemProvider = new AttributeDataType_And_BitOperatorItemProvider(this);
-		}
-
-		return attributeDataType_And_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_Character_toString_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_Character_toString_FunctionalOperatorItemProvider object_Character_toString_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_Character_toString_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_Character_toString_FunctionalOperatorAdapter() {
-		if (object_Character_toString_FunctionalOperatorItemProvider == null) {
-			object_Character_toString_FunctionalOperatorItemProvider = new Object_Character_toString_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_Character_toString_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.OrdinalScaledType_requiredMaxValue_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OrdinalScaledType_requiredMaxValue_AttrEClassItemProvider ordinalScaledType_requiredMaxValue_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.OrdinalScaledType_requiredMaxValue_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOrdinalScaledType_requiredMaxValue_AttrEClassAdapter() {
-		if (ordinalScaledType_requiredMaxValue_AttrEClassItemProvider == null) {
-			ordinalScaledType_requiredMaxValue_AttrEClassItemProvider = new OrdinalScaledType_requiredMaxValue_AttrEClassItemProvider(this);
-		}
-
-		return ordinalScaledType_requiredMaxValue_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InstanceHierarchy_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InstanceHierarchy_Reference_OrGroupItemProvider instanceHierarchy_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InstanceHierarchy_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInstanceHierarchy_Reference_OrGroupAdapter() {
-		if (instanceHierarchy_Reference_OrGroupItemProvider == null) {
-			instanceHierarchy_Reference_OrGroupItemProvider = new InstanceHierarchy_Reference_OrGroupItemProvider(this);
-		}
-
-		return instanceHierarchy_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXObject_name_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXObject_name_AttrEClassItemProvider caexObject_name_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXObject_name_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXObject_name_AttrEClassAdapter() {
-		if (caexObject_name_AttrEClassItemProvider == null) {
-			caexObject_name_AttrEClassItemProvider = new CAEXObject_name_AttrEClassItemProvider(this);
-		}
-
-		return caexObject_name_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.GenericElement_elementFeatureMap_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GenericElement_elementFeatureMap_AttrEClassItemProvider genericElement_elementFeatureMap_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.GenericElement_elementFeatureMap_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGenericElement_elementFeatureMap_AttrEClassAdapter() {
-		if (genericElement_elementFeatureMap_AttrEClassItemProvider == null) {
-			genericElement_elementFeatureMap_AttrEClassItemProvider = new GenericElement_elementFeatureMap_AttrEClassItemProvider(this);
-		}
-
-		return genericElement_elementFeatureMap_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.ExternalInterface_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExternalInterface_Containment_OrGroupItemProvider externalInterface_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.ExternalInterface_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExternalInterface_Containment_OrGroupAdapter() {
-		if (externalInterface_Containment_OrGroupItemProvider == null) {
-			externalInterface_Containment_OrGroupItemProvider = new ExternalInterface_Containment_OrGroupItemProvider(this);
-		}
-
-		return externalInterface_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Element_value_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Element_value_AttrEClassItemProvider element_value_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Element_value_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createElement_value_AttrEClassAdapter() {
-		if (element_value_AttrEClassItemProvider == null) {
-			element_value_AttrEClassItemProvider = new Element_value_AttrEClassItemProvider(this);
-		}
-
-		return element_value_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXObject_iD_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXObject_iD_AttrEClassItemProvider caexObject_iD_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXObject_iD_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXObject_iD_AttrEClassAdapter() {
-		if (caexObject_iD_AttrEClassItemProvider == null) {
-			caexObject_iD_AttrEClassItemProvider = new CAEXObject_iD_AttrEClassItemProvider(this);
-		}
-
-		return caexObject_iD_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_CalculateableParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_CalculateableParameterItemProvider object_CalculateableParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_CalculateableParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_CalculateableParameterAdapter() {
-		if (object_CalculateableParameterItemProvider == null) {
-			object_CalculateableParameterItemProvider = new Object_CalculateableParameterItemProvider(this);
-		}
-
-		return object_CalculateableParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeValueRequirement_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeValueRequirement_Reference_OrGroupItemProvider attributeValueRequirement_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeValueRequirement_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeValueRequirement_Reference_OrGroupAdapter() {
-		if (attributeValueRequirement_Reference_OrGroupItemProvider == null) {
-			attributeValueRequirement_Reference_OrGroupItemProvider = new AttributeValueRequirement_Reference_OrGroupItemProvider(this);
-		}
-
-		return attributeValueRequirement_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InstanceHierarchy_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InstanceHierarchy_Containment_OrGroupItemProvider instanceHierarchy_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InstanceHierarchy_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInstanceHierarchy_Containment_OrGroupAdapter() {
-		if (instanceHierarchy_Containment_OrGroupItemProvider == null) {
-			instanceHierarchy_Containment_OrGroupItemProvider = new InstanceHierarchy_Containment_OrGroupItemProvider(this);
-		}
-
-		return instanceHierarchy_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RefSemantic_correspondingAttributePath_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RefSemantic_correspondingAttributePath_AttrEClassItemProvider refSemantic_correspondingAttributePath_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RefSemantic_correspondingAttributePath_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRefSemantic_correspondingAttributePath_AttrEClassAdapter() {
-		if (refSemantic_correspondingAttributePath_AttrEClassItemProvider == null) {
-			refSemantic_correspondingAttributePath_AttrEClassItemProvider = new RefSemantic_correspondingAttributePath_AttrEClassItemProvider(this);
-		}
-
-		return refSemantic_correspondingAttributePath_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_Character_hashCode_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_Character_hashCode_FunctionalOperatorItemProvider object_Character_hashCode_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_Character_hashCode_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_Character_hashCode_FunctionalOperatorAdapter() {
-		if (object_Character_hashCode_FunctionalOperatorItemProvider == null) {
-			object_Character_hashCode_FunctionalOperatorItemProvider = new Object_Character_hashCode_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_Character_hashCode_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_Object_Number_equals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Integer_Object_Number_equals_FunctionalOperatorItemProvider number_Integer_Object_Number_equals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Integer_Object_Number_equals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Integer_Object_Number_equals_FunctionalOperatorAdapter() {
-		if (number_Integer_Object_Number_equals_FunctionalOperatorItemProvider == null) {
-			number_Integer_Object_Number_equals_FunctionalOperatorItemProvider = new Number_Integer_Object_Number_equals_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Integer_Object_Number_equals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.IntegerParseInt_ClassOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IntegerParseInt_ClassOperatorItemProvider integerParseInt_ClassOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.IntegerParseInt_ClassOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIntegerParseInt_ClassOperatorAdapter() {
-		if (integerParseInt_ClassOperatorItemProvider == null) {
-			integerParseInt_ClassOperatorItemProvider = new IntegerParseInt_ClassOperatorItemProvider(this);
-		}
-
-		return integerParseInt_ClassOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Element_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Element_Containment_OrGroupItemProvider element_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Element_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createElement_Containment_OrGroupAdapter() {
-		if (element_Containment_OrGroupItemProvider == null) {
-			element_Containment_OrGroupItemProvider = new Element_Containment_OrGroupItemProvider(this);
-		}
-
-		return element_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.GenericAttribute_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GenericAttribute_Containment_OrGroupItemProvider genericAttribute_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.GenericAttribute_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGenericAttribute_Containment_OrGroupAdapter() {
-		if (genericAttribute_Containment_OrGroupItemProvider == null) {
-			genericAttribute_Containment_OrGroupItemProvider = new GenericAttribute_Containment_OrGroupItemProvider(this);
-		}
-
-		return genericAttribute_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.DateTime_PrimitiveArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DateTime_PrimitiveArgumentItemProvider dateTime_PrimitiveArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.DateTime_PrimitiveArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDateTime_PrimitiveArgumentAdapter() {
-		if (dateTime_PrimitiveArgumentItemProvider == null) {
-			dateTime_PrimitiveArgumentItemProvider = new DateTime_PrimitiveArgumentItemProvider(this);
-		}
-
-		return dateTime_PrimitiveArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.trim_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected trim_FunctionalOperatorItemProvider trim_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.trim_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createtrim_FunctionalOperatorAdapter() {
-		if (trim_FunctionalOperatorItemProvider == null) {
-			trim_FunctionalOperatorItemProvider = new trim_FunctionalOperatorItemProvider(this);
-		}
-
-		return trim_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Double_FunctionalParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Double_FunctionalParameterItemProvider double_FunctionalParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Double_FunctionalParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDouble_FunctionalParameterAdapter() {
-		if (double_FunctionalParameterItemProvider == null) {
-			double_FunctionalParameterItemProvider = new Double_FunctionalParameterItemProvider(this);
-		}
-
-		return double_FunctionalParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.toString_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected toString_FunctionalOperatorItemProvider toString_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.toString_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createtoString_FunctionalOperatorAdapter() {
-		if (toString_FunctionalOperatorItemProvider == null) {
-			toString_FunctionalOperatorItemProvider = new toString_FunctionalOperatorItemProvider(this);
-		}
-
-		return toString_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeFamily_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeFamily_Containment_OrGroupItemProvider attributeFamily_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeFamily_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeFamily_Containment_OrGroupAdapter() {
-		if (attributeFamily_Containment_OrGroupItemProvider == null) {
-			attributeFamily_Containment_OrGroupItemProvider = new AttributeFamily_Containment_OrGroupItemProvider(this);
-		}
-
-		return attributeFamily_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SystemUnitClass_refBaseClassPath_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemUnitClass_refBaseClassPath_AttrEClassItemProvider systemUnitClass_refBaseClassPath_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SystemUnitClass_refBaseClassPath_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemUnitClass_refBaseClassPath_AttrEClassAdapter() {
-		if (systemUnitClass_refBaseClassPath_AttrEClassItemProvider == null) {
-			systemUnitClass_refBaseClassPath_AttrEClassItemProvider = new SystemUnitClass_refBaseClassPath_AttrEClassItemProvider(this);
-		}
-
-		return systemUnitClass_refBaseClassPath_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CountableReferenceParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CountableReferenceParameterItemProvider countableReferenceParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CountableReferenceParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCountableReferenceParameterAdapter() {
-		if (countableReferenceParameterItemProvider == null) {
-			countableReferenceParameterItemProvider = new CountableReferenceParameterItemProvider(this);
-		}
-
-		return countableReferenceParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.GenericElement_attributeFeatureMap_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GenericElement_attributeFeatureMap_AttrEClassItemProvider genericElement_attributeFeatureMap_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.GenericElement_attributeFeatureMap_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGenericElement_attributeFeatureMap_AttrEClassAdapter() {
-		if (genericElement_attributeFeatureMap_AttrEClassItemProvider == null) {
-			genericElement_attributeFeatureMap_AttrEClassItemProvider = new GenericElement_attributeFeatureMap_AttrEClassItemProvider(this);
-		}
-
-		return genericElement_attributeFeatureMap_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.indexOfCharFromIndex_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected indexOfCharFromIndex_FunctionalOperatorItemProvider indexOfCharFromIndex_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.indexOfCharFromIndex_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createindexOfCharFromIndex_FunctionalOperatorAdapter() {
-		if (indexOfCharFromIndex_FunctionalOperatorItemProvider == null) {
-			indexOfCharFromIndex_FunctionalOperatorItemProvider = new indexOfCharFromIndex_FunctionalOperatorItemProvider(this);
-		}
-
-		return indexOfCharFromIndex_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_smallerEquals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Double_smallerEquals_FunctionalOperatorItemProvider number_Double_smallerEquals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Double_smallerEquals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Double_smallerEquals_FunctionalOperatorAdapter() {
-		if (number_Double_smallerEquals_FunctionalOperatorItemProvider == null) {
-			number_Double_smallerEquals_FunctionalOperatorItemProvider = new Number_Double_smallerEquals_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Double_smallerEquals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Character_And_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Character_And_BitOperatorItemProvider character_And_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Character_And_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharacter_And_BitOperatorAdapter() {
-		if (character_And_BitOperatorItemProvider == null) {
-			character_And_BitOperatorItemProvider = new Character_And_BitOperatorItemProvider(this);
-		}
-
-		return character_And_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceIDMapping_roleInterfaceID_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceIDMapping_roleInterfaceID_AttrEClassItemProvider interfaceIDMapping_roleInterfaceID_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceIDMapping_roleInterfaceID_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceIDMapping_roleInterfaceID_AttrEClassAdapter() {
-		if (interfaceIDMapping_roleInterfaceID_AttrEClassItemProvider == null) {
-			interfaceIDMapping_roleInterfaceID_AttrEClassItemProvider = new InterfaceIDMapping_roleInterfaceID_AttrEClassItemProvider(this);
-		}
-
-		return interfaceIDMapping_roleInterfaceID_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXObject_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXObject_Containment_OrGroupItemProvider caexObject_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXObject_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXObject_Containment_OrGroupAdapter() {
-		if (caexObject_Containment_OrGroupItemProvider == null) {
-			caexObject_Containment_OrGroupItemProvider = new CAEXObject_Containment_OrGroupItemProvider(this);
-		}
-
-		return caexObject_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation_originVendor_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformation_originVendor_AttrEClassItemProvider sourceDocumentInformation_originVendor_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation_originVendor_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformation_originVendor_AttrEClassAdapter() {
-		if (sourceDocumentInformation_originVendor_AttrEClassItemProvider == null) {
-			sourceDocumentInformation_originVendor_AttrEClassItemProvider = new SourceDocumentInformation_originVendor_AttrEClassItemProvider(this);
-		}
-
-		return sourceDocumentInformation_originVendor_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Mapping_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Mapping_Containment_OrGroupItemProvider mapping_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Mapping_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMapping_Containment_OrGroupAdapter() {
-		if (mapping_Containment_OrGroupItemProvider == null) {
-			mapping_Containment_OrGroupItemProvider = new Mapping_Containment_OrGroupItemProvider(this);
-		}
-
-		return mapping_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.UnknownType_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UnknownType_Containment_OrGroupItemProvider unknownType_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.UnknownType_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUnknownType_Containment_OrGroupAdapter() {
-		if (unknownType_Containment_OrGroupItemProvider == null) {
-			unknownType_Containment_OrGroupItemProvider = new UnknownType_Containment_OrGroupItemProvider(this);
-		}
-
-		return unknownType_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.ExternalReferenceType_alias_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExternalReferenceType_alias_AttrEClassItemProvider externalReferenceType_alias_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.ExternalReferenceType_alias_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExternalReferenceType_alias_AttrEClassAdapter() {
-		if (externalReferenceType_alias_AttrEClassItemProvider == null) {
-			externalReferenceType_alias_AttrEClassItemProvider = new ExternalReferenceType_alias_AttrEClassItemProvider(this);
-		}
-
-		return externalReferenceType_alias_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.String_PrimitiveArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected String_PrimitiveArgumentItemProvider string_PrimitiveArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.String_PrimitiveArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createString_PrimitiveArgumentAdapter() {
-		if (string_PrimitiveArgumentItemProvider == null) {
-			string_PrimitiveArgumentItemProvider = new String_PrimitiveArgumentItemProvider(this);
-		}
-
-		return string_PrimitiveArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Version_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Version_Reference_OrGroupItemProvider version_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Version_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVersion_Reference_OrGroupAdapter() {
-		if (version_Reference_OrGroupItemProvider == null) {
-			version_Reference_OrGroupItemProvider = new Version_Reference_OrGroupItemProvider(this);
-		}
-
-		return version_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_And_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CharSequence_And_BitOperatorItemProvider charSequence_And_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CharSequence_And_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharSequence_And_BitOperatorAdapter() {
-		if (charSequence_And_BitOperatorItemProvider == null) {
-			charSequence_And_BitOperatorItemProvider = new CharSequence_And_BitOperatorItemProvider(this);
-		}
-
-		return charSequence_And_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Version_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Version_Containment_OrGroupItemProvider version_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Version_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVersion_Containment_OrGroupAdapter() {
-		if (version_Containment_OrGroupItemProvider == null) {
-			version_Containment_OrGroupItemProvider = new Version_Containment_OrGroupItemProvider(this);
-		}
-
-		return version_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.toLowerCase_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected toLowerCase_FunctionalOperatorItemProvider toLowerCase_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.toLowerCase_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createtoLowerCase_FunctionalOperatorAdapter() {
-		if (toLowerCase_FunctionalOperatorItemProvider == null) {
-			toLowerCase_FunctionalOperatorItemProvider = new toLowerCase_FunctionalOperatorItemProvider(this);
-		}
-
-		return toLowerCase_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.smallerEquals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected smallerEquals_FunctionalOperatorItemProvider smallerEquals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.smallerEquals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createsmallerEquals_FunctionalOperatorAdapter() {
-		if (smallerEquals_FunctionalOperatorItemProvider == null) {
-			smallerEquals_FunctionalOperatorItemProvider = new smallerEquals_FunctionalOperatorItemProvider(this);
-		}
-
-		return smallerEquals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.OrdinalScaledType_requiredValue_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OrdinalScaledType_requiredValue_AttrEClassItemProvider ordinalScaledType_requiredValue_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.OrdinalScaledType_requiredValue_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOrdinalScaledType_requiredValue_AttrEClassAdapter() {
-		if (ordinalScaledType_requiredValue_AttrEClassItemProvider == null) {
-			ordinalScaledType_requiredValue_AttrEClassItemProvider = new OrdinalScaledType_requiredValue_AttrEClassItemProvider(this);
-		}
-
-		return ordinalScaledType_requiredValue_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_Or_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CharSequence_Or_BitOperatorItemProvider charSequence_Or_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CharSequence_Or_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharSequence_Or_BitOperatorAdapter() {
-		if (charSequence_Or_BitOperatorItemProvider == null) {
-			charSequence_Or_BitOperatorItemProvider = new CharSequence_Or_BitOperatorItemProvider(this);
-		}
-
-		return charSequence_Or_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Boolean_PrimitiveArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Boolean_PrimitiveArgumentItemProvider boolean_PrimitiveArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Boolean_PrimitiveArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBoolean_PrimitiveArgumentAdapter() {
-		if (boolean_PrimitiveArgumentItemProvider == null) {
-			boolean_PrimitiveArgumentItemProvider = new Boolean_PrimitiveArgumentItemProvider(this);
-		}
-
-		return boolean_PrimitiveArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformation_Reference_OrGroupItemProvider sourceDocumentInformation_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformation_Reference_OrGroupAdapter() {
-		if (sourceDocumentInformation_Reference_OrGroupItemProvider == null) {
-			sourceDocumentInformation_Reference_OrGroupItemProvider = new SourceDocumentInformation_Reference_OrGroupItemProvider(this);
-		}
-
-		return sourceDocumentInformation_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleRequirements_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleRequirements_Reference_OrGroupItemProvider roleRequirements_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleRequirements_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleRequirements_Reference_OrGroupAdapter() {
-		if (roleRequirements_Reference_OrGroupItemProvider == null) {
-			roleRequirements_Reference_OrGroupItemProvider = new RoleRequirements_Reference_OrGroupItemProvider(this);
-		}
-
-		return roleRequirements_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AdditionalInformation_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AdditionalInformation_Containment_OrGroupItemProvider additionalInformation_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AdditionalInformation_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAdditionalInformation_Containment_OrGroupAdapter() {
-		if (additionalInformation_Containment_OrGroupItemProvider == null) {
-			additionalInformation_Containment_OrGroupItemProvider = new AdditionalInformation_Containment_OrGroupItemProvider(this);
-		}
-
-		return additionalInformation_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeNameMapping_roleAttributeName_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeNameMapping_roleAttributeName_AttrEClassItemProvider attributeNameMapping_roleAttributeName_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeNameMapping_roleAttributeName_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeNameMapping_roleAttributeName_AttrEClassAdapter() {
-		if (attributeNameMapping_roleAttributeName_AttrEClassItemProvider == null) {
-			attributeNameMapping_roleAttributeName_AttrEClassItemProvider = new AttributeNameMapping_roleAttributeName_AttrEClassItemProvider(this);
-		}
-
-		return attributeNameMapping_roleAttributeName_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_FunctionalParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_FunctionalParameterItemProvider number_FunctionalParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_FunctionalParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_FunctionalParameterAdapter() {
-		if (number_FunctionalParameterItemProvider == null) {
-			number_FunctionalParameterItemProvider = new Number_FunctionalParameterItemProvider(this);
-		}
-
-		return number_FunctionalParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeDataType_FunctionalParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeDataType_FunctionalParameterItemProvider attributeDataType_FunctionalParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeDataType_FunctionalParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeDataType_FunctionalParameterAdapter() {
-		if (attributeDataType_FunctionalParameterItemProvider == null) {
-			attributeDataType_FunctionalParameterItemProvider = new AttributeDataType_FunctionalParameterItemProvider(this);
-		}
-
-		return attributeDataType_FunctionalParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.endsWith_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected endsWith_FunctionalOperatorItemProvider endsWith_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.endsWith_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createendsWith_FunctionalOperatorAdapter() {
-		if (endsWith_FunctionalOperatorItemProvider == null) {
-			endsWith_FunctionalOperatorItemProvider = new endsWith_FunctionalOperatorItemProvider(this);
-		}
-
-		return endsWith_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Or_EvaluationBitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Or_EvaluationBitOperatorItemProvider or_EvaluationBitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Or_EvaluationBitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOr_EvaluationBitOperatorAdapter() {
-		if (or_EvaluationBitOperatorItemProvider == null) {
-			or_EvaluationBitOperatorItemProvider = new Or_EvaluationBitOperatorItemProvider(this);
-		}
-
-		return or_EvaluationBitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.FindQuery} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FindQueryItemProvider findQueryItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.FindQuery}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFindQueryAdapter() {
-		if (findQueryItemProvider == null) {
-			findQueryItemProvider = new FindQueryItemProvider(this);
-		}
-
-		return findQueryItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.hashCode_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected hashCode_FunctionalOperatorItemProvider hashCode_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.hashCode_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createhashCode_FunctionalOperatorAdapter() {
-		if (hashCode_FunctionalOperatorItemProvider == null) {
-			hashCode_FunctionalOperatorItemProvider = new hashCode_FunctionalOperatorItemProvider(this);
-		}
-
-		return hashCode_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_CharSequence_equals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_CharSequence_equals_FunctionalOperatorItemProvider object_CharSequence_equals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_CharSequence_equals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_CharSequence_equals_FunctionalOperatorAdapter() {
-		if (object_CharSequence_equals_FunctionalOperatorItemProvider == null) {
-			object_CharSequence_equals_FunctionalOperatorItemProvider = new Object_CharSequence_equals_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_CharSequence_equals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.offsetByCodePoints_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected offsetByCodePoints_FunctionalOperatorItemProvider offsetByCodePoints_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.offsetByCodePoints_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createoffsetByCodePoints_FunctionalOperatorAdapter() {
-		if (offsetByCodePoints_FunctionalOperatorItemProvider == null) {
-			offsetByCodePoints_FunctionalOperatorItemProvider = new offsetByCodePoints_FunctionalOperatorItemProvider(this);
-		}
-
-		return offsetByCodePoints_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeNameMapping_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeNameMapping_Reference_OrGroupItemProvider attributeNameMapping_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeNameMapping_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeNameMapping_Reference_OrGroupAdapter() {
-		if (attributeNameMapping_Reference_OrGroupItemProvider == null) {
-			attributeNameMapping_Reference_OrGroupItemProvider = new AttributeNameMapping_Reference_OrGroupItemProvider(this);
-		}
-
-		return attributeNameMapping_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_CharSequence_toString_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_CharSequence_toString_FunctionalOperatorItemProvider object_CharSequence_toString_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_CharSequence_toString_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_CharSequence_toString_FunctionalOperatorAdapter() {
-		if (object_CharSequence_toString_FunctionalOperatorItemProvider == null) {
-			object_CharSequence_toString_FunctionalOperatorItemProvider = new Object_CharSequence_toString_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_CharSequence_toString_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_String_Object_CharSequence_toString_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CharSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CharSequence_String_Object_CharSequence_toString_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharSequence_String_Object_CharSequence_toString_FunctionalOperatorAdapter() {
-		if (charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider == null) {
-			charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider = new CharSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider(this);
-		}
-
-		return charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.indexOfChar_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected indexOfChar_FunctionalOperatorItemProvider indexOfChar_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.indexOfChar_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createindexOfChar_FunctionalOperatorAdapter() {
-		if (indexOfChar_FunctionalOperatorItemProvider == null) {
-			indexOfChar_FunctionalOperatorItemProvider = new indexOfChar_FunctionalOperatorItemProvider(this);
-		}
-
-		return indexOfChar_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceClassLib_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceClassLib_Reference_OrGroupItemProvider interfaceClassLib_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceClassLib_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceClassLib_Reference_OrGroupAdapter() {
-		if (interfaceClassLib_Reference_OrGroupItemProvider == null) {
-			interfaceClassLib_Reference_OrGroupItemProvider = new InterfaceClassLib_Reference_OrGroupItemProvider(this);
-		}
-
-		return interfaceClassLib_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.String_CalculateableParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected String_CalculateableParameterItemProvider string_CalculateableParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.String_CalculateableParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createString_CalculateableParameterAdapter() {
-		if (string_CalculateableParameterItemProvider == null) {
-			string_CalculateableParameterItemProvider = new String_CalculateableParameterItemProvider(this);
-		}
-
-		return string_CalculateableParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXFile_schemaVersion_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXFile_schemaVersion_AttrEClassItemProvider caexFile_schemaVersion_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXFile_schemaVersion_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXFile_schemaVersion_AttrEClassAdapter() {
-		if (caexFile_schemaVersion_AttrEClassItemProvider == null) {
-			caexFile_schemaVersion_AttrEClassItemProvider = new CAEXFile_schemaVersion_AttrEClassItemProvider(this);
-		}
-
-		return caexFile_schemaVersion_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Character_CalculateableParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Character_CalculateableParameterItemProvider character_CalculateableParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Character_CalculateableParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharacter_CalculateableParameterAdapter() {
-		if (character_CalculateableParameterItemProvider == null) {
-			character_CalculateableParameterItemProvider = new Character_CalculateableParameterItemProvider(this);
-		}
-
-		return character_CalculateableParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Attribute_unit_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Attribute_unit_AttrEClassItemProvider attribute_unit_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Attribute_unit_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttribute_unit_AttrEClassAdapter() {
-		if (attribute_unit_AttrEClassItemProvider == null) {
-			attribute_unit_AttrEClassItemProvider = new Attribute_unit_AttrEClassItemProvider(this);
-		}
-
-		return attribute_unit_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Element_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Element_Reference_OrGroupItemProvider element_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Element_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createElement_Reference_OrGroupAdapter() {
-		if (element_Reference_OrGroupItemProvider == null) {
-			element_Reference_OrGroupItemProvider = new Element_Reference_OrGroupItemProvider(this);
-		}
-
-		return element_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_Boolean_equals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_Boolean_equals_FunctionalOperatorItemProvider object_Boolean_equals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_Boolean_equals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_Boolean_equals_FunctionalOperatorAdapter() {
-		if (object_Boolean_equals_FunctionalOperatorItemProvider == null) {
-			object_Boolean_equals_FunctionalOperatorItemProvider = new Object_Boolean_equals_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_Boolean_equals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeDataType_CalculateableParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeDataType_CalculateableParameterItemProvider attributeDataType_CalculateableParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeDataType_CalculateableParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeDataType_CalculateableParameterAdapter() {
-		if (attributeDataType_CalculateableParameterItemProvider == null) {
-			attributeDataType_CalculateableParameterItemProvider = new AttributeDataType_CalculateableParameterItemProvider(this);
-		}
-
-		return attributeDataType_CalculateableParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Double_And_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Double_And_BitOperatorItemProvider double_And_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Double_And_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDouble_And_BitOperatorAdapter() {
-		if (double_And_BitOperatorItemProvider == null) {
-			double_And_BitOperatorItemProvider = new Double_And_BitOperatorItemProvider(this);
-		}
-
-		return double_And_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceClass_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceClass_Containment_OrGroupItemProvider interfaceClass_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceClass_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceClass_Containment_OrGroupAdapter() {
-		if (interfaceClass_Containment_OrGroupItemProvider == null) {
-			interfaceClass_Containment_OrGroupItemProvider = new InterfaceClass_Containment_OrGroupItemProvider(this);
-		}
-
-		return interfaceClass_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceFamily_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceFamily_Reference_OrGroupItemProvider interfaceFamily_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceFamily_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceFamily_Reference_OrGroupAdapter() {
-		if (interfaceFamily_Reference_OrGroupItemProvider == null) {
-			interfaceFamily_Reference_OrGroupItemProvider = new InterfaceFamily_Reference_OrGroupItemProvider(this);
-		}
-
-		return interfaceFamily_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Version_value_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Version_value_AttrEClassItemProvider version_value_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Version_value_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVersion_value_AttrEClassAdapter() {
-		if (version_value_AttrEClassItemProvider == null) {
-			version_value_AttrEClassItemProvider = new Version_value_AttrEClassItemProvider(this);
-		}
-
-		return version_value_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.ExternalReferenceType_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExternalReferenceType_Reference_OrGroupItemProvider externalReferenceType_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.ExternalReferenceType_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExternalReferenceType_Reference_OrGroupAdapter() {
-		if (externalReferenceType_Reference_OrGroupItemProvider == null) {
-			externalReferenceType_Reference_OrGroupItemProvider = new ExternalReferenceType_Reference_OrGroupItemProvider(this);
-		}
-
-		return externalReferenceType_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.GenericElement_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GenericElement_Containment_OrGroupItemProvider genericElement_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.GenericElement_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGenericElement_Containment_OrGroupAdapter() {
-		if (genericElement_Containment_OrGroupItemProvider == null) {
-			genericElement_Containment_OrGroupItemProvider = new GenericElement_Containment_OrGroupItemProvider(this);
-		}
-
-		return genericElement_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RefSemantic_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RefSemantic_Reference_OrGroupItemProvider refSemantic_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RefSemantic_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRefSemantic_Reference_OrGroupAdapter() {
-		if (refSemantic_Reference_OrGroupItemProvider == null) {
-			refSemantic_Reference_OrGroupItemProvider = new RefSemantic_Reference_OrGroupItemProvider(this);
-		}
-
-		return refSemantic_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Revision_newVersion_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Revision_newVersion_AttrEClassItemProvider revision_newVersion_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Revision_newVersion_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRevision_newVersion_AttrEClassAdapter() {
-		if (revision_newVersion_AttrEClassItemProvider == null) {
-			revision_newVersion_AttrEClassItemProvider = new Revision_newVersion_AttrEClassItemProvider(this);
-		}
-
-		return revision_newVersion_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Attribute_value_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Attribute_value_AttrEClassItemProvider attribute_value_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Attribute_value_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttribute_value_AttrEClassAdapter() {
-		if (attribute_value_AttrEClassItemProvider == null) {
-			attribute_value_AttrEClassItemProvider = new Attribute_value_AttrEClassItemProvider(this);
-		}
-
-		return attribute_value_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeValueRequirement_name_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeValueRequirement_name_AttrEClassItemProvider attributeValueRequirement_name_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeValueRequirement_name_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeValueRequirement_name_AttrEClassAdapter() {
-		if (attributeValueRequirement_name_AttrEClassItemProvider == null) {
-			attributeValueRequirement_name_AttrEClassItemProvider = new AttributeValueRequirement_name_AttrEClassItemProvider(this);
-		}
-
-		return attributeValueRequirement_name_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.ExternalInterface_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExternalInterface_Reference_OrGroupItemProvider externalInterface_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.ExternalInterface_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExternalInterface_Reference_OrGroupAdapter() {
-		if (externalInterface_Reference_OrGroupItemProvider == null) {
-			externalInterface_Reference_OrGroupItemProvider = new ExternalInterface_Reference_OrGroupItemProvider(this);
-		}
-
-		return externalInterface_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation_originVersion_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformation_originVersion_AttrEClassItemProvider sourceDocumentInformation_originVersion_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation_originVersion_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformation_originVersion_AttrEClassAdapter() {
-		if (sourceDocumentInformation_originVersion_AttrEClassItemProvider == null) {
-			sourceDocumentInformation_originVersion_AttrEClassItemProvider = new SourceDocumentInformation_originVersion_AttrEClassItemProvider(this);
-		}
-
-		return sourceDocumentInformation_originVersion_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SupportedRoleClass_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SupportedRoleClass_Reference_OrGroupItemProvider supportedRoleClass_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SupportedRoleClass_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSupportedRoleClass_Reference_OrGroupAdapter() {
-		if (supportedRoleClass_Reference_OrGroupItemProvider == null) {
-			supportedRoleClass_Reference_OrGroupItemProvider = new SupportedRoleClass_Reference_OrGroupItemProvider(this);
-		}
-
-		return supportedRoleClass_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.contains_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected contains_FunctionalOperatorItemProvider contains_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.contains_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createcontains_FunctionalOperatorAdapter() {
-		if (contains_FunctionalOperatorItemProvider == null) {
-			contains_FunctionalOperatorItemProvider = new contains_FunctionalOperatorItemProvider(this);
-		}
-
-		return contains_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation_originVendorURL_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformation_originVendorURL_AttrEClassItemProvider sourceDocumentInformation_originVendorURL_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation_originVendorURL_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformation_originVendorURL_AttrEClassAdapter() {
-		if (sourceDocumentInformation_originVendorURL_AttrEClassItemProvider == null) {
-			sourceDocumentInformation_originVendorURL_AttrEClassItemProvider = new SourceDocumentInformation_originVendorURL_AttrEClassItemProvider(this);
-		}
-
-		return sourceDocumentInformation_originVendorURL_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation_originRelease_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformation_originRelease_AttrEClassItemProvider sourceDocumentInformation_originRelease_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation_originRelease_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformation_originRelease_AttrEClassAdapter() {
-		if (sourceDocumentInformation_originRelease_AttrEClassItemProvider == null) {
-			sourceDocumentInformation_originRelease_AttrEClassItemProvider = new SourceDocumentInformation_originRelease_AttrEClassItemProvider(this);
-		}
-
-		return sourceDocumentInformation_originRelease_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation_originName_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformation_originName_AttrEClassItemProvider sourceDocumentInformation_originName_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation_originName_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformation_originName_AttrEClassAdapter() {
-		if (sourceDocumentInformation_originName_AttrEClassItemProvider == null) {
-			sourceDocumentInformation_originName_AttrEClassItemProvider = new SourceDocumentInformation_originName_AttrEClassItemProvider(this);
-		}
-
-		return sourceDocumentInformation_originName_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeLib_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeLib_Reference_OrGroupItemProvider attributeLib_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeLib_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeLib_Reference_OrGroupAdapter() {
-		if (attributeLib_Reference_OrGroupItemProvider == null) {
-			attributeLib_Reference_OrGroupItemProvider = new AttributeLib_Reference_OrGroupItemProvider(this);
-		}
-
-		return attributeLib_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.DateTime_CalculateableElementReferenceArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DateTime_CalculateableElementReferenceArgumentItemProvider dateTime_CalculateableElementReferenceArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.DateTime_CalculateableElementReferenceArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDateTime_CalculateableElementReferenceArgumentAdapter() {
-		if (dateTime_CalculateableElementReferenceArgumentItemProvider == null) {
-			dateTime_CalculateableElementReferenceArgumentItemProvider = new DateTime_CalculateableElementReferenceArgumentItemProvider(this);
-		}
-
-		return dateTime_CalculateableElementReferenceArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Version_changeMode_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Version_changeMode_AttrEClassItemProvider version_changeMode_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Version_changeMode_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVersion_changeMode_AttrEClassAdapter() {
-		if (version_changeMode_AttrEClassItemProvider == null) {
-			version_changeMode_AttrEClassItemProvider = new Version_changeMode_AttrEClassItemProvider(this);
-		}
-
-		return version_changeMode_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.EFeatureMapEntry_CalculateableParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EFeatureMapEntry_CalculateableParameterItemProvider eFeatureMapEntry_CalculateableParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.EFeatureMapEntry_CalculateableParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEFeatureMapEntry_CalculateableParameterAdapter() {
-		if (eFeatureMapEntry_CalculateableParameterItemProvider == null) {
-			eFeatureMapEntry_CalculateableParameterItemProvider = new EFeatureMapEntry_CalculateableParameterItemProvider(this);
-		}
-
-		return eFeatureMapEntry_CalculateableParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SystemUnitClass_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemUnitClass_Containment_OrGroupItemProvider systemUnitClass_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SystemUnitClass_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemUnitClass_Containment_OrGroupAdapter() {
-		if (systemUnitClass_Containment_OrGroupItemProvider == null) {
-			systemUnitClass_Containment_OrGroupItemProvider = new SystemUnitClass_Containment_OrGroupItemProvider(this);
-		}
-
-		return systemUnitClass_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_CalculateableParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CharSequence_CalculateableParameterItemProvider charSequence_CalculateableParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CharSequence_CalculateableParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharSequence_CalculateableParameterAdapter() {
-		if (charSequence_CalculateableParameterItemProvider == null) {
-			charSequence_CalculateableParameterItemProvider = new CharSequence_CalculateableParameterItemProvider(this);
-		}
-
-		return charSequence_CalculateableParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_String_Object_CharSequence_equals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CharSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CharSequence_String_Object_CharSequence_equals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharSequence_String_Object_CharSequence_equals_FunctionalOperatorAdapter() {
-		if (charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider == null) {
-			charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider = new CharSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider(this);
-		}
-
-		return charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.String_And_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected String_And_BitOperatorItemProvider string_And_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.String_And_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createString_And_BitOperatorAdapter() {
-		if (string_And_BitOperatorItemProvider == null) {
-			string_And_BitOperatorItemProvider = new String_And_BitOperatorItemProvider(this);
-		}
-
-		return string_And_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.UnknownType_requirements_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UnknownType_requirements_AttrEClassItemProvider unknownType_requirements_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.UnknownType_requirements_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUnknownType_requirements_AttrEClassAdapter() {
-		if (unknownType_requirements_AttrEClassItemProvider == null) {
-			unknownType_requirements_AttrEClassItemProvider = new UnknownType_requirements_AttrEClassItemProvider(this);
-		}
-
-		return unknownType_requirements_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.GenericAttribute_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GenericAttribute_Reference_OrGroupItemProvider genericAttribute_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.GenericAttribute_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGenericAttribute_Reference_OrGroupAdapter() {
-		if (genericAttribute_Reference_OrGroupItemProvider == null) {
-			genericAttribute_Reference_OrGroupItemProvider = new GenericAttribute_Reference_OrGroupItemProvider(this);
-		}
-
-		return genericAttribute_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.NominalScaledType_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NominalScaledType_Containment_OrGroupItemProvider nominalScaledType_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.NominalScaledType_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNominalScaledType_Containment_OrGroupAdapter() {
-		if (nominalScaledType_Containment_OrGroupItemProvider == null) {
-			nominalScaledType_Containment_OrGroupItemProvider = new NominalScaledType_Containment_OrGroupItemProvider(this);
-		}
-
-		return nominalScaledType_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceClass_refBaseClassPath_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceClass_refBaseClassPath_AttrEClassItemProvider interfaceClass_refBaseClassPath_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceClass_refBaseClassPath_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceClass_refBaseClassPath_AttrEClassAdapter() {
-		if (interfaceClass_refBaseClassPath_AttrEClassItemProvider == null) {
-			interfaceClass_refBaseClassPath_AttrEClassItemProvider = new InterfaceClass_refBaseClassPath_AttrEClassItemProvider(this);
-		}
-
-		return interfaceClass_refBaseClassPath_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.GenericElement_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GenericElement_Reference_OrGroupItemProvider genericElement_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.GenericElement_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGenericElement_Reference_OrGroupAdapter() {
-		if (genericElement_Reference_OrGroupItemProvider == null) {
-			genericElement_Reference_OrGroupItemProvider = new GenericElement_Reference_OrGroupItemProvider(this);
-		}
-
-		return genericElement_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.startsWith_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected startsWith_FunctionalOperatorItemProvider startsWith_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.startsWith_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createstartsWith_FunctionalOperatorAdapter() {
-		if (startsWith_FunctionalOperatorItemProvider == null) {
-			startsWith_FunctionalOperatorItemProvider = new startsWith_FunctionalOperatorItemProvider(this);
-		}
-
-		return startsWith_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.String_CalculateableElementReferenceArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected String_CalculateableElementReferenceArgumentItemProvider string_CalculateableElementReferenceArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.String_CalculateableElementReferenceArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createString_CalculateableElementReferenceArgumentAdapter() {
-		if (string_CalculateableElementReferenceArgumentItemProvider == null) {
-			string_CalculateableElementReferenceArgumentItemProvider = new String_CalculateableElementReferenceArgumentItemProvider(this);
-		}
-
-		return string_CalculateableElementReferenceArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Attribute_defaultValue_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Attribute_defaultValue_AttrEClassItemProvider attribute_defaultValue_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Attribute_defaultValue_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttribute_defaultValue_AttrEClassAdapter() {
-		if (attribute_defaultValue_AttrEClassItemProvider == null) {
-			attribute_defaultValue_AttrEClassItemProvider = new Attribute_defaultValue_AttrEClassItemProvider(this);
-		}
-
-		return attribute_defaultValue_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.substring_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected substring_FunctionalOperatorItemProvider substring_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.substring_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createsubstring_FunctionalOperatorAdapter() {
-		if (substring_FunctionalOperatorItemProvider == null) {
-			substring_FunctionalOperatorItemProvider = new substring_FunctionalOperatorItemProvider(this);
-		}
-
-		return substring_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.NominalScaledType_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NominalScaledType_Reference_OrGroupItemProvider nominalScaledType_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.NominalScaledType_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNominalScaledType_Reference_OrGroupAdapter() {
-		if (nominalScaledType_Reference_OrGroupItemProvider == null) {
-			nominalScaledType_Reference_OrGroupItemProvider = new NominalScaledType_Reference_OrGroupItemProvider(this);
-		}
-
-		return nominalScaledType_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_PrimitiveArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CharSequence_PrimitiveArgumentItemProvider charSequence_PrimitiveArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CharSequence_PrimitiveArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharSequence_PrimitiveArgumentAdapter() {
-		if (charSequence_PrimitiveArgumentItemProvider == null) {
-			charSequence_PrimitiveArgumentItemProvider = new CharSequence_PrimitiveArgumentItemProvider(this);
-		}
-
-		return charSequence_PrimitiveArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Count_AggregationOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Count_AggregationOperatorItemProvider count_AggregationOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Count_AggregationOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCount_AggregationOperatorAdapter() {
-		if (count_AggregationOperatorItemProvider == null) {
-			count_AggregationOperatorItemProvider = new Count_AggregationOperatorItemProvider(this);
-		}
-
-		return count_AggregationOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_Object_Number_toString_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Double_Object_Number_toString_FunctionalOperatorItemProvider number_Double_Object_Number_toString_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Double_Object_Number_toString_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Double_Object_Number_toString_FunctionalOperatorAdapter() {
-		if (number_Double_Object_Number_toString_FunctionalOperatorItemProvider == null) {
-			number_Double_Object_Number_toString_FunctionalOperatorItemProvider = new Number_Double_Object_Number_toString_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Double_Object_Number_toString_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Attribute_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Attribute_Reference_OrGroupItemProvider attribute_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Attribute_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttribute_Reference_OrGroupAdapter() {
-		if (attribute_Reference_OrGroupItemProvider == null) {
-			attribute_Reference_OrGroupItemProvider = new Attribute_Reference_OrGroupItemProvider(this);
-		}
-
-		return attribute_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeDataType_PrimitiveArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeDataType_PrimitiveArgumentItemProvider attributeDataType_PrimitiveArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeDataType_PrimitiveArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeDataType_PrimitiveArgumentAdapter() {
-		if (attributeDataType_PrimitiveArgumentItemProvider == null) {
-			attributeDataType_PrimitiveArgumentItemProvider = new AttributeDataType_PrimitiveArgumentItemProvider(this);
-		}
-
-		return attributeDataType_PrimitiveArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXBasicObject_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXBasicObject_Containment_OrGroupItemProvider caexBasicObject_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXBasicObject_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXBasicObject_Containment_OrGroupAdapter() {
-		if (caexBasicObject_Containment_OrGroupItemProvider == null) {
-			caexBasicObject_Containment_OrGroupItemProvider = new CAEXBasicObject_Containment_OrGroupItemProvider(this);
-		}
-
-		return caexBasicObject_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.codePointAt_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected codePointAt_FunctionalOperatorItemProvider codePointAt_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.codePointAt_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createcodePointAt_FunctionalOperatorAdapter() {
-		if (codePointAt_FunctionalOperatorItemProvider == null) {
-			codePointAt_FunctionalOperatorItemProvider = new codePointAt_FunctionalOperatorItemProvider(this);
-		}
-
-		return codePointAt_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Description_value_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Description_value_AttrEClassItemProvider description_value_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Description_value_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDescription_value_AttrEClassAdapter() {
-		if (description_value_AttrEClassItemProvider == null) {
-			description_value_AttrEClassItemProvider = new Description_value_AttrEClassItemProvider(this);
-		}
-
-		return description_value_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation_originID_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformation_originID_AttrEClassItemProvider sourceDocumentInformation_originID_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation_originID_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformation_originID_AttrEClassAdapter() {
-		if (sourceDocumentInformation_originID_AttrEClassItemProvider == null) {
-			sourceDocumentInformation_originID_AttrEClassItemProvider = new SourceDocumentInformation_originID_AttrEClassItemProvider(this);
-		}
-
-		return sourceDocumentInformation_originID_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.DateTime_FunctionalParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DateTime_FunctionalParameterItemProvider dateTime_FunctionalParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.DateTime_FunctionalParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDateTime_FunctionalParameterAdapter() {
-		if (dateTime_FunctionalParameterItemProvider == null) {
-			dateTime_FunctionalParameterItemProvider = new DateTime_FunctionalParameterItemProvider(this);
-		}
-
-		return dateTime_FunctionalParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Revision_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Revision_Containment_OrGroupItemProvider revision_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Revision_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRevision_Containment_OrGroupAdapter() {
-		if (revision_Containment_OrGroupItemProvider == null) {
-			revision_Containment_OrGroupItemProvider = new Revision_Containment_OrGroupItemProvider(this);
-		}
-
-		return revision_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Min_AggregationOperator_Double} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Min_AggregationOperator_DoubleItemProvider min_AggregationOperator_DoubleItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Min_AggregationOperator_Double}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMin_AggregationOperator_DoubleAdapter() {
-		if (min_AggregationOperator_DoubleItemProvider == null) {
-			min_AggregationOperator_DoubleItemProvider = new Min_AggregationOperator_DoubleItemProvider(this);
-		}
-
-		return min_AggregationOperator_DoubleItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InternalElement_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InternalElement_Containment_OrGroupItemProvider internalElement_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InternalElement_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInternalElement_Containment_OrGroupAdapter() {
-		if (internalElement_Containment_OrGroupItemProvider == null) {
-			internalElement_Containment_OrGroupItemProvider = new InternalElement_Containment_OrGroupItemProvider(this);
-		}
-
-		return internalElement_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_CharSequence_hashCode_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_CharSequence_hashCode_FunctionalOperatorItemProvider object_CharSequence_hashCode_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_CharSequence_hashCode_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_CharSequence_hashCode_FunctionalOperatorAdapter() {
-		if (object_CharSequence_hashCode_FunctionalOperatorItemProvider == null) {
-			object_CharSequence_hashCode_FunctionalOperatorItemProvider = new Object_CharSequence_hashCode_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_CharSequence_hashCode_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Boolean_And_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Boolean_And_BitOperatorItemProvider boolean_And_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Boolean_And_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBoolean_And_BitOperatorAdapter() {
-		if (boolean_And_BitOperatorItemProvider == null) {
-			boolean_And_BitOperatorItemProvider = new Boolean_And_BitOperatorItemProvider(this);
-		}
-
-		return boolean_And_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.isEmpty_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected isEmpty_FunctionalOperatorItemProvider isEmpty_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.isEmpty_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createisEmpty_FunctionalOperatorAdapter() {
-		if (isEmpty_FunctionalOperatorItemProvider == null) {
-			isEmpty_FunctionalOperatorItemProvider = new isEmpty_FunctionalOperatorItemProvider(this);
-		}
-
-		return isEmpty_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.String_FunctionalParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected String_FunctionalParameterItemProvider string_FunctionalParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.String_FunctionalParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createString_FunctionalParameterAdapter() {
-		if (string_FunctionalParameterItemProvider == null) {
-			string_FunctionalParameterItemProvider = new String_FunctionalParameterItemProvider(this);
-		}
-
-		return string_FunctionalParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceClassLib_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceClassLib_Containment_OrGroupItemProvider interfaceClassLib_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceClassLib_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceClassLib_Containment_OrGroupAdapter() {
-		if (interfaceClassLib_Containment_OrGroupItemProvider == null) {
-			interfaceClassLib_Containment_OrGroupItemProvider = new InterfaceClassLib_Containment_OrGroupItemProvider(this);
-		}
-
-		return interfaceClassLib_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Copyright_value_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Copyright_value_AttrEClassItemProvider copyright_value_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Copyright_value_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCopyright_value_AttrEClassAdapter() {
-		if (copyright_value_AttrEClassItemProvider == null) {
-			copyright_value_AttrEClassItemProvider = new Copyright_value_AttrEClassItemProvider(this);
-		}
-
-		return copyright_value_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.greaterThan_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected greaterThan_FunctionalOperatorItemProvider greaterThan_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.greaterThan_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter creategreaterThan_FunctionalOperatorAdapter() {
-		if (greaterThan_FunctionalOperatorItemProvider == null) {
-			greaterThan_FunctionalOperatorItemProvider = new greaterThan_FunctionalOperatorItemProvider(this);
-		}
-
-		return greaterThan_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SystemUnitClassLib_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemUnitClassLib_Reference_OrGroupItemProvider systemUnitClassLib_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SystemUnitClassLib_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemUnitClassLib_Reference_OrGroupAdapter() {
-		if (systemUnitClassLib_Reference_OrGroupItemProvider == null) {
-			systemUnitClassLib_Reference_OrGroupItemProvider = new SystemUnitClassLib_Reference_OrGroupItemProvider(this);
-		}
-
-		return systemUnitClassLib_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.startsWithOffset_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected startsWithOffset_FunctionalOperatorItemProvider startsWithOffset_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.startsWithOffset_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createstartsWithOffset_FunctionalOperatorAdapter() {
-		if (startsWithOffset_FunctionalOperatorItemProvider == null) {
-			startsWithOffset_FunctionalOperatorItemProvider = new startsWithOffset_FunctionalOperatorItemProvider(this);
-		}
-
-		return startsWithOffset_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.indexOfString_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected indexOfString_FunctionalOperatorItemProvider indexOfString_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.indexOfString_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createindexOfString_FunctionalOperatorAdapter() {
-		if (indexOfString_FunctionalOperatorItemProvider == null) {
-			indexOfString_FunctionalOperatorItemProvider = new indexOfString_FunctionalOperatorItemProvider(this);
-		}
-
-		return indexOfString_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_greaterThan_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Integer_greaterThan_FunctionalOperatorItemProvider number_Integer_greaterThan_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Integer_greaterThan_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Integer_greaterThan_FunctionalOperatorAdapter() {
-		if (number_Integer_greaterThan_FunctionalOperatorItemProvider == null) {
-			number_Integer_greaterThan_FunctionalOperatorItemProvider = new Number_Integer_greaterThan_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Integer_greaterThan_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.NominalScaledType_requiredValue_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NominalScaledType_requiredValue_AttrEClassItemProvider nominalScaledType_requiredValue_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.NominalScaledType_requiredValue_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNominalScaledType_requiredValue_AttrEClassAdapter() {
-		if (nominalScaledType_requiredValue_AttrEClassItemProvider == null) {
-			nominalScaledType_requiredValue_AttrEClassItemProvider = new NominalScaledType_requiredValue_AttrEClassItemProvider(this);
-		}
-
-		return nominalScaledType_requiredValue_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.DocumentRoot_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DocumentRoot_Reference_OrGroupItemProvider documentRoot_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.DocumentRoot_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDocumentRoot_Reference_OrGroupAdapter() {
-		if (documentRoot_Reference_OrGroupItemProvider == null) {
-			documentRoot_Reference_OrGroupItemProvider = new DocumentRoot_Reference_OrGroupItemProvider(this);
-		}
-
-		return documentRoot_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeDataType_CalculateableElementReferenceArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeDataType_CalculateableElementReferenceArgumentItemProvider attributeDataType_CalculateableElementReferenceArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeDataType_CalculateableElementReferenceArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeDataType_CalculateableElementReferenceArgumentAdapter() {
-		if (attributeDataType_CalculateableElementReferenceArgumentItemProvider == null) {
-			attributeDataType_CalculateableElementReferenceArgumentItemProvider = new AttributeDataType_CalculateableElementReferenceArgumentItemProvider(this);
-		}
-
-		return attributeDataType_CalculateableElementReferenceArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation_lastWritingDateTime_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformation_lastWritingDateTime_AttrEClassItemProvider sourceDocumentInformation_lastWritingDateTime_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation_lastWritingDateTime_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformation_lastWritingDateTime_AttrEClassAdapter() {
-		if (sourceDocumentInformation_lastWritingDateTime_AttrEClassItemProvider == null) {
-			sourceDocumentInformation_lastWritingDateTime_AttrEClassItemProvider = new SourceDocumentInformation_lastWritingDateTime_AttrEClassItemProvider(this);
-		}
-
-		return sourceDocumentInformation_lastWritingDateTime_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Integer_And_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Integer_And_BitOperatorItemProvider integer_And_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Integer_And_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInteger_And_BitOperatorAdapter() {
-		if (integer_And_BitOperatorItemProvider == null) {
-			integer_And_BitOperatorItemProvider = new Integer_And_BitOperatorItemProvider(this);
-		}
-
-		return integer_And_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXBasicObject_changeMode_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXBasicObject_changeMode_AttrEClassItemProvider caexBasicObject_changeMode_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXBasicObject_changeMode_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXBasicObject_changeMode_AttrEClassAdapter() {
-		if (caexBasicObject_changeMode_AttrEClassItemProvider == null) {
-			caexBasicObject_changeMode_AttrEClassItemProvider = new CAEXBasicObject_changeMode_AttrEClassItemProvider(this);
-		}
-
-		return caexBasicObject_changeMode_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Double_Or_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Double_Or_BitOperatorItemProvider double_Or_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Double_Or_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDouble_Or_BitOperatorAdapter() {
-		if (double_Or_BitOperatorItemProvider == null) {
-			double_Or_BitOperatorItemProvider = new Double_Or_BitOperatorItemProvider(this);
-		}
-
-		return double_Or_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Element_name_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Element_name_AttrEClassItemProvider element_name_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Element_name_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createElement_name_AttrEClassAdapter() {
-		if (element_name_AttrEClassItemProvider == null) {
-			element_name_AttrEClassItemProvider = new Element_name_AttrEClassItemProvider(this);
-		}
-
-		return element_name_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleClass_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleClass_Reference_OrGroupItemProvider roleClass_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleClass_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleClass_Reference_OrGroupAdapter() {
-		if (roleClass_Reference_OrGroupItemProvider == null) {
-			roleClass_Reference_OrGroupItemProvider = new RoleClass_Reference_OrGroupItemProvider(this);
-		}
-
-		return roleClass_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation_originProjectID_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformation_originProjectID_AttrEClassItemProvider sourceDocumentInformation_originProjectID_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation_originProjectID_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformation_originProjectID_AttrEClassAdapter() {
-		if (sourceDocumentInformation_originProjectID_AttrEClassItemProvider == null) {
-			sourceDocumentInformation_originProjectID_AttrEClassItemProvider = new SourceDocumentInformation_originProjectID_AttrEClassItemProvider(this);
-		}
-
-		return sourceDocumentInformation_originProjectID_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleClass_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleClass_Containment_OrGroupItemProvider roleClass_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleClass_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleClass_Containment_OrGroupAdapter() {
-		if (roleClass_Containment_OrGroupItemProvider == null) {
-			roleClass_Containment_OrGroupItemProvider = new RoleClass_Containment_OrGroupItemProvider(this);
-		}
-
-		return roleClass_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_FunctionalParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_FunctionalParameterItemProvider object_FunctionalParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_FunctionalParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_FunctionalParameterAdapter() {
-		if (object_FunctionalParameterItemProvider == null) {
-			object_FunctionalParameterItemProvider = new Object_FunctionalParameterItemProvider(this);
-		}
-
-		return object_FunctionalParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.EFeatureMapEntry_FunctionalParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EFeatureMapEntry_FunctionalParameterItemProvider eFeatureMapEntry_FunctionalParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.EFeatureMapEntry_FunctionalParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEFeatureMapEntry_FunctionalParameterAdapter() {
-		if (eFeatureMapEntry_FunctionalParameterItemProvider == null) {
-			eFeatureMapEntry_FunctionalParameterItemProvider = new EFeatureMapEntry_FunctionalParameterItemProvider(this);
-		}
-
-		return eFeatureMapEntry_FunctionalParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_Object_Number_hashCode_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Integer_Object_Number_hashCode_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Integer_Object_Number_hashCode_FunctionalOperatorAdapter() {
-		if (number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider == null) {
-			number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider = new Number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.EFeatureMapEntry_Or_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EFeatureMapEntry_Or_BitOperatorItemProvider eFeatureMapEntry_Or_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.EFeatureMapEntry_Or_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEFeatureMapEntry_Or_BitOperatorAdapter() {
-		if (eFeatureMapEntry_Or_BitOperatorItemProvider == null) {
-			eFeatureMapEntry_Or_BitOperatorItemProvider = new EFeatureMapEntry_Or_BitOperatorItemProvider(this);
-		}
-
-		return eFeatureMapEntry_Or_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_String_length_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CharSequence_String_length_FunctionalOperatorItemProvider charSequence_String_length_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CharSequence_String_length_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharSequence_String_length_FunctionalOperatorAdapter() {
-		if (charSequence_String_length_FunctionalOperatorItemProvider == null) {
-			charSequence_String_length_FunctionalOperatorItemProvider = new CharSequence_String_length_FunctionalOperatorItemProvider(this);
-		}
-
-		return charSequence_String_length_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceIDMapping_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceIDMapping_Containment_OrGroupItemProvider interfaceIDMapping_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceIDMapping_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceIDMapping_Containment_OrGroupAdapter() {
-		if (interfaceIDMapping_Containment_OrGroupItemProvider == null) {
-			interfaceIDMapping_Containment_OrGroupItemProvider = new InterfaceIDMapping_Containment_OrGroupItemProvider(this);
-		}
-
-		return interfaceIDMapping_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.equalsIgnoreCase_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected equalsIgnoreCase_FunctionalOperatorItemProvider equalsIgnoreCase_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.equalsIgnoreCase_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createequalsIgnoreCase_FunctionalOperatorAdapter() {
-		if (equalsIgnoreCase_FunctionalOperatorItemProvider == null) {
-			equalsIgnoreCase_FunctionalOperatorItemProvider = new equalsIgnoreCase_FunctionalOperatorItemProvider(this);
-		}
-
-		return equalsIgnoreCase_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeNameMapping_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeNameMapping_Containment_OrGroupItemProvider attributeNameMapping_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeNameMapping_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeNameMapping_Containment_OrGroupAdapter() {
-		if (attributeNameMapping_Containment_OrGroupItemProvider == null) {
-			attributeNameMapping_Containment_OrGroupItemProvider = new AttributeNameMapping_Containment_OrGroupItemProvider(this);
-		}
-
-		return attributeNameMapping_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Revision_authorName_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Revision_authorName_AttrEClassItemProvider revision_authorName_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Revision_authorName_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRevision_authorName_AttrEClassAdapter() {
-		if (revision_authorName_AttrEClassItemProvider == null) {
-			revision_authorName_AttrEClassItemProvider = new Revision_authorName_AttrEClassItemProvider(this);
-		}
-
-		return revision_authorName_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.ChangeMode_EnumerationOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ChangeMode_EnumerationOperatorItemProvider changeMode_EnumerationOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.ChangeMode_EnumerationOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createChangeMode_EnumerationOperatorAdapter() {
-		if (changeMode_EnumerationOperatorItemProvider == null) {
-			changeMode_EnumerationOperatorItemProvider = new ChangeMode_EnumerationOperatorItemProvider(this);
-		}
-
-		return changeMode_EnumerationOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeLib_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeLib_Containment_OrGroupItemProvider attributeLib_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeLib_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeLib_Containment_OrGroupAdapter() {
-		if (attributeLib_Containment_OrGroupItemProvider == null) {
-			attributeLib_Containment_OrGroupItemProvider = new AttributeLib_Containment_OrGroupItemProvider(this);
-		}
-
-		return attributeLib_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.DocumentRoot_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DocumentRoot_Containment_OrGroupItemProvider documentRoot_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.DocumentRoot_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDocumentRoot_Containment_OrGroupAdapter() {
-		if (documentRoot_Containment_OrGroupItemProvider == null) {
-			documentRoot_Containment_OrGroupItemProvider = new DocumentRoot_Containment_OrGroupItemProvider(this);
-		}
-
-		return documentRoot_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleClassLib_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleClassLib_Containment_OrGroupItemProvider roleClassLib_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleClassLib_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleClassLib_Containment_OrGroupAdapter() {
-		if (roleClassLib_Containment_OrGroupItemProvider == null) {
-			roleClassLib_Containment_OrGroupItemProvider = new RoleClassLib_Containment_OrGroupItemProvider(this);
-		}
-
-		return roleClassLib_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleFamily_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleFamily_Containment_OrGroupItemProvider roleFamily_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleFamily_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleFamily_Containment_OrGroupAdapter() {
-		if (roleFamily_Containment_OrGroupItemProvider == null) {
-			roleFamily_Containment_OrGroupItemProvider = new RoleFamily_Containment_OrGroupItemProvider(this);
-		}
-
-		return roleFamily_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_CalculateableParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_CalculateableParameterItemProvider number_CalculateableParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_CalculateableParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_CalculateableParameterAdapter() {
-		if (number_CalculateableParameterItemProvider == null) {
-			number_CalculateableParameterItemProvider = new Number_CalculateableParameterItemProvider(this);
-		}
-
-		return number_CalculateableParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InternalLink_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InternalLink_Containment_OrGroupItemProvider internalLink_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InternalLink_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInternalLink_Containment_OrGroupAdapter() {
-		if (internalLink_Containment_OrGroupItemProvider == null) {
-			internalLink_Containment_OrGroupItemProvider = new InternalLink_Containment_OrGroupItemProvider(this);
-		}
-
-		return internalLink_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.DocumentRoot_mixed_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DocumentRoot_mixed_AttrEClassItemProvider documentRoot_mixed_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.DocumentRoot_mixed_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDocumentRoot_mixed_AttrEClassAdapter() {
-		if (documentRoot_mixed_AttrEClassItemProvider == null) {
-			documentRoot_mixed_AttrEClassItemProvider = new DocumentRoot_mixed_AttrEClassItemProvider(this);
-		}
-
-		return documentRoot_mixed_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Max_AggregationOperator_Integer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Max_AggregationOperator_IntegerItemProvider max_AggregationOperator_IntegerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Max_AggregationOperator_Integer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMax_AggregationOperator_IntegerAdapter() {
-		if (max_AggregationOperator_IntegerItemProvider == null) {
-			max_AggregationOperator_IntegerItemProvider = new Max_AggregationOperator_IntegerItemProvider(this);
-		}
-
-		return max_AggregationOperator_IntegerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Description_changeMode_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Description_changeMode_AttrEClassItemProvider description_changeMode_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Description_changeMode_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDescription_changeMode_AttrEClassAdapter() {
-		if (description_changeMode_AttrEClassItemProvider == null) {
-			description_changeMode_AttrEClassItemProvider = new Description_changeMode_AttrEClassItemProvider(this);
-		}
-
-		return description_changeMode_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_PrimitiveArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_PrimitiveArgumentItemProvider number_PrimitiveArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_PrimitiveArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_PrimitiveArgumentAdapter() {
-		if (number_PrimitiveArgumentItemProvider == null) {
-			number_PrimitiveArgumentItemProvider = new Number_PrimitiveArgumentItemProvider(this);
-		}
-
-		return number_PrimitiveArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_Number_toString_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_Number_toString_FunctionalOperatorItemProvider object_Number_toString_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_Number_toString_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_Number_toString_FunctionalOperatorAdapter() {
-		if (object_Number_toString_FunctionalOperatorItemProvider == null) {
-			object_Number_toString_FunctionalOperatorItemProvider = new Object_Number_toString_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_Number_toString_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXFile_superiorStandardVersion_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXFile_superiorStandardVersion_AttrEClassItemProvider caexFile_superiorStandardVersion_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXFile_superiorStandardVersion_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXFile_superiorStandardVersion_AttrEClassAdapter() {
-		if (caexFile_superiorStandardVersion_AttrEClassItemProvider == null) {
-			caexFile_superiorStandardVersion_AttrEClassItemProvider = new CAEXFile_superiorStandardVersion_AttrEClassItemProvider(this);
-		}
-
-		return caexFile_superiorStandardVersion_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeFamily_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeFamily_Reference_OrGroupItemProvider attributeFamily_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeFamily_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeFamily_Reference_OrGroupAdapter() {
-		if (attributeFamily_Reference_OrGroupItemProvider == null) {
-			attributeFamily_Reference_OrGroupItemProvider = new AttributeFamily_Reference_OrGroupItemProvider(this);
-		}
-
-		return attributeFamily_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.doubleValue_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected doubleValue_FunctionalOperatorItemProvider doubleValue_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.doubleValue_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createdoubleValue_FunctionalOperatorAdapter() {
-		if (doubleValue_FunctionalOperatorItemProvider == null) {
-			doubleValue_FunctionalOperatorItemProvider = new doubleValue_FunctionalOperatorItemProvider(this);
-		}
-
-		return doubleValue_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InternalLink_refPartnerSideA_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InternalLink_refPartnerSideA_AttrEClassItemProvider internalLink_refPartnerSideA_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InternalLink_refPartnerSideA_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInternalLink_refPartnerSideA_AttrEClassAdapter() {
-		if (internalLink_refPartnerSideA_AttrEClassItemProvider == null) {
-			internalLink_refPartnerSideA_AttrEClassItemProvider = new InternalLink_refPartnerSideA_AttrEClassItemProvider(this);
-		}
-
-		return internalLink_refPartnerSideA_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_Object_Number_equals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Double_Object_Number_equals_FunctionalOperatorItemProvider number_Double_Object_Number_equals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Double_Object_Number_equals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Double_Object_Number_equals_FunctionalOperatorAdapter() {
-		if (number_Double_Object_Number_equals_FunctionalOperatorItemProvider == null) {
-			number_Double_Object_Number_equals_FunctionalOperatorItemProvider = new Number_Double_Object_Number_equals_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Double_Object_Number_equals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.parseBoolean_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected parseBoolean_FunctionalOperatorItemProvider parseBoolean_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.parseBoolean_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createparseBoolean_FunctionalOperatorAdapter() {
-		if (parseBoolean_FunctionalOperatorItemProvider == null) {
-			parseBoolean_FunctionalOperatorItemProvider = new parseBoolean_FunctionalOperatorItemProvider(this);
-		}
-
-		return parseBoolean_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.toUpperCase_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected toUpperCase_FunctionalOperatorItemProvider toUpperCase_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.toUpperCase_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createtoUpperCase_FunctionalOperatorAdapter() {
-		if (toUpperCase_FunctionalOperatorItemProvider == null) {
-			toUpperCase_FunctionalOperatorItemProvider = new toUpperCase_FunctionalOperatorItemProvider(this);
-		}
-
-		return toUpperCase_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_Boolean_toString_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_Boolean_toString_FunctionalOperatorItemProvider object_Boolean_toString_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_Boolean_toString_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_Boolean_toString_FunctionalOperatorAdapter() {
-		if (object_Boolean_toString_FunctionalOperatorItemProvider == null) {
-			object_Boolean_toString_FunctionalOperatorItemProvider = new Object_Boolean_toString_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_Boolean_toString_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Revision_comment_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Revision_comment_AttrEClassItemProvider revision_comment_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Revision_comment_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRevision_comment_AttrEClassAdapter() {
-		if (revision_comment_AttrEClassItemProvider == null) {
-			revision_comment_AttrEClassItemProvider = new Revision_comment_AttrEClassItemProvider(this);
-		}
-
-		return revision_comment_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXFile_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXFile_Containment_OrGroupItemProvider caexFile_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXFile_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXFile_Containment_OrGroupAdapter() {
-		if (caexFile_Containment_OrGroupItemProvider == null) {
-			caexFile_Containment_OrGroupItemProvider = new CAEXFile_Containment_OrGroupItemProvider(this);
-		}
-
-		return caexFile_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Sum_AggregationOperator_Integer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Sum_AggregationOperator_IntegerItemProvider sum_AggregationOperator_IntegerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Sum_AggregationOperator_Integer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSum_AggregationOperator_IntegerAdapter() {
-		if (sum_AggregationOperator_IntegerItemProvider == null) {
-			sum_AggregationOperator_IntegerItemProvider = new Sum_AggregationOperator_IntegerItemProvider(this);
-		}
-
-		return sum_AggregationOperator_IntegerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.greaterEquals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected greaterEquals_FunctionalOperatorItemProvider greaterEquals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.greaterEquals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter creategreaterEquals_FunctionalOperatorAdapter() {
-		if (greaterEquals_FunctionalOperatorItemProvider == null) {
-			greaterEquals_FunctionalOperatorItemProvider = new greaterEquals_FunctionalOperatorItemProvider(this);
-		}
-
-		return greaterEquals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InternalLink_refPartnerSideB_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InternalLink_refPartnerSideB_AttrEClassItemProvider internalLink_refPartnerSideB_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InternalLink_refPartnerSideB_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInternalLink_refPartnerSideB_AttrEClassAdapter() {
-		if (internalLink_refPartnerSideB_AttrEClassItemProvider == null) {
-			internalLink_refPartnerSideB_AttrEClassItemProvider = new InternalLink_refPartnerSideB_AttrEClassItemProvider(this);
-		}
-
-		return internalLink_refPartnerSideB_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Character_FunctionalParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Character_FunctionalParameterItemProvider character_FunctionalParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Character_FunctionalParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharacter_FunctionalParameterAdapter() {
-		if (character_FunctionalParameterItemProvider == null) {
-			character_FunctionalParameterItemProvider = new Character_FunctionalParameterItemProvider(this);
-		}
-
-		return character_FunctionalParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleFamily_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleFamily_Reference_OrGroupItemProvider roleFamily_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleFamily_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleFamily_Reference_OrGroupAdapter() {
-		if (roleFamily_Reference_OrGroupItemProvider == null) {
-			roleFamily_Reference_OrGroupItemProvider = new RoleFamily_Reference_OrGroupItemProvider(this);
-		}
-
-		return roleFamily_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Attribute_attributeDataType_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Attribute_attributeDataType_AttrEClassItemProvider attribute_attributeDataType_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Attribute_attributeDataType_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttribute_attributeDataType_AttrEClassAdapter() {
-		if (attribute_attributeDataType_AttrEClassItemProvider == null) {
-			attribute_attributeDataType_AttrEClassItemProvider = new Attribute_attributeDataType_AttrEClassItemProvider(this);
-		}
-
-		return attribute_attributeDataType_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Description_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Description_Reference_OrGroupItemProvider description_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Description_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDescription_Reference_OrGroupAdapter() {
-		if (description_Reference_OrGroupItemProvider == null) {
-			description_Reference_OrGroupItemProvider = new Description_Reference_OrGroupItemProvider(this);
-		}
-
-		return description_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_Number_hashCode_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_Number_hashCode_FunctionalOperatorItemProvider object_Number_hashCode_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_Number_hashCode_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_Number_hashCode_FunctionalOperatorAdapter() {
-		if (object_Number_hashCode_FunctionalOperatorItemProvider == null) {
-			object_Number_hashCode_FunctionalOperatorItemProvider = new Object_Number_hashCode_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_Number_hashCode_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceIDMapping_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceIDMapping_Reference_OrGroupItemProvider interfaceIDMapping_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceIDMapping_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceIDMapping_Reference_OrGroupAdapter() {
-		if (interfaceIDMapping_Reference_OrGroupItemProvider == null) {
-			interfaceIDMapping_Reference_OrGroupItemProvider = new InterfaceIDMapping_Reference_OrGroupItemProvider(this);
-		}
-
-		return interfaceIDMapping_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_smallerEquals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Integer_smallerEquals_FunctionalOperatorItemProvider number_Integer_smallerEquals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Integer_smallerEquals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Integer_smallerEquals_FunctionalOperatorAdapter() {
-		if (number_Integer_smallerEquals_FunctionalOperatorItemProvider == null) {
-			number_Integer_smallerEquals_FunctionalOperatorItemProvider = new Number_Integer_smallerEquals_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Integer_smallerEquals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXBasicObject_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXBasicObject_Reference_OrGroupItemProvider caexBasicObject_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXBasicObject_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXBasicObject_Reference_OrGroupAdapter() {
-		if (caexBasicObject_Reference_OrGroupItemProvider == null) {
-			caexBasicObject_Reference_OrGroupItemProvider = new CAEXBasicObject_Reference_OrGroupItemProvider(this);
-		}
-
-		return caexBasicObject_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Attribute_refAttributeType_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Attribute_refAttributeType_AttrEClassItemProvider attribute_refAttributeType_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Attribute_refAttributeType_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttribute_refAttributeType_AttrEClassAdapter() {
-		if (attribute_refAttributeType_AttrEClassItemProvider == null) {
-			attribute_refAttributeType_AttrEClassItemProvider = new Attribute_refAttributeType_AttrEClassItemProvider(this);
-		}
-
-		return attribute_refAttributeType_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.compareToString_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected compareToString_FunctionalOperatorItemProvider compareToString_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.compareToString_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createcompareToString_FunctionalOperatorAdapter() {
-		if (compareToString_FunctionalOperatorItemProvider == null) {
-			compareToString_FunctionalOperatorItemProvider = new compareToString_FunctionalOperatorItemProvider(this);
-		}
-
-		return compareToString_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InternalElement_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InternalElement_Reference_OrGroupItemProvider internalElement_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InternalElement_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInternalElement_Reference_OrGroupAdapter() {
-		if (internalElement_Reference_OrGroupItemProvider == null) {
-			internalElement_Reference_OrGroupItemProvider = new InternalElement_Reference_OrGroupItemProvider(this);
-		}
-
-		return internalElement_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.OrdinalScaledType_requiredMinValue_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OrdinalScaledType_requiredMinValue_AttrEClassItemProvider ordinalScaledType_requiredMinValue_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.OrdinalScaledType_requiredMinValue_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOrdinalScaledType_requiredMinValue_AttrEClassAdapter() {
-		if (ordinalScaledType_requiredMinValue_AttrEClassItemProvider == null) {
-			ordinalScaledType_requiredMinValue_AttrEClassItemProvider = new OrdinalScaledType_requiredMinValue_AttrEClassItemProvider(this);
-		}
-
-		return ordinalScaledType_requiredMinValue_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Boolean_Or_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Boolean_Or_BitOperatorItemProvider boolean_Or_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Boolean_Or_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBoolean_Or_BitOperatorAdapter() {
-		if (boolean_Or_BitOperatorItemProvider == null) {
-			boolean_Or_BitOperatorItemProvider = new Boolean_Or_BitOperatorItemProvider(this);
-		}
-
-		return boolean_Or_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Character_Or_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Character_Or_BitOperatorItemProvider character_Or_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Character_Or_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharacter_Or_BitOperatorAdapter() {
-		if (character_Or_BitOperatorItemProvider == null) {
-			character_Or_BitOperatorItemProvider = new Character_Or_BitOperatorItemProvider(this);
-		}
-
-		return character_Or_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Boolean_FunctionalParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Boolean_FunctionalParameterItemProvider boolean_FunctionalParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Boolean_FunctionalParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBoolean_FunctionalParameterAdapter() {
-		if (boolean_FunctionalParameterItemProvider == null) {
-			boolean_FunctionalParameterItemProvider = new Boolean_FunctionalParameterItemProvider(this);
-		}
-
-		return boolean_FunctionalParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Double_PrimitiveArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Double_PrimitiveArgumentItemProvider double_PrimitiveArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Double_PrimitiveArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDouble_PrimitiveArgumentAdapter() {
-		if (double_PrimitiveArgumentItemProvider == null) {
-			double_PrimitiveArgumentItemProvider = new Double_PrimitiveArgumentItemProvider(this);
-		}
-
-		return double_PrimitiveArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.compareToStringIgnoreCase_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected compareToStringIgnoreCase_FunctionalOperatorItemProvider compareToStringIgnoreCase_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.compareToStringIgnoreCase_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createcompareToStringIgnoreCase_FunctionalOperatorAdapter() {
-		if (compareToStringIgnoreCase_FunctionalOperatorItemProvider == null) {
-			compareToStringIgnoreCase_FunctionalOperatorItemProvider = new compareToStringIgnoreCase_FunctionalOperatorItemProvider(this);
-		}
-
-		return compareToStringIgnoreCase_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceClass_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceClass_Reference_OrGroupItemProvider interfaceClass_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceClass_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceClass_Reference_OrGroupAdapter() {
-		if (interfaceClass_Reference_OrGroupItemProvider == null) {
-			interfaceClass_Reference_OrGroupItemProvider = new InterfaceClass_Reference_OrGroupItemProvider(this);
-		}
-
-		return interfaceClass_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_Or_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_Or_BitOperatorItemProvider object_Or_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_Or_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_Or_BitOperatorAdapter() {
-		if (object_Or_BitOperatorItemProvider == null) {
-			object_Or_BitOperatorItemProvider = new Object_Or_BitOperatorItemProvider(this);
-		}
-
-		return object_Or_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AdditionalInformation_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AdditionalInformation_Reference_OrGroupItemProvider additionalInformation_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AdditionalInformation_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAdditionalInformation_Reference_OrGroupAdapter() {
-		if (additionalInformation_Reference_OrGroupItemProvider == null) {
-			additionalInformation_Reference_OrGroupItemProvider = new AdditionalInformation_Reference_OrGroupItemProvider(this);
-		}
-
-		return additionalInformation_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Countable_ReferenceArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Countable_ReferenceArgumentItemProvider countable_ReferenceArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Countable_ReferenceArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCountable_ReferenceArgumentAdapter() {
-		if (countable_ReferenceArgumentItemProvider == null) {
-			countable_ReferenceArgumentItemProvider = new Countable_ReferenceArgumentItemProvider(this);
-		}
-
-		return countable_ReferenceArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_FunctionalParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CharSequence_FunctionalParameterItemProvider charSequence_FunctionalParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CharSequence_FunctionalParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharSequence_FunctionalParameterAdapter() {
-		if (charSequence_FunctionalParameterItemProvider == null) {
-			charSequence_FunctionalParameterItemProvider = new CharSequence_FunctionalParameterItemProvider(this);
-		}
-
-		return charSequence_FunctionalParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Boolean_CalculateableParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Boolean_CalculateableParameterItemProvider boolean_CalculateableParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Boolean_CalculateableParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBoolean_CalculateableParameterAdapter() {
-		if (boolean_CalculateableParameterItemProvider == null) {
-			boolean_CalculateableParameterItemProvider = new Boolean_CalculateableParameterItemProvider(this);
-		}
-
-		return boolean_CalculateableParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation_originProjectTitle_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformation_originProjectTitle_AttrEClassItemProvider sourceDocumentInformation_originProjectTitle_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation_originProjectTitle_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformation_originProjectTitle_AttrEClassAdapter() {
-		if (sourceDocumentInformation_originProjectTitle_AttrEClassItemProvider == null) {
-			sourceDocumentInformation_originProjectTitle_AttrEClassItemProvider = new SourceDocumentInformation_originProjectTitle_AttrEClassItemProvider(this);
-		}
-
-		return sourceDocumentInformation_originProjectTitle_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Or_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Or_BitOperatorItemProvider number_Or_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Or_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Or_BitOperatorAdapter() {
-		if (number_Or_BitOperatorItemProvider == null) {
-			number_Or_BitOperatorItemProvider = new Number_Or_BitOperatorItemProvider(this);
-		}
-
-		return number_Or_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Max_AggregationOperator_Double} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Max_AggregationOperator_DoubleItemProvider max_AggregationOperator_DoubleItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Max_AggregationOperator_Double}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMax_AggregationOperator_DoubleAdapter() {
-		if (max_AggregationOperator_DoubleItemProvider == null) {
-			max_AggregationOperator_DoubleItemProvider = new Max_AggregationOperator_DoubleItemProvider(this);
-		}
-
-		return max_AggregationOperator_DoubleItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SystemUnitFamily_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemUnitFamily_Containment_OrGroupItemProvider systemUnitFamily_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SystemUnitFamily_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemUnitFamily_Containment_OrGroupAdapter() {
-		if (systemUnitFamily_Containment_OrGroupItemProvider == null) {
-			systemUnitFamily_Containment_OrGroupItemProvider = new SystemUnitFamily_Containment_OrGroupItemProvider(this);
-		}
-
-		return systemUnitFamily_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_greaterThan_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Double_greaterThan_FunctionalOperatorItemProvider number_Double_greaterThan_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Double_greaterThan_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Double_greaterThan_FunctionalOperatorAdapter() {
-		if (number_Double_greaterThan_FunctionalOperatorItemProvider == null) {
-			number_Double_greaterThan_FunctionalOperatorItemProvider = new Number_Double_greaterThan_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Double_greaterThan_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Copyright_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Copyright_Reference_OrGroupItemProvider copyright_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Copyright_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCopyright_Reference_OrGroupAdapter() {
-		if (copyright_Reference_OrGroupItemProvider == null) {
-			copyright_Reference_OrGroupItemProvider = new Copyright_Reference_OrGroupItemProvider(this);
-		}
-
-		return copyright_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Character_PrimitiveArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Character_PrimitiveArgumentItemProvider character_PrimitiveArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Character_PrimitiveArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharacter_PrimitiveArgumentAdapter() {
-		if (character_PrimitiveArgumentItemProvider == null) {
-			character_PrimitiveArgumentItemProvider = new Character_PrimitiveArgumentItemProvider(this);
-		}
-
-		return character_PrimitiveArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleClass_refBaseClassPath_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleClass_refBaseClassPath_AttrEClassItemProvider roleClass_refBaseClassPath_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleClass_refBaseClassPath_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleClass_refBaseClassPath_AttrEClassAdapter() {
-		if (roleClass_refBaseClassPath_AttrEClassItemProvider == null) {
-			roleClass_refBaseClassPath_AttrEClassItemProvider = new RoleClass_refBaseClassPath_AttrEClassItemProvider(this);
-		}
-
-		return roleClass_refBaseClassPath_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Copyright_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Copyright_Containment_OrGroupItemProvider copyright_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Copyright_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCopyright_Containment_OrGroupAdapter() {
-		if (copyright_Containment_OrGroupItemProvider == null) {
-			copyright_Containment_OrGroupItemProvider = new Copyright_Containment_OrGroupItemProvider(this);
-		}
-
-		return copyright_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeDataType_Or_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeDataType_Or_BitOperatorItemProvider attributeDataType_Or_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeDataType_Or_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeDataType_Or_BitOperatorAdapter() {
-		if (attributeDataType_Or_BitOperatorItemProvider == null) {
-			attributeDataType_Or_BitOperatorItemProvider = new AttributeDataType_Or_BitOperatorItemProvider(this);
-		}
-
-		return attributeDataType_Or_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.OrdinalScaledType_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OrdinalScaledType_Containment_OrGroupItemProvider ordinalScaledType_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.OrdinalScaledType_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOrdinalScaledType_Containment_OrGroupAdapter() {
-		if (ordinalScaledType_Containment_OrGroupItemProvider == null) {
-			ordinalScaledType_Containment_OrGroupItemProvider = new OrdinalScaledType_Containment_OrGroupItemProvider(this);
-		}
-
-		return ordinalScaledType_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.ExternalReferenceType_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExternalReferenceType_Containment_OrGroupItemProvider externalReferenceType_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.ExternalReferenceType_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExternalReferenceType_Containment_OrGroupAdapter() {
-		if (externalReferenceType_Containment_OrGroupItemProvider == null) {
-			externalReferenceType_Containment_OrGroupItemProvider = new ExternalReferenceType_Containment_OrGroupItemProvider(this);
-		}
-
-		return externalReferenceType_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Integer_FunctionalParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Integer_FunctionalParameterItemProvider integer_FunctionalParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Integer_FunctionalParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInteger_FunctionalParameterAdapter() {
-		if (integer_FunctionalParameterItemProvider == null) {
-			integer_FunctionalParameterItemProvider = new Integer_FunctionalParameterItemProvider(this);
-		}
-
-		return integer_FunctionalParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.ExternalReferenceType_path_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExternalReferenceType_path_AttrEClassItemProvider externalReferenceType_path_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.ExternalReferenceType_path_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExternalReferenceType_path_AttrEClassAdapter() {
-		if (externalReferenceType_path_AttrEClassItemProvider == null) {
-			externalReferenceType_path_AttrEClassItemProvider = new ExternalReferenceType_path_AttrEClassItemProvider(this);
-		}
-
-		return externalReferenceType_path_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_Boolean_hashCode_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_Boolean_hashCode_FunctionalOperatorItemProvider object_Boolean_hashCode_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_Boolean_hashCode_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_Boolean_hashCode_FunctionalOperatorAdapter() {
-		if (object_Boolean_hashCode_FunctionalOperatorItemProvider == null) {
-			object_Boolean_hashCode_FunctionalOperatorItemProvider = new Object_Boolean_hashCode_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_Boolean_hashCode_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.And_EvaluationBitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected And_EvaluationBitOperatorItemProvider and_EvaluationBitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.And_EvaluationBitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAnd_EvaluationBitOperatorAdapter() {
-		if (and_EvaluationBitOperatorItemProvider == null) {
-			and_EvaluationBitOperatorItemProvider = new And_EvaluationBitOperatorItemProvider(this);
-		}
-
-		return and_EvaluationBitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.smallerThan_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected smallerThan_FunctionalOperatorItemProvider smallerThan_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.smallerThan_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createsmallerThan_FunctionalOperatorAdapter() {
-		if (smallerThan_FunctionalOperatorItemProvider == null) {
-			smallerThan_FunctionalOperatorItemProvider = new smallerThan_FunctionalOperatorItemProvider(this);
-		}
-
-		return smallerThan_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SourceDocumentInformation_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceDocumentInformation_Containment_OrGroupItemProvider sourceDocumentInformation_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SourceDocumentInformation_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceDocumentInformation_Containment_OrGroupAdapter() {
-		if (sourceDocumentInformation_Containment_OrGroupItemProvider == null) {
-			sourceDocumentInformation_Containment_OrGroupItemProvider = new SourceDocumentInformation_Containment_OrGroupItemProvider(this);
-		}
-
-		return sourceDocumentInformation_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SystemUnitClass_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemUnitClass_Reference_OrGroupItemProvider systemUnitClass_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SystemUnitClass_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemUnitClass_Reference_OrGroupAdapter() {
-		if (systemUnitClass_Reference_OrGroupItemProvider == null) {
-			systemUnitClass_Reference_OrGroupItemProvider = new SystemUnitClass_Reference_OrGroupItemProvider(this);
-		}
-
-		return systemUnitClass_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Copyright_changeMode_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Copyright_changeMode_AttrEClassItemProvider copyright_changeMode_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Copyright_changeMode_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCopyright_changeMode_AttrEClassAdapter() {
-		if (copyright_changeMode_AttrEClassItemProvider == null) {
-			copyright_changeMode_AttrEClassItemProvider = new Copyright_changeMode_AttrEClassItemProvider(this);
-		}
-
-		return copyright_changeMode_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_Character_equals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_Character_equals_FunctionalOperatorItemProvider object_Character_equals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_Character_equals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_Character_equals_FunctionalOperatorAdapter() {
-		if (object_Character_equals_FunctionalOperatorItemProvider == null) {
-			object_Character_equals_FunctionalOperatorItemProvider = new Object_Character_equals_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_Character_equals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_Object_Number_toString_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Integer_Object_Number_toString_FunctionalOperatorItemProvider number_Integer_Object_Number_toString_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Integer_Object_Number_toString_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Integer_Object_Number_toString_FunctionalOperatorAdapter() {
-		if (number_Integer_Object_Number_toString_FunctionalOperatorItemProvider == null) {
-			number_Integer_Object_Number_toString_FunctionalOperatorItemProvider = new Number_Integer_Object_Number_toString_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Integer_Object_Number_toString_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.EFeatureMapEntry_PrimitiveArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EFeatureMapEntry_PrimitiveArgumentItemProvider eFeatureMapEntry_PrimitiveArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.EFeatureMapEntry_PrimitiveArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEFeatureMapEntry_PrimitiveArgumentAdapter() {
-		if (eFeatureMapEntry_PrimitiveArgumentItemProvider == null) {
-			eFeatureMapEntry_PrimitiveArgumentItemProvider = new EFeatureMapEntry_PrimitiveArgumentItemProvider(this);
-		}
-
-		return eFeatureMapEntry_PrimitiveArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceIDMapping_systemUnitInterfaceID_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceIDMapping_systemUnitInterfaceID_AttrEClassItemProvider interfaceIDMapping_systemUnitInterfaceID_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceIDMapping_systemUnitInterfaceID_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceIDMapping_systemUnitInterfaceID_AttrEClassAdapter() {
-		if (interfaceIDMapping_systemUnitInterfaceID_AttrEClassItemProvider == null) {
-			interfaceIDMapping_systemUnitInterfaceID_AttrEClassItemProvider = new InterfaceIDMapping_systemUnitInterfaceID_AttrEClassItemProvider(this);
-		}
-
-		return interfaceIDMapping_systemUnitInterfaceID_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.DateTime_CalculateableParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DateTime_CalculateableParameterItemProvider dateTime_CalculateableParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.DateTime_CalculateableParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDateTime_CalculateableParameterAdapter() {
-		if (dateTime_CalculateableParameterItemProvider == null) {
-			dateTime_CalculateableParameterItemProvider = new DateTime_CalculateableParameterItemProvider(this);
-		}
-
-		return dateTime_CalculateableParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InternalElement_refBaseSystemUnitPath_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InternalElement_refBaseSystemUnitPath_AttrEClassItemProvider internalElement_refBaseSystemUnitPath_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InternalElement_refBaseSystemUnitPath_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInternalElement_refBaseSystemUnitPath_AttrEClassAdapter() {
-		if (internalElement_refBaseSystemUnitPath_AttrEClassItemProvider == null) {
-			internalElement_refBaseSystemUnitPath_AttrEClassItemProvider = new InternalElement_refBaseSystemUnitPath_AttrEClassItemProvider(this);
-		}
-
-		return internalElement_refBaseSystemUnitPath_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.charAt_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected charAt_FunctionalOperatorItemProvider charAt_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.charAt_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createcharAt_FunctionalOperatorAdapter() {
-		if (charAt_FunctionalOperatorItemProvider == null) {
-			charAt_FunctionalOperatorItemProvider = new charAt_FunctionalOperatorItemProvider(this);
-		}
-
-		return charAt_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Sum_AggregationOperator_Double} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Sum_AggregationOperator_DoubleItemProvider sum_AggregationOperator_DoubleItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Sum_AggregationOperator_Double}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSum_AggregationOperator_DoubleAdapter() {
-		if (sum_AggregationOperator_DoubleItemProvider == null) {
-			sum_AggregationOperator_DoubleItemProvider = new Sum_AggregationOperator_DoubleItemProvider(this);
-		}
-
-		return sum_AggregationOperator_DoubleItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.compareToBoolean_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected compareToBoolean_FunctionalOperatorItemProvider compareToBoolean_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.compareToBoolean_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createcompareToBoolean_FunctionalOperatorAdapter() {
-		if (compareToBoolean_FunctionalOperatorItemProvider == null) {
-			compareToBoolean_FunctionalOperatorItemProvider = new compareToBoolean_FunctionalOperatorItemProvider(this);
-		}
-
-		return compareToBoolean_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.equals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected equals_FunctionalOperatorItemProvider equals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.equals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createequals_FunctionalOperatorAdapter() {
-		if (equals_FunctionalOperatorItemProvider == null) {
-			equals_FunctionalOperatorItemProvider = new equals_FunctionalOperatorItemProvider(this);
-		}
-
-		return equals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Integer_CalculateableParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Integer_CalculateableParameterItemProvider integer_CalculateableParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Integer_CalculateableParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInteger_CalculateableParameterAdapter() {
-		if (integer_CalculateableParameterItemProvider == null) {
-			integer_CalculateableParameterItemProvider = new Integer_CalculateableParameterItemProvider(this);
-		}
-
-		return integer_CalculateableParameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_And_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_And_BitOperatorItemProvider number_And_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_And_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_And_BitOperatorAdapter() {
-		if (number_And_BitOperatorItemProvider == null) {
-			number_And_BitOperatorItemProvider = new Number_And_BitOperatorItemProvider(this);
-		}
-
-		return number_And_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.codePointBefore_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected codePointBefore_FunctionalOperatorItemProvider codePointBefore_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.codePointBefore_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createcodePointBefore_FunctionalOperatorAdapter() {
-		if (codePointBefore_FunctionalOperatorItemProvider == null) {
-			codePointBefore_FunctionalOperatorItemProvider = new codePointBefore_FunctionalOperatorItemProvider(this);
-		}
-
-		return codePointBefore_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Revision_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Revision_Reference_OrGroupItemProvider revision_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Revision_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRevision_Reference_OrGroupAdapter() {
-		if (revision_Reference_OrGroupItemProvider == null) {
-			revision_Reference_OrGroupItemProvider = new Revision_Reference_OrGroupItemProvider(this);
-		}
-
-		return revision_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_smallerThan_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Double_smallerThan_FunctionalOperatorItemProvider number_Double_smallerThan_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Double_smallerThan_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Double_smallerThan_FunctionalOperatorAdapter() {
-		if (number_Double_smallerThan_FunctionalOperatorItemProvider == null) {
-			number_Double_smallerThan_FunctionalOperatorItemProvider = new Number_Double_smallerThan_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Double_smallerThan_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.EFeatureMapEntry_CalculateableElementReferenceArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EFeatureMapEntry_CalculateableElementReferenceArgumentItemProvider eFeatureMapEntry_CalculateableElementReferenceArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.EFeatureMapEntry_CalculateableElementReferenceArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEFeatureMapEntry_CalculateableElementReferenceArgumentAdapter() {
-		if (eFeatureMapEntry_CalculateableElementReferenceArgumentItemProvider == null) {
-			eFeatureMapEntry_CalculateableElementReferenceArgumentItemProvider = new EFeatureMapEntry_CalculateableElementReferenceArgumentItemProvider(this);
-		}
-
-		return eFeatureMapEntry_CalculateableElementReferenceArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_greaterEquals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Integer_greaterEquals_FunctionalOperatorItemProvider number_Integer_greaterEquals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Integer_greaterEquals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Integer_greaterEquals_FunctionalOperatorAdapter() {
-		if (number_Integer_greaterEquals_FunctionalOperatorItemProvider == null) {
-			number_Integer_greaterEquals_FunctionalOperatorItemProvider = new Number_Integer_greaterEquals_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Integer_greaterEquals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InternalLink_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InternalLink_Reference_OrGroupItemProvider internalLink_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InternalLink_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInternalLink_Reference_OrGroupAdapter() {
-		if (internalLink_Reference_OrGroupItemProvider == null) {
-			internalLink_Reference_OrGroupItemProvider = new InternalLink_Reference_OrGroupItemProvider(this);
-		}
-
-		return internalLink_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Attribute_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Attribute_Containment_OrGroupItemProvider attribute_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Attribute_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttribute_Containment_OrGroupAdapter() {
-		if (attribute_Containment_OrGroupItemProvider == null) {
-			attribute_Containment_OrGroupItemProvider = new Attribute_Containment_OrGroupItemProvider(this);
-		}
-
-		return attribute_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.concat_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected concat_FunctionalOperatorItemProvider concat_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.concat_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createconcat_FunctionalOperatorAdapter() {
-		if (concat_FunctionalOperatorItemProvider == null) {
-			concat_FunctionalOperatorItemProvider = new concat_FunctionalOperatorItemProvider(this);
-		}
-
-		return concat_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.EFeatureMapEntry_And_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EFeatureMapEntry_And_BitOperatorItemProvider eFeatureMapEntry_And_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.EFeatureMapEntry_And_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEFeatureMapEntry_And_BitOperatorAdapter() {
-		if (eFeatureMapEntry_And_BitOperatorItemProvider == null) {
-			eFeatureMapEntry_And_BitOperatorItemProvider = new EFeatureMapEntry_And_BitOperatorItemProvider(this);
-		}
-
-		return eFeatureMapEntry_And_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SystemUnitFamily_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemUnitFamily_Reference_OrGroupItemProvider systemUnitFamily_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SystemUnitFamily_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemUnitFamily_Reference_OrGroupAdapter() {
-		if (systemUnitFamily_Reference_OrGroupItemProvider == null) {
-			systemUnitFamily_Reference_OrGroupItemProvider = new SystemUnitFamily_Reference_OrGroupItemProvider(this);
-		}
-
-		return systemUnitFamily_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SupportedRoleClass_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SupportedRoleClass_Containment_OrGroupItemProvider supportedRoleClass_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SupportedRoleClass_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSupportedRoleClass_Containment_OrGroupAdapter() {
-		if (supportedRoleClass_Containment_OrGroupItemProvider == null) {
-			supportedRoleClass_Containment_OrGroupItemProvider = new SupportedRoleClass_Containment_OrGroupItemProvider(this);
-		}
-
-		return supportedRoleClass_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.InterfaceFamily_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceFamily_Containment_OrGroupItemProvider interfaceFamily_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.InterfaceFamily_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceFamily_Containment_OrGroupAdapter() {
-		if (interfaceFamily_Containment_OrGroupItemProvider == null) {
-			interfaceFamily_Containment_OrGroupItemProvider = new InterfaceFamily_Containment_OrGroupItemProvider(this);
-		}
-
-		return interfaceFamily_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleRequirements_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleRequirements_Containment_OrGroupItemProvider roleRequirements_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleRequirements_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleRequirements_Containment_OrGroupAdapter() {
-		if (roleRequirements_Containment_OrGroupItemProvider == null) {
-			roleRequirements_Containment_OrGroupItemProvider = new RoleRequirements_Containment_OrGroupItemProvider(this);
-		}
-
-		return roleRequirements_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Revision_oldVersion_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Revision_oldVersion_AttrEClassItemProvider revision_oldVersion_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Revision_oldVersion_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRevision_oldVersion_AttrEClassAdapter() {
-		if (revision_oldVersion_AttrEClassItemProvider == null) {
-			revision_oldVersion_AttrEClassItemProvider = new Revision_oldVersion_AttrEClassItemProvider(this);
-		}
-
-		return revision_oldVersion_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_Number_equals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_Number_equals_FunctionalOperatorItemProvider object_Number_equals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_Number_equals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_Number_equals_FunctionalOperatorAdapter() {
-		if (object_Number_equals_FunctionalOperatorItemProvider == null) {
-			object_Number_equals_FunctionalOperatorItemProvider = new Object_Number_equals_FunctionalOperatorItemProvider(this);
-		}
-
-		return object_Number_equals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_smallerThan_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Integer_smallerThan_FunctionalOperatorItemProvider number_Integer_smallerThan_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Integer_smallerThan_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Integer_smallerThan_FunctionalOperatorAdapter() {
-		if (number_Integer_smallerThan_FunctionalOperatorItemProvider == null) {
-			number_Integer_smallerThan_FunctionalOperatorItemProvider = new Number_Integer_smallerThan_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Integer_smallerThan_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_greaterEquals_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Number_Double_greaterEquals_FunctionalOperatorItemProvider number_Double_greaterEquals_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Number_Double_greaterEquals_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNumber_Double_greaterEquals_FunctionalOperatorAdapter() {
-		if (number_Double_greaterEquals_FunctionalOperatorItemProvider == null) {
-			number_Double_greaterEquals_FunctionalOperatorItemProvider = new Number_Double_greaterEquals_FunctionalOperatorItemProvider(this);
-		}
-
-		return number_Double_greaterEquals_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SystemUnitClassLib_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemUnitClassLib_Containment_OrGroupItemProvider systemUnitClassLib_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SystemUnitClassLib_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemUnitClassLib_Containment_OrGroupAdapter() {
-		if (systemUnitClassLib_Containment_OrGroupItemProvider == null) {
-			systemUnitClassLib_Containment_OrGroupItemProvider = new SystemUnitClassLib_Containment_OrGroupItemProvider(this);
-		}
-
-		return systemUnitClassLib_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeValueRequirement_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AttributeValueRequirement_Containment_OrGroupItemProvider attributeValueRequirement_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.AttributeValueRequirement_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAttributeValueRequirement_Containment_OrGroupAdapter() {
-		if (attributeValueRequirement_Containment_OrGroupItemProvider == null) {
-			attributeValueRequirement_Containment_OrGroupItemProvider = new AttributeValueRequirement_Containment_OrGroupItemProvider(this);
-		}
-
-		return attributeValueRequirement_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.String_Or_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected String_Or_BitOperatorItemProvider string_Or_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.String_Or_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createString_Or_BitOperatorAdapter() {
-		if (string_Or_BitOperatorItemProvider == null) {
-			string_Or_BitOperatorItemProvider = new String_Or_BitOperatorItemProvider(this);
-		}
-
-		return string_Or_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXObject_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXObject_Reference_OrGroupItemProvider caexObject_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXObject_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXObject_Reference_OrGroupAdapter() {
-		if (caexObject_Reference_OrGroupItemProvider == null) {
-			caexObject_Reference_OrGroupItemProvider = new CAEXObject_Reference_OrGroupItemProvider(this);
-		}
-
-		return caexObject_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Integer_Or_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Integer_Or_BitOperatorItemProvider integer_Or_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Integer_Or_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInteger_Or_BitOperatorAdapter() {
-		if (integer_Or_BitOperatorItemProvider == null) {
-			integer_Or_BitOperatorItemProvider = new Integer_Or_BitOperatorItemProvider(this);
-		}
-
-		return integer_Or_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXFile_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXFile_Reference_OrGroupItemProvider caexFile_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXFile_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXFile_Reference_OrGroupAdapter() {
-		if (caexFile_Reference_OrGroupItemProvider == null) {
-			caexFile_Reference_OrGroupItemProvider = new CAEXFile_Reference_OrGroupItemProvider(this);
-		}
-
-		return caexFile_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Mapping_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Mapping_Reference_OrGroupItemProvider mapping_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Mapping_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMapping_Reference_OrGroupAdapter() {
-		if (mapping_Reference_OrGroupItemProvider == null) {
-			mapping_Reference_OrGroupItemProvider = new Mapping_Reference_OrGroupItemProvider(this);
-		}
-
-		return mapping_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.DateTime_Or_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DateTime_Or_BitOperatorItemProvider dateTime_Or_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.DateTime_Or_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDateTime_Or_BitOperatorAdapter() {
-		if (dateTime_Or_BitOperatorItemProvider == null) {
-			dateTime_Or_BitOperatorItemProvider = new DateTime_Or_BitOperatorItemProvider(this);
-		}
-
-		return dateTime_Or_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CAEXFile_fileName_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CAEXFile_fileName_AttrEClassItemProvider caexFile_fileName_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CAEXFile_fileName_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCAEXFile_fileName_AttrEClassAdapter() {
-		if (caexFile_fileName_AttrEClassItemProvider == null) {
-			caexFile_fileName_AttrEClassItemProvider = new CAEXFile_fileName_AttrEClassItemProvider(this);
-		}
-
-		return caexFile_fileName_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_String_Object_CharSequence_hashCode_FunctionalOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CharSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.CharSequence_String_Object_CharSequence_hashCode_FunctionalOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCharSequence_String_Object_CharSequence_hashCode_FunctionalOperatorAdapter() {
-		if (charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider == null) {
-			charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider = new CharSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider(this);
-		}
-
-		return charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RoleClassLib_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RoleClassLib_Reference_OrGroupItemProvider roleClassLib_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RoleClassLib_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRoleClassLib_Reference_OrGroupAdapter() {
-		if (roleClassLib_Reference_OrGroupItemProvider == null) {
-			roleClassLib_Reference_OrGroupItemProvider = new RoleClassLib_Reference_OrGroupItemProvider(this);
-		}
-
-		return roleClassLib_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Min_AggregationOperator_Integer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Min_AggregationOperator_IntegerItemProvider min_AggregationOperator_IntegerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Min_AggregationOperator_Integer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMin_AggregationOperator_IntegerAdapter() {
-		if (min_AggregationOperator_IntegerItemProvider == null) {
-			min_AggregationOperator_IntegerItemProvider = new Min_AggregationOperator_IntegerItemProvider(this);
-		}
-
-		return min_AggregationOperator_IntegerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Integer_PrimitiveArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Integer_PrimitiveArgumentItemProvider integer_PrimitiveArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Integer_PrimitiveArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInteger_PrimitiveArgumentAdapter() {
-		if (integer_PrimitiveArgumentItemProvider == null) {
-			integer_PrimitiveArgumentItemProvider = new Integer_PrimitiveArgumentItemProvider(this);
-		}
-
-		return integer_PrimitiveArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.RefSemantic_Containment_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RefSemantic_Containment_OrGroupItemProvider refSemantic_Containment_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.RefSemantic_Containment_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRefSemantic_Containment_OrGroupAdapter() {
-		if (refSemantic_Containment_OrGroupItemProvider == null) {
-			refSemantic_Containment_OrGroupItemProvider = new RefSemantic_Containment_OrGroupItemProvider(this);
-		}
-
-		return refSemantic_Containment_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.OrdinalScaledType_Reference_OrGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OrdinalScaledType_Reference_OrGroupItemProvider ordinalScaledType_Reference_OrGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.OrdinalScaledType_Reference_OrGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOrdinalScaledType_Reference_OrGroupAdapter() {
-		if (ordinalScaledType_Reference_OrGroupItemProvider == null) {
-			ordinalScaledType_Reference_OrGroupItemProvider = new OrdinalScaledType_Reference_OrGroupItemProvider(this);
-		}
-
-		return ordinalScaledType_Reference_OrGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.FindQueryCollection} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FindQueryCollectionItemProvider findQueryCollectionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.FindQueryCollection}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFindQueryCollectionAdapter() {
-		if (findQueryCollectionItemProvider == null) {
-			findQueryCollectionItemProvider = new FindQueryCollectionItemProvider(this);
-		}
-
-		return findQueryCollectionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Revision_revisionDate_AttrEClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Revision_revisionDate_AttrEClassItemProvider revision_revisionDate_AttrEClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Revision_revisionDate_AttrEClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRevision_revisionDate_AttrEClassAdapter() {
-		if (revision_revisionDate_AttrEClassItemProvider == null) {
-			revision_revisionDate_AttrEClassItemProvider = new Revision_revisionDate_AttrEClassItemProvider(this);
-		}
-
-		return revision_revisionDate_AttrEClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_And_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_And_BitOperatorItemProvider object_And_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_And_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_And_BitOperatorAdapter() {
-		if (object_And_BitOperatorItemProvider == null) {
-			object_And_BitOperatorItemProvider = new Object_And_BitOperatorItemProvider(this);
-		}
-
-		return object_And_BitOperatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Object_PrimitiveArgument} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Object_PrimitiveArgumentItemProvider object_PrimitiveArgumentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.Object_PrimitiveArgument}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObject_PrimitiveArgumentAdapter() {
-		if (object_PrimitiveArgumentItemProvider == null) {
-			object_PrimitiveArgumentItemProvider = new Object_PrimitiveArgumentItemProvider(this);
-		}
-
-		return object_PrimitiveArgumentItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SelectClause} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SelectClauseItemProvider selectClauseItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.SelectClause}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSelectClauseAdapter() {
-		if (selectClauseItemProvider == null) {
-			selectClauseItemProvider = new SelectClauseItemProvider(this);
-		}
-
-		return selectClauseItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qmm.DateTime_And_BitOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DateTime_And_BitOperatorItemProvider dateTime_And_BitOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qmm.DateTime_And_BitOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDateTime_And_BitOperatorAdapter() {
-		if (dateTime_And_BitOperatorItemProvider == null) {
-			dateTime_And_BitOperatorItemProvider = new DateTime_And_BitOperatorItemProvider(this);
-		}
-
-		return dateTime_And_BitOperatorItemProvider;
+		return examItemProvider;
 	}
 
 	/**
@@ -7110,95 +233,394 @@ public class QmmItemProviderAdapterFactory extends QmmAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qmm.Description_Containment_OrGroup} instances.
+	 * This keeps track of the one adapter used for all {@link qmm.toLowerCase_FunctionalOperator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Description_Containment_OrGroupItemProvider description_Containment_OrGroupItemProvider;
+	protected toLowerCase_FunctionalOperatorItemProvider toLowerCase_FunctionalOperatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qmm.Description_Containment_OrGroup}.
+	 * This creates an adapter for a {@link qmm.toLowerCase_FunctionalOperator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDescription_Containment_OrGroupAdapter() {
-		if (description_Containment_OrGroupItemProvider == null) {
-			description_Containment_OrGroupItemProvider = new Description_Containment_OrGroupItemProvider(this);
+	public Adapter createtoLowerCase_FunctionalOperatorAdapter() {
+		if (toLowerCase_FunctionalOperatorItemProvider == null) {
+			toLowerCase_FunctionalOperatorItemProvider = new toLowerCase_FunctionalOperatorItemProvider(this);
 		}
 
-		return description_Containment_OrGroupItemProvider;
+		return toLowerCase_FunctionalOperatorItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qmm.length_FunctionalOperator} instances.
+	 * This keeps track of the one adapter used for all {@link qmm.String_CalculateableParameter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected length_FunctionalOperatorItemProvider length_FunctionalOperatorItemProvider;
+	protected String_CalculateableParameterItemProvider string_CalculateableParameterItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qmm.length_FunctionalOperator}.
+	 * This creates an adapter for a {@link qmm.String_CalculateableParameter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createlength_FunctionalOperatorAdapter() {
-		if (length_FunctionalOperatorItemProvider == null) {
-			length_FunctionalOperatorItemProvider = new length_FunctionalOperatorItemProvider(this);
+	public Adapter createString_CalculateableParameterAdapter() {
+		if (string_CalculateableParameterItemProvider == null) {
+			string_CalculateableParameterItemProvider = new String_CalculateableParameterItemProvider(this);
 		}
 
-		return length_FunctionalOperatorItemProvider;
+		return string_CalculateableParameterItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qmm.SupportedRoleClass_refRoleClassPath_AttrEClass} instances.
+	 * This keeps track of the one adapter used for all {@link qmm.Integer_Or_BitOperator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SupportedRoleClass_refRoleClassPath_AttrEClassItemProvider supportedRoleClass_refRoleClassPath_AttrEClassItemProvider;
+	protected Integer_Or_BitOperatorItemProvider integer_Or_BitOperatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qmm.SupportedRoleClass_refRoleClassPath_AttrEClass}.
+	 * This creates an adapter for a {@link qmm.Integer_Or_BitOperator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSupportedRoleClass_refRoleClassPath_AttrEClassAdapter() {
-		if (supportedRoleClass_refRoleClassPath_AttrEClassItemProvider == null) {
-			supportedRoleClass_refRoleClassPath_AttrEClassItemProvider = new SupportedRoleClass_refRoleClassPath_AttrEClassItemProvider(this);
+	public Adapter createInteger_Or_BitOperatorAdapter() {
+		if (integer_Or_BitOperatorItemProvider == null) {
+			integer_Or_BitOperatorItemProvider = new Integer_Or_BitOperatorItemProvider(this);
 		}
 
-		return supportedRoleClass_refRoleClassPath_AttrEClassItemProvider;
+		return integer_Or_BitOperatorItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qmm.UnknownType_Reference_OrGroup} instances.
+	 * This keeps track of the one adapter used for all {@link qmm.codePointBefore_FunctionalOperator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UnknownType_Reference_OrGroupItemProvider unknownType_Reference_OrGroupItemProvider;
+	protected codePointBefore_FunctionalOperatorItemProvider codePointBefore_FunctionalOperatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qmm.UnknownType_Reference_OrGroup}.
+	 * This creates an adapter for a {@link qmm.codePointBefore_FunctionalOperator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createUnknownType_Reference_OrGroupAdapter() {
-		if (unknownType_Reference_OrGroupItemProvider == null) {
-			unknownType_Reference_OrGroupItemProvider = new UnknownType_Reference_OrGroupItemProvider(this);
+	public Adapter createcodePointBefore_FunctionalOperatorAdapter() {
+		if (codePointBefore_FunctionalOperatorItemProvider == null) {
+			codePointBefore_FunctionalOperatorItemProvider = new codePointBefore_FunctionalOperatorItemProvider(this);
 		}
 
-		return unknownType_Reference_OrGroupItemProvider;
+		return codePointBefore_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Exam_examID_AttrEClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Exam_examID_AttrEClassItemProvider exam_examID_AttrEClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Exam_examID_AttrEClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExam_examID_AttrEClassAdapter() {
+		if (exam_examID_AttrEClassItemProvider == null) {
+			exam_examID_AttrEClassItemProvider = new Exam_examID_AttrEClassItemProvider(this);
+		}
+
+		return exam_examID_AttrEClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Min_AggregationOperator_Double} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Min_AggregationOperator_DoubleItemProvider min_AggregationOperator_DoubleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Min_AggregationOperator_Double}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMin_AggregationOperator_DoubleAdapter() {
+		if (min_AggregationOperator_DoubleItemProvider == null) {
+			min_AggregationOperator_DoubleItemProvider = new Min_AggregationOperator_DoubleItemProvider(this);
+		}
+
+		return min_AggregationOperator_DoubleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Boolean_Or_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Boolean_Or_BitOperatorItemProvider boolean_Or_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Boolean_Or_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBoolean_Or_BitOperatorAdapter() {
+		if (boolean_Or_BitOperatorItemProvider == null) {
+			boolean_Or_BitOperatorItemProvider = new Boolean_Or_BitOperatorItemProvider(this);
+		}
+
+		return boolean_Or_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_Boolean_toString_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_Boolean_toString_FunctionalOperatorItemProvider object_Boolean_toString_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_Boolean_toString_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_Boolean_toString_FunctionalOperatorAdapter() {
+		if (object_Boolean_toString_FunctionalOperatorItemProvider == null) {
+			object_Boolean_toString_FunctionalOperatorItemProvider = new Object_Boolean_toString_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_Boolean_toString_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_And_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CharSequence_And_BitOperatorItemProvider charSequence_And_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.CharSequence_And_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharSequence_And_BitOperatorAdapter() {
+		if (charSequence_And_BitOperatorItemProvider == null) {
+			charSequence_And_BitOperatorItemProvider = new CharSequence_And_BitOperatorItemProvider(this);
+		}
+
+		return charSequence_And_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_Object_Number_hashCode_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Integer_Object_Number_hashCode_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Integer_Object_Number_hashCode_FunctionalOperatorAdapter() {
+		if (number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider == null) {
+			number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider = new Number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.compareToString_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected compareToString_FunctionalOperatorItemProvider compareToString_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.compareToString_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createcompareToString_FunctionalOperatorAdapter() {
+		if (compareToString_FunctionalOperatorItemProvider == null) {
+			compareToString_FunctionalOperatorItemProvider = new compareToString_FunctionalOperatorItemProvider(this);
+		}
+
+		return compareToString_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.contains_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected contains_FunctionalOperatorItemProvider contains_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.contains_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createcontains_FunctionalOperatorAdapter() {
+		if (contains_FunctionalOperatorItemProvider == null) {
+			contains_FunctionalOperatorItemProvider = new contains_FunctionalOperatorItemProvider(this);
+		}
+
+		return contains_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Boolean_FunctionalParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Boolean_FunctionalParameterItemProvider boolean_FunctionalParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Boolean_FunctionalParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBoolean_FunctionalParameterAdapter() {
+		if (boolean_FunctionalParameterItemProvider == null) {
+			boolean_FunctionalParameterItemProvider = new Boolean_FunctionalParameterItemProvider(this);
+		}
+
+		return boolean_FunctionalParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Double_And_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Double_And_BitOperatorItemProvider double_And_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Double_And_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDouble_And_BitOperatorAdapter() {
+		if (double_And_BitOperatorItemProvider == null) {
+			double_And_BitOperatorItemProvider = new Double_And_BitOperatorItemProvider(this);
+		}
+
+		return double_And_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Character_Or_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Character_Or_BitOperatorItemProvider character_Or_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Character_Or_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharacter_Or_BitOperatorAdapter() {
+		if (character_Or_BitOperatorItemProvider == null) {
+			character_Or_BitOperatorItemProvider = new Character_Or_BitOperatorItemProvider(this);
+		}
+
+		return character_Or_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.equals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected equals_FunctionalOperatorItemProvider equals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.equals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createequals_FunctionalOperatorAdapter() {
+		if (equals_FunctionalOperatorItemProvider == null) {
+			equals_FunctionalOperatorItemProvider = new equals_FunctionalOperatorItemProvider(this);
+		}
+
+		return equals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_Number_equals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_Number_equals_FunctionalOperatorItemProvider object_Number_equals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_Number_equals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_Number_equals_FunctionalOperatorAdapter() {
+		if (object_Number_equals_FunctionalOperatorItemProvider == null) {
+			object_Number_equals_FunctionalOperatorItemProvider = new Object_Number_equals_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_Number_equals_FunctionalOperatorItemProvider;
 	}
 
 	/**
@@ -7225,26 +647,2763 @@ public class QmmItemProviderAdapterFactory extends QmmAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qmm.AttributeNameMapping_systemUnitAttributeName_AttrEClass} instances.
+	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_String_Object_CharSequence_toString_FunctionalOperator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttributeNameMapping_systemUnitAttributeName_AttrEClassItemProvider attributeNameMapping_systemUnitAttributeName_AttrEClassItemProvider;
+	protected CharSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qmm.AttributeNameMapping_systemUnitAttributeName_AttrEClass}.
+	 * This creates an adapter for a {@link qmm.CharSequence_String_Object_CharSequence_toString_FunctionalOperator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttributeNameMapping_systemUnitAttributeName_AttrEClassAdapter() {
-		if (attributeNameMapping_systemUnitAttributeName_AttrEClassItemProvider == null) {
-			attributeNameMapping_systemUnitAttributeName_AttrEClassItemProvider = new AttributeNameMapping_systemUnitAttributeName_AttrEClassItemProvider(this);
+	public Adapter createCharSequence_String_Object_CharSequence_toString_FunctionalOperatorAdapter() {
+		if (charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider == null) {
+			charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider = new CharSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider(this);
 		}
 
-		return attributeNameMapping_systemUnitAttributeName_AttrEClassItemProvider;
+		return charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Integer_PrimitiveArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Integer_PrimitiveArgumentItemProvider integer_PrimitiveArgumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Integer_PrimitiveArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInteger_PrimitiveArgumentAdapter() {
+		if (integer_PrimitiveArgumentItemProvider == null) {
+			integer_PrimitiveArgumentItemProvider = new Integer_PrimitiveArgumentItemProvider(this);
+		}
+
+		return integer_PrimitiveArgumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_FunctionalParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CharSequence_FunctionalParameterItemProvider charSequence_FunctionalParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.CharSequence_FunctionalParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharSequence_FunctionalParameterAdapter() {
+		if (charSequence_FunctionalParameterItemProvider == null) {
+			charSequence_FunctionalParameterItemProvider = new CharSequence_FunctionalParameterItemProvider(this);
+		}
+
+		return charSequence_FunctionalParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_smallerThan_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Integer_smallerThan_FunctionalOperatorItemProvider number_Integer_smallerThan_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Integer_smallerThan_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Integer_smallerThan_FunctionalOperatorAdapter() {
+		if (number_Integer_smallerThan_FunctionalOperatorItemProvider == null) {
+			number_Integer_smallerThan_FunctionalOperatorItemProvider = new Number_Integer_smallerThan_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Integer_smallerThan_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_Character_toString_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_Character_toString_FunctionalOperatorItemProvider object_Character_toString_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_Character_toString_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_Character_toString_FunctionalOperatorAdapter() {
+		if (object_Character_toString_FunctionalOperatorItemProvider == null) {
+			object_Character_toString_FunctionalOperatorItemProvider = new Object_Character_toString_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_Character_toString_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Person_Containment_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Person_Containment_OrGroupItemProvider person_Containment_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Person_Containment_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPerson_Containment_OrGroupAdapter() {
+		if (person_Containment_OrGroupItemProvider == null) {
+			person_Containment_OrGroupItemProvider = new Person_Containment_OrGroupItemProvider(this);
+		}
+
+		return person_Containment_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.smallerEquals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected smallerEquals_FunctionalOperatorItemProvider smallerEquals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.smallerEquals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createsmallerEquals_FunctionalOperatorAdapter() {
+		if (smallerEquals_FunctionalOperatorItemProvider == null) {
+			smallerEquals_FunctionalOperatorItemProvider = new smallerEquals_FunctionalOperatorItemProvider(this);
+		}
+
+		return smallerEquals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Double_Or_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Double_Or_BitOperatorItemProvider double_Or_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Double_Or_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDouble_Or_BitOperatorAdapter() {
+		if (double_Or_BitOperatorItemProvider == null) {
+			double_Or_BitOperatorItemProvider = new Double_Or_BitOperatorItemProvider(this);
+		}
+
+		return double_Or_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_CharSequence_hashCode_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_CharSequence_hashCode_FunctionalOperatorItemProvider object_CharSequence_hashCode_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_CharSequence_hashCode_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_CharSequence_hashCode_FunctionalOperatorAdapter() {
+		if (object_CharSequence_hashCode_FunctionalOperatorItemProvider == null) {
+			object_CharSequence_hashCode_FunctionalOperatorItemProvider = new Object_CharSequence_hashCode_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_CharSequence_hashCode_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_PrimitiveArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_PrimitiveArgumentItemProvider object_PrimitiveArgumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_PrimitiveArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_PrimitiveArgumentAdapter() {
+		if (object_PrimitiveArgumentItemProvider == null) {
+			object_PrimitiveArgumentItemProvider = new Object_PrimitiveArgumentItemProvider(this);
+		}
+
+		return object_PrimitiveArgumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.compareToBoolean_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected compareToBoolean_FunctionalOperatorItemProvider compareToBoolean_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.compareToBoolean_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createcompareToBoolean_FunctionalOperatorAdapter() {
+		if (compareToBoolean_FunctionalOperatorItemProvider == null) {
+			compareToBoolean_FunctionalOperatorItemProvider = new compareToBoolean_FunctionalOperatorItemProvider(this);
+		}
+
+		return compareToBoolean_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.CountableReferenceParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CountableReferenceParameterItemProvider countableReferenceParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.CountableReferenceParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCountableReferenceParameterAdapter() {
+		if (countableReferenceParameterItemProvider == null) {
+			countableReferenceParameterItemProvider = new CountableReferenceParameterItemProvider(this);
+		}
+
+		return countableReferenceParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Integer_FunctionalParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Integer_FunctionalParameterItemProvider integer_FunctionalParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Integer_FunctionalParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInteger_FunctionalParameterAdapter() {
+		if (integer_FunctionalParameterItemProvider == null) {
+			integer_FunctionalParameterItemProvider = new Integer_FunctionalParameterItemProvider(this);
+		}
+
+		return integer_FunctionalParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.String_FunctionalParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected String_FunctionalParameterItemProvider string_FunctionalParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.String_FunctionalParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createString_FunctionalParameterAdapter() {
+		if (string_FunctionalParameterItemProvider == null) {
+			string_FunctionalParameterItemProvider = new String_FunctionalParameterItemProvider(this);
+		}
+
+		return string_FunctionalParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Character_FunctionalParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Character_FunctionalParameterItemProvider character_FunctionalParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Character_FunctionalParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharacter_FunctionalParameterAdapter() {
+		if (character_FunctionalParameterItemProvider == null) {
+			character_FunctionalParameterItemProvider = new Character_FunctionalParameterItemProvider(this);
+		}
+
+		return character_FunctionalParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_CalculateableParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_CalculateableParameterItemProvider number_CalculateableParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_CalculateableParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_CalculateableParameterAdapter() {
+		if (number_CalculateableParameterItemProvider == null) {
+			number_CalculateableParameterItemProvider = new Number_CalculateableParameterItemProvider(this);
+		}
+
+		return number_CalculateableParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_Object_Number_equals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Double_Object_Number_equals_FunctionalOperatorItemProvider number_Double_Object_Number_equals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Double_Object_Number_equals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Double_Object_Number_equals_FunctionalOperatorAdapter() {
+		if (number_Double_Object_Number_equals_FunctionalOperatorItemProvider == null) {
+			number_Double_Object_Number_equals_FunctionalOperatorItemProvider = new Number_Double_Object_Number_equals_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Double_Object_Number_equals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Person_name_AttrEClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Person_name_AttrEClassItemProvider person_name_AttrEClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Person_name_AttrEClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPerson_name_AttrEClassAdapter() {
+		if (person_name_AttrEClassItemProvider == null) {
+			person_name_AttrEClassItemProvider = new Person_name_AttrEClassItemProvider(this);
+		}
+
+		return person_name_AttrEClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.length_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected length_FunctionalOperatorItemProvider length_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.length_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createlength_FunctionalOperatorAdapter() {
+		if (length_FunctionalOperatorItemProvider == null) {
+			length_FunctionalOperatorItemProvider = new length_FunctionalOperatorItemProvider(this);
+		}
+
+		return length_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.concat_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected concat_FunctionalOperatorItemProvider concat_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.concat_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createconcat_FunctionalOperatorAdapter() {
+		if (concat_FunctionalOperatorItemProvider == null) {
+			concat_FunctionalOperatorItemProvider = new concat_FunctionalOperatorItemProvider(this);
+		}
+
+		return concat_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_FunctionalParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_FunctionalParameterItemProvider number_FunctionalParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_FunctionalParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_FunctionalParameterAdapter() {
+		if (number_FunctionalParameterItemProvider == null) {
+			number_FunctionalParameterItemProvider = new Number_FunctionalParameterItemProvider(this);
+		}
+
+		return number_FunctionalParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_String_Object_CharSequence_hashCode_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CharSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.CharSequence_String_Object_CharSequence_hashCode_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharSequence_String_Object_CharSequence_hashCode_FunctionalOperatorAdapter() {
+		if (charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider == null) {
+			charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider = new CharSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider(this);
+		}
+
+		return charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.indexOfChar_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected indexOfChar_FunctionalOperatorItemProvider indexOfChar_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.indexOfChar_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createindexOfChar_FunctionalOperatorAdapter() {
+		if (indexOfChar_FunctionalOperatorItemProvider == null) {
+			indexOfChar_FunctionalOperatorItemProvider = new indexOfChar_FunctionalOperatorItemProvider(this);
+		}
+
+		return indexOfChar_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.equalsIgnoreCase_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected equalsIgnoreCase_FunctionalOperatorItemProvider equalsIgnoreCase_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.equalsIgnoreCase_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createequalsIgnoreCase_FunctionalOperatorAdapter() {
+		if (equalsIgnoreCase_FunctionalOperatorItemProvider == null) {
+			equalsIgnoreCase_FunctionalOperatorItemProvider = new equalsIgnoreCase_FunctionalOperatorItemProvider(this);
+		}
+
+		return equalsIgnoreCase_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Boolean_And_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Boolean_And_BitOperatorItemProvider boolean_And_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Boolean_And_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBoolean_And_BitOperatorAdapter() {
+		if (boolean_And_BitOperatorItemProvider == null) {
+			boolean_And_BitOperatorItemProvider = new Boolean_And_BitOperatorItemProvider(this);
+		}
+
+		return boolean_And_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_PrimitiveArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CharSequence_PrimitiveArgumentItemProvider charSequence_PrimitiveArgumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.CharSequence_PrimitiveArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharSequence_PrimitiveArgumentAdapter() {
+		if (charSequence_PrimitiveArgumentItemProvider == null) {
+			charSequence_PrimitiveArgumentItemProvider = new CharSequence_PrimitiveArgumentItemProvider(this);
+		}
+
+		return charSequence_PrimitiveArgumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_Object_Number_toString_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Integer_Object_Number_toString_FunctionalOperatorItemProvider number_Integer_Object_Number_toString_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Integer_Object_Number_toString_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Integer_Object_Number_toString_FunctionalOperatorAdapter() {
+		if (number_Integer_Object_Number_toString_FunctionalOperatorItemProvider == null) {
+			number_Integer_Object_Number_toString_FunctionalOperatorItemProvider = new Number_Integer_Object_Number_toString_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Integer_Object_Number_toString_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.isEmpty_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected isEmpty_FunctionalOperatorItemProvider isEmpty_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.isEmpty_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createisEmpty_FunctionalOperatorAdapter() {
+		if (isEmpty_FunctionalOperatorItemProvider == null) {
+			isEmpty_FunctionalOperatorItemProvider = new isEmpty_FunctionalOperatorItemProvider(this);
+		}
+
+		return isEmpty_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.toString_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected toString_FunctionalOperatorItemProvider toString_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.toString_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createtoString_FunctionalOperatorAdapter() {
+		if (toString_FunctionalOperatorItemProvider == null) {
+			toString_FunctionalOperatorItemProvider = new toString_FunctionalOperatorItemProvider(this);
+		}
+
+		return toString_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_Number_hashCode_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_Number_hashCode_FunctionalOperatorItemProvider object_Number_hashCode_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_Number_hashCode_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_Number_hashCode_FunctionalOperatorAdapter() {
+		if (object_Number_hashCode_FunctionalOperatorItemProvider == null) {
+			object_Number_hashCode_FunctionalOperatorItemProvider = new Object_Number_hashCode_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_Number_hashCode_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Student_Containment_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Student_Containment_OrGroupItemProvider student_Containment_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Student_Containment_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStudent_Containment_OrGroupAdapter() {
+		if (student_Containment_OrGroupItemProvider == null) {
+			student_Containment_OrGroupItemProvider = new Student_Containment_OrGroupItemProvider(this);
+		}
+
+		return student_Containment_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.hashCode_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected hashCode_FunctionalOperatorItemProvider hashCode_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.hashCode_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createhashCode_FunctionalOperatorAdapter() {
+		if (hashCode_FunctionalOperatorItemProvider == null) {
+			hashCode_FunctionalOperatorItemProvider = new hashCode_FunctionalOperatorItemProvider(this);
+		}
+
+		return hashCode_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.IntegerParseInt_ClassOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IntegerParseInt_ClassOperatorItemProvider integerParseInt_ClassOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.IntegerParseInt_ClassOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIntegerParseInt_ClassOperatorAdapter() {
+		if (integerParseInt_ClassOperatorItemProvider == null) {
+			integerParseInt_ClassOperatorItemProvider = new IntegerParseInt_ClassOperatorItemProvider(this);
+		}
+
+		return integerParseInt_ClassOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Exam_Reference_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Exam_Reference_OrGroupItemProvider exam_Reference_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Exam_Reference_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExam_Reference_OrGroupAdapter() {
+		if (exam_Reference_OrGroupItemProvider == null) {
+			exam_Reference_OrGroupItemProvider = new Exam_Reference_OrGroupItemProvider(this);
+		}
+
+		return exam_Reference_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Professor_Reference_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Professor_Reference_OrGroupItemProvider professor_Reference_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Professor_Reference_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProfessor_Reference_OrGroupAdapter() {
+		if (professor_Reference_OrGroupItemProvider == null) {
+			professor_Reference_OrGroupItemProvider = new Professor_Reference_OrGroupItemProvider(this);
+		}
+
+		return professor_Reference_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.smallerThan_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected smallerThan_FunctionalOperatorItemProvider smallerThan_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.smallerThan_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createsmallerThan_FunctionalOperatorAdapter() {
+		if (smallerThan_FunctionalOperatorItemProvider == null) {
+			smallerThan_FunctionalOperatorItemProvider = new smallerThan_FunctionalOperatorItemProvider(this);
+		}
+
+		return smallerThan_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Or_EvaluationBitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Or_EvaluationBitOperatorItemProvider or_EvaluationBitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Or_EvaluationBitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOr_EvaluationBitOperatorAdapter() {
+		if (or_EvaluationBitOperatorItemProvider == null) {
+			or_EvaluationBitOperatorItemProvider = new Or_EvaluationBitOperatorItemProvider(this);
+		}
+
+		return or_EvaluationBitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_CalculateableParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CharSequence_CalculateableParameterItemProvider charSequence_CalculateableParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.CharSequence_CalculateableParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharSequence_CalculateableParameterAdapter() {
+		if (charSequence_CalculateableParameterItemProvider == null) {
+			charSequence_CalculateableParameterItemProvider = new CharSequence_CalculateableParameterItemProvider(this);
+		}
+
+		return charSequence_CalculateableParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Character_And_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Character_And_BitOperatorItemProvider character_And_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Character_And_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharacter_And_BitOperatorAdapter() {
+		if (character_And_BitOperatorItemProvider == null) {
+			character_And_BitOperatorItemProvider = new Character_And_BitOperatorItemProvider(this);
+		}
+
+		return character_And_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.codePointAt_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected codePointAt_FunctionalOperatorItemProvider codePointAt_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.codePointAt_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createcodePointAt_FunctionalOperatorAdapter() {
+		if (codePointAt_FunctionalOperatorItemProvider == null) {
+			codePointAt_FunctionalOperatorItemProvider = new codePointAt_FunctionalOperatorItemProvider(this);
+		}
+
+		return codePointAt_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_Number_toString_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_Number_toString_FunctionalOperatorItemProvider object_Number_toString_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_Number_toString_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_Number_toString_FunctionalOperatorAdapter() {
+		if (object_Number_toString_FunctionalOperatorItemProvider == null) {
+			object_Number_toString_FunctionalOperatorItemProvider = new Object_Number_toString_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_Number_toString_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.String_Or_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected String_Or_BitOperatorItemProvider string_Or_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.String_Or_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createString_Or_BitOperatorAdapter() {
+		if (string_Or_BitOperatorItemProvider == null) {
+			string_Or_BitOperatorItemProvider = new String_Or_BitOperatorItemProvider(this);
+		}
+
+		return string_Or_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.SelectClause} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SelectClauseItemProvider selectClauseItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.SelectClause}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSelectClauseAdapter() {
+		if (selectClauseItemProvider == null) {
+			selectClauseItemProvider = new SelectClauseItemProvider(this);
+		}
+
+		return selectClauseItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_PrimitiveArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_PrimitiveArgumentItemProvider number_PrimitiveArgumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_PrimitiveArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_PrimitiveArgumentAdapter() {
+		if (number_PrimitiveArgumentItemProvider == null) {
+			number_PrimitiveArgumentItemProvider = new Number_PrimitiveArgumentItemProvider(this);
+		}
+
+		return number_PrimitiveArgumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Max_AggregationOperator_Double} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Max_AggregationOperator_DoubleItemProvider max_AggregationOperator_DoubleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Max_AggregationOperator_Double}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMax_AggregationOperator_DoubleAdapter() {
+		if (max_AggregationOperator_DoubleItemProvider == null) {
+			max_AggregationOperator_DoubleItemProvider = new Max_AggregationOperator_DoubleItemProvider(this);
+		}
+
+		return max_AggregationOperator_DoubleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.And_EvaluationBitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected And_EvaluationBitOperatorItemProvider and_EvaluationBitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.And_EvaluationBitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAnd_EvaluationBitOperatorAdapter() {
+		if (and_EvaluationBitOperatorItemProvider == null) {
+			and_EvaluationBitOperatorItemProvider = new And_EvaluationBitOperatorItemProvider(this);
+		}
+
+		return and_EvaluationBitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.String_CalculateableElementReferenceArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected String_CalculateableElementReferenceArgumentItemProvider string_CalculateableElementReferenceArgumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.String_CalculateableElementReferenceArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createString_CalculateableElementReferenceArgumentAdapter() {
+		if (string_CalculateableElementReferenceArgumentItemProvider == null) {
+			string_CalculateableElementReferenceArgumentItemProvider = new String_CalculateableElementReferenceArgumentItemProvider(this);
+		}
+
+		return string_CalculateableElementReferenceArgumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.offsetByCodePoints_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected offsetByCodePoints_FunctionalOperatorItemProvider offsetByCodePoints_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.offsetByCodePoints_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createoffsetByCodePoints_FunctionalOperatorAdapter() {
+		if (offsetByCodePoints_FunctionalOperatorItemProvider == null) {
+			offsetByCodePoints_FunctionalOperatorItemProvider = new offsetByCodePoints_FunctionalOperatorItemProvider(this);
+		}
+
+		return offsetByCodePoints_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.indexOfCharFromIndex_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected indexOfCharFromIndex_FunctionalOperatorItemProvider indexOfCharFromIndex_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.indexOfCharFromIndex_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createindexOfCharFromIndex_FunctionalOperatorAdapter() {
+		if (indexOfCharFromIndex_FunctionalOperatorItemProvider == null) {
+			indexOfCharFromIndex_FunctionalOperatorItemProvider = new indexOfCharFromIndex_FunctionalOperatorItemProvider(this);
+		}
+
+		return indexOfCharFromIndex_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_And_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_And_BitOperatorItemProvider number_And_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_And_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_And_BitOperatorAdapter() {
+		if (number_And_BitOperatorItemProvider == null) {
+			number_And_BitOperatorItemProvider = new Number_And_BitOperatorItemProvider(this);
+		}
+
+		return number_And_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.endsWith_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected endsWith_FunctionalOperatorItemProvider endsWith_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.endsWith_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createendsWith_FunctionalOperatorAdapter() {
+		if (endsWith_FunctionalOperatorItemProvider == null) {
+			endsWith_FunctionalOperatorItemProvider = new endsWith_FunctionalOperatorItemProvider(this);
+		}
+
+		return endsWith_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.startsWithOffset_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected startsWithOffset_FunctionalOperatorItemProvider startsWithOffset_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.startsWithOffset_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createstartsWithOffset_FunctionalOperatorAdapter() {
+		if (startsWithOffset_FunctionalOperatorItemProvider == null) {
+			startsWithOffset_FunctionalOperatorItemProvider = new startsWithOffset_FunctionalOperatorItemProvider(this);
+		}
+
+		return startsWithOffset_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.FindQueryCollection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FindQueryCollectionItemProvider findQueryCollectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.FindQueryCollection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFindQueryCollectionAdapter() {
+		if (findQueryCollectionItemProvider == null) {
+			findQueryCollectionItemProvider = new FindQueryCollectionItemProvider(this);
+		}
+
+		return findQueryCollectionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Professor_Containment_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Professor_Containment_OrGroupItemProvider professor_Containment_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Professor_Containment_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProfessor_Containment_OrGroupAdapter() {
+		if (professor_Containment_OrGroupItemProvider == null) {
+			professor_Containment_OrGroupItemProvider = new Professor_Containment_OrGroupItemProvider(this);
+		}
+
+		return professor_Containment_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Course_courseType_AttrEClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Course_courseType_AttrEClassItemProvider course_courseType_AttrEClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Course_courseType_AttrEClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCourse_courseType_AttrEClassAdapter() {
+		if (course_courseType_AttrEClassItemProvider == null) {
+			course_courseType_AttrEClassItemProvider = new Course_courseType_AttrEClassItemProvider(this);
+		}
+
+		return course_courseType_AttrEClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Boolean_CalculateableParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Boolean_CalculateableParameterItemProvider boolean_CalculateableParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Boolean_CalculateableParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBoolean_CalculateableParameterAdapter() {
+		if (boolean_CalculateableParameterItemProvider == null) {
+			boolean_CalculateableParameterItemProvider = new Boolean_CalculateableParameterItemProvider(this);
+		}
+
+		return boolean_CalculateableParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Character_CalculateableParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Character_CalculateableParameterItemProvider character_CalculateableParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Character_CalculateableParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharacter_CalculateableParameterAdapter() {
+		if (character_CalculateableParameterItemProvider == null) {
+			character_CalculateableParameterItemProvider = new Character_CalculateableParameterItemProvider(this);
+		}
+
+		return character_CalculateableParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Person_Reference_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Person_Reference_OrGroupItemProvider person_Reference_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Person_Reference_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPerson_Reference_OrGroupAdapter() {
+		if (person_Reference_OrGroupItemProvider == null) {
+			person_Reference_OrGroupItemProvider = new Person_Reference_OrGroupItemProvider(this);
+		}
+
+		return person_Reference_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Character_PrimitiveArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Character_PrimitiveArgumentItemProvider character_PrimitiveArgumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Character_PrimitiveArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharacter_PrimitiveArgumentAdapter() {
+		if (character_PrimitiveArgumentItemProvider == null) {
+			character_PrimitiveArgumentItemProvider = new Character_PrimitiveArgumentItemProvider(this);
+		}
+
+		return character_PrimitiveArgumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.parseBoolean_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected parseBoolean_FunctionalOperatorItemProvider parseBoolean_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.parseBoolean_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createparseBoolean_FunctionalOperatorAdapter() {
+		if (parseBoolean_FunctionalOperatorItemProvider == null) {
+			parseBoolean_FunctionalOperatorItemProvider = new parseBoolean_FunctionalOperatorItemProvider(this);
+		}
+
+		return parseBoolean_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_greaterThan_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Integer_greaterThan_FunctionalOperatorItemProvider number_Integer_greaterThan_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Integer_greaterThan_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Integer_greaterThan_FunctionalOperatorAdapter() {
+		if (number_Integer_greaterThan_FunctionalOperatorItemProvider == null) {
+			number_Integer_greaterThan_FunctionalOperatorItemProvider = new Number_Integer_greaterThan_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Integer_greaterThan_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Person_email_AttrEClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Person_email_AttrEClassItemProvider person_email_AttrEClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Person_email_AttrEClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPerson_email_AttrEClassAdapter() {
+		if (person_email_AttrEClassItemProvider == null) {
+			person_email_AttrEClassItemProvider = new Person_email_AttrEClassItemProvider(this);
+		}
+
+		return person_email_AttrEClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.CourseType_EnumerationOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CourseType_EnumerationOperatorItemProvider courseType_EnumerationOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.CourseType_EnumerationOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCourseType_EnumerationOperatorAdapter() {
+		if (courseType_EnumerationOperatorItemProvider == null) {
+			courseType_EnumerationOperatorItemProvider = new CourseType_EnumerationOperatorItemProvider(this);
+		}
+
+		return courseType_EnumerationOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Max_AggregationOperator_Integer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Max_AggregationOperator_IntegerItemProvider max_AggregationOperator_IntegerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Max_AggregationOperator_Integer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMax_AggregationOperator_IntegerAdapter() {
+		if (max_AggregationOperator_IntegerItemProvider == null) {
+			max_AggregationOperator_IntegerItemProvider = new Max_AggregationOperator_IntegerItemProvider(this);
+		}
+
+		return max_AggregationOperator_IntegerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Course_Containment_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Course_Containment_OrGroupItemProvider course_Containment_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Course_Containment_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCourse_Containment_OrGroupAdapter() {
+		if (course_Containment_OrGroupItemProvider == null) {
+			course_Containment_OrGroupItemProvider = new Course_Containment_OrGroupItemProvider(this);
+		}
+
+		return course_Containment_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Boolean_PrimitiveArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Boolean_PrimitiveArgumentItemProvider boolean_PrimitiveArgumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Boolean_PrimitiveArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBoolean_PrimitiveArgumentAdapter() {
+		if (boolean_PrimitiveArgumentItemProvider == null) {
+			boolean_PrimitiveArgumentItemProvider = new Boolean_PrimitiveArgumentItemProvider(this);
+		}
+
+		return boolean_PrimitiveArgumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Sum_AggregationOperator_Integer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Sum_AggregationOperator_IntegerItemProvider sum_AggregationOperator_IntegerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Sum_AggregationOperator_Integer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSum_AggregationOperator_IntegerAdapter() {
+		if (sum_AggregationOperator_IntegerItemProvider == null) {
+			sum_AggregationOperator_IntegerItemProvider = new Sum_AggregationOperator_IntegerItemProvider(this);
+		}
+
+		return sum_AggregationOperator_IntegerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_greaterEquals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Double_greaterEquals_FunctionalOperatorItemProvider number_Double_greaterEquals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Double_greaterEquals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Double_greaterEquals_FunctionalOperatorAdapter() {
+		if (number_Double_greaterEquals_FunctionalOperatorItemProvider == null) {
+			number_Double_greaterEquals_FunctionalOperatorItemProvider = new Number_Double_greaterEquals_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Double_greaterEquals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Integer_CalculateableParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Integer_CalculateableParameterItemProvider integer_CalculateableParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Integer_CalculateableParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInteger_CalculateableParameterAdapter() {
+		if (integer_CalculateableParameterItemProvider == null) {
+			integer_CalculateableParameterItemProvider = new Integer_CalculateableParameterItemProvider(this);
+		}
+
+		return integer_CalculateableParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_String_length_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CharSequence_String_length_FunctionalOperatorItemProvider charSequence_String_length_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.CharSequence_String_length_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharSequence_String_length_FunctionalOperatorAdapter() {
+		if (charSequence_String_length_FunctionalOperatorItemProvider == null) {
+			charSequence_String_length_FunctionalOperatorItemProvider = new CharSequence_String_length_FunctionalOperatorItemProvider(this);
+		}
+
+		return charSequence_String_length_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.indexOfString_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected indexOfString_FunctionalOperatorItemProvider indexOfString_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.indexOfString_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createindexOfString_FunctionalOperatorAdapter() {
+		if (indexOfString_FunctionalOperatorItemProvider == null) {
+			indexOfString_FunctionalOperatorItemProvider = new indexOfString_FunctionalOperatorItemProvider(this);
+		}
+
+		return indexOfString_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.trim_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected trim_FunctionalOperatorItemProvider trim_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.trim_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createtrim_FunctionalOperatorAdapter() {
+		if (trim_FunctionalOperatorItemProvider == null) {
+			trim_FunctionalOperatorItemProvider = new trim_FunctionalOperatorItemProvider(this);
+		}
+
+		return trim_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.greaterEquals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected greaterEquals_FunctionalOperatorItemProvider greaterEquals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.greaterEquals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter creategreaterEquals_FunctionalOperatorAdapter() {
+		if (greaterEquals_FunctionalOperatorItemProvider == null) {
+			greaterEquals_FunctionalOperatorItemProvider = new greaterEquals_FunctionalOperatorItemProvider(this);
+		}
+
+		return greaterEquals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Student_Reference_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Student_Reference_OrGroupItemProvider student_Reference_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Student_Reference_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStudent_Reference_OrGroupAdapter() {
+		if (student_Reference_OrGroupItemProvider == null) {
+			student_Reference_OrGroupItemProvider = new Student_Reference_OrGroupItemProvider(this);
+		}
+
+		return student_Reference_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.String_And_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected String_And_BitOperatorItemProvider string_And_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.String_And_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createString_And_BitOperatorAdapter() {
+		if (string_And_BitOperatorItemProvider == null) {
+			string_And_BitOperatorItemProvider = new String_And_BitOperatorItemProvider(this);
+		}
+
+		return string_And_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Course_courseNumber_AttrEClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Course_courseNumber_AttrEClassItemProvider course_courseNumber_AttrEClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Course_courseNumber_AttrEClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCourse_courseNumber_AttrEClassAdapter() {
+		if (course_courseNumber_AttrEClassItemProvider == null) {
+			course_courseNumber_AttrEClassItemProvider = new Course_courseNumber_AttrEClassItemProvider(this);
+		}
+
+		return course_courseNumber_AttrEClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.greaterThan_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected greaterThan_FunctionalOperatorItemProvider greaterThan_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.greaterThan_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter creategreaterThan_FunctionalOperatorAdapter() {
+		if (greaterThan_FunctionalOperatorItemProvider == null) {
+			greaterThan_FunctionalOperatorItemProvider = new greaterThan_FunctionalOperatorItemProvider(this);
+		}
+
+		return greaterThan_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Count_AggregationOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Count_AggregationOperatorItemProvider count_AggregationOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Count_AggregationOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCount_AggregationOperatorAdapter() {
+		if (count_AggregationOperatorItemProvider == null) {
+			count_AggregationOperatorItemProvider = new Count_AggregationOperatorItemProvider(this);
+		}
+
+		return count_AggregationOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Min_AggregationOperator_Integer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Min_AggregationOperator_IntegerItemProvider min_AggregationOperator_IntegerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Min_AggregationOperator_Integer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMin_AggregationOperator_IntegerAdapter() {
+		if (min_AggregationOperator_IntegerItemProvider == null) {
+			min_AggregationOperator_IntegerItemProvider = new Min_AggregationOperator_IntegerItemProvider(this);
+		}
+
+		return min_AggregationOperator_IntegerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_greaterEquals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Integer_greaterEquals_FunctionalOperatorItemProvider number_Integer_greaterEquals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Integer_greaterEquals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Integer_greaterEquals_FunctionalOperatorAdapter() {
+		if (number_Integer_greaterEquals_FunctionalOperatorItemProvider == null) {
+			number_Integer_greaterEquals_FunctionalOperatorItemProvider = new Number_Integer_greaterEquals_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Integer_greaterEquals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_And_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_And_BitOperatorItemProvider object_And_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_And_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_And_BitOperatorAdapter() {
+		if (object_And_BitOperatorItemProvider == null) {
+			object_And_BitOperatorItemProvider = new Object_And_BitOperatorItemProvider(this);
+		}
+
+		return object_And_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_CharSequence_toString_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_CharSequence_toString_FunctionalOperatorItemProvider object_CharSequence_toString_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_CharSequence_toString_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_CharSequence_toString_FunctionalOperatorAdapter() {
+		if (object_CharSequence_toString_FunctionalOperatorItemProvider == null) {
+			object_CharSequence_toString_FunctionalOperatorItemProvider = new Object_CharSequence_toString_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_CharSequence_toString_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_Object_Number_equals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Integer_Object_Number_equals_FunctionalOperatorItemProvider number_Integer_Object_Number_equals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Integer_Object_Number_equals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Integer_Object_Number_equals_FunctionalOperatorAdapter() {
+		if (number_Integer_Object_Number_equals_FunctionalOperatorItemProvider == null) {
+			number_Integer_Object_Number_equals_FunctionalOperatorItemProvider = new Number_Integer_Object_Number_equals_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Integer_Object_Number_equals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_FunctionalParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_FunctionalParameterItemProvider object_FunctionalParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_FunctionalParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_FunctionalParameterAdapter() {
+		if (object_FunctionalParameterItemProvider == null) {
+			object_FunctionalParameterItemProvider = new Object_FunctionalParameterItemProvider(this);
+		}
+
+		return object_FunctionalParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_Or_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CharSequence_Or_BitOperatorItemProvider charSequence_Or_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.CharSequence_Or_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharSequence_Or_BitOperatorAdapter() {
+		if (charSequence_Or_BitOperatorItemProvider == null) {
+			charSequence_Or_BitOperatorItemProvider = new CharSequence_Or_BitOperatorItemProvider(this);
+		}
+
+		return charSequence_Or_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_Character_equals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_Character_equals_FunctionalOperatorItemProvider object_Character_equals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_Character_equals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_Character_equals_FunctionalOperatorAdapter() {
+		if (object_Character_equals_FunctionalOperatorItemProvider == null) {
+			object_Character_equals_FunctionalOperatorItemProvider = new Object_Character_equals_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_Character_equals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_Or_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_Or_BitOperatorItemProvider object_Or_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_Or_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_Or_BitOperatorAdapter() {
+		if (object_Or_BitOperatorItemProvider == null) {
+			object_Or_BitOperatorItemProvider = new Object_Or_BitOperatorItemProvider(this);
+		}
+
+		return object_Or_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.startsWith_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected startsWith_FunctionalOperatorItemProvider startsWith_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.startsWith_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createstartsWith_FunctionalOperatorAdapter() {
+		if (startsWith_FunctionalOperatorItemProvider == null) {
+			startsWith_FunctionalOperatorItemProvider = new startsWith_FunctionalOperatorItemProvider(this);
+		}
+
+		return startsWith_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Integer_CalculateableElementReferenceArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Integer_CalculateableElementReferenceArgumentItemProvider integer_CalculateableElementReferenceArgumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Integer_CalculateableElementReferenceArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInteger_CalculateableElementReferenceArgumentAdapter() {
+		if (integer_CalculateableElementReferenceArgumentItemProvider == null) {
+			integer_CalculateableElementReferenceArgumentItemProvider = new Integer_CalculateableElementReferenceArgumentItemProvider(this);
+		}
+
+		return integer_CalculateableElementReferenceArgumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Student_matriculationNumber_AttrEClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Student_matriculationNumber_AttrEClassItemProvider student_matriculationNumber_AttrEClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Student_matriculationNumber_AttrEClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStudent_matriculationNumber_AttrEClassAdapter() {
+		if (student_matriculationNumber_AttrEClassItemProvider == null) {
+			student_matriculationNumber_AttrEClassItemProvider = new Student_matriculationNumber_AttrEClassItemProvider(this);
+		}
+
+		return student_matriculationNumber_AttrEClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Double_FunctionalParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Double_FunctionalParameterItemProvider double_FunctionalParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Double_FunctionalParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDouble_FunctionalParameterAdapter() {
+		if (double_FunctionalParameterItemProvider == null) {
+			double_FunctionalParameterItemProvider = new Double_FunctionalParameterItemProvider(this);
+		}
+
+		return double_FunctionalParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Sum_AggregationOperator_Double} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Sum_AggregationOperator_DoubleItemProvider sum_AggregationOperator_DoubleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Sum_AggregationOperator_Double}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSum_AggregationOperator_DoubleAdapter() {
+		if (sum_AggregationOperator_DoubleItemProvider == null) {
+			sum_AggregationOperator_DoubleItemProvider = new Sum_AggregationOperator_DoubleItemProvider(this);
+		}
+
+		return sum_AggregationOperator_DoubleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_Object_Number_toString_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Double_Object_Number_toString_FunctionalOperatorItemProvider number_Double_Object_Number_toString_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Double_Object_Number_toString_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Double_Object_Number_toString_FunctionalOperatorAdapter() {
+		if (number_Double_Object_Number_toString_FunctionalOperatorItemProvider == null) {
+			number_Double_Object_Number_toString_FunctionalOperatorItemProvider = new Number_Double_Object_Number_toString_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Double_Object_Number_toString_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_Boolean_equals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_Boolean_equals_FunctionalOperatorItemProvider object_Boolean_equals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_Boolean_equals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_Boolean_equals_FunctionalOperatorAdapter() {
+		if (object_Boolean_equals_FunctionalOperatorItemProvider == null) {
+			object_Boolean_equals_FunctionalOperatorItemProvider = new Object_Boolean_equals_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_Boolean_equals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Integer_And_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Integer_And_BitOperatorItemProvider integer_And_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Integer_And_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInteger_And_BitOperatorAdapter() {
+		if (integer_And_BitOperatorItemProvider == null) {
+			integer_And_BitOperatorItemProvider = new Integer_And_BitOperatorItemProvider(this);
+		}
+
+		return integer_And_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Countable_ReferenceArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Countable_ReferenceArgumentItemProvider countable_ReferenceArgumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Countable_ReferenceArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCountable_ReferenceArgumentAdapter() {
+		if (countable_ReferenceArgumentItemProvider == null) {
+			countable_ReferenceArgumentItemProvider = new Countable_ReferenceArgumentItemProvider(this);
+		}
+
+		return countable_ReferenceArgumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Integer_smallerEquals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Integer_smallerEquals_FunctionalOperatorItemProvider number_Integer_smallerEquals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Integer_smallerEquals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Integer_smallerEquals_FunctionalOperatorAdapter() {
+		if (number_Integer_smallerEquals_FunctionalOperatorItemProvider == null) {
+			number_Integer_smallerEquals_FunctionalOperatorItemProvider = new Number_Integer_smallerEquals_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Integer_smallerEquals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_Character_hashCode_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_Character_hashCode_FunctionalOperatorItemProvider object_Character_hashCode_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_Character_hashCode_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_Character_hashCode_FunctionalOperatorAdapter() {
+		if (object_Character_hashCode_FunctionalOperatorItemProvider == null) {
+			object_Character_hashCode_FunctionalOperatorItemProvider = new Object_Character_hashCode_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_Character_hashCode_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.UniversityManagementSystem_Containment_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UniversityManagementSystem_Containment_OrGroupItemProvider universityManagementSystem_Containment_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.UniversityManagementSystem_Containment_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUniversityManagementSystem_Containment_OrGroupAdapter() {
+		if (universityManagementSystem_Containment_OrGroupItemProvider == null) {
+			universityManagementSystem_Containment_OrGroupItemProvider = new UniversityManagementSystem_Containment_OrGroupItemProvider(this);
+		}
+
+		return universityManagementSystem_Containment_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Exam_Containment_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Exam_Containment_OrGroupItemProvider exam_Containment_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Exam_Containment_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExam_Containment_OrGroupAdapter() {
+		if (exam_Containment_OrGroupItemProvider == null) {
+			exam_Containment_OrGroupItemProvider = new Exam_Containment_OrGroupItemProvider(this);
+		}
+
+		return exam_Containment_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_smallerThan_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Double_smallerThan_FunctionalOperatorItemProvider number_Double_smallerThan_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Double_smallerThan_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Double_smallerThan_FunctionalOperatorAdapter() {
+		if (number_Double_smallerThan_FunctionalOperatorItemProvider == null) {
+			number_Double_smallerThan_FunctionalOperatorItemProvider = new Number_Double_smallerThan_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Double_smallerThan_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Professor_employeeNumber_AttrEClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Professor_employeeNumber_AttrEClassItemProvider professor_employeeNumber_AttrEClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Professor_employeeNumber_AttrEClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProfessor_employeeNumber_AttrEClassAdapter() {
+		if (professor_employeeNumber_AttrEClassItemProvider == null) {
+			professor_employeeNumber_AttrEClassItemProvider = new Professor_employeeNumber_AttrEClassItemProvider(this);
+		}
+
+		return professor_employeeNumber_AttrEClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.doubleValue_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected doubleValue_FunctionalOperatorItemProvider doubleValue_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.doubleValue_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createdoubleValue_FunctionalOperatorAdapter() {
+		if (doubleValue_FunctionalOperatorItemProvider == null) {
+			doubleValue_FunctionalOperatorItemProvider = new doubleValue_FunctionalOperatorItemProvider(this);
+		}
+
+		return doubleValue_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.String_PrimitiveArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected String_PrimitiveArgumentItemProvider string_PrimitiveArgumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.String_PrimitiveArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createString_PrimitiveArgumentAdapter() {
+		if (string_PrimitiveArgumentItemProvider == null) {
+			string_PrimitiveArgumentItemProvider = new String_PrimitiveArgumentItemProvider(this);
+		}
+
+		return string_PrimitiveArgumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_CalculateableParameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_CalculateableParameterItemProvider object_CalculateableParameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_CalculateableParameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_CalculateableParameterAdapter() {
+		if (object_CalculateableParameterItemProvider == null) {
+			object_CalculateableParameterItemProvider = new Object_CalculateableParameterItemProvider(this);
+		}
+
+		return object_CalculateableParameterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.FindQuery} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FindQueryItemProvider findQueryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.FindQuery}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFindQueryAdapter() {
+		if (findQueryItemProvider == null) {
+			findQueryItemProvider = new FindQueryItemProvider(this);
+		}
+
+		return findQueryItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.charAt_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected charAt_FunctionalOperatorItemProvider charAt_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.charAt_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createcharAt_FunctionalOperatorAdapter() {
+		if (charAt_FunctionalOperatorItemProvider == null) {
+			charAt_FunctionalOperatorItemProvider = new charAt_FunctionalOperatorItemProvider(this);
+		}
+
+		return charAt_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.compareToStringIgnoreCase_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected compareToStringIgnoreCase_FunctionalOperatorItemProvider compareToStringIgnoreCase_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.compareToStringIgnoreCase_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createcompareToStringIgnoreCase_FunctionalOperatorAdapter() {
+		if (compareToStringIgnoreCase_FunctionalOperatorItemProvider == null) {
+			compareToStringIgnoreCase_FunctionalOperatorItemProvider = new compareToStringIgnoreCase_FunctionalOperatorItemProvider(this);
+		}
+
+		return compareToStringIgnoreCase_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Or_BitOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Or_BitOperatorItemProvider number_Or_BitOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Or_BitOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Or_BitOperatorAdapter() {
+		if (number_Or_BitOperatorItemProvider == null) {
+			number_Or_BitOperatorItemProvider = new Number_Or_BitOperatorItemProvider(this);
+		}
+
+		return number_Or_BitOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.CharSequence_String_Object_CharSequence_equals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CharSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.CharSequence_String_Object_CharSequence_equals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharSequence_String_Object_CharSequence_equals_FunctionalOperatorAdapter() {
+		if (charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider == null) {
+			charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider = new CharSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider(this);
+		}
+
+		return charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.toUpperCase_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected toUpperCase_FunctionalOperatorItemProvider toUpperCase_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.toUpperCase_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createtoUpperCase_FunctionalOperatorAdapter() {
+		if (toUpperCase_FunctionalOperatorItemProvider == null) {
+			toUpperCase_FunctionalOperatorItemProvider = new toUpperCase_FunctionalOperatorItemProvider(this);
+		}
+
+		return toUpperCase_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_Boolean_hashCode_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_Boolean_hashCode_FunctionalOperatorItemProvider object_Boolean_hashCode_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_Boolean_hashCode_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_Boolean_hashCode_FunctionalOperatorAdapter() {
+		if (object_Boolean_hashCode_FunctionalOperatorItemProvider == null) {
+			object_Boolean_hashCode_FunctionalOperatorItemProvider = new Object_Boolean_hashCode_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_Boolean_hashCode_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_smallerEquals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Double_smallerEquals_FunctionalOperatorItemProvider number_Double_smallerEquals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Double_smallerEquals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Double_smallerEquals_FunctionalOperatorAdapter() {
+		if (number_Double_smallerEquals_FunctionalOperatorItemProvider == null) {
+			number_Double_smallerEquals_FunctionalOperatorItemProvider = new Number_Double_smallerEquals_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Double_smallerEquals_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Double_PrimitiveArgument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Double_PrimitiveArgumentItemProvider double_PrimitiveArgumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Double_PrimitiveArgument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDouble_PrimitiveArgumentAdapter() {
+		if (double_PrimitiveArgumentItemProvider == null) {
+			double_PrimitiveArgumentItemProvider = new Double_PrimitiveArgumentItemProvider(this);
+		}
+
+		return double_PrimitiveArgumentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.substring_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected substring_FunctionalOperatorItemProvider substring_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.substring_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createsubstring_FunctionalOperatorAdapter() {
+		if (substring_FunctionalOperatorItemProvider == null) {
+			substring_FunctionalOperatorItemProvider = new substring_FunctionalOperatorItemProvider(this);
+		}
+
+		return substring_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Course_Reference_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Course_Reference_OrGroupItemProvider course_Reference_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Course_Reference_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCourse_Reference_OrGroupAdapter() {
+		if (course_Reference_OrGroupItemProvider == null) {
+			course_Reference_OrGroupItemProvider = new Course_Reference_OrGroupItemProvider(this);
+		}
+
+		return course_Reference_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Course_name_AttrEClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Course_name_AttrEClassItemProvider course_name_AttrEClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Course_name_AttrEClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCourse_name_AttrEClassAdapter() {
+		if (course_name_AttrEClassItemProvider == null) {
+			course_name_AttrEClassItemProvider = new Course_name_AttrEClassItemProvider(this);
+		}
+
+		return course_name_AttrEClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.UniversityManagementSystem_Reference_OrGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UniversityManagementSystem_Reference_OrGroupItemProvider universityManagementSystem_Reference_OrGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.UniversityManagementSystem_Reference_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUniversityManagementSystem_Reference_OrGroupAdapter() {
+		if (universityManagementSystem_Reference_OrGroupItemProvider == null) {
+			universityManagementSystem_Reference_OrGroupItemProvider = new UniversityManagementSystem_Reference_OrGroupItemProvider(this);
+		}
+
+		return universityManagementSystem_Reference_OrGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Number_Double_greaterThan_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Number_Double_greaterThan_FunctionalOperatorItemProvider number_Double_greaterThan_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Number_Double_greaterThan_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumber_Double_greaterThan_FunctionalOperatorAdapter() {
+		if (number_Double_greaterThan_FunctionalOperatorItemProvider == null) {
+			number_Double_greaterThan_FunctionalOperatorItemProvider = new Number_Double_greaterThan_FunctionalOperatorItemProvider(this);
+		}
+
+		return number_Double_greaterThan_FunctionalOperatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qmm.Object_CharSequence_equals_FunctionalOperator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Object_CharSequence_equals_FunctionalOperatorItemProvider object_CharSequence_equals_FunctionalOperatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qmm.Object_CharSequence_equals_FunctionalOperator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObject_CharSequence_equals_FunctionalOperatorAdapter() {
+		if (object_CharSequence_equals_FunctionalOperatorItemProvider == null) {
+			object_CharSequence_equals_FunctionalOperatorItemProvider = new Object_CharSequence_equals_FunctionalOperatorItemProvider(this);
+		}
+
+		return object_CharSequence_equals_FunctionalOperatorItemProvider;
 	}
 
 	/**
@@ -7346,318 +3505,151 @@ public class QmmItemProviderAdapterFactory extends QmmAdapterFactory implements 
 	 * @generated
 	 */
 	public void dispose() {
-		if (attributeFamilyItemProvider != null) attributeFamilyItemProvider.dispose();
-		if (attributeNameMappingItemProvider != null) attributeNameMappingItemProvider.dispose();
-		if (attributeItemProvider != null) attributeItemProvider.dispose();
-		if (attributeLibItemProvider != null) attributeLibItemProvider.dispose();
-		if (attributeValueRequirementItemProvider != null) attributeValueRequirementItemProvider.dispose();
-		if (caexBasicObjectItemProvider != null) caexBasicObjectItemProvider.dispose();
-		if (caexFileItemProvider != null) caexFileItemProvider.dispose();
-		if (caexObjectItemProvider != null) caexObjectItemProvider.dispose();
-		if (documentRootItemProvider != null) documentRootItemProvider.dispose();
-		if (externalInterfaceItemProvider != null) externalInterfaceItemProvider.dispose();
-		if (externalReferenceTypeItemProvider != null) externalReferenceTypeItemProvider.dispose();
-		if (instanceHierarchyItemProvider != null) instanceHierarchyItemProvider.dispose();
-		if (interfaceClassLibItemProvider != null) interfaceClassLibItemProvider.dispose();
-		if (interfaceClassItemProvider != null) interfaceClassItemProvider.dispose();
-		if (interfaceFamilyItemProvider != null) interfaceFamilyItemProvider.dispose();
-		if (interfaceIDMappingItemProvider != null) interfaceIDMappingItemProvider.dispose();
-		if (internalElementItemProvider != null) internalElementItemProvider.dispose();
-		if (internalLinkItemProvider != null) internalLinkItemProvider.dispose();
-		if (mappingItemProvider != null) mappingItemProvider.dispose();
-		if (nominalScaledTypeItemProvider != null) nominalScaledTypeItemProvider.dispose();
-		if (ordinalScaledTypeItemProvider != null) ordinalScaledTypeItemProvider.dispose();
-		if (refSemanticItemProvider != null) refSemanticItemProvider.dispose();
-		if (roleClassLibItemProvider != null) roleClassLibItemProvider.dispose();
-		if (roleClassItemProvider != null) roleClassItemProvider.dispose();
-		if (roleFamilyItemProvider != null) roleFamilyItemProvider.dispose();
-		if (roleRequirementsItemProvider != null) roleRequirementsItemProvider.dispose();
-		if (sourceDocumentInformationItemProvider != null) sourceDocumentInformationItemProvider.dispose();
-		if (supportedRoleClassItemProvider != null) supportedRoleClassItemProvider.dispose();
-		if (systemUnitClassLibItemProvider != null) systemUnitClassLibItemProvider.dispose();
-		if (systemUnitClassItemProvider != null) systemUnitClassItemProvider.dispose();
-		if (systemUnitFamilyItemProvider != null) systemUnitFamilyItemProvider.dispose();
-		if (unknownTypeItemProvider != null) unknownTypeItemProvider.dispose();
-		if (copyrightItemProvider != null) copyrightItemProvider.dispose();
-		if (descriptionItemProvider != null) descriptionItemProvider.dispose();
-		if (revisionItemProvider != null) revisionItemProvider.dispose();
-		if (versionItemProvider != null) versionItemProvider.dispose();
-		if (additionalInformationItemProvider != null) additionalInformationItemProvider.dispose();
-		if (elementItemProvider != null) elementItemProvider.dispose();
-		if (genericElementItemProvider != null) genericElementItemProvider.dispose();
-		if (genericAttributeItemProvider != null) genericAttributeItemProvider.dispose();
-		if (attributeDataType_And_BitOperatorItemProvider != null) attributeDataType_And_BitOperatorItemProvider.dispose();
-		if (object_Character_toString_FunctionalOperatorItemProvider != null) object_Character_toString_FunctionalOperatorItemProvider.dispose();
-		if (ordinalScaledType_requiredMaxValue_AttrEClassItemProvider != null) ordinalScaledType_requiredMaxValue_AttrEClassItemProvider.dispose();
-		if (instanceHierarchy_Reference_OrGroupItemProvider != null) instanceHierarchy_Reference_OrGroupItemProvider.dispose();
-		if (caexObject_name_AttrEClassItemProvider != null) caexObject_name_AttrEClassItemProvider.dispose();
-		if (genericElement_elementFeatureMap_AttrEClassItemProvider != null) genericElement_elementFeatureMap_AttrEClassItemProvider.dispose();
-		if (externalInterface_Containment_OrGroupItemProvider != null) externalInterface_Containment_OrGroupItemProvider.dispose();
-		if (element_value_AttrEClassItemProvider != null) element_value_AttrEClassItemProvider.dispose();
-		if (caexObject_iD_AttrEClassItemProvider != null) caexObject_iD_AttrEClassItemProvider.dispose();
-		if (object_CalculateableParameterItemProvider != null) object_CalculateableParameterItemProvider.dispose();
-		if (attributeValueRequirement_Reference_OrGroupItemProvider != null) attributeValueRequirement_Reference_OrGroupItemProvider.dispose();
-		if (instanceHierarchy_Containment_OrGroupItemProvider != null) instanceHierarchy_Containment_OrGroupItemProvider.dispose();
-		if (refSemantic_correspondingAttributePath_AttrEClassItemProvider != null) refSemantic_correspondingAttributePath_AttrEClassItemProvider.dispose();
-		if (object_Character_hashCode_FunctionalOperatorItemProvider != null) object_Character_hashCode_FunctionalOperatorItemProvider.dispose();
-		if (number_Integer_Object_Number_equals_FunctionalOperatorItemProvider != null) number_Integer_Object_Number_equals_FunctionalOperatorItemProvider.dispose();
-		if (integerParseInt_ClassOperatorItemProvider != null) integerParseInt_ClassOperatorItemProvider.dispose();
-		if (element_Containment_OrGroupItemProvider != null) element_Containment_OrGroupItemProvider.dispose();
-		if (genericAttribute_Containment_OrGroupItemProvider != null) genericAttribute_Containment_OrGroupItemProvider.dispose();
-		if (dateTime_PrimitiveArgumentItemProvider != null) dateTime_PrimitiveArgumentItemProvider.dispose();
-		if (trim_FunctionalOperatorItemProvider != null) trim_FunctionalOperatorItemProvider.dispose();
-		if (double_FunctionalParameterItemProvider != null) double_FunctionalParameterItemProvider.dispose();
-		if (toString_FunctionalOperatorItemProvider != null) toString_FunctionalOperatorItemProvider.dispose();
-		if (attributeFamily_Containment_OrGroupItemProvider != null) attributeFamily_Containment_OrGroupItemProvider.dispose();
-		if (systemUnitClass_refBaseClassPath_AttrEClassItemProvider != null) systemUnitClass_refBaseClassPath_AttrEClassItemProvider.dispose();
-		if (countableReferenceParameterItemProvider != null) countableReferenceParameterItemProvider.dispose();
-		if (genericElement_attributeFeatureMap_AttrEClassItemProvider != null) genericElement_attributeFeatureMap_AttrEClassItemProvider.dispose();
-		if (indexOfCharFromIndex_FunctionalOperatorItemProvider != null) indexOfCharFromIndex_FunctionalOperatorItemProvider.dispose();
-		if (number_Double_smallerEquals_FunctionalOperatorItemProvider != null) number_Double_smallerEquals_FunctionalOperatorItemProvider.dispose();
-		if (character_And_BitOperatorItemProvider != null) character_And_BitOperatorItemProvider.dispose();
-		if (interfaceIDMapping_roleInterfaceID_AttrEClassItemProvider != null) interfaceIDMapping_roleInterfaceID_AttrEClassItemProvider.dispose();
-		if (caexObject_Containment_OrGroupItemProvider != null) caexObject_Containment_OrGroupItemProvider.dispose();
-		if (sourceDocumentInformation_originVendor_AttrEClassItemProvider != null) sourceDocumentInformation_originVendor_AttrEClassItemProvider.dispose();
-		if (mapping_Containment_OrGroupItemProvider != null) mapping_Containment_OrGroupItemProvider.dispose();
-		if (unknownType_Containment_OrGroupItemProvider != null) unknownType_Containment_OrGroupItemProvider.dispose();
-		if (externalReferenceType_alias_AttrEClassItemProvider != null) externalReferenceType_alias_AttrEClassItemProvider.dispose();
-		if (string_PrimitiveArgumentItemProvider != null) string_PrimitiveArgumentItemProvider.dispose();
-		if (version_Reference_OrGroupItemProvider != null) version_Reference_OrGroupItemProvider.dispose();
-		if (charSequence_And_BitOperatorItemProvider != null) charSequence_And_BitOperatorItemProvider.dispose();
-		if (version_Containment_OrGroupItemProvider != null) version_Containment_OrGroupItemProvider.dispose();
-		if (toLowerCase_FunctionalOperatorItemProvider != null) toLowerCase_FunctionalOperatorItemProvider.dispose();
-		if (smallerEquals_FunctionalOperatorItemProvider != null) smallerEquals_FunctionalOperatorItemProvider.dispose();
-		if (ordinalScaledType_requiredValue_AttrEClassItemProvider != null) ordinalScaledType_requiredValue_AttrEClassItemProvider.dispose();
-		if (charSequence_Or_BitOperatorItemProvider != null) charSequence_Or_BitOperatorItemProvider.dispose();
-		if (boolean_PrimitiveArgumentItemProvider != null) boolean_PrimitiveArgumentItemProvider.dispose();
-		if (sourceDocumentInformation_Reference_OrGroupItemProvider != null) sourceDocumentInformation_Reference_OrGroupItemProvider.dispose();
-		if (roleRequirements_Reference_OrGroupItemProvider != null) roleRequirements_Reference_OrGroupItemProvider.dispose();
-		if (additionalInformation_Containment_OrGroupItemProvider != null) additionalInformation_Containment_OrGroupItemProvider.dispose();
-		if (attributeNameMapping_roleAttributeName_AttrEClassItemProvider != null) attributeNameMapping_roleAttributeName_AttrEClassItemProvider.dispose();
-		if (number_FunctionalParameterItemProvider != null) number_FunctionalParameterItemProvider.dispose();
-		if (attributeDataType_FunctionalParameterItemProvider != null) attributeDataType_FunctionalParameterItemProvider.dispose();
-		if (endsWith_FunctionalOperatorItemProvider != null) endsWith_FunctionalOperatorItemProvider.dispose();
-		if (or_EvaluationBitOperatorItemProvider != null) or_EvaluationBitOperatorItemProvider.dispose();
-		if (findQueryItemProvider != null) findQueryItemProvider.dispose();
-		if (hashCode_FunctionalOperatorItemProvider != null) hashCode_FunctionalOperatorItemProvider.dispose();
-		if (object_CharSequence_equals_FunctionalOperatorItemProvider != null) object_CharSequence_equals_FunctionalOperatorItemProvider.dispose();
-		if (offsetByCodePoints_FunctionalOperatorItemProvider != null) offsetByCodePoints_FunctionalOperatorItemProvider.dispose();
-		if (attributeNameMapping_Reference_OrGroupItemProvider != null) attributeNameMapping_Reference_OrGroupItemProvider.dispose();
-		if (object_CharSequence_toString_FunctionalOperatorItemProvider != null) object_CharSequence_toString_FunctionalOperatorItemProvider.dispose();
-		if (charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider != null) charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider.dispose();
-		if (indexOfChar_FunctionalOperatorItemProvider != null) indexOfChar_FunctionalOperatorItemProvider.dispose();
-		if (interfaceClassLib_Reference_OrGroupItemProvider != null) interfaceClassLib_Reference_OrGroupItemProvider.dispose();
-		if (string_CalculateableParameterItemProvider != null) string_CalculateableParameterItemProvider.dispose();
-		if (caexFile_schemaVersion_AttrEClassItemProvider != null) caexFile_schemaVersion_AttrEClassItemProvider.dispose();
-		if (character_CalculateableParameterItemProvider != null) character_CalculateableParameterItemProvider.dispose();
-		if (attribute_unit_AttrEClassItemProvider != null) attribute_unit_AttrEClassItemProvider.dispose();
-		if (element_Reference_OrGroupItemProvider != null) element_Reference_OrGroupItemProvider.dispose();
-		if (object_Boolean_equals_FunctionalOperatorItemProvider != null) object_Boolean_equals_FunctionalOperatorItemProvider.dispose();
-		if (attributeDataType_CalculateableParameterItemProvider != null) attributeDataType_CalculateableParameterItemProvider.dispose();
-		if (double_And_BitOperatorItemProvider != null) double_And_BitOperatorItemProvider.dispose();
-		if (interfaceClass_Containment_OrGroupItemProvider != null) interfaceClass_Containment_OrGroupItemProvider.dispose();
-		if (interfaceFamily_Reference_OrGroupItemProvider != null) interfaceFamily_Reference_OrGroupItemProvider.dispose();
-		if (version_value_AttrEClassItemProvider != null) version_value_AttrEClassItemProvider.dispose();
-		if (externalReferenceType_Reference_OrGroupItemProvider != null) externalReferenceType_Reference_OrGroupItemProvider.dispose();
-		if (genericElement_Containment_OrGroupItemProvider != null) genericElement_Containment_OrGroupItemProvider.dispose();
-		if (refSemantic_Reference_OrGroupItemProvider != null) refSemantic_Reference_OrGroupItemProvider.dispose();
-		if (revision_newVersion_AttrEClassItemProvider != null) revision_newVersion_AttrEClassItemProvider.dispose();
-		if (attribute_value_AttrEClassItemProvider != null) attribute_value_AttrEClassItemProvider.dispose();
-		if (attributeValueRequirement_name_AttrEClassItemProvider != null) attributeValueRequirement_name_AttrEClassItemProvider.dispose();
-		if (externalInterface_Reference_OrGroupItemProvider != null) externalInterface_Reference_OrGroupItemProvider.dispose();
-		if (sourceDocumentInformation_originVersion_AttrEClassItemProvider != null) sourceDocumentInformation_originVersion_AttrEClassItemProvider.dispose();
-		if (supportedRoleClass_Reference_OrGroupItemProvider != null) supportedRoleClass_Reference_OrGroupItemProvider.dispose();
-		if (contains_FunctionalOperatorItemProvider != null) contains_FunctionalOperatorItemProvider.dispose();
-		if (sourceDocumentInformation_originVendorURL_AttrEClassItemProvider != null) sourceDocumentInformation_originVendorURL_AttrEClassItemProvider.dispose();
-		if (sourceDocumentInformation_originRelease_AttrEClassItemProvider != null) sourceDocumentInformation_originRelease_AttrEClassItemProvider.dispose();
-		if (sourceDocumentInformation_originName_AttrEClassItemProvider != null) sourceDocumentInformation_originName_AttrEClassItemProvider.dispose();
-		if (attributeLib_Reference_OrGroupItemProvider != null) attributeLib_Reference_OrGroupItemProvider.dispose();
-		if (dateTime_CalculateableElementReferenceArgumentItemProvider != null) dateTime_CalculateableElementReferenceArgumentItemProvider.dispose();
-		if (version_changeMode_AttrEClassItemProvider != null) version_changeMode_AttrEClassItemProvider.dispose();
-		if (eFeatureMapEntry_CalculateableParameterItemProvider != null) eFeatureMapEntry_CalculateableParameterItemProvider.dispose();
-		if (systemUnitClass_Containment_OrGroupItemProvider != null) systemUnitClass_Containment_OrGroupItemProvider.dispose();
-		if (charSequence_CalculateableParameterItemProvider != null) charSequence_CalculateableParameterItemProvider.dispose();
-		if (charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider != null) charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider.dispose();
-		if (string_And_BitOperatorItemProvider != null) string_And_BitOperatorItemProvider.dispose();
-		if (unknownType_requirements_AttrEClassItemProvider != null) unknownType_requirements_AttrEClassItemProvider.dispose();
-		if (genericAttribute_Reference_OrGroupItemProvider != null) genericAttribute_Reference_OrGroupItemProvider.dispose();
-		if (nominalScaledType_Containment_OrGroupItemProvider != null) nominalScaledType_Containment_OrGroupItemProvider.dispose();
-		if (interfaceClass_refBaseClassPath_AttrEClassItemProvider != null) interfaceClass_refBaseClassPath_AttrEClassItemProvider.dispose();
-		if (genericElement_Reference_OrGroupItemProvider != null) genericElement_Reference_OrGroupItemProvider.dispose();
-		if (startsWith_FunctionalOperatorItemProvider != null) startsWith_FunctionalOperatorItemProvider.dispose();
-		if (string_CalculateableElementReferenceArgumentItemProvider != null) string_CalculateableElementReferenceArgumentItemProvider.dispose();
-		if (attribute_defaultValue_AttrEClassItemProvider != null) attribute_defaultValue_AttrEClassItemProvider.dispose();
-		if (substring_FunctionalOperatorItemProvider != null) substring_FunctionalOperatorItemProvider.dispose();
-		if (nominalScaledType_Reference_OrGroupItemProvider != null) nominalScaledType_Reference_OrGroupItemProvider.dispose();
-		if (charSequence_PrimitiveArgumentItemProvider != null) charSequence_PrimitiveArgumentItemProvider.dispose();
-		if (count_AggregationOperatorItemProvider != null) count_AggregationOperatorItemProvider.dispose();
-		if (number_Double_Object_Number_toString_FunctionalOperatorItemProvider != null) number_Double_Object_Number_toString_FunctionalOperatorItemProvider.dispose();
-		if (attribute_Reference_OrGroupItemProvider != null) attribute_Reference_OrGroupItemProvider.dispose();
-		if (attributeDataType_PrimitiveArgumentItemProvider != null) attributeDataType_PrimitiveArgumentItemProvider.dispose();
-		if (caexBasicObject_Containment_OrGroupItemProvider != null) caexBasicObject_Containment_OrGroupItemProvider.dispose();
-		if (codePointAt_FunctionalOperatorItemProvider != null) codePointAt_FunctionalOperatorItemProvider.dispose();
-		if (description_value_AttrEClassItemProvider != null) description_value_AttrEClassItemProvider.dispose();
-		if (sourceDocumentInformation_originID_AttrEClassItemProvider != null) sourceDocumentInformation_originID_AttrEClassItemProvider.dispose();
-		if (dateTime_FunctionalParameterItemProvider != null) dateTime_FunctionalParameterItemProvider.dispose();
-		if (revision_Containment_OrGroupItemProvider != null) revision_Containment_OrGroupItemProvider.dispose();
-		if (min_AggregationOperator_DoubleItemProvider != null) min_AggregationOperator_DoubleItemProvider.dispose();
-		if (internalElement_Containment_OrGroupItemProvider != null) internalElement_Containment_OrGroupItemProvider.dispose();
-		if (object_CharSequence_hashCode_FunctionalOperatorItemProvider != null) object_CharSequence_hashCode_FunctionalOperatorItemProvider.dispose();
-		if (boolean_And_BitOperatorItemProvider != null) boolean_And_BitOperatorItemProvider.dispose();
-		if (isEmpty_FunctionalOperatorItemProvider != null) isEmpty_FunctionalOperatorItemProvider.dispose();
-		if (string_FunctionalParameterItemProvider != null) string_FunctionalParameterItemProvider.dispose();
-		if (interfaceClassLib_Containment_OrGroupItemProvider != null) interfaceClassLib_Containment_OrGroupItemProvider.dispose();
-		if (copyright_value_AttrEClassItemProvider != null) copyright_value_AttrEClassItemProvider.dispose();
-		if (greaterThan_FunctionalOperatorItemProvider != null) greaterThan_FunctionalOperatorItemProvider.dispose();
-		if (systemUnitClassLib_Reference_OrGroupItemProvider != null) systemUnitClassLib_Reference_OrGroupItemProvider.dispose();
-		if (startsWithOffset_FunctionalOperatorItemProvider != null) startsWithOffset_FunctionalOperatorItemProvider.dispose();
-		if (indexOfString_FunctionalOperatorItemProvider != null) indexOfString_FunctionalOperatorItemProvider.dispose();
-		if (number_Integer_greaterThan_FunctionalOperatorItemProvider != null) number_Integer_greaterThan_FunctionalOperatorItemProvider.dispose();
-		if (nominalScaledType_requiredValue_AttrEClassItemProvider != null) nominalScaledType_requiredValue_AttrEClassItemProvider.dispose();
-		if (documentRoot_Reference_OrGroupItemProvider != null) documentRoot_Reference_OrGroupItemProvider.dispose();
-		if (attributeDataType_CalculateableElementReferenceArgumentItemProvider != null) attributeDataType_CalculateableElementReferenceArgumentItemProvider.dispose();
-		if (sourceDocumentInformation_lastWritingDateTime_AttrEClassItemProvider != null) sourceDocumentInformation_lastWritingDateTime_AttrEClassItemProvider.dispose();
-		if (integer_And_BitOperatorItemProvider != null) integer_And_BitOperatorItemProvider.dispose();
-		if (caexBasicObject_changeMode_AttrEClassItemProvider != null) caexBasicObject_changeMode_AttrEClassItemProvider.dispose();
-		if (double_Or_BitOperatorItemProvider != null) double_Or_BitOperatorItemProvider.dispose();
-		if (element_name_AttrEClassItemProvider != null) element_name_AttrEClassItemProvider.dispose();
-		if (roleClass_Reference_OrGroupItemProvider != null) roleClass_Reference_OrGroupItemProvider.dispose();
-		if (sourceDocumentInformation_originProjectID_AttrEClassItemProvider != null) sourceDocumentInformation_originProjectID_AttrEClassItemProvider.dispose();
-		if (roleClass_Containment_OrGroupItemProvider != null) roleClass_Containment_OrGroupItemProvider.dispose();
-		if (object_FunctionalParameterItemProvider != null) object_FunctionalParameterItemProvider.dispose();
-		if (eFeatureMapEntry_FunctionalParameterItemProvider != null) eFeatureMapEntry_FunctionalParameterItemProvider.dispose();
-		if (number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider != null) number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider.dispose();
-		if (eFeatureMapEntry_Or_BitOperatorItemProvider != null) eFeatureMapEntry_Or_BitOperatorItemProvider.dispose();
-		if (charSequence_String_length_FunctionalOperatorItemProvider != null) charSequence_String_length_FunctionalOperatorItemProvider.dispose();
-		if (interfaceIDMapping_Containment_OrGroupItemProvider != null) interfaceIDMapping_Containment_OrGroupItemProvider.dispose();
-		if (equalsIgnoreCase_FunctionalOperatorItemProvider != null) equalsIgnoreCase_FunctionalOperatorItemProvider.dispose();
-		if (attributeNameMapping_Containment_OrGroupItemProvider != null) attributeNameMapping_Containment_OrGroupItemProvider.dispose();
-		if (revision_authorName_AttrEClassItemProvider != null) revision_authorName_AttrEClassItemProvider.dispose();
-		if (changeMode_EnumerationOperatorItemProvider != null) changeMode_EnumerationOperatorItemProvider.dispose();
-		if (attributeLib_Containment_OrGroupItemProvider != null) attributeLib_Containment_OrGroupItemProvider.dispose();
-		if (documentRoot_Containment_OrGroupItemProvider != null) documentRoot_Containment_OrGroupItemProvider.dispose();
-		if (roleClassLib_Containment_OrGroupItemProvider != null) roleClassLib_Containment_OrGroupItemProvider.dispose();
-		if (roleFamily_Containment_OrGroupItemProvider != null) roleFamily_Containment_OrGroupItemProvider.dispose();
-		if (number_CalculateableParameterItemProvider != null) number_CalculateableParameterItemProvider.dispose();
-		if (internalLink_Containment_OrGroupItemProvider != null) internalLink_Containment_OrGroupItemProvider.dispose();
-		if (documentRoot_mixed_AttrEClassItemProvider != null) documentRoot_mixed_AttrEClassItemProvider.dispose();
-		if (max_AggregationOperator_IntegerItemProvider != null) max_AggregationOperator_IntegerItemProvider.dispose();
-		if (description_changeMode_AttrEClassItemProvider != null) description_changeMode_AttrEClassItemProvider.dispose();
-		if (number_PrimitiveArgumentItemProvider != null) number_PrimitiveArgumentItemProvider.dispose();
-		if (object_Number_toString_FunctionalOperatorItemProvider != null) object_Number_toString_FunctionalOperatorItemProvider.dispose();
-		if (caexFile_superiorStandardVersion_AttrEClassItemProvider != null) caexFile_superiorStandardVersion_AttrEClassItemProvider.dispose();
-		if (attributeFamily_Reference_OrGroupItemProvider != null) attributeFamily_Reference_OrGroupItemProvider.dispose();
-		if (doubleValue_FunctionalOperatorItemProvider != null) doubleValue_FunctionalOperatorItemProvider.dispose();
-		if (internalLink_refPartnerSideA_AttrEClassItemProvider != null) internalLink_refPartnerSideA_AttrEClassItemProvider.dispose();
-		if (number_Double_Object_Number_equals_FunctionalOperatorItemProvider != null) number_Double_Object_Number_equals_FunctionalOperatorItemProvider.dispose();
-		if (parseBoolean_FunctionalOperatorItemProvider != null) parseBoolean_FunctionalOperatorItemProvider.dispose();
-		if (toUpperCase_FunctionalOperatorItemProvider != null) toUpperCase_FunctionalOperatorItemProvider.dispose();
-		if (object_Boolean_toString_FunctionalOperatorItemProvider != null) object_Boolean_toString_FunctionalOperatorItemProvider.dispose();
-		if (revision_comment_AttrEClassItemProvider != null) revision_comment_AttrEClassItemProvider.dispose();
-		if (caexFile_Containment_OrGroupItemProvider != null) caexFile_Containment_OrGroupItemProvider.dispose();
-		if (sum_AggregationOperator_IntegerItemProvider != null) sum_AggregationOperator_IntegerItemProvider.dispose();
-		if (greaterEquals_FunctionalOperatorItemProvider != null) greaterEquals_FunctionalOperatorItemProvider.dispose();
-		if (internalLink_refPartnerSideB_AttrEClassItemProvider != null) internalLink_refPartnerSideB_AttrEClassItemProvider.dispose();
-		if (character_FunctionalParameterItemProvider != null) character_FunctionalParameterItemProvider.dispose();
-		if (roleFamily_Reference_OrGroupItemProvider != null) roleFamily_Reference_OrGroupItemProvider.dispose();
-		if (attribute_attributeDataType_AttrEClassItemProvider != null) attribute_attributeDataType_AttrEClassItemProvider.dispose();
-		if (description_Reference_OrGroupItemProvider != null) description_Reference_OrGroupItemProvider.dispose();
-		if (object_Number_hashCode_FunctionalOperatorItemProvider != null) object_Number_hashCode_FunctionalOperatorItemProvider.dispose();
-		if (interfaceIDMapping_Reference_OrGroupItemProvider != null) interfaceIDMapping_Reference_OrGroupItemProvider.dispose();
-		if (number_Integer_smallerEquals_FunctionalOperatorItemProvider != null) number_Integer_smallerEquals_FunctionalOperatorItemProvider.dispose();
-		if (caexBasicObject_Reference_OrGroupItemProvider != null) caexBasicObject_Reference_OrGroupItemProvider.dispose();
-		if (attribute_refAttributeType_AttrEClassItemProvider != null) attribute_refAttributeType_AttrEClassItemProvider.dispose();
-		if (compareToString_FunctionalOperatorItemProvider != null) compareToString_FunctionalOperatorItemProvider.dispose();
-		if (internalElement_Reference_OrGroupItemProvider != null) internalElement_Reference_OrGroupItemProvider.dispose();
-		if (ordinalScaledType_requiredMinValue_AttrEClassItemProvider != null) ordinalScaledType_requiredMinValue_AttrEClassItemProvider.dispose();
-		if (boolean_Or_BitOperatorItemProvider != null) boolean_Or_BitOperatorItemProvider.dispose();
-		if (character_Or_BitOperatorItemProvider != null) character_Or_BitOperatorItemProvider.dispose();
-		if (boolean_FunctionalParameterItemProvider != null) boolean_FunctionalParameterItemProvider.dispose();
-		if (double_PrimitiveArgumentItemProvider != null) double_PrimitiveArgumentItemProvider.dispose();
-		if (compareToStringIgnoreCase_FunctionalOperatorItemProvider != null) compareToStringIgnoreCase_FunctionalOperatorItemProvider.dispose();
-		if (interfaceClass_Reference_OrGroupItemProvider != null) interfaceClass_Reference_OrGroupItemProvider.dispose();
-		if (object_Or_BitOperatorItemProvider != null) object_Or_BitOperatorItemProvider.dispose();
-		if (additionalInformation_Reference_OrGroupItemProvider != null) additionalInformation_Reference_OrGroupItemProvider.dispose();
-		if (countable_ReferenceArgumentItemProvider != null) countable_ReferenceArgumentItemProvider.dispose();
-		if (charSequence_FunctionalParameterItemProvider != null) charSequence_FunctionalParameterItemProvider.dispose();
-		if (boolean_CalculateableParameterItemProvider != null) boolean_CalculateableParameterItemProvider.dispose();
-		if (sourceDocumentInformation_originProjectTitle_AttrEClassItemProvider != null) sourceDocumentInformation_originProjectTitle_AttrEClassItemProvider.dispose();
-		if (number_Or_BitOperatorItemProvider != null) number_Or_BitOperatorItemProvider.dispose();
-		if (max_AggregationOperator_DoubleItemProvider != null) max_AggregationOperator_DoubleItemProvider.dispose();
-		if (systemUnitFamily_Containment_OrGroupItemProvider != null) systemUnitFamily_Containment_OrGroupItemProvider.dispose();
-		if (number_Double_greaterThan_FunctionalOperatorItemProvider != null) number_Double_greaterThan_FunctionalOperatorItemProvider.dispose();
-		if (copyright_Reference_OrGroupItemProvider != null) copyright_Reference_OrGroupItemProvider.dispose();
-		if (character_PrimitiveArgumentItemProvider != null) character_PrimitiveArgumentItemProvider.dispose();
-		if (roleClass_refBaseClassPath_AttrEClassItemProvider != null) roleClass_refBaseClassPath_AttrEClassItemProvider.dispose();
-		if (copyright_Containment_OrGroupItemProvider != null) copyright_Containment_OrGroupItemProvider.dispose();
-		if (attributeDataType_Or_BitOperatorItemProvider != null) attributeDataType_Or_BitOperatorItemProvider.dispose();
-		if (ordinalScaledType_Containment_OrGroupItemProvider != null) ordinalScaledType_Containment_OrGroupItemProvider.dispose();
-		if (externalReferenceType_Containment_OrGroupItemProvider != null) externalReferenceType_Containment_OrGroupItemProvider.dispose();
-		if (integer_FunctionalParameterItemProvider != null) integer_FunctionalParameterItemProvider.dispose();
-		if (externalReferenceType_path_AttrEClassItemProvider != null) externalReferenceType_path_AttrEClassItemProvider.dispose();
-		if (object_Boolean_hashCode_FunctionalOperatorItemProvider != null) object_Boolean_hashCode_FunctionalOperatorItemProvider.dispose();
-		if (and_EvaluationBitOperatorItemProvider != null) and_EvaluationBitOperatorItemProvider.dispose();
-		if (smallerThan_FunctionalOperatorItemProvider != null) smallerThan_FunctionalOperatorItemProvider.dispose();
-		if (sourceDocumentInformation_Containment_OrGroupItemProvider != null) sourceDocumentInformation_Containment_OrGroupItemProvider.dispose();
-		if (systemUnitClass_Reference_OrGroupItemProvider != null) systemUnitClass_Reference_OrGroupItemProvider.dispose();
-		if (copyright_changeMode_AttrEClassItemProvider != null) copyright_changeMode_AttrEClassItemProvider.dispose();
-		if (object_Character_equals_FunctionalOperatorItemProvider != null) object_Character_equals_FunctionalOperatorItemProvider.dispose();
-		if (number_Integer_Object_Number_toString_FunctionalOperatorItemProvider != null) number_Integer_Object_Number_toString_FunctionalOperatorItemProvider.dispose();
-		if (eFeatureMapEntry_PrimitiveArgumentItemProvider != null) eFeatureMapEntry_PrimitiveArgumentItemProvider.dispose();
-		if (interfaceIDMapping_systemUnitInterfaceID_AttrEClassItemProvider != null) interfaceIDMapping_systemUnitInterfaceID_AttrEClassItemProvider.dispose();
-		if (dateTime_CalculateableParameterItemProvider != null) dateTime_CalculateableParameterItemProvider.dispose();
-		if (internalElement_refBaseSystemUnitPath_AttrEClassItemProvider != null) internalElement_refBaseSystemUnitPath_AttrEClassItemProvider.dispose();
-		if (charAt_FunctionalOperatorItemProvider != null) charAt_FunctionalOperatorItemProvider.dispose();
-		if (sum_AggregationOperator_DoubleItemProvider != null) sum_AggregationOperator_DoubleItemProvider.dispose();
-		if (compareToBoolean_FunctionalOperatorItemProvider != null) compareToBoolean_FunctionalOperatorItemProvider.dispose();
-		if (equals_FunctionalOperatorItemProvider != null) equals_FunctionalOperatorItemProvider.dispose();
-		if (integer_CalculateableParameterItemProvider != null) integer_CalculateableParameterItemProvider.dispose();
-		if (number_And_BitOperatorItemProvider != null) number_And_BitOperatorItemProvider.dispose();
-		if (codePointBefore_FunctionalOperatorItemProvider != null) codePointBefore_FunctionalOperatorItemProvider.dispose();
-		if (revision_Reference_OrGroupItemProvider != null) revision_Reference_OrGroupItemProvider.dispose();
-		if (number_Double_smallerThan_FunctionalOperatorItemProvider != null) number_Double_smallerThan_FunctionalOperatorItemProvider.dispose();
-		if (eFeatureMapEntry_CalculateableElementReferenceArgumentItemProvider != null) eFeatureMapEntry_CalculateableElementReferenceArgumentItemProvider.dispose();
-		if (number_Integer_greaterEquals_FunctionalOperatorItemProvider != null) number_Integer_greaterEquals_FunctionalOperatorItemProvider.dispose();
-		if (internalLink_Reference_OrGroupItemProvider != null) internalLink_Reference_OrGroupItemProvider.dispose();
-		if (attribute_Containment_OrGroupItemProvider != null) attribute_Containment_OrGroupItemProvider.dispose();
-		if (concat_FunctionalOperatorItemProvider != null) concat_FunctionalOperatorItemProvider.dispose();
-		if (eFeatureMapEntry_And_BitOperatorItemProvider != null) eFeatureMapEntry_And_BitOperatorItemProvider.dispose();
-		if (systemUnitFamily_Reference_OrGroupItemProvider != null) systemUnitFamily_Reference_OrGroupItemProvider.dispose();
-		if (supportedRoleClass_Containment_OrGroupItemProvider != null) supportedRoleClass_Containment_OrGroupItemProvider.dispose();
-		if (interfaceFamily_Containment_OrGroupItemProvider != null) interfaceFamily_Containment_OrGroupItemProvider.dispose();
-		if (roleRequirements_Containment_OrGroupItemProvider != null) roleRequirements_Containment_OrGroupItemProvider.dispose();
-		if (revision_oldVersion_AttrEClassItemProvider != null) revision_oldVersion_AttrEClassItemProvider.dispose();
-		if (object_Number_equals_FunctionalOperatorItemProvider != null) object_Number_equals_FunctionalOperatorItemProvider.dispose();
-		if (number_Integer_smallerThan_FunctionalOperatorItemProvider != null) number_Integer_smallerThan_FunctionalOperatorItemProvider.dispose();
-		if (number_Double_greaterEquals_FunctionalOperatorItemProvider != null) number_Double_greaterEquals_FunctionalOperatorItemProvider.dispose();
-		if (systemUnitClassLib_Containment_OrGroupItemProvider != null) systemUnitClassLib_Containment_OrGroupItemProvider.dispose();
-		if (attributeValueRequirement_Containment_OrGroupItemProvider != null) attributeValueRequirement_Containment_OrGroupItemProvider.dispose();
-		if (string_Or_BitOperatorItemProvider != null) string_Or_BitOperatorItemProvider.dispose();
-		if (caexObject_Reference_OrGroupItemProvider != null) caexObject_Reference_OrGroupItemProvider.dispose();
-		if (integer_Or_BitOperatorItemProvider != null) integer_Or_BitOperatorItemProvider.dispose();
-		if (caexFile_Reference_OrGroupItemProvider != null) caexFile_Reference_OrGroupItemProvider.dispose();
-		if (mapping_Reference_OrGroupItemProvider != null) mapping_Reference_OrGroupItemProvider.dispose();
-		if (dateTime_Or_BitOperatorItemProvider != null) dateTime_Or_BitOperatorItemProvider.dispose();
-		if (caexFile_fileName_AttrEClassItemProvider != null) caexFile_fileName_AttrEClassItemProvider.dispose();
-		if (charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider != null) charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider.dispose();
-		if (roleClassLib_Reference_OrGroupItemProvider != null) roleClassLib_Reference_OrGroupItemProvider.dispose();
-		if (min_AggregationOperator_IntegerItemProvider != null) min_AggregationOperator_IntegerItemProvider.dispose();
-		if (integer_PrimitiveArgumentItemProvider != null) integer_PrimitiveArgumentItemProvider.dispose();
-		if (refSemantic_Containment_OrGroupItemProvider != null) refSemantic_Containment_OrGroupItemProvider.dispose();
-		if (ordinalScaledType_Reference_OrGroupItemProvider != null) ordinalScaledType_Reference_OrGroupItemProvider.dispose();
-		if (findQueryCollectionItemProvider != null) findQueryCollectionItemProvider.dispose();
-		if (revision_revisionDate_AttrEClassItemProvider != null) revision_revisionDate_AttrEClassItemProvider.dispose();
-		if (object_And_BitOperatorItemProvider != null) object_And_BitOperatorItemProvider.dispose();
-		if (object_PrimitiveArgumentItemProvider != null) object_PrimitiveArgumentItemProvider.dispose();
-		if (selectClauseItemProvider != null) selectClauseItemProvider.dispose();
-		if (dateTime_And_BitOperatorItemProvider != null) dateTime_And_BitOperatorItemProvider.dispose();
+		if (personItemProvider != null) personItemProvider.dispose();
+		if (studentItemProvider != null) studentItemProvider.dispose();
+		if (professorItemProvider != null) professorItemProvider.dispose();
+		if (courseItemProvider != null) courseItemProvider.dispose();
+		if (universityManagementSystemItemProvider != null) universityManagementSystemItemProvider.dispose();
+		if (examItemProvider != null) examItemProvider.dispose();
 		if (double_CalculateableParameterItemProvider != null) double_CalculateableParameterItemProvider.dispose();
-		if (description_Containment_OrGroupItemProvider != null) description_Containment_OrGroupItemProvider.dispose();
-		if (length_FunctionalOperatorItemProvider != null) length_FunctionalOperatorItemProvider.dispose();
-		if (supportedRoleClass_refRoleClassPath_AttrEClassItemProvider != null) supportedRoleClass_refRoleClassPath_AttrEClassItemProvider.dispose();
-		if (unknownType_Reference_OrGroupItemProvider != null) unknownType_Reference_OrGroupItemProvider.dispose();
+		if (toLowerCase_FunctionalOperatorItemProvider != null) toLowerCase_FunctionalOperatorItemProvider.dispose();
+		if (string_CalculateableParameterItemProvider != null) string_CalculateableParameterItemProvider.dispose();
+		if (integer_Or_BitOperatorItemProvider != null) integer_Or_BitOperatorItemProvider.dispose();
+		if (codePointBefore_FunctionalOperatorItemProvider != null) codePointBefore_FunctionalOperatorItemProvider.dispose();
+		if (exam_examID_AttrEClassItemProvider != null) exam_examID_AttrEClassItemProvider.dispose();
+		if (min_AggregationOperator_DoubleItemProvider != null) min_AggregationOperator_DoubleItemProvider.dispose();
+		if (boolean_Or_BitOperatorItemProvider != null) boolean_Or_BitOperatorItemProvider.dispose();
+		if (object_Boolean_toString_FunctionalOperatorItemProvider != null) object_Boolean_toString_FunctionalOperatorItemProvider.dispose();
+		if (charSequence_And_BitOperatorItemProvider != null) charSequence_And_BitOperatorItemProvider.dispose();
+		if (number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider != null) number_Integer_Object_Number_hashCode_FunctionalOperatorItemProvider.dispose();
+		if (compareToString_FunctionalOperatorItemProvider != null) compareToString_FunctionalOperatorItemProvider.dispose();
+		if (contains_FunctionalOperatorItemProvider != null) contains_FunctionalOperatorItemProvider.dispose();
+		if (boolean_FunctionalParameterItemProvider != null) boolean_FunctionalParameterItemProvider.dispose();
+		if (double_And_BitOperatorItemProvider != null) double_And_BitOperatorItemProvider.dispose();
+		if (character_Or_BitOperatorItemProvider != null) character_Or_BitOperatorItemProvider.dispose();
+		if (equals_FunctionalOperatorItemProvider != null) equals_FunctionalOperatorItemProvider.dispose();
+		if (object_Number_equals_FunctionalOperatorItemProvider != null) object_Number_equals_FunctionalOperatorItemProvider.dispose();
 		if (number_Double_Object_Number_hashCode_FunctionalOperatorItemProvider != null) number_Double_Object_Number_hashCode_FunctionalOperatorItemProvider.dispose();
-		if (attributeNameMapping_systemUnitAttributeName_AttrEClassItemProvider != null) attributeNameMapping_systemUnitAttributeName_AttrEClassItemProvider.dispose();
+		if (charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider != null) charSequence_String_Object_CharSequence_toString_FunctionalOperatorItemProvider.dispose();
+		if (integer_PrimitiveArgumentItemProvider != null) integer_PrimitiveArgumentItemProvider.dispose();
+		if (charSequence_FunctionalParameterItemProvider != null) charSequence_FunctionalParameterItemProvider.dispose();
+		if (number_Integer_smallerThan_FunctionalOperatorItemProvider != null) number_Integer_smallerThan_FunctionalOperatorItemProvider.dispose();
+		if (object_Character_toString_FunctionalOperatorItemProvider != null) object_Character_toString_FunctionalOperatorItemProvider.dispose();
+		if (person_Containment_OrGroupItemProvider != null) person_Containment_OrGroupItemProvider.dispose();
+		if (smallerEquals_FunctionalOperatorItemProvider != null) smallerEquals_FunctionalOperatorItemProvider.dispose();
+		if (double_Or_BitOperatorItemProvider != null) double_Or_BitOperatorItemProvider.dispose();
+		if (object_CharSequence_hashCode_FunctionalOperatorItemProvider != null) object_CharSequence_hashCode_FunctionalOperatorItemProvider.dispose();
+		if (object_PrimitiveArgumentItemProvider != null) object_PrimitiveArgumentItemProvider.dispose();
+		if (compareToBoolean_FunctionalOperatorItemProvider != null) compareToBoolean_FunctionalOperatorItemProvider.dispose();
+		if (countableReferenceParameterItemProvider != null) countableReferenceParameterItemProvider.dispose();
+		if (integer_FunctionalParameterItemProvider != null) integer_FunctionalParameterItemProvider.dispose();
+		if (string_FunctionalParameterItemProvider != null) string_FunctionalParameterItemProvider.dispose();
+		if (character_FunctionalParameterItemProvider != null) character_FunctionalParameterItemProvider.dispose();
+		if (number_CalculateableParameterItemProvider != null) number_CalculateableParameterItemProvider.dispose();
+		if (number_Double_Object_Number_equals_FunctionalOperatorItemProvider != null) number_Double_Object_Number_equals_FunctionalOperatorItemProvider.dispose();
+		if (person_name_AttrEClassItemProvider != null) person_name_AttrEClassItemProvider.dispose();
+		if (length_FunctionalOperatorItemProvider != null) length_FunctionalOperatorItemProvider.dispose();
+		if (concat_FunctionalOperatorItemProvider != null) concat_FunctionalOperatorItemProvider.dispose();
+		if (number_FunctionalParameterItemProvider != null) number_FunctionalParameterItemProvider.dispose();
+		if (charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider != null) charSequence_String_Object_CharSequence_hashCode_FunctionalOperatorItemProvider.dispose();
+		if (indexOfChar_FunctionalOperatorItemProvider != null) indexOfChar_FunctionalOperatorItemProvider.dispose();
+		if (equalsIgnoreCase_FunctionalOperatorItemProvider != null) equalsIgnoreCase_FunctionalOperatorItemProvider.dispose();
+		if (boolean_And_BitOperatorItemProvider != null) boolean_And_BitOperatorItemProvider.dispose();
+		if (charSequence_PrimitiveArgumentItemProvider != null) charSequence_PrimitiveArgumentItemProvider.dispose();
+		if (number_Integer_Object_Number_toString_FunctionalOperatorItemProvider != null) number_Integer_Object_Number_toString_FunctionalOperatorItemProvider.dispose();
+		if (isEmpty_FunctionalOperatorItemProvider != null) isEmpty_FunctionalOperatorItemProvider.dispose();
+		if (toString_FunctionalOperatorItemProvider != null) toString_FunctionalOperatorItemProvider.dispose();
+		if (object_Number_hashCode_FunctionalOperatorItemProvider != null) object_Number_hashCode_FunctionalOperatorItemProvider.dispose();
+		if (student_Containment_OrGroupItemProvider != null) student_Containment_OrGroupItemProvider.dispose();
+		if (hashCode_FunctionalOperatorItemProvider != null) hashCode_FunctionalOperatorItemProvider.dispose();
+		if (integerParseInt_ClassOperatorItemProvider != null) integerParseInt_ClassOperatorItemProvider.dispose();
+		if (exam_Reference_OrGroupItemProvider != null) exam_Reference_OrGroupItemProvider.dispose();
+		if (professor_Reference_OrGroupItemProvider != null) professor_Reference_OrGroupItemProvider.dispose();
+		if (smallerThan_FunctionalOperatorItemProvider != null) smallerThan_FunctionalOperatorItemProvider.dispose();
+		if (or_EvaluationBitOperatorItemProvider != null) or_EvaluationBitOperatorItemProvider.dispose();
+		if (charSequence_CalculateableParameterItemProvider != null) charSequence_CalculateableParameterItemProvider.dispose();
+		if (character_And_BitOperatorItemProvider != null) character_And_BitOperatorItemProvider.dispose();
+		if (codePointAt_FunctionalOperatorItemProvider != null) codePointAt_FunctionalOperatorItemProvider.dispose();
+		if (object_Number_toString_FunctionalOperatorItemProvider != null) object_Number_toString_FunctionalOperatorItemProvider.dispose();
+		if (string_Or_BitOperatorItemProvider != null) string_Or_BitOperatorItemProvider.dispose();
+		if (selectClauseItemProvider != null) selectClauseItemProvider.dispose();
+		if (number_PrimitiveArgumentItemProvider != null) number_PrimitiveArgumentItemProvider.dispose();
+		if (max_AggregationOperator_DoubleItemProvider != null) max_AggregationOperator_DoubleItemProvider.dispose();
+		if (and_EvaluationBitOperatorItemProvider != null) and_EvaluationBitOperatorItemProvider.dispose();
+		if (string_CalculateableElementReferenceArgumentItemProvider != null) string_CalculateableElementReferenceArgumentItemProvider.dispose();
+		if (offsetByCodePoints_FunctionalOperatorItemProvider != null) offsetByCodePoints_FunctionalOperatorItemProvider.dispose();
+		if (indexOfCharFromIndex_FunctionalOperatorItemProvider != null) indexOfCharFromIndex_FunctionalOperatorItemProvider.dispose();
+		if (number_And_BitOperatorItemProvider != null) number_And_BitOperatorItemProvider.dispose();
+		if (endsWith_FunctionalOperatorItemProvider != null) endsWith_FunctionalOperatorItemProvider.dispose();
+		if (startsWithOffset_FunctionalOperatorItemProvider != null) startsWithOffset_FunctionalOperatorItemProvider.dispose();
+		if (findQueryCollectionItemProvider != null) findQueryCollectionItemProvider.dispose();
+		if (professor_Containment_OrGroupItemProvider != null) professor_Containment_OrGroupItemProvider.dispose();
+		if (course_courseType_AttrEClassItemProvider != null) course_courseType_AttrEClassItemProvider.dispose();
+		if (boolean_CalculateableParameterItemProvider != null) boolean_CalculateableParameterItemProvider.dispose();
+		if (character_CalculateableParameterItemProvider != null) character_CalculateableParameterItemProvider.dispose();
+		if (person_Reference_OrGroupItemProvider != null) person_Reference_OrGroupItemProvider.dispose();
+		if (character_PrimitiveArgumentItemProvider != null) character_PrimitiveArgumentItemProvider.dispose();
+		if (parseBoolean_FunctionalOperatorItemProvider != null) parseBoolean_FunctionalOperatorItemProvider.dispose();
+		if (number_Integer_greaterThan_FunctionalOperatorItemProvider != null) number_Integer_greaterThan_FunctionalOperatorItemProvider.dispose();
+		if (person_email_AttrEClassItemProvider != null) person_email_AttrEClassItemProvider.dispose();
+		if (courseType_EnumerationOperatorItemProvider != null) courseType_EnumerationOperatorItemProvider.dispose();
+		if (max_AggregationOperator_IntegerItemProvider != null) max_AggregationOperator_IntegerItemProvider.dispose();
+		if (course_Containment_OrGroupItemProvider != null) course_Containment_OrGroupItemProvider.dispose();
+		if (boolean_PrimitiveArgumentItemProvider != null) boolean_PrimitiveArgumentItemProvider.dispose();
+		if (sum_AggregationOperator_IntegerItemProvider != null) sum_AggregationOperator_IntegerItemProvider.dispose();
+		if (number_Double_greaterEquals_FunctionalOperatorItemProvider != null) number_Double_greaterEquals_FunctionalOperatorItemProvider.dispose();
+		if (integer_CalculateableParameterItemProvider != null) integer_CalculateableParameterItemProvider.dispose();
+		if (charSequence_String_length_FunctionalOperatorItemProvider != null) charSequence_String_length_FunctionalOperatorItemProvider.dispose();
+		if (indexOfString_FunctionalOperatorItemProvider != null) indexOfString_FunctionalOperatorItemProvider.dispose();
+		if (trim_FunctionalOperatorItemProvider != null) trim_FunctionalOperatorItemProvider.dispose();
+		if (greaterEquals_FunctionalOperatorItemProvider != null) greaterEquals_FunctionalOperatorItemProvider.dispose();
+		if (student_Reference_OrGroupItemProvider != null) student_Reference_OrGroupItemProvider.dispose();
+		if (string_And_BitOperatorItemProvider != null) string_And_BitOperatorItemProvider.dispose();
+		if (course_courseNumber_AttrEClassItemProvider != null) course_courseNumber_AttrEClassItemProvider.dispose();
+		if (greaterThan_FunctionalOperatorItemProvider != null) greaterThan_FunctionalOperatorItemProvider.dispose();
+		if (count_AggregationOperatorItemProvider != null) count_AggregationOperatorItemProvider.dispose();
+		if (min_AggregationOperator_IntegerItemProvider != null) min_AggregationOperator_IntegerItemProvider.dispose();
+		if (number_Integer_greaterEquals_FunctionalOperatorItemProvider != null) number_Integer_greaterEquals_FunctionalOperatorItemProvider.dispose();
+		if (object_And_BitOperatorItemProvider != null) object_And_BitOperatorItemProvider.dispose();
+		if (object_CharSequence_toString_FunctionalOperatorItemProvider != null) object_CharSequence_toString_FunctionalOperatorItemProvider.dispose();
+		if (number_Integer_Object_Number_equals_FunctionalOperatorItemProvider != null) number_Integer_Object_Number_equals_FunctionalOperatorItemProvider.dispose();
+		if (object_FunctionalParameterItemProvider != null) object_FunctionalParameterItemProvider.dispose();
+		if (charSequence_Or_BitOperatorItemProvider != null) charSequence_Or_BitOperatorItemProvider.dispose();
+		if (object_Character_equals_FunctionalOperatorItemProvider != null) object_Character_equals_FunctionalOperatorItemProvider.dispose();
+		if (object_Or_BitOperatorItemProvider != null) object_Or_BitOperatorItemProvider.dispose();
+		if (startsWith_FunctionalOperatorItemProvider != null) startsWith_FunctionalOperatorItemProvider.dispose();
+		if (integer_CalculateableElementReferenceArgumentItemProvider != null) integer_CalculateableElementReferenceArgumentItemProvider.dispose();
+		if (student_matriculationNumber_AttrEClassItemProvider != null) student_matriculationNumber_AttrEClassItemProvider.dispose();
+		if (double_FunctionalParameterItemProvider != null) double_FunctionalParameterItemProvider.dispose();
+		if (sum_AggregationOperator_DoubleItemProvider != null) sum_AggregationOperator_DoubleItemProvider.dispose();
+		if (number_Double_Object_Number_toString_FunctionalOperatorItemProvider != null) number_Double_Object_Number_toString_FunctionalOperatorItemProvider.dispose();
+		if (object_Boolean_equals_FunctionalOperatorItemProvider != null) object_Boolean_equals_FunctionalOperatorItemProvider.dispose();
+		if (integer_And_BitOperatorItemProvider != null) integer_And_BitOperatorItemProvider.dispose();
+		if (countable_ReferenceArgumentItemProvider != null) countable_ReferenceArgumentItemProvider.dispose();
+		if (number_Integer_smallerEquals_FunctionalOperatorItemProvider != null) number_Integer_smallerEquals_FunctionalOperatorItemProvider.dispose();
+		if (object_Character_hashCode_FunctionalOperatorItemProvider != null) object_Character_hashCode_FunctionalOperatorItemProvider.dispose();
+		if (universityManagementSystem_Containment_OrGroupItemProvider != null) universityManagementSystem_Containment_OrGroupItemProvider.dispose();
+		if (exam_Containment_OrGroupItemProvider != null) exam_Containment_OrGroupItemProvider.dispose();
+		if (number_Double_smallerThan_FunctionalOperatorItemProvider != null) number_Double_smallerThan_FunctionalOperatorItemProvider.dispose();
+		if (professor_employeeNumber_AttrEClassItemProvider != null) professor_employeeNumber_AttrEClassItemProvider.dispose();
+		if (doubleValue_FunctionalOperatorItemProvider != null) doubleValue_FunctionalOperatorItemProvider.dispose();
+		if (string_PrimitiveArgumentItemProvider != null) string_PrimitiveArgumentItemProvider.dispose();
+		if (object_CalculateableParameterItemProvider != null) object_CalculateableParameterItemProvider.dispose();
+		if (findQueryItemProvider != null) findQueryItemProvider.dispose();
+		if (charAt_FunctionalOperatorItemProvider != null) charAt_FunctionalOperatorItemProvider.dispose();
+		if (compareToStringIgnoreCase_FunctionalOperatorItemProvider != null) compareToStringIgnoreCase_FunctionalOperatorItemProvider.dispose();
+		if (number_Or_BitOperatorItemProvider != null) number_Or_BitOperatorItemProvider.dispose();
+		if (charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider != null) charSequence_String_Object_CharSequence_equals_FunctionalOperatorItemProvider.dispose();
+		if (toUpperCase_FunctionalOperatorItemProvider != null) toUpperCase_FunctionalOperatorItemProvider.dispose();
+		if (object_Boolean_hashCode_FunctionalOperatorItemProvider != null) object_Boolean_hashCode_FunctionalOperatorItemProvider.dispose();
+		if (number_Double_smallerEquals_FunctionalOperatorItemProvider != null) number_Double_smallerEquals_FunctionalOperatorItemProvider.dispose();
+		if (double_PrimitiveArgumentItemProvider != null) double_PrimitiveArgumentItemProvider.dispose();
+		if (substring_FunctionalOperatorItemProvider != null) substring_FunctionalOperatorItemProvider.dispose();
+		if (course_Reference_OrGroupItemProvider != null) course_Reference_OrGroupItemProvider.dispose();
+		if (course_name_AttrEClassItemProvider != null) course_name_AttrEClassItemProvider.dispose();
+		if (universityManagementSystem_Reference_OrGroupItemProvider != null) universityManagementSystem_Reference_OrGroupItemProvider.dispose();
+		if (number_Double_greaterThan_FunctionalOperatorItemProvider != null) number_Double_greaterThan_FunctionalOperatorItemProvider.dispose();
+		if (object_CharSequence_equals_FunctionalOperatorItemProvider != null) object_CharSequence_equals_FunctionalOperatorItemProvider.dispose();
 	}
 
 }

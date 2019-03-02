@@ -1,0 +1,45 @@
+Find 
+InstanceHierarchy ih{
+	changeMode c;
+	internalElement! ie1: InternalElement ie1rc{
+		attribute a1 : Attribute a1rc{
+			additionalInformation addRef;
+			attribute!+ a2: Attribute a2rc{
+				additionalInformation addRef2;
+				attribute! a3: AttributeFamily a3rc1{
+					additionalInformation addRef3 : addInf1 OR addInf1 OR addInf2;
+					attribute a4: Attribute a4rc{
+						additionalInformation addRef4 : addInf22 OR addInf2;
+					};
+				} OR AttributeFamily a3rc2{
+					additionalInformation addRef5  :addInf2 OR addInf22;
+					attribute! a5;
+				};
+			};
+		};
+	};
+}; 
+
+AdditionalInformation addInf1; 
+
+AdditionalInformation addInf2; 
+
+AdditionalInformation addInf22;
+
+Select addInf2, ih, addInf2, ih;
+
+union
+
+Find 
+InternalElement co {
+	internalElement ie2 : InternalElement ie2rc{
+		name! n2;
+		systemUnitClass su2 : SystemUnitClass su2rc{
+			name n22;
+			internalElement ie22 : InternalElement ie22rc{
+				baseClass bc : ie2rc;
+				baseSystemUnit! bsu : ie2rc OR su2rc;
+			};
+		};
+	};
+};

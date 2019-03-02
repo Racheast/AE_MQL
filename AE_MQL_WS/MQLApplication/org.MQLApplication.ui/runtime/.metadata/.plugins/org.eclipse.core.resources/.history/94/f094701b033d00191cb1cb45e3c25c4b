@@ -1,0 +1,41 @@
+package dmm
+import "/DMM/model/DMM.ecore"
+
+pattern query_0(s, c){
+	find s_Student(s, cRef, c,e);
+	find c_Course(c);
+}
+
+pattern cRef_OrGroup(cRef,c){
+	Course(cRef);
+    Course(c);
+    cRef == c;
+}
+
+pattern s_Student(s:Student,cRef,c,e){
+    Student(s);
+    Course(cRef);
+    Course(c);
+    find e_Person_email_AttrEClass(s,e);
+    find cRef_OrGroup_ref(s,cRef,c);
+    cRef != e;
+}
+
+pattern c_Course(c:Course){
+    Course(c);
+}
+
+
+pattern e_Person_email_AttrEClass(s:Student, e){
+    Student.email(s, e);
+}
+
+pattern Student_attends(from:Student, to:Course){
+    Student.attends(from, to);
+}
+
+pattern cRef_OrGroup_ref(s,cRef,c){
+    find cRef_OrGroup(cRef,c);
+    find Student_attends(s,cRef);
+}
+

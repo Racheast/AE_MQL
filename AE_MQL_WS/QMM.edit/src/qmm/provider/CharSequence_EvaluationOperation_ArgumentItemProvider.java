@@ -125,7 +125,12 @@ public class CharSequence_EvaluationOperation_ArgumentItemProvider extends Evalu
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCharSequence_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createObject_CharSequence_equals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createObject_CharSequence_hashCode_FunctionalOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QmmPackage.eINSTANCE.getCharSequence_FunctionalType_Operator(),
+				 QmmFactory.eINSTANCE.createlength_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -135,12 +140,7 @@ public class CharSequence_EvaluationOperation_ArgumentItemProvider extends Evalu
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCharSequence_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createObject_CharSequence_hashCode_FunctionalOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(QmmPackage.eINSTANCE.getCharSequence_FunctionalType_Operator(),
-				 QmmFactory.eINSTANCE.createlength_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createObject_CharSequence_equals_FunctionalOperator()));
 	}
 
 }

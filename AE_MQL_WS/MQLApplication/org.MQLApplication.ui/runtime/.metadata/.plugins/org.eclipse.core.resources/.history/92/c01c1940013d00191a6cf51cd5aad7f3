@@ -1,0 +1,9 @@
+Find 
+InternalElement ie{
+	version! v1ref : v1;
+	
+};
+Version v1 {
+	changeMode c1: change;
+	value val1;
+};

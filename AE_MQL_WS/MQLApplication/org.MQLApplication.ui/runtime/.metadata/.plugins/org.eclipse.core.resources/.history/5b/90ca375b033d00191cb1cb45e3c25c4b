@@ -1,0 +1,11 @@
+Find
+
+Student s2 {
+	name n2: self.contains("Martha");
+	attends cRef2 : c;
+};
+
+Course c {
+	
+};
+

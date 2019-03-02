@@ -154,12 +154,12 @@ public class Character_BitOperatorItemProvider extends Character_ExpressionOpera
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCharacter_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createObject_Character_toString_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createCharacter_Or_BitOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCharacter_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createObject_Character_hashCode_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createObject_Character_toString_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -169,12 +169,12 @@ public class Character_BitOperatorItemProvider extends Character_ExpressionOpera
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCharacter_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createCharacter_Or_BitOperator()));
+				 QmmFactory.eINSTANCE.createObject_Character_equals_FunctionalOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QmmPackage.eINSTANCE.getCharacter_BitOperator_Connects(),
-				 QmmFactory.eINSTANCE.createObject_Character_equals_FunctionalOperator()));
+				 QmmFactory.eINSTANCE.createObject_Character_hashCode_FunctionalOperator()));
 	}
 
 }
