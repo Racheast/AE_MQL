@@ -17,7 +17,7 @@ class MQLGenerator extends AbstractGenerator implements IGenerator{
 	public static FindQueryCollection queryCollection = null;	
 	 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) { 
-		System.out.println("MQL Query Interpreter: Generating Query.vql ... ")
+		System.out.println("MQL Query Compiler: Generating Query.vql ... ")
 		
 		var code = "package dmm\nimport \"/DMM/model/DMM.ecore\"\n\n";
 		queryCollection = resource.contents.filter(FindQueryCollection).get(0)		
@@ -26,9 +26,9 @@ class MQLGenerator extends AbstractGenerator implements IGenerator{
 		
 		try{
 			fsa.generateFile("Query.vql", code);
-			System.out.println("MQL Query Interpreter: Generation of Query.vql completed.")
+			System.out.println("MQL Query Compiler: Generation of Query.vql completed.")
 		}catch(Exception e){
-			System.out.println("MQL Query Interpreter: Exception caught. Stacktrace: ...")
+			System.out.println("MQL Query Compiler: Exception caught. Stacktrace: ...")
 			e.printStackTrace 
 		}
 		
